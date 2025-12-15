@@ -29,6 +29,22 @@ export default function GoogleYourself() {
           </span>
         </p>
         
+        {/* Stats */}
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-8">
+          <div className="text-center">
+            <p className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">70%</p>
+            <p className="text-sm text-slate-500">of recruiters Google candidates</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">85%</p>
+            <p className="text-sm text-slate-500">check LinkedIn profiles</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl md:text-4xl font-bold text-blue-600 mb-1">60%</p>
+            <p className="text-sm text-slate-500">visit GitHub for tech roles</p>
+          </div>
+        </div>
+        
         {/* Book Connection */}
         <p className="text-lg text-slate-500 max-w-2xl mx-auto">
           This book shows you how to take control of your online presence and make your work visible.

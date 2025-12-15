@@ -1,8 +1,29 @@
 'use client'
 
-import { ArrowRight, BookOpen, Eye } from 'lucide-react'
+import { ArrowRight, BookOpen, Eye, Github, Twitter, Instagram, Youtube, Rocket, Code, Globe, Music, BookMarked, Mail } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+
+const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, position: { top: string, left: string } }) => (
+  <motion.div
+    className="absolute text-slate-300"
+    style={{ ...position }}
+    initial={{ opacity: 0 }}
+    animate={{ 
+      opacity: [0.3, 0.4, 0.3],
+      y: [0, -15, 0],
+      rotate: [0, 3, 0]
+    }}
+    transition={{
+      duration: 10,
+      delay,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  >
+    <Icon className="w-10 h-10 md:w-14 md:h-14" />
+  </motion.div>
+)
 
 export default function Hero() {
   const [onlineCount, setOnlineCount] = useState(5.35)
@@ -23,6 +44,29 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden bg-white">
       {/* Clean Apple-style Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
+
+      {/* Floating Background Icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top Icons */}
+        <FloatingIcon Icon={Github} delay={0} position={{ top: '8%', left: '10%' }} />
+        <FloatingIcon Icon={Youtube} delay={1} position={{ top: '10%', left: '85%' }} />
+        
+        {/* Middle Left */}
+        <FloatingIcon Icon={Twitter} delay={2} position={{ top: '35%', left: '5%' }} />
+        <FloatingIcon Icon={Code} delay={1.5} position={{ top: '60%', left: '7%' }} />
+        
+        {/* Middle Right */}
+        <FloatingIcon Icon={Instagram} delay={2.5} position={{ top: '40%', left: '90%' }} />
+        <FloatingIcon Icon={Rocket} delay={0.5} position={{ top: '55%', left: '88%' }} />
+        
+        {/* Bottom Icons */}
+        <FloatingIcon Icon={Music} delay={3.5} position={{ top: '85%', left: '12%' }} />
+        <FloatingIcon Icon={Mail} delay={2.8} position={{ top: '88%', left: '82%' }} />
+        
+        {/* Additional Balance */}
+        <FloatingIcon Icon={BookMarked} delay={1.8} position={{ top: '25%', left: '92%' }} />
+        <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} />
+      </div>
 
       <div className="relative max-w-5xl mx-auto text-center animate-fade-in">
         {/* Book Badge */}
