@@ -42,7 +42,15 @@ export default function GoogleYourself() {
               whileHover={{ y: -8, scale: 1.02 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <p className="relative text-5xl font-bold text-blue-600 mb-4">70%</p>
+              <motion.p 
+                className="relative text-5xl font-bold text-blue-600 mb-4"
+                initial={{ scale: 0.5, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, type: "spring" }}
+              >
+                70%
+              </motion.p>
               <p className="relative text-sm font-medium text-slate-900 mb-1">Recruiters Google first</p>
               <p className="relative text-xs text-slate-500">before scheduling interviews</p>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -57,7 +65,15 @@ export default function GoogleYourself() {
               whileHover={{ y: -8, scale: 1.02 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <p className="relative text-5xl font-bold text-blue-600 mb-4">85%</p>
+              <motion.p 
+                className="relative text-5xl font-bold text-blue-600 mb-4"
+                initial={{ scale: 0.5, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.15, type: "spring" }}
+              >
+                85%
+              </motion.p>
               <p className="relative text-sm font-medium text-slate-900 mb-1">Check social profiles</p>
               <p className="relative text-xs text-slate-500">GitHub & LinkedIn before résumé</p>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -72,7 +88,15 @@ export default function GoogleYourself() {
               whileHover={{ y: -8, scale: 1.02 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <p className="relative text-5xl font-bold text-purple-600 mb-4">63%</p>
+              <motion.p 
+                className="relative text-5xl font-bold text-purple-600 mb-4"
+                initial={{ scale: 0.5, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
+              >
+                63%
+              </motion.p>
               <p className="relative text-sm font-medium text-slate-900 mb-1">Candidates rejected</p>
               <p className="relative text-xs text-slate-500">due to poor online presence</p>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

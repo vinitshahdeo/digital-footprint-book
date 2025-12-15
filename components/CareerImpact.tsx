@@ -42,10 +42,22 @@ export default function CareerImpact() {
             whileHover={{ y: -8, scale: 1.02 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
+            <motion.div 
+              className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow"
+              whileHover={{ rotate: [0, -10, 10, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <TrendingUp className="w-8 h-8 text-white" />
-            </div>
-            <p className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3">5×</p>
+            </motion.div>
+            <motion.p 
+              className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3"
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
+            >
+              5×
+            </motion.p>
             <p className="relative text-base font-semibold text-slate-900 mb-2">More visibility</p>
             <p className="relative text-sm text-slate-600 leading-relaxed">Engineers who blog receive 5× more inbound opportunities</p>
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -60,10 +72,22 @@ export default function CareerImpact() {
             whileHover={{ y: -8, scale: 1.02 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-4 shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow">
+            <motion.div 
+              className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-4 shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow"
+              whileHover={{ rotate: [0, -10, 10, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <MessageSquare className="w-8 h-8 text-white" />
-            </div>
-            <p className="relative text-5xl font-bold bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent mb-3">3×</p>
+            </motion.div>
+            <motion.p 
+              className="relative text-5xl font-bold bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent mb-3"
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15, type: "spring", bounce: 0.5 }}
+            >
+              3×
+            </motion.p>
             <p className="relative text-base font-semibold text-slate-900 mb-2">More interviews</p>
             <p className="relative text-sm text-slate-600 leading-relaxed">Open-source contributors get 3× more interview calls</p>
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -78,10 +102,22 @@ export default function CareerImpact() {
             whileHover={{ y: -8, scale: 1.02 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
+            <motion.div 
+              className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow"
+              whileHover={{ rotate: [0, -10, 10, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <Camera className="w-8 h-8 text-white" />
-            </div>
-            <p className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3">14×</p>
+            </motion.div>
+            <motion.p 
+              className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3"
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.5 }}
+            >
+              14×
+            </motion.p>
             <p className="relative text-base font-semibold text-slate-900 mb-2">Profile views</p>
             <p className="relative text-sm text-slate-600 leading-relaxed">Profiles with photos get 14× more profile views</p>
           </motion.div>

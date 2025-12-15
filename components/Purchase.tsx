@@ -21,15 +21,17 @@ export default function Purchase() {
           </p>
           
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
-            Get{' '}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Digital Footprint
-            </span>{' '}
-            today
+            </span>
+            <br />
+            <span className="text-4xl md:text-5xl lg:text-6xl">
+              for Software Engineers
+            </span>
           </h2>
           
           <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-            Start building your online presence and make your engineering work visible
+            Get your copy today and start building your online presence
           </p>
 
           {/* Benefits */}

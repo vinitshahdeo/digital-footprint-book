@@ -1,7 +1,8 @@
 'use client'
 
-import { Code2, Linkedin, FileText, Globe2, Users, Search, Lightbulb, Twitter, Shield, Sparkles, Briefcase, Youtube, Mic, Rocket } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Code2, Linkedin, FileText, Globe2, Users, Search, Lightbulb, Twitter, Shield, Sparkles, Briefcase, Youtube, Mic, Rocket, ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
 
 const topics = [
   {
@@ -85,6 +86,23 @@ const topics = [
 ]
 
 export default function BookCoverage() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const cardsPerView = 3
+  const totalSlides = Math.ceil(topics.length / cardsPerView)
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalSlides)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
+  }
+
+  const getCurrentCards = () => {
+    const start = currentIndex * cardsPerView
+    return topics.slice(start, start + cardsPerView)
+  }
+
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto">
@@ -105,46 +123,102 @@ export default function BookCoverage() {
           </p>
         </div>
 
-        {/* Apple-style Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {topics.map((topic, index) => (
-            <motion.div 
-              key={index} 
-              className="relative bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group cursor-default overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.08 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
-              {/* Subtle gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              {/* Icon with gradient background */}
-              <div className="relative mb-6">
-                <motion.div 
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${topic.gradient} shadow-lg shadow-blue-500/20`}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  <topic.icon className="w-7 h-7 text-white" strokeWidth={2} />
-                </motion.div>
-              </div>
-              
-              {/* Content */}
-              <div className="relative">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors duration-300">
-                  {topic.title}
-                </h3>
-                <p className="text-[15px] text-slate-600 leading-relaxed">
-                  {topic.description}
-                </p>
-              </div>
+        {/* Slider Container */}
+        <div className="relative">
+          {/* Cards Grid with Animation */}
+          <div className="overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={currentIndex}
+                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+              >
+                {getCurrentCards().map((topic, index) => (
+                  <motion.div 
+                    key={currentIndex * cardsPerView + index} 
+                    className="relative bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group cursor-default overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                  >
+                    {/* Subtle gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                    
+                    {/* Icon with gradient background */}
+                    <div className="relative mb-6">
+                      <motion.div 
+                        className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${topic.gradient} shadow-lg shadow-blue-500/20`}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      >
+                        <topic.icon className="w-7 h-7 text-white" strokeWidth={2} />
+                      </motion.div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="relative">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors duration-300">
+                        {topic.title}
+                      </h3>
+                      <p className="text-[15px] text-slate-600 leading-relaxed">
+                        {topic.description}
+                      </p>
+                    </div>
 
-              {/* Bottom accent line */}
-              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${topic.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-            </motion.div>
-          ))}
+                    {/* Bottom accent line */}
+                    <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${topic.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center justify-center gap-4 mt-12">
+            <motion.button
+              onClick={prevSlide}
+              className="group p-4 rounded-full bg-white border-2 border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 shadow-sm hover:shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ChevronLeft className="w-6 h-6 text-slate-600 group-hover:text-blue-600 transition-colors" />
+            </motion.button>
+
+            {/* Dot Indicators */}
+            <div className="flex gap-2">
+              {Array.from({ length: totalSlides }).map((_, index) => (
+                <motion.button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500' 
+                      : 'w-2 bg-slate-300 hover:bg-slate-400'
+                  }`}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                />
+              ))}
+            </div>
+
+            <motion.button
+              onClick={nextSlide}
+              className="group p-4 rounded-full bg-white border-2 border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 shadow-sm hover:shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ChevronRight className="w-6 h-6 text-slate-600 group-hover:text-blue-600 transition-colors" />
+            </motion.button>
+          </div>
+
+          {/* Slide Counter */}
+          <p className="text-center mt-6 text-sm text-slate-500 font-accent">
+            {currentIndex + 1} of {totalSlides}
+          </p>
         </div>
       </div>
     </section>
