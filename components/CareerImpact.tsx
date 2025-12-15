@@ -32,50 +32,53 @@ export default function CareerImpact() {
         </div>
 
         {/* Icon Metric Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-6">
           <motion.div
-            className="bg-white rounded-2xl p-6 border border-slate-100 text-center"
+            className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
+            whileHover={{ y: -6 }}
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 mb-3">
-              <TrendingUp className="w-6 h-6 text-blue-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
+              <TrendingUp className="w-8 h-8 text-white" />
             </div>
-            <p className="text-4xl font-bold text-blue-600 mb-2">5×</p>
-            <p className="text-sm font-medium text-black mb-1">More visibility</p>
-            <p className="text-xs text-slate-500">Engineers who blog get 5× more opportunities</p>
+            <p className="text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3">5×</p>
+            <p className="text-base font-semibold text-slate-900 mb-2">More visibility</p>
+            <p className="text-sm text-slate-600 leading-relaxed">Engineers who blog receive 5× more inbound opportunities</p>
           </motion.div>
 
           <motion.div
-            className="bg-white rounded-2xl p-6 border border-slate-100 text-center"
+            className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-green-200 transition-all duration-300 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
+            whileHover={{ y: -6 }}
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-green-50 mb-3">
-              <MessageSquare className="w-6 h-6 text-green-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 mb-4 shadow-lg shadow-green-500/30 group-hover:shadow-green-500/50 transition-shadow">
+              <MessageSquare className="w-8 h-8 text-white" />
             </div>
-            <p className="text-4xl font-bold text-green-600 mb-2">3×</p>
-            <p className="text-sm font-medium text-black mb-1">More interviews</p>
-            <p className="text-xs text-slate-500">Open-source contributors get 3× more calls</p>
+            <p className="text-5xl font-bold bg-gradient-to-br from-green-600 to-green-700 bg-clip-text text-transparent mb-3">3×</p>
+            <p className="text-base font-semibold text-slate-900 mb-2">More interviews</p>
+            <p className="text-sm text-slate-600 leading-relaxed">Open-source contributors get 3× more interview calls</p>
           </motion.div>
 
           <motion.div
-            className="bg-white rounded-2xl p-6 border border-slate-100 text-center"
+            className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-purple-200 transition-all duration-300 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
+            whileHover={{ y: -6 }}
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-purple-50 mb-3">
-              <Camera className="w-6 h-6 text-purple-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-4 shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow">
+              <Camera className="w-8 h-8 text-white" />
             </div>
-            <p className="text-4xl font-bold text-purple-600 mb-2">14×</p>
-            <p className="text-sm font-medium text-black mb-1">Profile views</p>
-            <p className="text-xs text-slate-500">Profiles with photos get 14× more views</p>
+            <p className="text-5xl font-bold bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent mb-3">14×</p>
+            <p className="text-base font-semibold text-slate-900 mb-2">Profile views</p>
+            <p className="text-sm text-slate-600 leading-relaxed">Profiles with photos get 14× more profile views</p>
           </motion.div>
         </div>
 

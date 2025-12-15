@@ -31,54 +31,60 @@ export default function GoogleYourself() {
         </div>
 
         {/* Stats */}
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
             <motion.div 
-              className="text-center p-6 rounded-2xl bg-white border border-slate-100"
+              className="group text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
+              whileHover={{ y: -4 }}
             >
-              <p className="text-4xl font-bold text-blue-600 mb-2">70%</p>
-              <p className="text-sm text-slate-600">of recruiters Google candidates before interviews</p>
+              <p className="text-5xl font-bold text-blue-600 mb-4">70%</p>
+              <p className="text-sm font-medium text-slate-900 mb-1">Recruiters Google first</p>
+              <p className="text-xs text-slate-500">before scheduling interviews</p>
             </motion.div>
 
             <motion.div 
-              className="text-center p-6 rounded-2xl bg-white border border-slate-100"
+              className="group text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
+              whileHover={{ y: -4 }}
             >
-              <p className="text-4xl font-bold text-blue-600 mb-2">85%</p>
-              <p className="text-sm text-slate-600">check GitHub and LinkedIn first</p>
+              <p className="text-5xl font-bold text-blue-600 mb-4">85%</p>
+              <p className="text-sm font-medium text-slate-900 mb-1">Check social profiles</p>
+              <p className="text-xs text-slate-500">GitHub & LinkedIn before résumé</p>
             </motion.div>
 
             <motion.div 
-              className="text-center p-6 rounded-2xl bg-white border border-slate-100"
+              className="group text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.2 }}
+              whileHover={{ y: -4 }}
             >
-              <p className="text-4xl font-bold text-blue-600 mb-2">63%</p>
-              <p className="text-sm text-slate-600">reject due to poor online presence</p>
+              <p className="text-5xl font-bold text-red-600 mb-4">63%</p>
+              <p className="text-sm font-medium text-slate-900 mb-1">Candidates rejected</p>
+              <p className="text-xs text-slate-500">due to poor online presence</p>
             </motion.div>
           </div>
 
           <motion.div 
-            className="text-center py-8 px-6 rounded-2xl bg-slate-50 border border-slate-100"
+            className="text-center py-8 px-8 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            <p className="text-lg text-slate-700 mb-2">
+            <p className="text-base font-medium text-slate-900 mb-2">
               If you don't control your digital footprint, Google will.
             </p>
-            <p className="text-sm text-slate-500">
-              This book shows you how to take control and make your work visible.
+            <p className="text-sm text-slate-600">
+              This book shows you exactly how to take control.
             </p>
           </motion.div>
         </div>
