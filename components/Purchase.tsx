@@ -1,84 +1,49 @@
 'use client'
 
-import { ShoppingCart, BookOpen, Sparkles, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function Purchase() {
   return (
-    <section id="purchase" className="relative py-32 px-6 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        <div className="absolute inset-0 bg-grid-slate-700/25 bg-[size:32px_32px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      
-      <div className="relative max-w-5xl mx-auto text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
-          <Sparkles className="w-4 h-4 text-yellow-400" />
-          <span className="text-sm font-medium text-white">Available Now</span>
-        </div>
-
-        <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6 tracking-tighter leading-[1.1]">
-          Get Your Copy Today
+    <section id="purchase" className="relative py-24 px-6 bg-black">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-5xl md:text-6xl font-semibold text-white mb-6 tracking-tight">
+          Start building your footprint
         </h2>
         
-        <p className="text-xl md:text-2xl text-blue-100 mb-16 max-w-2xl mx-auto leading-relaxed font-light">
-          Start building your digital footprint and let your engineering work speak for itself
+        <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
+          Get the book and start making your work visible
         </p>
 
-        {/* Purchase Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-10">
+        {/* Clean Apple-style Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <a
             href="https://www.amazon.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center gap-3 px-10 py-6 bg-white text-slate-900 rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-white/20 transition-all transform hover:scale-105 w-full sm:w-auto"
+            className="group flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-10 transition-opacity" />
-            <ShoppingCart className="w-5 h-5 relative z-10" />
-            <span className="relative z-10">Buy on Amazon</span>
-            <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+            <span>Buy on Amazon</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
           
           <a
             href="https://www.flipkart.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 px-10 py-6 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-2xl font-bold text-lg hover:from-orange-700 hover:to-orange-800 shadow-2xl hover:shadow-orange-500/50 transition-all transform hover:scale-105 w-full sm:w-auto"
+            className="group flex items-center gap-2 px-8 py-4 bg-white text-black rounded-xl font-semibold text-lg hover:bg-slate-100 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
           >
-            <ShoppingCart className="w-5 h-5" />
             <span>Buy on Flipkart</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-          
-          <a
-            href="#ebook"
-            className="group flex items-center gap-3 px-10 py-6 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/50 shadow-2xl transition-all transform hover:scale-105 w-full sm:w-auto"
-          >
-            <BookOpen className="w-5 h-5" />
-            <span>Get eBook</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>
 
-        {/* Format Info */}
-        <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-200">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-400" />
-            <span>Paperback</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-400" />
-            <span>Kindle</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-400" />
-            <span>ePub</span>
-          </div>
+        {/* Simple Format Info */}
+        <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
+          <span>Paperback</span>
+          <span>•</span>
+          <span>Kindle</span>
+          <span>•</span>
+          <span>ePub</span>
         </div>
       </div>
     </section>
