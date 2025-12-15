@@ -35,47 +35,47 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative py-20 px-6 bg-slate-900 text-white overflow-hidden">
+    <footer className="relative py-16 px-6 bg-slate-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-slate-800/50 bg-[size:32px_32px]" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
       
       <div className="relative max-w-6xl mx-auto">
         {/* Footer Hook */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-block relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 blur-xl" />
-            <p className="relative text-3xl md:text-4xl font-serif font-bold bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent tracking-tight leading-snug">
+            <p className="relative text-2xl md:text-3xl font-serif font-bold bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent tracking-tight">
               "Write code for machines.<br className="sm:hidden" /> Build a footprint for people."
             </p>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-5 mb-16">
+        <div className="flex justify-center gap-4 mb-12">
           {socialLinks.map((social) => (
             <a
               key={social.name}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group p-4 bg-slate-800 rounded-2xl ${social.color} transition-all hover:scale-110 hover:shadow-xl duration-300`}
+              className={`group p-4 bg-slate-800 rounded-xl ${social.color} transition-all hover:scale-110 hover:shadow-lg`}
               aria-label={social.label}
             >
-              <social.icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+              <social.icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
           ))}
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10" />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8" />
 
         {/* Copyright */}
-        <div className="text-center space-y-4">
-          <p className="text-slate-400 text-base font-light">
+        <div className="text-center space-y-3">
+          <p className="text-slate-400 text-sm">
             © {new Date().getFullYear()} Vinit Shahdeo. All rights reserved.
           </p>
-          <p className="flex items-center justify-center gap-2.5 text-slate-500 text-base font-light">
+          <p className="flex items-center justify-center gap-2 text-slate-500 text-sm">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
             <span>for engineers who ship</span>

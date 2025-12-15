@@ -43,22 +43,22 @@ const topics = [
 
 export default function BookCoverage() {
   return (
-    <section className="py-40 px-6 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
+    <section className="py-32 px-6 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-slate-100 bg-[size:32px_32px] opacity-40" />
+      <div className="absolute inset-0 bg-grid-slate-100 bg-[size:32px_32px] opacity-50" />
       
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-1.5 bg-blue-50 border border-blue-200 rounded-full mb-6">
-            <span className="text-xs font-semibold text-blue-700 tracking-wide uppercase">
-              Comprehensive Guide
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-full mb-6">
+            <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              COMPREHENSIVE GUIDE
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-6 tracking-tighter leading-[1.1]">
             What the Book Covers
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
             A practical playbook for engineers who want their work to be seen
           </p>
         </div>
@@ -68,18 +68,22 @@ export default function BookCoverage() {
           {topics.map((topic, index) => (
             <div
               key={index}
-              className="bg-white p-8 border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all"
+              className="group relative bg-white p-8 rounded-2xl border border-slate-200 hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
+              {/* Gradient Border on Hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl`} />
+              <div className="absolute inset-[1px] bg-white rounded-2xl -z-10" />
+              
               {/* Icon */}
-              <div className="w-12 h-12 bg-slate-900 flex items-center justify-center mb-5">
-                <topic.icon className="w-6 h-6 text-white" />
+              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${topic.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+                <topic.icon className="w-7 h-7 text-white" />
               </div>
               
               {/* Content */}
-              <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-slate-800">
                 {topic.title}
               </h3>
-              <p className="text-slate-600 leading-relaxed text-sm">
+              <p className="text-slate-600 leading-relaxed">
                 {topic.description}
               </p>
             </div>
