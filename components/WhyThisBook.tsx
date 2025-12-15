@@ -30,8 +30,15 @@ export default function WhyThisBook() {
     <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-semibold text-black mb-4 tracking-tight">
-            Not another LinkedIn guru
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-block px-4 py-2 bg-blue-50 rounded-full">
+            Why This Book
+          </p>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-black mb-4 tracking-tight leading-[1.1]">
+            Not another{' '}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+              LinkedIn
+            </span>{' '}
+            guru
           </h2>
           <p className="text-xl text-slate-600">
             Written by an engineer, for engineers
@@ -55,6 +62,18 @@ export default function WhyThisBook() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Quote Section */}
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-slate-50 rounded-2xl p-10 md:p-12">
+            <p className="text-2xl md:text-3xl font-semibold text-black mb-4 leading-tight">
+              "Not another growth hacking guide. Just honest, practical advice for engineers who want their work to speak for itself."
+            </p>
+            <p className="text-slate-600">
+              — Real frameworks from real engineering experience
+            </p>
+          </div>
         </div>
       </div>
     </section>

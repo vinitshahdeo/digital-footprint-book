@@ -47,11 +47,17 @@ export default function BookCoverage() {
       <div className="max-w-6xl mx-auto">
         {/* Apple-style Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-semibold text-black mb-4 tracking-tight">
-            A playbook, not a theory book
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-block px-4 py-2 bg-blue-50 rounded-full">
+            What You'll Learn
+          </p>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-black mb-4 tracking-tight leading-[1.1]">
+            Inside the{' '}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+              book
+            </span>
           </h2>
           <p className="text-xl text-slate-600">
-            Practical frameworks you can use starting today
+            Six practical chapters with frameworks you can use today
           </p>
         </div>
 
