@@ -16,7 +16,7 @@ export default function CareerImpact() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
             <Zap className="w-4 h-4" />
             Career Acceleration
           </p>
@@ -34,51 +34,56 @@ export default function CareerImpact() {
         {/* Icon Metric Cards */}
         <div className="grid md:grid-cols-3 gap-6">
           <motion.div
-            className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 text-center"
+            className="relative group bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 text-center overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            whileHover={{ y: -6 }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+            <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
               <TrendingUp className="w-8 h-8 text-white" />
             </div>
-            <p className="text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3">5×</p>
-            <p className="text-base font-semibold text-slate-900 mb-2">More visibility</p>
-            <p className="text-sm text-slate-600 leading-relaxed">Engineers who blog receive 5× more inbound opportunities</p>
+            <p className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3">5×</p>
+            <p className="relative text-base font-semibold text-slate-900 mb-2">More visibility</p>
+            <p className="relative text-sm text-slate-600 leading-relaxed">Engineers who blog receive 5× more inbound opportunities</p>
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </motion.div>
 
           <motion.div
-            className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-green-200 transition-all duration-300 text-center"
+            className="relative group bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 text-center overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            whileHover={{ y: -6 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 mb-4 shadow-lg shadow-green-500/30 group-hover:shadow-green-500/50 transition-shadow">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+            <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-4 shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow">
               <MessageSquare className="w-8 h-8 text-white" />
             </div>
-            <p className="text-5xl font-bold bg-gradient-to-br from-green-600 to-green-700 bg-clip-text text-transparent mb-3">3×</p>
-            <p className="text-base font-semibold text-slate-900 mb-2">More interviews</p>
-            <p className="text-sm text-slate-600 leading-relaxed">Open-source contributors get 3× more interview calls</p>
+            <p className="relative text-5xl font-bold bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent mb-3">3×</p>
+            <p className="relative text-base font-semibold text-slate-900 mb-2">More interviews</p>
+            <p className="relative text-sm text-slate-600 leading-relaxed">Open-source contributors get 3× more interview calls</p>
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </motion.div>
 
           <motion.div
-            className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-purple-200 transition-all duration-300 text-center"
+            className="relative group bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 text-center overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            whileHover={{ y: -6 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-4 shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+            <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow">
               <Camera className="w-8 h-8 text-white" />
             </div>
-            <p className="text-5xl font-bold bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent mb-3">14×</p>
-            <p className="text-base font-semibold text-slate-900 mb-2">Profile views</p>
-            <p className="text-sm text-slate-600 leading-relaxed">Profiles with photos get 14× more profile views</p>
+            <p className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3">14×</p>
+            <p className="relative text-base font-semibold text-slate-900 mb-2">Profile views</p>
+            <p className="relative text-sm text-slate-600 leading-relaxed">Profiles with photos get 14× more profile views</p>
           </motion.div>
         </div>
 

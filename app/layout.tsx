@@ -1,19 +1,33 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Andada_Pro } from 'next/font/google'
+import { Inter, Playfair_Display, Caveat, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const dmSans = DM_Sans({ 
+const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
+})
+
+const caveat = Caveat({ 
+  subsets: ['latin'],
+  variable: '--font-handwriting',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
 })
 
-const andadaPro = Andada_Pro({ 
+const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
-  variable: '--font-serif',
+  variable: '--font-accent',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -34,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${andadaPro.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${caveat.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )

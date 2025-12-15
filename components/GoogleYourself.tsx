@@ -24,7 +24,7 @@ export default function GoogleYourself() {
           <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
             Recruiters do. Hiring managers do. Everyone does.
             <br />
-            <span className="text-black font-semibold mt-4 block">
+            <span className="text-black font-semibold mt-4 block font-handwriting text-2xl">
               What shows up when they search your name?
             </span>
           </p>
@@ -34,51 +34,57 @@ export default function GoogleYourself() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <motion.div 
-              className="group text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
+              className="relative group text-center p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              whileHover={{ y: -4 }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <p className="text-5xl font-bold text-blue-600 mb-4">70%</p>
-              <p className="text-sm font-medium text-slate-900 mb-1">Recruiters Google first</p>
-              <p className="text-xs text-slate-500">before scheduling interviews</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+              <p className="relative text-5xl font-bold text-blue-600 mb-4">70%</p>
+              <p className="relative text-sm font-medium text-slate-900 mb-1">Recruiters Google first</p>
+              <p className="relative text-xs text-slate-500">before scheduling interviews</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
 
             <motion.div 
-              className="group text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
+              className="relative group text-center p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              whileHover={{ y: -4 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <p className="text-5xl font-bold text-blue-600 mb-4">85%</p>
-              <p className="text-sm font-medium text-slate-900 mb-1">Check social profiles</p>
-              <p className="text-xs text-slate-500">GitHub & LinkedIn before résumé</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+              <p className="relative text-5xl font-bold text-blue-600 mb-4">85%</p>
+              <p className="relative text-sm font-medium text-slate-900 mb-1">Check social profiles</p>
+              <p className="relative text-xs text-slate-500">GitHub & LinkedIn before résumé</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
 
             <motion.div 
-              className="group text-center p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
+              className="relative group text-center p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              whileHover={{ y: -4 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <p className="text-5xl font-bold text-red-600 mb-4">63%</p>
-              <p className="text-sm font-medium text-slate-900 mb-1">Candidates rejected</p>
-              <p className="text-xs text-slate-500">due to poor online presence</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+              <p className="relative text-5xl font-bold text-purple-600 mb-4">63%</p>
+              <p className="relative text-sm font-medium text-slate-900 mb-1">Candidates rejected</p>
+              <p className="relative text-xs text-slate-500">due to poor online presence</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           </div>
 
           <motion.div 
-            className="text-center py-8 px-8 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm"
+            className="text-center py-8 px-8 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200/60 shadow-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <p className="text-base font-medium text-slate-900 mb-2">
               If you don't control your digital footprint, Google will.

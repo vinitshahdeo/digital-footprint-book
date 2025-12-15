@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
-  --font-serif: 'Andada Pro', 'New York', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', 'New York', Georgia, serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-accent: 'Space Grotesk', 'Inter', sans-serif;
 }
 
 @layer base {

@@ -2,6 +2,7 @@
 
 import { ExternalLink, Award, Users, Code, User } from 'lucide-react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const achievements = [
   { icon: Code, label: 'Engineering Leader' },
@@ -15,17 +16,41 @@ export default function Author() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Clean Author Image */}
-          <div className="flex justify-center md:justify-end order-2 md:order-1">
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
-              <Image
-                src="/images/vinit-shahdeo.png"
-                alt="Vinit Shahdeo"
-                width={400}
-                height={400}
-                className="object-cover"
+          <motion.div 
+            className="flex justify-center md:justify-end order-2 md:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.div 
+              className="relative w-80 h-80 lg:w-96 lg:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-xl"
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <motion.div
+                initial={{ scale: 1.2 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <Image
+                  src="/images/vinit-shahdeo.png"
+                  alt="Vinit Shahdeo"
+                  width={400}
+                  height={400}
+                  className="object-cover"
+                />
+              </motion.div>
+              
+              {/* Animated border accent */}
+              <motion.div
+                className="absolute inset-0 border-4 border-blue-500 rounded-3xl opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Clean Author Bio */}
           <div className="order-1 md:order-2">

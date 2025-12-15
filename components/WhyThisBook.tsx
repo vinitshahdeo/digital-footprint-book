@@ -66,14 +66,21 @@ export default function WhyThisBook() {
         </div>
 
         {/* Quote Section */}
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-slate-50 rounded-2xl p-10 md:p-12">
-            <p className="text-2xl md:text-3xl font-semibold text-black mb-4 leading-tight">
-              "Not another growth hacking guide. Just honest, practical advice for engineers who want their work to speak for itself."
-            </p>
-            <p className="text-slate-600">
-              — Real frameworks from real engineering experience
-            </p>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 md:p-16 border border-blue-100/50 shadow-lg">
+            {/* Decorative quote marks */}
+            <div className="absolute top-8 left-8 text-8xl text-blue-200 font-serif leading-none">"</div>
+            <div className="absolute bottom-8 right-8 text-8xl text-purple-200 font-serif leading-none">"</div>
+            
+            <div className="relative z-10">
+              <p className="text-3xl md:text-4xl font-handwriting text-slate-800 mb-6 leading-relaxed">
+                Not another growth hacking guide. Just honest, practical advice for engineers who want their work to speak for itself.
+              </p>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+              <p className="text-lg font-handwriting text-slate-600">
+                — Real frameworks from real engineering experience
+              </p>
+            </div>
           </div>
         </div>
       </div>

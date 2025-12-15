@@ -9,7 +9,7 @@ export default function Searchability() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
             <Search className="w-4 h-4" />
             First Impressions
           </p>
@@ -27,83 +27,118 @@ export default function Searchability() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Funnel Diagram */}
           <motion.div
-            className="space-y-4"
+            className="relative"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-black mb-8">The Discovery Funnel</h3>
+            <h3 className="text-xl font-semibold text-black mb-8 font-accent">The Discovery Funnel</h3>
             
-            {/* Stage 1 */}
-            <motion.div 
-              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 text-white shadow-lg"
-              initial={{ opacity: 0, width: "100%" }}
-              whileInView={{ opacity: 1, width: "100%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-white/10 rounded-lg">
-                  <Search className="w-5 h-5" />
-                </div>
-                <p className="text-2xl font-bold">1,000</p>
+            <div className="relative space-y-3">
+              {/* Funnel connecting lines */}
+              <div className="absolute left-0 top-16 bottom-16 w-full pointer-events-none">
+                <svg className="w-full h-full" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="funnelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#1e293b" stopOpacity="0.1" />
+                      <stop offset="100%" stopColor="#2563eb" stopOpacity="0.2" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0 0 L 400 300 L 0 300 Z" fill="url(#funnelGradient)" opacity="0.3" />
+                </svg>
               </div>
-              <p className="text-sm text-slate-300">Google searches for engineers</p>
-            </motion.div>
 
-            {/* Stage 2 */}
-            <motion.div 
-              className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-6 text-white ml-8 shadow-lg"
-              initial={{ opacity: 0, width: "85%" }}
-              whileInView={{ opacity: 1, width: "85%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-white/10 rounded-lg">
-                  <MousePointer className="w-5 h-5" />
+              {/* Stage 1 - Widest */}
+              <motion.div 
+                className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-lg w-full mx-auto"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-white/10 rounded-lg">
+                      <Search className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">1,000</p>
+                      <p className="text-xs text-slate-300">Google searches</p>
+                    </div>
+                  </div>
+                  <div className="text-xs text-slate-400">100%</div>
                 </div>
-                <p className="text-2xl font-bold">300</p>
-              </div>
-              <p className="text-sm text-slate-300">Click on profile</p>
-            </motion.div>
+              </motion.div>
 
-            {/* Stage 3 */}
-            <motion.div 
-              className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-6 text-white ml-16 shadow-lg"
-              initial={{ opacity: 0, width: "60%" }}
-              whileInView={{ opacity: 1, width: "60%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-white/10 rounded-lg">
-                  <MessageCircle className="w-5 h-5" />
+              {/* Stage 2 */}
+              <motion.div 
+                className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-6 text-white shadow-lg w-[85%] mx-auto"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-white/10 rounded-lg">
+                      <MousePointer className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">300</p>
+                      <p className="text-xs text-slate-300">Click profile</p>
+                    </div>
+                  </div>
+                  <div className="text-xs text-slate-400">30%</div>
                 </div>
-                <p className="text-2xl font-bold">100</p>
-              </div>
-              <p className="text-sm text-slate-300">Reach out</p>
-            </motion.div>
+              </motion.div>
 
-            {/* Stage 4 */}
-            <motion.div 
-              className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-6 text-white ml-24 shadow-lg shadow-blue-500/30"
-              initial={{ opacity: 0, width: "40%" }}
-              whileInView={{ opacity: 1, width: "40%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-white/20 rounded-lg">
-                  <Calendar className="w-5 h-5" />
+              {/* Stage 3 */}
+              <motion.div 
+                className="relative bg-gradient-to-br from-slate-600 to-slate-700 rounded-2xl p-6 text-white shadow-lg w-[65%] mx-auto"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-white/10 rounded-lg">
+                      <MessageCircle className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">100</p>
+                      <p className="text-xs text-slate-300">Reach out</p>
+                    </div>
+                  </div>
+                  <div className="text-xs text-slate-400">10%</div>
                 </div>
-                <p className="text-2xl font-bold">10</p>
-              </div>
-              <p className="text-sm text-blue-100">Interviews</p>
-            </motion.div>
+              </motion.div>
 
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 mt-8">
+              {/* Stage 4 - Narrowest */}
+              <motion.div 
+                className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 text-white shadow-lg shadow-blue-500/30 w-[45%] mx-auto"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-white/20 rounded-lg">
+                      <Calendar className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">10</p>
+                      <p className="text-xs text-blue-100">Interviews</p>
+                    </div>
+                  </div>
+                  <div className="text-xs text-blue-200">1%</div>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8">
               <p className="text-sm font-semibold text-slate-900 mb-2">You don't get a second first search</p>
               <p className="text-sm text-slate-600">
                 Your name is your landing page. Make sure it shows the right story.
@@ -119,7 +154,7 @@ export default function Searchability() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-black mb-8">Signals That Matter</h3>
+            <h3 className="text-xl font-semibold text-black mb-8 font-accent">Signals That Matter</h3>
 
             <div className="space-y-3">
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-lg">
@@ -163,7 +198,7 @@ export default function Searchability() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm mt-8">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8">
               <h4 className="text-base font-semibold text-slate-900 mb-3">Your searchability checklist</h4>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-slate-600">
@@ -187,7 +222,7 @@ export default function Searchability() {
           </motion.div>
         </div>
 
-        <p className="text-center text-lg text-slate-500 mt-16 italic">
+        <p className="text-center text-lg text-slate-500 mt-16 font-handwriting">
           Your footprint is a collection of signals. Make them count.
         </p>
       </div>
