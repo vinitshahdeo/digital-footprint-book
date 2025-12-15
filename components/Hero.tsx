@@ -2,6 +2,7 @@
 
 import { ArrowRight, BookOpen, Eye } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   const [onlineCount, setOnlineCount] = useState(5.35)
@@ -25,21 +26,39 @@ export default function Hero() {
 
       <div className="relative max-w-5xl mx-auto text-center animate-fade-in">
         {/* Book Badge */}
-        <div className="inline-block mb-6 animate-slide-up">
-          <span className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full">
+        <motion.div 
+          className="inline-block mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.span 
+            className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full inline-block"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400 }}
+          >
             New Book Available Now
-          </span>
-        </div>
+          </motion.span>
+        </motion.div>
 
         {/* Live Counter */}
-        <div className="mb-6 animate-slide-up" style={{animationDelay: '0.05s'}}>
+        <motion.div 
+          className="mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
           <p className="text-sm md:text-base text-slate-500 font-mono">
             <span className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <motion.span 
+                className="w-2 h-2 bg-green-500 rounded-full"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+              />
               {onlineCount.toFixed(2)}B people online right now
             </span>
           </p>
-        </div>
+        </motion.div>
 
         {/* Large Apple-style Headline with Hook */}
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-[1.05] tracking-tight animate-slide-up" style={{animationDelay: '0.1s'}}>

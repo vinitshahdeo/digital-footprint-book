@@ -1,6 +1,7 @@
 'use client'
 
 import { Linkedin, Github, Twitter, ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const socialLinks = [
   {
@@ -76,17 +77,23 @@ export default function Footer() {
               Connect
             </h4>
             <div className="flex gap-3 mb-6">
-              {socialLinks.map((social) => (
-                <a
+              {socialLinks.map((social, index) => (
+                <motion.a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-slate-100 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110"
+                  className="p-3 bg-slate-100 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300"
                   aria-label={social.label}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <social.icon className="w-5 h-5" />
-                </a>
+                </motion.a>
               ))}
             </div>
             <a

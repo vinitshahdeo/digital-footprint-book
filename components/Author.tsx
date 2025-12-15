@@ -1,6 +1,6 @@
 'use client'
 
-import { ExternalLink, Award, Users, Code } from 'lucide-react'
+import { ExternalLink, Award, Users, Code, User } from 'lucide-react'
 import Image from 'next/image'
 
 const achievements = [
@@ -29,7 +29,8 @@ export default function Author() {
 
           {/* Clean Author Bio */}
           <div className="order-1 md:order-2">
-            <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-block px-4 py-2 bg-blue-50 rounded-full">
+            <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+              <User className="w-4 h-4" />
               About the Author
             </p>
             
