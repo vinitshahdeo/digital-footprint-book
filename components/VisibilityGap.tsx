@@ -1,7 +1,31 @@
 'use client'
 
 import { Eye, EyeOff, TrendingUp } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+
+function Counter({ value, duration = 1 }: { value: number; duration?: number }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const motionValue = useMotionValue(0)
+  const springValue = useSpring(motionValue, { duration: duration * 1000 })
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value)
+    }
+  }, [isInView, motionValue, value])
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current) {
+        ref.current.textContent = Math.floor(latest).toString()
+      }
+    })
+  }, [springValue])
+
+  return <span ref={ref}>0</span>
+}
 
 export default function VisibilityGap() {
   return (
@@ -26,163 +50,184 @@ export default function VisibilityGap() {
           </p>
         </div>
 
-        {/* Stats with Stacked Bar Visualization */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left: Stats */}
-          <div className="space-y-8">
+        {/* Modern Step Flow */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* 100% - Work Done */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              className="relative"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
-                  <EyeOff className="w-6 h-6 text-blue-600" />
-                </div>
-                <div>
-                  <p className="text-4xl font-bold text-black">80%</p>
-                </div>
+              <div className="text-center mb-4">
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, type: "spring", delay: 0.2 }}
+                >
+                  <p className="text-9xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-6">
+                    <Counter value={100} duration={1.5} /><span className="text-6xl">%</span>
+                  </p>
+                </motion.div>
+                <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-6" />
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Work Done</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Great engineers shipping quality code every day
+                </p>
               </div>
-              <p className="text-lg text-slate-700 mb-2">Engineers rely only on résumés and private code</p>
-              <p className="text-sm text-slate-500">Invisible to the world, no compounding value</p>
             </motion.div>
 
+            {/* 40% - Work Documented */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              className="relative"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center">
-                  <Eye className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <p className="text-4xl font-bold text-black">20%</p>
-                </div>
+              <div className="text-center mb-4">
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, type: "spring", delay: 0.35 }}
+                >
+                  <p className="text-9xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-6">
+                    <Counter value={40} duration={1.5} /><span className="text-6xl">%</span>
+                  </p>
+                </motion.div>
+                <div className="h-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-6 mx-auto" style={{ width: '40%' }} />
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Documented</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Creating internal docs, READMEs, and notes
+                </p>
               </div>
-              <p className="text-lg text-slate-700 mb-2">Actively showcase their work online</p>
-              <p className="text-sm text-slate-500">Discoverable, credible, compounding visibility</p>
             </motion.div>
 
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-              <p className="text-sm font-semibold text-slate-900 mb-2">The gap is opportunity</p>
-              <p className="text-sm text-slate-600">
-                Same skills. Same effort. Exponentially different outcomes.
-              </p>
-            </div>
+            {/* 20% - Publicly Discoverable */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="text-center mb-4">
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
+                >
+                  <p className="text-9xl font-bold bg-gradient-to-br from-slate-700 to-slate-800 bg-clip-text text-transparent leading-none mb-6">
+                    <Counter value={20} duration={1.5} /><span className="text-6xl">%</span>
+                  </p>
+                </motion.div>
+                <div className="h-2 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full mb-6 mx-auto" style={{ width: '20%' }} />
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Discoverable</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Actually visible and searchable online
+                </p>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Right: Stacked Bar Chart */}
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Gap Explanation */}
+          <motion.div 
+            className="text-center mt-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-sm font-medium text-slate-700">Work Done</p>
-                <p className="text-sm font-semibold text-blue-600">100%</p>
-              </div>
-              <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full" style={{ width: '100%' }}></div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-sm font-medium text-slate-700">Work Documented</p>
-                <p className="text-sm font-semibold text-blue-600">40%</p>
-              </div>
-              <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full transition-all duration-1000" style={{ width: '40%' }}></div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-sm font-medium text-slate-700">Publicly Discoverable</p>
-                <p className="text-sm font-semibold text-blue-600">20%</p>
-              </div>
-              <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-blue-300 to-blue-400 rounded-full transition-all duration-1000" style={{ width: '20%' }}></div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 border border-slate-200 shadow-sm mt-8">
-              <p className="text-sm font-medium text-slate-700 leading-relaxed">
-                This book helps you close the gap between work done and work visible.
-              </p>
-            </div>
+            <p className="text-3xl font-handwriting text-blue-600 mb-4">
+              The gap is opportunity
+            </p>
+            <p className="text-xl text-slate-700 font-semibold">
+              Same skills. Same effort.{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Exponentially different outcomes.
+              </span>
+            </p>
           </motion.div>
         </div>
 
-        {/* Before / After Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <motion.div 
-            className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-100 mb-6">
-              <EyeOff className="w-6 h-6 text-slate-500" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">Invisible Engineer</h3>
-            <div className="space-y-3 text-sm text-slate-600">
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex-shrink-0 mt-0.5 text-xs">✕</span>
-                <span>Great work, but only your team knows</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex-shrink-0 mt-0.5 text-xs">✕</span>
-                <span>Résumé gets lost in the pile</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex-shrink-0 mt-0.5 text-xs">✕</span>
-                <span>Google shows nothing or outdated info</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex-shrink-0 mt-0.5 text-xs">✕</span>
-                <span>Cold applications, low response rate</span>
-              </div>
-            </div>
-          </motion.div>
+        {/* Before/After Comparison - Split Design */}
+        <div className="max-w-5xl mx-auto">
+          <div className="relative">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Invisible Engineer */}
+              <motion.div
+                className="relative p-8"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center">
+                    <EyeOff className="w-7 h-7 text-slate-500" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Invisible Engineer</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
+                    <p className="text-slate-700">Great work, but only your team knows</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
+                    <p className="text-slate-700">Résumé gets lost in the pile</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
+                    <p className="text-slate-700">Google shows nothing or outdated info</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
+                    <p className="text-slate-700">Cold applications, low response rate</p>
+                  </div>
+                </div>
+              </motion.div>
 
-          <motion.div 
-            className="bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 transition-shadow duration-300"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-          >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-600 mb-6 shadow-lg shadow-blue-600/30">
-              <Eye className="w-6 h-6 text-white" />
+              {/* Searchable Engineer */}
+              <motion.div
+                className="relative p-8"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+              >
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <Eye className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Searchable Engineer</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
+                    <p className="text-slate-900 font-medium">Work visible across GitHub, blogs, LinkedIn</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
+                    <p className="text-slate-900 font-medium">First-page Google results you control</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
+                    <p className="text-slate-900 font-medium">Inbound messages from recruiters</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
+                    <p className="text-slate-900 font-medium">Opportunities find you</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-4">Searchable Engineer</h3>
-            <div className="space-y-3 text-sm text-blue-800">
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-200 text-blue-700 flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
-                <span className="font-medium">Work visible across GitHub, blogs, LinkedIn</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-200 text-blue-700 flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
-                <span className="font-medium">First-page Google results you control</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-200 text-blue-700 flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
-                <span className="font-medium">Inbound messages from recruiters</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-200 text-blue-700 flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
-                <span className="font-medium">Opportunities find you</span>
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

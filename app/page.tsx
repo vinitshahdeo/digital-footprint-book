@@ -4,6 +4,7 @@ import VisibilityGap from '@/components/VisibilityGap'
 import BookCoverage from '@/components/BookCoverage'
 import CareerImpact from '@/components/CareerImpact'
 import Searchability from '@/components/Searchability'
+import BookIntro from '@/components/BookIntro'
 import Author from '@/components/Author'
 import WhyThisBook from '@/components/WhyThisBook'
 import DecisionTable from '@/components/DecisionTable'
@@ -15,10 +16,11 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <GoogleYourself />
-      <VisibilityGap />
-      <BookCoverage />
       <CareerImpact />
+      <VisibilityGap />
       <Searchability />
+      <BookIntro />
+      <BookCoverage />
       <WhyThisBook />
       <Author />
       {/* <DecisionTable /> */}

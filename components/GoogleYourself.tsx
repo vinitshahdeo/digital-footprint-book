@@ -30,92 +30,117 @@ export default function GoogleYourself() {
           </p>
         </div>
 
-        {/* Stats */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <motion.div 
-              className="relative group text-center p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <motion.p 
-                className="relative text-5xl font-bold text-blue-600 mb-4"
-                initial={{ scale: 0.5, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, type: "spring" }}
-              >
-                70%
-              </motion.p>
-              <p className="relative text-sm font-medium text-slate-900 mb-1">Recruiters Google first</p>
-              <p className="relative text-xs text-slate-500">before scheduling interviews</p>
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </motion.div>
-
-            <motion.div 
-              className="relative group text-center p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <motion.p 
-                className="relative text-5xl font-bold text-blue-600 mb-4"
-                initial={{ scale: 0.5, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.15, type: "spring" }}
-              >
-                85%
-              </motion.p>
-              <p className="relative text-sm font-medium text-slate-900 mb-1">Check social profiles</p>
-              <p className="relative text-xs text-slate-500">GitHub & LinkedIn before résumé</p>
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </motion.div>
-
-            <motion.div 
-              className="relative group text-center p-8 rounded-3xl bg-white border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-              <motion.p 
-                className="relative text-5xl font-bold text-purple-600 mb-4"
-                initial={{ scale: 0.5, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
-              >
-                63%
-              </motion.p>
-              <p className="relative text-sm font-medium text-slate-900 mb-1">Candidates rejected</p>
-              <p className="relative text-xs text-slate-500">due to poor online presence</p>
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </motion.div>
-          </div>
-
+        {/* Stats - Modern Split Layout */}
+        <div className="max-w-6xl mx-auto">
+          {/* Large Statement with Integrated Stats */}
           <motion.div 
-            className="text-center py-8 px-8 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200/60 shadow-sm"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="relative p-12 md:p-16"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.8 }}
           >
-            <p className="text-base font-medium text-slate-900 mb-2">
-              If you don't control your digital footprint, Google will.
-            </p>
-            <p className="text-sm text-slate-600">
-              This book shows you exactly how to take control.
-            </p>
+
+            <div className="relative space-y-12">
+              {/* First Stat */}
+              <motion.div 
+                className="flex flex-col items-center gap-6 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <motion.div 
+                  className="flex-shrink-0"
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, type: "spring", delay: 0.3 }}
+                >
+                  <div className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent leading-none">
+                    70%
+                  </div>
+                </motion.div>
+                <div>
+                  <p className="text-2xl md:text-3xl font-semibold text-slate-900 mb-2">
+                    of recruiters Google you first
+                  </p>
+                  <p className="text-lg text-slate-600">
+                    before they even schedule an interview
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Divider */}
+              <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+
+              {/* Second & Third Stats - Side by Side */}
+              <div className="grid md:grid-cols-2 gap-8">
+                <motion.div 
+                  className="flex flex-col items-center text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <motion.div 
+                    className="text-7xl font-bold bg-gradient-to-br from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
+                  >
+                    85%
+                  </motion.div>
+                  <p className="text-xl font-semibold text-slate-900 mb-1">
+                    Check social profiles
+                  </p>
+                  <p className="text-slate-600">
+                    GitHub & LinkedIn before your résumé
+                  </p>
+                </motion.div>
+
+                <motion.div 
+                  className="flex flex-col items-center text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                  <motion.div 
+                    className="text-7xl font-bold bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, type: "spring", delay: 0.6 }}
+                  >
+                    63%
+                  </motion.div>
+                  <p className="text-xl font-semibold text-slate-900 mb-1">
+                    Candidates rejected
+                  </p>
+                  <p className="text-slate-600">
+                    due to poor online presence
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Bottom CTA */}
+              <motion.div 
+                className="pt-8 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                <p className="text-2xl md:text-3xl font-handwriting text-blue-600 mb-3">
+                  If you don't control your digital footprint,
+                </p>
+                <p className="text-3xl md:text-4xl font-bold text-slate-900">
+                  Google will.
+                </p>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

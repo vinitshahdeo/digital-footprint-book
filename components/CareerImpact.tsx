@@ -31,95 +31,141 @@ export default function CareerImpact() {
           </p>
         </div>
 
-        {/* Icon Metric Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Creative Timeline-style Metrics */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Vertical connecting line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-blue-500 transform -translate-x-1/2 hidden md:block" />
+          
+          {/* Metric 1 - 5× More visibility */}
           <motion.div
-            className="relative group bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 text-center overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="relative mb-16"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            whileHover={{ y: -8, scale: 1.02 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <motion.div 
-              className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow"
-              whileHover={{ rotate: [0, -10, 10, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <TrendingUp className="w-8 h-8 text-white" />
-            </motion.div>
-            <motion.p 
-              className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
-            >
-              5×
-            </motion.p>
-            <p className="relative text-base font-semibold text-slate-900 mb-2">More visibility</p>
-            <p className="relative text-sm text-slate-600 leading-relaxed">Engineers who blog receive 5× more inbound opportunities</p>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Left side - Number */}
+              <div className="flex-1 text-center md:text-right">
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
+                >
+                  <p className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-4">
+                    5×
+                  </p>
+                </motion.div>
+                <p className="text-2xl font-semibold text-slate-900 mb-2">More visibility</p>
+              </div>
+              
+              {/* Center icon */}
+              <motion.div 
+                className="relative z-10 flex-shrink-0"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-2xl shadow-blue-500/50 border-4 border-slate-50">
+                  <TrendingUp className="w-10 h-10 text-white" />
+                </div>
+              </motion.div>
+              
+              {/* Right side - Description */}
+              <div className="flex-1 text-center md:text-left">
+                <p className="text-lg text-slate-600 max-w-xs">
+                  Engineers who blog receive <span className="font-semibold text-slate-900">5× more inbound opportunities</span>
+                </p>
+              </div>
+            </div>
           </motion.div>
 
+          {/* Metric 2 - 3× More interviews */}
           <motion.div
-            className="relative group bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 text-center overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="relative mb-16"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <motion.div 
-              className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-4 shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow"
-              whileHover={{ rotate: [0, -10, 10, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <MessageSquare className="w-8 h-8 text-white" />
-            </motion.div>
-            <motion.p 
-              className="relative text-5xl font-bold bg-gradient-to-br from-purple-600 to-purple-700 bg-clip-text text-transparent mb-3"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.15, type: "spring", bounce: 0.5 }}
-            >
-              3×
-            </motion.p>
-            <p className="relative text-base font-semibold text-slate-900 mb-2">More interviews</p>
-            <p className="relative text-sm text-slate-600 leading-relaxed">Open-source contributors get 3× more interview calls</p>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+              {/* Right side - Number */}
+              <div className="flex-1 text-center md:text-left">
+                <motion.div
+                  initial={{ scale: 0, rotate: 180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.15, type: "spring", bounce: 0.5 }}
+                >
+                  <p className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-4">
+                    3×
+                  </p>
+                </motion.div>
+                <p className="text-2xl font-semibold text-slate-900 mb-2">More interviews</p>
+              </div>
+              
+              {/* Center icon */}
+              <motion.div 
+                className="relative z-10 flex-shrink-0"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-2xl shadow-purple-500/50 border-4 border-slate-50">
+                  <MessageSquare className="w-10 h-10 text-white" />
+                </div>
+              </motion.div>
+              
+              {/* Left side - Description */}
+              <div className="flex-1 text-center md:text-right">
+                <p className="text-lg text-slate-600 max-w-xs md:ml-auto">
+                  Open-source contributors get <span className="font-semibold text-slate-900">3× more interview calls</span>
+                </p>
+              </div>
+            </div>
           </motion.div>
 
+          {/* Metric 3 - 14× Profile views */}
           <motion.div
-            className="relative group bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 text-center overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="relative"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <motion.div 
-              className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-4 shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow"
-              whileHover={{ rotate: [0, -10, 10, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <Camera className="w-8 h-8 text-white" />
-            </motion.div>
-            <motion.p 
-              className="relative text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent mb-3"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.5 }}
-            >
-              14×
-            </motion.p>
-            <p className="relative text-base font-semibold text-slate-900 mb-2">Profile views</p>
-            <p className="relative text-sm text-slate-600 leading-relaxed">Profiles with photos get 14× more profile views</p>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Left side - Number */}
+              <div className="flex-1 text-center md:text-right">
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.5 }}
+                >
+                  <p className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-4">
+                    14×
+                  </p>
+                </motion.div>
+                <p className="text-2xl font-semibold text-slate-900 mb-2">Profile views</p>
+              </div>
+              
+              {/* Center icon */}
+              <motion.div 
+                className="relative z-10 flex-shrink-0"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-2xl shadow-blue-500/50 border-4 border-slate-50">
+                  <Camera className="w-10 h-10 text-white" />
+                </div>
+              </motion.div>
+              
+              {/* Right side - Description */}
+              <div className="flex-1 text-center md:text-left">
+                <p className="text-lg text-slate-600 max-w-xs">
+                  Profiles with photos get <span className="font-semibold text-slate-900">14× more profile views</span>
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
 
