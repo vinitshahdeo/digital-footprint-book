@@ -4,6 +4,7 @@ import VisibilityGap from '@/components/VisibilityGap'
 import BookCoverage from '@/components/BookCoverage'
 import CareerImpact from '@/components/CareerImpact'
 import Searchability from '@/components/Searchability'
+import DigitalFootprintVisual from '@/components/DigitalFootprintVisual'
 import BookIntro from '@/components/BookIntro'
 import Author from '@/components/Author'
 import WhyThisBook from '@/components/WhyThisBook'
@@ -19,6 +20,7 @@ export default function Home() {
       <CareerImpact />
       <VisibilityGap />
       <Searchability />
+      <DigitalFootprintVisual />
       <BookIntro />
       <BookCoverage />
       <WhyThisBook />
