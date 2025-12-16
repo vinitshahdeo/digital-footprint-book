@@ -1,6 +1,6 @@
 'use client'
 
-import { Linkedin, Github, Twitter, ArrowRight } from 'lucide-react'
+import { Linkedin, Github, Twitter, ArrowRight, Footprints } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
@@ -32,9 +32,24 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand Section */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              Digital Footprint
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <motion.div
+                animate={{ 
+                  rotate: [0, 5, -5, 0],
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 4, 
+                  ease: "easeInOut" 
+                }}
+              >
+                <Footprints className="w-6 h-6 text-blue-600" />
+              </motion.div>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Digital Footprint
+              </h3>
+            </div>
             <p className="text-slate-600 leading-relaxed mb-6">
               A practical playbook for engineers who want their work to be seen.
             </p>

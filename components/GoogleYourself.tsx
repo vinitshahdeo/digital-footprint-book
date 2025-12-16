@@ -5,15 +5,16 @@ import { motion } from 'framer-motion'
 
 export default function GoogleYourself() {
   return (
-    <section className="py-24 px-6 bg-slate-50">
+    <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-8 hover:scale-110 transition-transform duration-300">
-            <Search className="w-8 h-8 text-white" />
-          </div>
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+            <Search className="w-4 h-4" />
+            Reality Check
+          </p>
 
-          <h2 className="text-5xl md:text-6xl font-semibold text-black mb-8 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
             Ever{' '}
             <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               Googled
@@ -21,12 +22,11 @@ export default function GoogleYourself() {
             yourself?
           </h2>
 
-          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
             Recruiters do. Hiring managers do. Everyone does.
-            <br />
-            <span className="text-black font-semibold mt-4 block font-handwriting text-2xl">
-              What shows up when they search your name?
-            </span>
+          </p>
+          <p className="text-xl font-handwriting text-blue-600 max-w-2xl mx-auto">
+            What shows up when they search your name?
           </p>
         </div>
 

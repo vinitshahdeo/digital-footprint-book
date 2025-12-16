@@ -1,6 +1,6 @@
 'use client'
 
-import { BookOpen, Sparkles, ShoppingCart, ArrowRight } from 'lucide-react'
+import { BookOpen, Sparkles, ShoppingCart, ArrowRight, Footprints } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function BookIntro() {
@@ -13,20 +13,59 @@ export default function BookIntro() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-8 shadow-xl shadow-blue-500/25">
-            <BookOpen className="w-10 h-10 text-white" />
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+            <BookOpen className="w-4 h-4" />
+            The Solution
+          </p>
+
+          <div className="relative">
+            {/* Floating Footprint Icons */}
+            <motion.div
+              className="absolute -left-8 md:-left-16 top-0 text-blue-500/20"
+              initial={{ opacity: 0, x: -20, rotate: -15 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              animate={{ 
+                y: [0, -10, 0],
+                rotate: [-5, 5, -5]
+              }}
+              transition={{ 
+                y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+                rotate: { repeat: Infinity, duration: 4, ease: "easeInOut" }
+              }}
+            >
+              <Footprints className="w-12 h-12 md:w-16 md:h-16" />
+            </motion.div>
+            
+            <motion.div
+              className="absolute -right-8 md:-right-16 top-8 text-purple-500/20"
+              initial={{ opacity: 0, x: 20, rotate: 15 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              animate={{ 
+                y: [0, 10, 0],
+                rotate: [5, -5, 5]
+              }}
+              transition={{ 
+                y: { repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 0.5 },
+                rotate: { repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }
+              }}
+            >
+              <Footprints className="w-10 h-10 md:w-14 md:h-14" />
+            </motion.div>
+
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+              Introducing{' '}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Digital Footprint
+              </span>
+            </h2>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-[1.1]">
-            Introducing{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Digital Footprint
-            </span>
-          </h2>
-
-          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            A practical playbook for software engineers who want their work to be{' '}
-            <span className="font-semibold text-slate-900">discoverable, credible, and career-defining</span>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+            A practical playbook for software engineers who want their work to be discoverable, credible, and career-defining
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-12">

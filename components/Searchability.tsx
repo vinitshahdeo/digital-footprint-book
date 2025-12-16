@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Searchability() {
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -20,7 +20,7 @@ export default function Searchability() {
             </span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            First-page results shape first impressions
+            What do they find? First-page results shape first impressions.
           </p>
         </div>
 
@@ -51,11 +51,12 @@ export default function Searchability() {
 
               {/* Stage 1 - Widest */}
               <motion.div 
-                className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-lg w-full mx-auto"
+                className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-lg shadow-slate-900/20 w-full mx-auto"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
+                whileHover={{ y: -2, scale: 1.02 }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -73,11 +74,12 @@ export default function Searchability() {
 
               {/* Stage 2 */}
               <motion.div 
-                className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-6 text-white shadow-lg w-[85%] mx-auto"
+                className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-6 text-white shadow-lg shadow-slate-800/20 w-[85%] mx-auto"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
+                whileHover={{ y: -2, scale: 1.02 }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -95,11 +97,12 @@ export default function Searchability() {
 
               {/* Stage 3 */}
               <motion.div 
-                className="relative bg-gradient-to-br from-slate-600 to-slate-700 rounded-2xl p-6 text-white shadow-lg w-[65%] mx-auto"
+                className="relative bg-gradient-to-br from-slate-600 to-slate-700 rounded-2xl p-6 text-white shadow-lg shadow-slate-700/20 w-[65%] mx-auto"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
+                whileHover={{ y: -2, scale: 1.02 }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -122,6 +125,7 @@ export default function Searchability() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
+                whileHover={{ y: -3, scale: 1.03, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)" }}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -138,12 +142,19 @@ export default function Searchability() {
               </motion.div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8">
-              <p className="text-sm font-semibold text-slate-900 mb-2">You don't get a second first search</p>
+            <motion.div 
+              className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              whileHover={{ y: -2, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)" }}
+            >
+              <p className="text-base font-semibold text-slate-900 mb-2">You don't get a second first search</p>
               <p className="text-sm text-slate-600">
                 Your name is your landing page. Make sure it shows the right story.
               </p>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Heatmap-style Signals */}
@@ -157,74 +168,146 @@ export default function Searchability() {
             <h3 className="text-xl font-semibold text-black mb-8 font-accent">Signals That Matter</h3>
 
             <div className="space-y-3">
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-lg">
+              <motion.div 
+                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-lg shadow-slate-900/30 cursor-default"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                whileHover={{ x: 5, boxShadow: "0 15px 35px rgba(0, 0, 0, 0.3)" }}
+              >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">GitHub Activity</p>
                   <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">Critical</span>
                 </div>
                 <p className="text-xs text-slate-300">Real code, real projects</p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-5 text-white shadow-lg">
+              <motion.div 
+                className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-5 text-white shadow-lg shadow-slate-800/30 cursor-default"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+                whileHover={{ x: 5, boxShadow: "0 15px 35px rgba(0, 0, 0, 0.25)" }}
+              >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">LinkedIn Profile</p>
                   <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">Critical</span>
                 </div>
                 <p className="text-xs text-slate-300">Professional presence</p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-5 text-white shadow-md">
+              <motion.div 
+                className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-5 text-white shadow-md shadow-slate-700/20 cursor-default"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                whileHover={{ x: 5, boxShadow: "0 12px 30px rgba(0, 0, 0, 0.2)" }}
+              >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">Blog Posts</p>
                   <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">High</span>
                 </div>
                 <p className="text-xs text-slate-200">Thought leadership</p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-slate-400 to-slate-500 rounded-xl p-5 text-white shadow-md">
+              <motion.div 
+                className="bg-gradient-to-br from-slate-400 to-slate-500 rounded-xl p-5 text-white shadow-md shadow-slate-500/15 cursor-default"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.25 }}
+                whileHover={{ x: 5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)" }}
+              >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">Talks & Podcasts</p>
                   <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">Medium</span>
                 </div>
                 <p className="text-xs text-slate-100">Public speaking</p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl p-5 text-slate-700 border border-slate-300 shadow-sm">
+              <motion.div 
+                className="bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl p-5 text-slate-700 border border-slate-300 shadow-sm cursor-default"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                whileHover={{ x: 5, boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)" }}
+              >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">Portfolio Site</p>
                   <span className="px-3 py-1 bg-slate-300 rounded-full text-xs font-medium">Good</span>
                 </div>
                 <p className="text-xs text-slate-600">Showcase work</p>
-              </div>
+              </motion.div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8">
-              <h4 className="text-base font-semibold text-slate-900 mb-3">Your searchability checklist</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2 text-slate-600">
-                  <span className="text-blue-500">✓</span>
+            <motion.div 
+              className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ y: -2, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)" }}
+            >
+              <h4 className="text-base font-semibold text-slate-900 mb-4">Your searchability checklist</h4>
+              <ul className="space-y-3">
+                <motion.li 
+                  className="flex items-center gap-2 text-slate-600"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                >
+                  <span className="text-blue-500 font-bold">✓</span>
                   <span className="text-sm">Searchable — Your name returns relevant results</span>
-                </li>
-                <li className="flex items-center gap-2 text-slate-600">
-                  <span className="text-blue-500">✓</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center gap-2 text-slate-600"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.6 }}
+                >
+                  <span className="text-blue-500 font-bold">✓</span>
                   <span className="text-sm">Credible — Links point to real work</span>
-                </li>
-                <li className="flex items-center gap-2 text-slate-600">
-                  <span className="text-blue-500">✓</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center gap-2 text-slate-600"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.7 }}
+                >
+                  <span className="text-blue-500 font-bold">✓</span>
                   <span className="text-sm">Consistent — Same identity across platforms</span>
-                </li>
-                <li className="flex items-center gap-2 text-slate-600">
-                  <span className="text-blue-500">✓</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center gap-2 text-slate-600"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.8 }}
+                >
+                  <span className="text-blue-500 font-bold">✓</span>
                   <span className="text-sm">Authentic — Represents who you really are</span>
-                </li>
+                </motion.li>
               </ul>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
-        <p className="text-center text-lg text-slate-500 mt-16 font-handwriting">
+        <motion.p 
+          className="text-center text-lg text-slate-500 mt-16 font-handwriting"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
           Your footprint is a collection of signals. Make them count.
-        </p>
+        </motion.p>
       </div>
     </section>
   )

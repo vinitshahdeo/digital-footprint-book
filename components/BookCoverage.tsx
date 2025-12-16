@@ -104,7 +104,7 @@ export default function BookCoverage() {
   }
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Apple-style Section Header */}
         <div className="text-center mb-20">
