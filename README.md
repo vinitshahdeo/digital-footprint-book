@@ -38,4 +38,8 @@ MIT © Vinit Shahdeo
 
 ---
 
-> "A practical playbook for engineers who want their work to be seen."
+<p align="center">
+  <a href="https://github.com/vinitshahdeo"><img src="https://img.shields.io/github/followers/vinitshahdeo?label=Follow%20on%20GitHub&style=social" alt="Follow Vinit Shahdeo on GitHub"></a>
+  <br/>
+  <a href="https://digitalfootprint.in"><strong>Visit the landing page → digitalfootprint.in</strong></a>
+</p>
