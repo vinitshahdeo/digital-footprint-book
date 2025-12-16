@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/digital-footprint-og.png',
+        url: '/images/digital-footprint-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Digital Footprint for Software Engineers',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Footprint for Software Engineers',
     description: 'Your code speaks. But what does the internet say about you?',
-    images: ['/images/digital-footprint-og.png'],
+    images: ['/images/digital-footprint-og.jpg'],
   },
   robots: {
     index: true,
