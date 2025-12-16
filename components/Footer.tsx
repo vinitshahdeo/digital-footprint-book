@@ -1,6 +1,6 @@
 'use client'
 
-import { Linkedin, Github, Twitter, ArrowRight, Footprints } from 'lucide-react'
+import { Linkedin, Github, Twitter, ArrowRight, Footprints, Coffee } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
@@ -123,10 +123,23 @@ export default function Footer() {
               href="https://vinitshahdeo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 hover:text-blue-600 transition-colors text-sm font-medium"
+              className="text-slate-600 hover:text-blue-600 transition-colors text-sm font-medium block mb-6"
             >
               vinitshahdeo.com →
             </a>
+
+            {/* Support Badge */}
+            <motion.a
+              href="https://www.buymeacoffee.com/vinitshahdeo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 text-sm text-slate-600 hover:text-slate-900 shadow-sm"
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Coffee className="w-4 h-4" />
+              <span>Buy me a coffee</span>
+            </motion.a>
           </div>
         </div>
 
