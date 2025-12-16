@@ -68,11 +68,12 @@ export default function Author() {
             
             <div className="space-y-5 text-lg text-slate-600 leading-relaxed mb-8">
               <p>
-                Engineering leader at Postman with experience building developer platforms, fintech products, and large-scale distributed systems.
+                A software engineer and engineering leader who has worked across developer platforms, fintech, and large-scale distributed systems.
               </p>
               
               <p>
-                As a <span className="font-semibold text-black">GitHub Star</span>, he's helped thousands of engineers build credibility online—not through growth hacks, but through consistent, authentic work.
+                As a <span className="font-semibold text-black">GitHub Star</span> and open-source mentor, he's helped thousands of engineers build 
+                visibility through code, content, and community.
               </p>
               
               <p className="text-black font-semibold">
@@ -90,7 +91,7 @@ export default function Author() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300 group"
             >
-              Learn more
+              Learn more about Vinit
               <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
             </a>
           </div>

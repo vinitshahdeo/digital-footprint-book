@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, BookOpen, Eye, Github, Twitter, Instagram, Youtube, Rocket, Code, Globe, Music, BookMarked, Mail } from 'lucide-react'
+import { ArrowRight, BookOpen, Eye, Github, Twitter, Clapperboard, Instagram, Youtube, Rocket, Globe, Mail, Twitch, Rss, Sparkles } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -53,18 +53,18 @@ export default function Hero() {
         
         {/* Middle Left */}
         <FloatingIcon Icon={Twitter} delay={2} position={{ top: '35%', left: '5%' }} />
-        <FloatingIcon Icon={Code} delay={1.5} position={{ top: '60%', left: '7%' }} />
+        <FloatingIcon Icon={Twitch} delay={1.5} position={{ top: '60%', left: '7%' }} />
         
         {/* Middle Right */}
         <FloatingIcon Icon={Instagram} delay={2.5} position={{ top: '40%', left: '90%' }} />
         <FloatingIcon Icon={Rocket} delay={0.5} position={{ top: '55%', left: '88%' }} />
         
         {/* Bottom Icons */}
-        <FloatingIcon Icon={Music} delay={3.5} position={{ top: '85%', left: '12%' }} />
+        <FloatingIcon Icon={Rss} delay={3.5} position={{ top: '85%', left: '12%' }} />
         <FloatingIcon Icon={Mail} delay={2.8} position={{ top: '88%', left: '82%' }} />
         
         {/* Additional Balance */}
-        <FloatingIcon Icon={BookMarked} delay={1.8} position={{ top: '25%', left: '92%' }} />
+        <FloatingIcon Icon={Clapperboard} delay={1.8} position={{ top: '25%', left: '92%' }} />
         <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} />
       </div>
 
@@ -77,11 +77,12 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <motion.span 
-            className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full inline-block"
+            className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full inline-flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            New Book Available Now
+            <Sparkles className="w-4 h-4" />
+            Now Available – Get Your Copy!
           </motion.span>
         </motion.div>
 
