@@ -1,6 +1,7 @@
 'use client'
 
-import { CheckCircle2, Shield, Target, BookOpen, TrendingUp } from 'lucide-react'
+import { CheckCircle2, Shield, Target, BookOpen, TrendingUp, Sparkles } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const reasons = [
   {
@@ -27,68 +28,132 @@ const reasons = [
 
 export default function WhyThisBook() {
   return (
-    <section className="py-32 px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute top-1/2 right-0 w-64 h-64 bg-indigo-200/20 rounded-full blur-3xl -translate-y-1/2" />
-      
-      <div className="relative max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-full mb-6">
-            <span className="text-sm font-semibold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-              BUILT FOR ENGINEERS
-            </span>
-          </div>
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-6 tracking-tighter leading-[1.1]">
-            Why This Book?
-          </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
-            Engineering-first. No marketing fluff.
+    <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+      <div className="max-w-6xl mx-auto">
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+            <Sparkles className="w-4 h-4" />
+            Why This Book
           </p>
-        </div>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-black mb-4 tracking-tight leading-[1.1]">
+            Not another{' '}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+              LinkedIn
+            </span>{' '}
+            guru
+          </h2>
+          <p className="text-xl text-slate-600">
+            Written by an engineer, for engineers
+          </p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="group relative bg-white p-8 rounded-2xl border border-slate-200 hover:border-green-300 hover:shadow-xl transition-all duration-300"
+            <motion.div 
+              key={index} 
+              className="text-left group cursor-default"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
             >
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              {/* Simple Icon */}
+              <motion.div 
+                className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center mb-6"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <reason.icon className="w-6 h-6 text-white" />
-              </div>
+              </motion.div>
               
               {/* Content */}
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
+              <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-blue-600 transition-colors duration-300">
                 {reason.title}
               </h3>
-              <p className="text-slate-600">
+              <p className="text-slate-600 leading-relaxed">
                 {reason.description}
               </p>
-              
-              {/* Checkmark */}
-              <CheckCircle2 className="absolute top-8 right-8 w-6 h-6 text-green-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Quote */}
-        <div className="max-w-3xl mx-auto">
-          <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 p-8 md:p-12 rounded-2xl shadow-2xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-full blur-3xl" />
-            <div className="relative">
-              <svg className="w-12 h-12 text-blue-500/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-                No shortcuts. No hacks. Just proven frameworks that work.
-              </p>
-              <p className="text-slate-300 text-lg">
-                Built for engineers who want to be known for their craft, not their content calendar.
-              </p>
+        {/* Quote Section - Modern Redesign */}
+        <motion.div 
+          className="max-w-5xl mx-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-12 md:p-20">
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10"></div>
+            
+            {/* Grid pattern */}
+            <div className="absolute inset-0 opacity-5" style={{
+              backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+              backgroundSize: '50px 50px'
+            }} />
+            
+            <div className="relative z-10 text-center">
+              {/* Opening Quote Mark */}
+              <motion.div 
+                className="mb-8"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <svg className="w-16 h-16 mx-auto text-blue-400 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                  <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8z" />
+                </svg>
+              </motion.div>
+
+              <motion.p 
+                className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-relaxed mb-8 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                Not another growth hacking guide.{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">
+                  Just honest, practical advice
+                </span>{' '}
+                for engineers who want their work to speak for itself.
+              </motion.p>
+
+              <motion.div 
+                className="flex items-center justify-center gap-3 mb-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-400"></div>
+                <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                <div className="h-px w-12 bg-gradient-to-l from-transparent to-purple-400"></div>
+              </motion.div>
+
+              <motion.p 
+                className="text-lg text-slate-400 font-medium"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                Real frameworks from real engineering experience
+              </motion.p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

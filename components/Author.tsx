@@ -1,7 +1,8 @@
 'use client'
 
-import { ExternalLink, Award, Users, Code } from 'lucide-react'
+import { ExternalLink, Award, Users, Code, User } from 'lucide-react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const achievements = [
   { icon: Code, label: 'Engineering Leader' },
@@ -11,70 +12,76 @@ const achievements = [
 
 export default function Author() {
   return (
-    <section className="py-32 px-6 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100/50 to-indigo-100/50 rounded-full blur-3xl" />
-      
-      <div className="relative max-w-7xl mx-auto">
+    <section className="py-24 px-6 bg-slate-50">
+      <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Author Image */}
-          <div className="flex justify-center md:justify-end order-2 md:order-1">
-            <div className="relative group">
-              {/* Animated gradient ring */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl opacity-75 group-hover:opacity-100 transition-opacity blur animate-pulse" />
-              
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-slate-200 to-slate-300 rounded-3xl overflow-hidden shadow-2xl">
+          {/* Clean Author Image */}
+          <motion.div 
+            className="flex justify-center md:justify-end order-2 md:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.div 
+              className="relative w-80 h-80 lg:w-96 lg:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-xl"
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <motion.div
+                initial={{ scale: 1.2 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
                 <Image
-                  src="/images/vinitshahdeo.png"
+                  src="/images/vinit-shahdeo.png"
                   alt="Vinit Shahdeo"
                   width={400}
                   height={400}
                   className="object-cover"
                 />
-              </div>
-            </div>
-          </div>
+              </motion.div>
+              
+              {/* Animated border accent */}
+              <motion.div
+                className="absolute inset-0 border-4 border-blue-500 rounded-3xl opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
+          </motion.div>
 
-          {/* Author Bio */}
+          {/* Clean Author Bio */}
           <div className="order-1 md:order-2">
-            <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-full mb-6">
-              <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                MEET THE AUTHOR
-              </span>
-            </div>
+            <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+              <User className="w-4 h-4" />
+              About the Author
+            </p>
             
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]">
-              Vinit Shahdeo
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+              Vinit{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                Shahdeo
+              </span>
             </h2>
             
-            {/* Achievement Badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm"
-                >
-                  <achievement.icon className="w-4 h-4 text-blue-600" />
-                  <span className="text-sm font-medium text-slate-700">{achievement.label}</span>
-                </div>
-              ))}
-            </div>
-            
-            <div className="space-y-5 text-lg text-slate-700 leading-relaxed mb-8 font-light">
+            <div className="space-y-5 text-lg text-slate-600 leading-relaxed mb-8">
               <p>
-                A software engineer and engineering leader who has worked across 
-                <span className="font-semibold text-slate-900"> developer platforms, fintech, and large-scale distributed systems</span>.
+                A software engineer and engineering leader who has worked across developer platforms, fintech, and large-scale distributed systems.
               </p>
               
               <p>
-                As a <span className="font-semibold text-slate-900">GitHub Star</span> and open-source mentor, 
-                he has helped <span className="font-semibold text-slate-900">thousands of engineers</span> build 
+                As a <span className="font-semibold text-black">GitHub Star</span> and open-source mentor, he's helped thousands of engineers build 
                 visibility through code, content, and community.
               </p>
               
-              <p className="text-slate-600 italic border-l-4 border-blue-600 pl-4">
-                This book distills real-world learnings into a practical playbook for engineers 
-                who want their work to be seen.
+              <p className="text-black font-semibold">
+                This book shares the exact playbook he used to build his digital footprint.
+              </p>
+              
+              <p className="text-sm text-slate-500 italic pt-2 border-t border-slate-200">
+                Try it yourself: Google "Vinit Shahdeo" to see the principles in action
               </p>
             </div>
 
@@ -82,10 +89,10 @@ export default function Author() {
               href="https://vinitshahdeo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl group"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300 group"
             >
               Learn more about Vinit
-              <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
             </a>
           </div>
         </div>

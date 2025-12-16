@@ -1,106 +1,191 @@
 'use client'
 
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, BookOpen, Eye, Github, Twitter, Clapperboard, Instagram, Youtube, Rocket, Globe, Mail, Twitch, Rss, Sparkles } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+
+const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, position: { top: string, left: string } }) => (
+  <motion.div
+    className="absolute text-slate-300"
+    style={{ ...position }}
+    initial={{ opacity: 0 }}
+    animate={{ 
+      opacity: [0.3, 0.4, 0.3],
+      y: [0, -15, 0],
+      rotate: [0, 3, 0]
+    }}
+    transition={{
+      duration: 10,
+      delay,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  >
+    <Icon className="w-10 h-10 md:w-14 md:h-14" />
+  </motion.div>
+)
+
+const AnimatedSignature = () => {
+  return (
+    <motion.div 
+      className="relative inline-block opacity-75"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 0.70, scale: 1 }}
+      transition={{ 
+        duration: 1, 
+        delay: 1,
+        ease: "easeOut"
+      }}
+    >
+      <Image
+        src="/images/signature.png"
+        alt="Vinit Shahdeo"
+        width={160}
+        height={48}
+        className="w-32 h-auto md:w-36"
+        style={{ filter: 'contrast(1.1)' }}
+      />
+    </motion.div>
+  )
+}
 
 export default function Hero() {
+  const [onlineCount, setOnlineCount] = useState(5.35)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOnlineCount(prev => {
+        const increment = Math.random() * 0.0001
+        const newCount = prev + increment
+        return parseFloat(newCount.toFixed(4))
+      })
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <div className="absolute inset-0 bg-grid-slate-200/50 bg-[size:32px_32px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+    <section className="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden bg-white">
+      {/* Clean Apple-style Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
+
+      {/* Floating Background Icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top Icons */}
+        <FloatingIcon Icon={Github} delay={0} position={{ top: '8%', left: '10%' }} />
+        <FloatingIcon Icon={Youtube} delay={1} position={{ top: '10%', left: '85%' }} />
+        
+        {/* Middle Left */}
+        <FloatingIcon Icon={Twitter} delay={2} position={{ top: '35%', left: '5%' }} />
+        <FloatingIcon Icon={Twitch} delay={1.5} position={{ top: '60%', left: '7%' }} />
+        
+        {/* Middle Right */}
+        <FloatingIcon Icon={Instagram} delay={2.5} position={{ top: '40%', left: '90%' }} />
+        <FloatingIcon Icon={Rocket} delay={0.5} position={{ top: '55%', left: '88%' }} />
+        
+        {/* Bottom Icons */}
+        <FloatingIcon Icon={Rss} delay={3.5} position={{ top: '85%', left: '12%' }} />
+        <FloatingIcon Icon={Mail} delay={2.8} position={{ top: '88%', left: '82%' }} />
+        
+        {/* Additional Balance */}
+        <FloatingIcon Icon={Clapperboard} delay={1.8} position={{ top: '25%', left: '92%' }} />
+        <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} />
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="relative max-w-5xl mx-auto text-center animate-fade-in">
+        {/* Book Badge */}
+        <motion.div 
+          className="inline-block mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.span 
+            className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full inline-flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <Sparkles className="w-4 h-4" />
+            Now Available – Get Your Copy!
+          </motion.span>
+        </motion.div>
 
-      <div className="relative max-w-6xl mx-auto text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-full mb-8 shadow-sm">
-          <Sparkles className="w-4 h-4 text-blue-600" />
-          <span className="text-sm font-medium text-slate-700">A Practical Playbook for Engineers</span>
-        </div>
+        {/* Live Counter */}
+        <motion.div 
+          className="mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <p className="text-sm md:text-base text-slate-500 font-mono">
+            <span className="inline-flex items-center gap-2">
+              <motion.span 
+                className="w-2 h-2 bg-green-500 rounded-full"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+              />
+              {onlineCount.toFixed(2)}B internet users worldwide
+            </span>
+          </p>
+        </motion.div>
 
-        {/* Headline */}
-        <h1 className="text-6xl md:text-8xl font-serif font-bold mb-8 leading-[1.05] tracking-tighter">
-          <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
+        {/* Large Apple-style Headline with Hook */}
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-[1.05] tracking-tight animate-slide-up" style={{animationDelay: '0.1s'}}>
+          <span className="text-black">
             Your code speaks.
           </span>
           <br />
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            But what does the
-            <br className="hidden sm:block" /> internet say about you?
+          <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+            Does the internet know about you?
           </span>
         </h1>
 
-        {/* Subheading */}
-        <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-          Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, 
-          and community work—<span className="font-semibold text-slate-900">without fake self-promotion</span>.
+        {/* Clean Subheading */}
+        <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-normal animate-slide-up" style={{animationDelay: '0.2s'}}>
+          A practical playbook to build a strong, authentic digital presence—without feeling like a self-promoter.
         </p>
 
-        {/* Book Cover Preview */}
-        <div className="mb-16 relative group">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-          <div className="relative inline-block bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-1 rounded-2xl shadow-2xl">
-            <div className="bg-white p-8 rounded-xl">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 rounded-full bg-blue-600" />
-                <div className="w-2 h-2 rounded-full bg-indigo-600" />
-                <div className="w-2 h-2 rounded-full bg-purple-600" />
-              </div>
-              <h2 className="font-serif text-3xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent mb-3">
-                Digital Footprint
-              </h2>
-              <p className="text-slate-600 mb-6 text-lg">for Software Engineers</p>
-              <div className="border-t border-slate-200 pt-4">
-                <p className="text-sm text-slate-500 font-medium">Vinit Shahdeo</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        {/* Apple-style CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{animationDelay: '0.3s'}}>
           <a
             href="#purchase"
-            className="group relative px-8 py-4 bg-slate-900 text-white rounded-xl font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all w-full sm:w-auto"
+            className="group px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <span className="relative flex items-center gap-2 justify-center">
-              Buy on Amazon
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <span className="flex items-center gap-2 justify-center">
+              <BookOpen className="w-5 h-5" />
+              Get the book
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
           </a>
           <a
-            href="#purchase"
-            className="group px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl font-semibold text-lg hover:from-orange-700 hover:to-orange-800 transition-all shadow-lg hover:shadow-2xl transform hover:scale-105 w-full sm:w-auto"
+            href="#preview"
+            className="group px-8 py-4 text-blue-600 font-semibold text-lg hover:text-blue-700 transition-all duration-300 w-full sm:w-auto"
           >
             <span className="flex items-center gap-2 justify-center">
-              Buy on Flipkart
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </a>
-          <a
-            href="#purchase"
-            className="group px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-900 border-2 border-slate-300 rounded-xl font-semibold text-lg hover:bg-white hover:border-slate-400 transition-all shadow hover:shadow-lg w-full sm:w-auto"
-          >
-            <span className="flex items-center gap-2 justify-center">
-              Get eBook
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Eye className="w-5 h-5" />
+              See what's inside
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
           </a>
         </div>
 
-        {/* Secondary CTA */}
-        <a
-          href="#preview"
-          className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 font-medium transition-colors group"
+        {/* Quote */}
+        <motion.div 
+          className="mt-16 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
         >
-          Preview the Book
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </a>
+          <blockquote className="relative">
+            <p className="text-lg md:text-xl text-slate-600 italic mb-4 text-center">
+              "Write code for machines. Build a footprint for people."
+            </p>
+            <footer className="flex justify-center items-center gap-2">
+              <AnimatedSignature />
+            </footer>
+          </blockquote>
+        </motion.div>
       </div>
     </section>
   )

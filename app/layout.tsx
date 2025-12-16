@@ -1,19 +1,37 @@
 import type { Metadata } from 'next'
-import { Inter, Libre_Baskerville } from 'next/font/google'
+import { Inter, Playfair_Display, Caveat, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
+  preload: true,
 })
 
-const libreBaskerville = Libre_Baskerville({ 
+const playfair = Playfair_Display({ 
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
-  weight: ['400', '700'],
+  weight: ['600', '700'],
+  preload: false,
+})
+
+const caveat = Caveat({ 
+  subsets: ['latin'],
+  variable: '--font-handwriting',
+  display: 'swap',
+  weight: ['400'],
+  preload: false,
+})
+
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  variable: '--font-accent',
+  display: 'swap',
+  weight: ['600'],
+  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -25,6 +43,27 @@ export const metadata: Metadata = {
     title: 'Digital Footprint for Software Engineers',
     description: 'Your code speaks. But what does the internet say about you?',
     type: 'website',
+    images: [
+      {
+        url: '/images/digital-footprint-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Digital Footprint for Software Engineers',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digital Footprint for Software Engineers',
+    description: 'Your code speaks. But what does the internet say about you?',
+    images: ['/images/digital-footprint-og.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: 'your-google-verification-code',
   },
 }
 
@@ -34,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${libreBaskerville.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${caveat.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )
