@@ -92,6 +92,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#purchase" className="text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group">
+                  <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
+                  Get e-book
+                </a>
+              </li>
+              <li>
                 <a 
                   href="https://vinitshahdeo.com/talk" 
                   target="_blank"

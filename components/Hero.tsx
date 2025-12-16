@@ -3,6 +3,7 @@
 import { ArrowRight, BookOpen, Eye, Github, Twitter, Clapperboard, Instagram, Youtube, Rocket, Globe, Mail, Twitch, Rss, Sparkles } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, position: { top: string, left: string } }) => (
   <motion.div
@@ -24,6 +25,30 @@ const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, pos
     <Icon className="w-10 h-10 md:w-14 md:h-14" />
   </motion.div>
 )
+
+const AnimatedSignature = () => {
+  return (
+    <motion.div 
+      className="relative inline-block opacity-75"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 0.70, scale: 1 }}
+      transition={{ 
+        duration: 1, 
+        delay: 1,
+        ease: "easeOut"
+      }}
+    >
+      <Image
+        src="/images/signature.png"
+        alt="Vinit Shahdeo"
+        width={160}
+        height={48}
+        className="w-32 h-auto md:w-36"
+        style={{ filter: 'contrast(1.1)' }}
+      />
+    </motion.div>
+  )
+}
 
 export default function Hero() {
   const [onlineCount, setOnlineCount] = useState(5.35)
@@ -144,6 +169,23 @@ export default function Hero() {
             </span>
           </a>
         </div>
+
+        {/* Quote */}
+        <motion.div 
+          className="mt-16 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
+          <blockquote className="relative">
+            <p className="text-lg md:text-xl text-slate-600 italic mb-4 text-center">
+              "Write code for machines. Build a footprint for people."
+            </p>
+            <footer className="flex justify-center items-center gap-2">
+              <AnimatedSignature />
+            </footer>
+          </blockquote>
+        </motion.div>
       </div>
     </section>
   )
