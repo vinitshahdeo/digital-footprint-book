@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Searchability() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -24,7 +24,7 @@ export default function Searchability() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Funnel Diagram */}
           <motion.div
             className="relative"
@@ -33,7 +33,7 @@ export default function Searchability() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-black mb-8 font-accent">The Discovery Funnel</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8">The Discovery Funnel</h3>
             
             <div className="relative space-y-3">
               {/* Funnel connecting lines */}
@@ -143,15 +143,15 @@ export default function Searchability() {
             </div>
 
             <motion.div 
-              className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8"
+              className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-sm mt-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
               whileHover={{ y: -2, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)" }}
             >
-              <p className="text-base font-semibold text-slate-900 mb-2">You don't get a second first search</p>
-              <p className="text-sm text-slate-600">
+              <p className="text-lg font-bold text-slate-900 mb-3">You don't get a second first search</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Your name is your landing page. Make sure it shows the right story.
               </p>
             </motion.div>
@@ -165,7 +165,7 @@ export default function Searchability() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-black mb-8 font-accent">Signals That Matter</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8">Signals That Matter</h3>
 
             <div className="space-y-3">
               <motion.div 
@@ -245,54 +245,54 @@ export default function Searchability() {
             </div>
 
             <motion.div 
-              className="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm mt-8"
+              className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-sm mt-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
               whileHover={{ y: -2, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)" }}
             >
-              <h4 className="text-base font-semibold text-slate-900 mb-4">Your searchability checklist</h4>
-              <ul className="space-y-3">
+              <h4 className="text-lg font-bold text-slate-900 mb-5">Your searchability checklist</h4>
+              <ul className="space-y-3.5">
                 <motion.li 
-                  className="flex items-center gap-2 text-slate-600"
+                  className="flex items-center gap-3 text-slate-600"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.5 }}
                 >
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span className="text-sm">Searchable — Your name returns relevant results</span>
+                  <span className="text-blue-600 font-bold text-lg">✓</span>
+                  <span className="text-sm leading-relaxed"><span className="font-semibold text-slate-900">Searchable</span> — Your name returns relevant results</span>
                 </motion.li>
                 <motion.li 
-                  className="flex items-center gap-2 text-slate-600"
+                  className="flex items-center gap-3 text-slate-600"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.6 }}
                 >
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span className="text-sm">Credible — Links point to real work</span>
+                  <span className="text-blue-600 font-bold text-lg">✓</span>
+                  <span className="text-sm leading-relaxed"><span className="font-semibold text-slate-900">Credible</span> — Links point to real work</span>
                 </motion.li>
                 <motion.li 
-                  className="flex items-center gap-2 text-slate-600"
+                  className="flex items-center gap-3 text-slate-600"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.7 }}
                 >
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span className="text-sm">Consistent — Same identity across platforms</span>
+                  <span className="text-blue-600 font-bold text-lg">✓</span>
+                  <span className="text-sm leading-relaxed"><span className="font-semibold text-slate-900">Consistent</span> — Same identity across platforms</span>
                 </motion.li>
                 <motion.li 
-                  className="flex items-center gap-2 text-slate-600"
+                  className="flex items-center gap-3 text-slate-600"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.8 }}
                 >
-                  <span className="text-blue-500 font-bold">✓</span>
-                  <span className="text-sm">Authentic — Represents who you really are</span>
+                  <span className="text-blue-600 font-bold text-lg">✓</span>
+                  <span className="text-sm leading-relaxed"><span className="font-semibold text-slate-900">Authentic</span> — Represents who you really are</span>
                 </motion.li>
               </ul>
             </motion.div>
@@ -300,7 +300,7 @@ export default function Searchability() {
         </div>
 
         <motion.p 
-          className="text-center text-lg text-slate-500 mt-16 font-handwriting"
+          className="text-center text-xl font-handwriting text-blue-600 mt-16 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
