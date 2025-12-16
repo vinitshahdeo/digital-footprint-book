@@ -1,3 +1,5 @@
+<img width="2848" height="1504" alt="digital-footprint-og-min-min" src="https://github.com/user-attachments/assets/aa4ddb6a-24a3-471b-aea7-7dc97ea432f3" />
+
 # Digital Footprint for Software Engineers
 
 <p align="left">
