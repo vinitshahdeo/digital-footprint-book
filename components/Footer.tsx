@@ -163,6 +163,44 @@ export default function Footer() {
         {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent mb-8" />
 
+        {/* Google Search CTA */}
+        <div className="mb-8 text-center">
+          <p className="text-xs text-slate-500 mb-3">Try it yourself:</p>
+          <a
+            href="https://www.google.com/search?q=Vinit+Shahdeo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 pl-4 pr-3 py-3 bg-white rounded-full border border-slate-300 hover:shadow-lg transition-all duration-200 cursor-pointer group max-w-md"
+          >
+            {/* Google Logo */}
+            <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
+              <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
+              <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
+              <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
+            </svg>
+            
+            {/* Search Text */}
+            <span className="text-sm text-slate-700 font-normal flex-1">Vinit Shahdeo</span>
+            
+            {/* Right Icons */}
+            <div className="flex items-center gap-3">
+              {/* Microphone Icon */}
+              <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+              </svg>
+              
+              {/* Search Icon */}
+              <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+              </svg>
+            </div>
+          </a>
+          <p className="text-xs text-slate-400 mt-2 italic">See the principles in action</p>
+        </div>
+
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-600">
           <p>
