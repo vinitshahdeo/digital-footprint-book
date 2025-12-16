@@ -128,6 +128,25 @@ export default function BookIntro() {
               This isn't about becoming an influencer. It's about making sure your best work doesn't go unnoticed.
             </p>
 
+            {/* Who is this for */}
+            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+              <h3 className="text-base font-semibold text-slate-900 mb-4">Perfect for:</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Engineering Students', 'Entry-level Engineers', 'SDE-1/2', 'Mid-level Developers', 'Senior Engineers', 'Staff Engineers', 'Tech Leads', 'Engineering Managers'].map((role, index) => (
+                  <motion.span
+                    key={role}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
+                    className="px-3 py-1.5 bg-slate-100 text-slate-700 text-sm rounded-lg font-medium"
+                  >
+                    {role}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+
             {/* Buy Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
