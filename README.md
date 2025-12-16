@@ -1,4 +1,6 @@
-<img width="2848" height="1504" alt="digital-footprint-og-min-min" src="https://github.com/user-attachments/assets/aa4ddb6a-24a3-471b-aea7-7dc97ea432f3" />
+<p align="center">
+  <img width="260" alt="Digital Footprint for Software Engineers - Book Cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
+</p>
 
 # Digital Footprint for Software Engineers
 
@@ -36,12 +38,13 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 
 MIT © Vinit Shahdeo
 
+
 ---
 
+<img width="2848" height="1504" alt="digital-footprint-og-min-min" src="https://github.com/user-attachments/assets/aa4ddb6a-24a3-471b-aea7-7dc97ea432f3" />
 
-<p align="center">
-  <img width="320" alt="Digital Footprint for Software Engineers - Book Cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
-</p>
+---
+
 
 <p align="center">
   <em>A practical playbook for engineers who want their work to be seen.</em>
@@ -54,3 +57,4 @@ MIT © Vinit Shahdeo
   <br /><br />
   <a href="https://github.com/vinitshahdeo"><img src="https://img.shields.io/github/followers/vinitshahdeo?label=Follow%20on%20GitHub&style=social" alt="Follow Vinit Shahdeo on GitHub"></a>
 </p>
+
