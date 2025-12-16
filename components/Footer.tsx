@@ -104,7 +104,7 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2.5">
-              <li>
+              {/* <li>
                 <a href="#preview" className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group">
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
                   What's inside
@@ -115,23 +115,23 @@ export default function Footer() {
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
                   About the author
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#purchase" className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group">
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
-                  Buy now
+                  Author’s Note
                 </a>
               </li>
               <li>
                 <a href="#purchase" className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group">
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
-                  Get e-book
+                  Kindle eBook
                 </a>
               </li>
               <li>
                 <a href="#reviews" className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group">
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
-                  Reviews
+                  Goodreads Reviews
                 </a>
               </li>
               <li>
@@ -142,7 +142,7 @@ export default function Footer() {
                   className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
                 >
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
-                  Request a talk
+                  Invite Vinit to Speak
                 </a>
               </li>
             </ul>
