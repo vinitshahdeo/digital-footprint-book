@@ -125,7 +125,7 @@ export default function Hero() {
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ repeat: Infinity, duration: 2 }}
               />
-              {onlineCount.toFixed(2)}B people online right now
+              {onlineCount.toFixed(2)}B internet users worldwide
             </span>
           </p>
         </motion.div>

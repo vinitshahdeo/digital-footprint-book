@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, ShoppingCart, Rocket, Check } from 'lucide-react'
+import { ArrowRight, ShoppingCart, Rocket, Check, BookOpen, TabletSmartphone, FileText, Headphones } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const benefits = [
@@ -74,12 +74,26 @@ export default function Purchase() {
         </div>
 
         {/* Format Info */}
-        <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
-          <span>Paperback</span>
-          <span>•</span>
-          <span>Kindle</span>
-          <span>•</span>
-          <span>ePub</span>
+        <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
+          <div className="flex items-center gap-2 text-slate-400">
+            <BookOpen className="w-4 h-4" />
+            <span>Paperback</span>
+          </div>
+          <span className="text-slate-600">•</span>
+          <div className="flex items-center gap-2 text-slate-400">
+            <TabletSmartphone className="w-4 h-4" />
+            <span>Kindle</span>
+          </div>
+          <span className="text-slate-600">•</span>
+          <div className="flex items-center gap-2 text-slate-400">
+            <FileText className="w-4 h-4" />
+            <span>ePub</span>
+          </div>
+          <span className="text-slate-600">•</span>
+          <div className="flex items-center gap-2 text-slate-500/60">
+            <Headphones className="w-4 h-4" />
+            <span className="italic">Audiobook coming soon</span>
+          </div>
         </div>
       </div>
     </section>
