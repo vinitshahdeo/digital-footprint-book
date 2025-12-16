@@ -27,12 +27,13 @@ export default function BookIntro() {
               initial={{ opacity: 0, x: -20, rotate: -15 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
               animate={{ 
                 y: [0, -10, 0],
                 rotate: [-5, 5, -5]
               }}
               transition={{ 
+                opacity: { duration: 0.8, delay: 0.2 },
+                x: { duration: 0.8, delay: 0.2 },
                 y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
                 rotate: { repeat: Infinity, duration: 4, ease: "easeInOut" }
               }}
@@ -45,12 +46,13 @@ export default function BookIntro() {
               initial={{ opacity: 0, x: 20, rotate: 15 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
               animate={{ 
                 y: [0, 10, 0],
                 rotate: [5, -5, 5]
               }}
               transition={{ 
+                opacity: { duration: 0.8, delay: 0.3 },
+                x: { duration: 0.8, delay: 0.3 },
                 y: { repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 0.5 },
                 rotate: { repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }
               }}
@@ -154,6 +156,26 @@ export default function BookIntro() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </motion.a>
             </div>
+
+            {/* Trusted By */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="pt-6 text-center"
+            >
+              <p className="text-xs text-slate-400 mb-3">Trusted by engineers at</p>
+              <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-slate-600">
+                <span>Microsoft</span>
+                <span className="text-slate-300">•</span>
+                <span>Cloudflare</span>
+                <span className="text-slate-300">•</span>
+                <span>Postman</span>
+                <span className="text-slate-300">•</span>
+                <span>IBM</span>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
