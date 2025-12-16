@@ -6,28 +6,32 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700'],
+  preload: true,
 })
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['600', '700'],
+  preload: false,
 })
 
 const caveat = Caveat({ 
   subsets: ['latin'],
   variable: '--font-handwriting',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400'],
+  preload: false,
 })
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
   variable: '--font-accent',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['600'],
+  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -39,6 +43,13 @@ export const metadata: Metadata = {
     title: 'Digital Footprint for Software Engineers',
     description: 'Your code speaks. But what does the internet say about you?',
     type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: 'your-google-verification-code',
   },
 }
 
