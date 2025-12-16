@@ -132,7 +132,7 @@ export default function BookIntro() {
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
               <h3 className="text-base font-semibold text-slate-900 mb-4">Perfect for:</h3>
               <div className="flex flex-wrap gap-2">
-                {['Engineering Students', 'Entry-level Engineers', 'SDE-1/2', 'Mid-level Developers', 'Senior Engineers', 'Staff Engineers', 'Tech Leads', 'Engineering Managers'].map((role, index) => (
+                {['Engineering Students', 'Entry-level Engineers', 'SDE-1/2', 'Mid-level Developers', 'Senior Engineers', 'Staff Engineers', 'Tech Leads', 'Engineering Managers', 'Startup Founders'].map((role, index) => (
                   <motion.span
                     key={role}
                     initial={{ opacity: 0, scale: 0.8 }}
