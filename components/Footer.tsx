@@ -1,6 +1,6 @@
 'use client'
 
-import { Linkedin, Github, Twitter, ArrowRight, Footprints, Coffee, ShoppingCart } from 'lucide-react'
+import { Linkedin, Github, Twitter, ArrowRight, Footprints, Coffee, BookOpen } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
@@ -64,7 +64,7 @@ export default function Footer() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <ShoppingCart className="w-4 h-4" />
+              <BookOpen className="w-4 h-4" />
               Get the book
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.a>

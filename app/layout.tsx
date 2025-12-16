@@ -43,6 +43,20 @@ export const metadata: Metadata = {
     title: 'Digital Footprint for Software Engineers',
     description: 'Your code speaks. But what does the internet say about you?',
     type: 'website',
+    images: [
+      {
+        url: '/images/digital-footprint-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Digital Footprint for Software Engineers',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digital Footprint for Software Engineers',
+    description: 'Your code speaks. But what does the internet say about you?',
+    images: ['/images/digital-footprint-og.png'],
   },
   robots: {
     index: true,
