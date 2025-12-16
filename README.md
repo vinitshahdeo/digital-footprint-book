@@ -38,7 +38,12 @@ MIT © Vinit Shahdeo
 
 ---
 
+
 <p align="center">
+  <img width="50%" height="50%" alt="Digital footprint for software engineers - book cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
+</p>
+<p align="center">
+  
 A practical playbook for engineers who want their work to be seen.
   <br/><br/>
   <a href="https://digitalfootprint.in"><strong>digitalfootprint.in</strong></a> ✨ <a href="https://vinitshahdeo.com"><strong>vinitshahdeo.com</strong></a>
