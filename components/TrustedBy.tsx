@@ -24,6 +24,12 @@ const companies = [
     height: 30
   },
   { 
+    name: 'Atlassian', 
+    logo: 'https://www.vectorlogo.zone/logos/atlassian/atlassian-ar21.svg',
+    width: 120,
+    height: 30
+  },
+  { 
     name: 'IBM', 
     logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg',
     width: 80,

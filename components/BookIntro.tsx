@@ -193,6 +193,8 @@ export default function BookIntro() {
                 <span>Postman</span>
                 <span className="text-slate-300">•</span>
                 <span>IBM</span>
+                <span className="text-slate-300">•</span>
+                <span>Atlassian</span>
               </div>
             </motion.div>
           </motion.div>
