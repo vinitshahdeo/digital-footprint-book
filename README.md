@@ -40,17 +40,17 @@ MIT © Vinit Shahdeo
 
 
 <p align="center">
-  <img width="50%" height="50%" alt="Digital footprint for software engineers - book cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
+  <img width="320" alt="Digital Footprint for Software Engineers - Book Cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
 </p>
+
 <p align="center">
-  
-A practical playbook for engineers who want their work to be seen.
-  <br/><br/>
-  <a href="https://digitalfootprint.in"><strong>digitalfootprint.in</strong></a> ✨ <a href="https://vinitshahdeo.com"><strong>vinitshahdeo.com</strong></a>
-  <br /><br/><br/>
+  <em>A practical playbook for engineers who want their work to be seen.</em>
+  <br /><br />
+  <a href="https://digitalfootprint.in"><strong>digitalfootprint.in</strong></a> &nbsp;|&nbsp; <a href="https://vinitshahdeo.com"><strong>vinitshahdeo.com</strong></a>
+  <br /><br />
   <a href="https://www.amazon.in/dp/B0C7SHJZ2K"><img src="https://img.shields.io/badge/Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
   &nbsp;
-  <a href="https://www.flipkart.com/digital-footprint-software-engineers/p/itm1b2e7e2e7e2e7"><img src="https://img.shields.io/badge/Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a><br/>
-  <br/>
+  <a href="https://www.flipkart.com/digital-footprint-software-engineers/p/itm1b2e7e2e7e2e7"><img src="https://img.shields.io/badge/Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a>
+  <br /><br />
   <a href="https://github.com/vinitshahdeo"><img src="https://img.shields.io/github/followers/vinitshahdeo?label=Follow%20on%20GitHub&style=social" alt="Follow Vinit Shahdeo on GitHub"></a>
 </p>
