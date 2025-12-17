@@ -9,6 +9,8 @@
   <a href="https://github.com/vinitshahdeo/digital-footprint/blob/main/LICENSE"><img src="https://img.shields.io/github/license/vinitshahdeo/digital-footprint?color=blue" alt="License" /></a>
   <a href="https://twitter.com/Vinit_Shahdeo"><img src="https://img.shields.io/twitter/follow/Vinit_Shahdeo?style=social" alt="Follow on Twitter"></a>
   <a href="https://www.linkedin.com/in/vinitshahdeo"><img src="https://img.shields.io/badge/LinkedIn-vinitshahdeo-blue?logo=linkedin&logoColor=white" alt="Follow on LinkedIn"></a>
+  <a href="https://www.flipkart.com/digital-footprint-software-engineers/p/itm1b2e7e2e7e2e7"><img src="https://img.shields.io/badge/📕%20Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a>
+  <a href="https://www.amazon.in/dp/B0C7SHJZ2K"><img src="https://img.shields.io/badge/📘%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
 </p>
 
 The official landing page for the book **Digital Footprint for Software Engineers** by [Vinit Shahdeo](https://vinitshahdeo.com).
