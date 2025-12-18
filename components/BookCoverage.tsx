@@ -1,87 +1,81 @@
 'use client'
 
-import { Code2, Linkedin, FileText, Globe2, Users, Search, Lightbulb, Twitter, Shield, Sparkles, Briefcase, Youtube, Mic, Rocket, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Code2, Linkedin, FileText, Users, Search, Lightbulb, Twitter, Shield, Sparkles, Briefcase, Youtube, Rocket, ChevronLeft, ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 const topics = [
   {
+    icon: Lightbulb,
+    title: 'The 3C Model: Code, Content & Community',
+    description: 'The foundational framework for building your digital presence',
+    gradient: 'from-blue-500 to-blue-600'
+  },
+  {
     icon: Code2,
-    title: 'Building a powerful GitHub profile',
-    description: 'Make your repositories speak for your engineering skills',
+    title: 'GitHub Mastery',
+    description: 'Advanced practices to craft a standout profile and make your code shine',
     gradient: 'from-blue-500 to-blue-600'
   },
   {
     icon: Linkedin,
-    title: 'Using LinkedIn intentionally (without cringe)',
-    description: 'Professional networking that feels authentic',
-    gradient: 'from-blue-500 to-blue-600'
-  },
-  {
-    icon: FileText,
-    title: 'Writing blogs that compound over time',
-    description: 'Create content that builds lasting credibility',
-    gradient: 'from-purple-500 to-purple-600'
-  },
-  {
-    icon: Globe2,
-    title: 'Portfolios that actually get noticed',
-    description: 'Showcase your work effectively to recruiters and peers',
-    gradient: 'from-purple-500 to-purple-600'
-  },
-  {
-    icon: Users,
-    title: 'Open source, hackathons, and community signals',
-    description: 'Leverage community work to amplify your presence',
-    gradient: 'from-blue-500 to-blue-600'
-  },
-  {
-    icon: Search,
-    title: 'Being searchable and credible on Google',
-    description: 'Own your digital identity across the web',
+    title: 'LinkedIn Strategies for Engineers',
+    description: 'From essentials to advanced tactics for professional networking',
     gradient: 'from-blue-500 to-blue-600'
   },
   {
     icon: Twitter,
-    title: 'Using social media like Twitter and Instagram',
-    description: 'Strategic visibility without the noise',
-    gradient: 'from-purple-500 to-purple-600'
-  },
-  {
-    icon: Shield,
-    title: 'Security and privacy online',
-    description: 'Protect yourself while staying visible',
-    gradient: 'from-blue-500 to-blue-600'
-  },
-  {
-    icon: Sparkles,
-    title: 'Making AI work in your favour',
-    description: 'Leverage AI tools to amplify your presence',
-    gradient: 'from-purple-500 to-purple-600'
-  },
-  {
-    icon: Briefcase,
-    title: 'Landing jobs using digital footprint',
-    description: 'Turn your online presence into career opportunities',
+    title: 'Mastering Twitter & Social Platforms',
+    description: 'Crack the code to going viral as a developer',
     gradient: 'from-blue-500 to-blue-600'
   },
   {
     icon: Youtube,
-    title: 'Creating content on YouTube',
-    description: 'Video content that showcases your expertise',
+    title: 'Visual Content & Video',
+    description: 'YouTube, Instagram Reels, and short-form magic for engineers',
     gradient: 'from-purple-500 to-purple-600'
   },
   {
-    icon: Mic,
-    title: 'Starting and growing podcasts',
-    description: 'Build authority through audio storytelling',
+    icon: FileText,
+    title: 'Blogging, Newsletters & Portfolios',
+    description: 'Technical writing, developer portfolios, and growing your audience',
     gradient: 'from-blue-500 to-blue-600'
   },
   {
-    icon: Rocket,
-    title: 'Launching on Product Hunt and community projects',
-    description: 'Make your code speak through strategic launches',
+    icon: Users,
+    title: 'Community & Open Source',
+    description: 'Hackathons, mentorship, and structured programs to grow influence',
     gradient: 'from-purple-500 to-purple-600'
+  },
+  {
+    icon: Rocket,
+    title: 'The FOOTPRINT Framework',
+    description: 'Your blueprint to a stellar digital presence with tools & playbooks',
+    gradient: 'from-blue-500 to-blue-600'
+  },
+  {
+    icon: Search,
+    title: 'SEO & Google Visibility',
+    description: 'Be unmissable — show up when people search for you',
+    gradient: 'from-purple-500 to-purple-600'
+  },
+  {
+    icon: Shield,
+    title: 'Security, Privacy & Digital Hygiene',
+    description: 'Protect yourself while building a healthy online presence',
+    gradient: 'from-blue-500 to-blue-600'
+  },
+  {
+    icon: Sparkles,
+    title: 'AI & Your Digital Footprint',
+    description: 'How AI impacts and helps you build your online presence',
+    gradient: 'from-purple-500 to-purple-600'
+  },
+  {
+    icon: Briefcase,
+    title: 'Landing Jobs with Strong Presence',
+    description: 'Turn your digital footprint into career opportunities',
+    gradient: 'from-blue-500 to-blue-600'
   }
 ]
 
@@ -119,7 +113,7 @@ export default function BookCoverage() {
             </span>
           </h2>
           <p className="text-lg text-slate-600">
-            Twelve practical chapters with frameworks you can use today
+            38 actionable chapters across 11 sections with frameworks you can use today
           </p>
         </div>
 
