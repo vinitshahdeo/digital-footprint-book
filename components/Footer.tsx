@@ -210,6 +210,11 @@ export default function Footer() {
             Made for engineers who ship ✨
           </p>
         </div>
+        
+        {/* Stats Disclaimer */}
+        <p className="text-center text-[10px] text-slate-400 mt-6 max-w-lg mx-auto leading-relaxed">
+          Statistics referenced are based on industry surveys and aggregated research. Individual results may vary.
+        </p>
       </div>
     </footer>
   )
