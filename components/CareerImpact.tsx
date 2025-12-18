@@ -2,20 +2,14 @@
 
 import { TrendingUp, MessageSquare, Zap, Camera } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
 export default function CareerImpact() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
 
   return (
     <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
             <Zap className="w-4 h-4" />
             Career Acceleration

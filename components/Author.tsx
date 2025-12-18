@@ -54,12 +54,12 @@ export default function Author() {
 
           {/* Clean Author Bio */}
           <div className="order-1 md:order-2">
-            <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+            <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
               <User className="w-4 h-4" />
               About the Author
             </p>
             
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
               Vinit{' '}
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 Shahdeo

@@ -159,32 +159,6 @@ const activityFeed = [
   },
 ]
 
-// Define connections between elements (creating a network graph)
-const connections = [
-  // GitHub connections
-  { from: 'github', to: 'opensource' },
-  { from: 'github', to: 'blog' },
-  { from: 'github', to: 'portfolio' },
-  
-  // LinkedIn connections
-  { from: 'linkedin', to: 'talks' },
-  { from: 'linkedin', to: 'social' },
-  
-  // Blog connections
-  { from: 'blog', to: 'social' },
-  { from: 'blog', to: 'portfolio' },
-  
-  // Talks connections
-  { from: 'talks', to: 'community' },
-  { from: 'talks', to: 'portfolio' },
-  
-  // Community connections
-  { from: 'community', to: 'opensource' },
-  { from: 'community', to: 'social' },
-  
-  // Portfolio connections
-  { from: 'portfolio', to: 'opensource' },
-]
 
 export default function DigitalFootprintVisual() {
   return (

@@ -96,7 +96,7 @@ export default function Hero() {
       <div className="relative max-w-5xl mx-auto text-center animate-fade-in">
         {/* Book Badge */}
         <motion.div 
-          className="inline-block mb-6"
+          className="inline-block mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
