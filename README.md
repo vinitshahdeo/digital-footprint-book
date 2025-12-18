@@ -37,6 +37,12 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 3. Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 
+## 🌩️ Lighthouse Score
+
+<img width="904" height="169" alt="Screenshot 2025-12-18 at 11 04 10 PM" src="https://github.com/user-attachments/assets/c50cfb31-3a60-45d1-aa41-ba475ffc6571" />
+
+
+
 ## 📄 License
 
 MIT © Vinit Shahdeo
