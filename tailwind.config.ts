@@ -10,7 +10,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)'],
-        serif: ['var(--font-serif)'],
       },
       letterSpacing: {
         'tighter': '-0.04em',

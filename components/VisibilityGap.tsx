@@ -33,7 +33,7 @@ export default function VisibilityGap() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+          <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
             <TrendingUp className="w-4 h-4" />
             The Visibility Gap
           </p>
@@ -143,7 +143,7 @@ export default function VisibilityGap() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <p className="text-2xl font-handwriting text-blue-600 mb-3">
+            <p className="text-xl italic font-medium text-slate-700 mb-3">
               The gap is opportunity
             </p>
             <p className="text-lg text-slate-700 font-semibold">

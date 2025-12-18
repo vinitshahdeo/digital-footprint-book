@@ -9,7 +9,7 @@ export default function GoogleYourself() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+          <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
             <Search className="w-4 h-4" />
             Reality Check
           </p>
@@ -25,7 +25,7 @@ export default function GoogleYourself() {
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
             Recruiters do. Hiring managers do. Everyone does.
           </p>
-          <p className="text-xl font-handwriting text-blue-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg italic text-slate-600 max-w-2xl mx-auto mb-8">
             What shows up when they search your name?
           </p>
           
@@ -175,7 +175,7 @@ export default function GoogleYourself() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <p className="text-xl md:text-2xl font-handwriting text-blue-600 mb-2">
+                <p className="text-lg md:text-xl italic font-medium text-slate-700 mb-2">
                   If you don't control your digital footprint,
                 </p>
                 <p className="text-2xl md:text-3xl font-bold text-slate-900">

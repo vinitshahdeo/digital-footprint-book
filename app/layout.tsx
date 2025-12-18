@@ -1,37 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display, Caveat, Space_Grotesk } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   preload: true,
-})
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-  weight: ['600', '700'],
-  preload: false,
-})
-
-const caveat = Caveat({ 
-  subsets: ['latin'],
-  variable: '--font-handwriting',
-  display: 'swap',
-  weight: ['400'],
-  preload: false,
-})
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'],
-  variable: '--font-accent',
-  display: 'swap',
-  weight: ['600'],
-  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -73,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${caveat.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )
