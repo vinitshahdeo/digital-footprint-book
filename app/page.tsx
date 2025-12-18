@@ -10,21 +10,32 @@ import Author from '@/components/Author'
 import WhyThisBook from '@/components/WhyThisBook'
 import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
+import CallToAction from '@/components/CallToAction'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* 1. First Impression */}
       <Hero />
+      
+      {/* 2. Problem Zone - Hook & Pain Points */}
       <GoogleYourself />
-      <CareerImpact />
       <VisibilityGap />
-      <Searchability />
-      <DigitalFootprintVisual />
+      <CareerImpact />
+      
+      {/* 3. Solution Zone - The Book & Author */}
       <BookIntro />
+      <Author />
       <BookCoverage />
       <WhyThisBook />
-      <Author />
+      
+      {/* 4. Reinforcement Zone - Value & Proof */}
+      <Searchability />
+      <DigitalFootprintVisual />
+      <CallToAction />
+      
+      {/* 5. Conversion Zone */}
       {/* <DecisionTable /> */}
       <Purchase />
       <Footer />

@@ -159,46 +159,20 @@ const activityFeed = [
   },
 ]
 
-// Define connections between elements (creating a network graph)
-const connections = [
-  // GitHub connections
-  { from: 'github', to: 'opensource' },
-  { from: 'github', to: 'blog' },
-  { from: 'github', to: 'portfolio' },
-  
-  // LinkedIn connections
-  { from: 'linkedin', to: 'talks' },
-  { from: 'linkedin', to: 'social' },
-  
-  // Blog connections
-  { from: 'blog', to: 'social' },
-  { from: 'blog', to: 'portfolio' },
-  
-  // Talks connections
-  { from: 'talks', to: 'community' },
-  { from: 'talks', to: 'portfolio' },
-  
-  // Community connections
-  { from: 'community', to: 'opensource' },
-  { from: 'community', to: 'social' },
-  
-  // Portfolio connections
-  { from: 'portfolio', to: 'opensource' },
-]
 
 export default function DigitalFootprintVisual() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <section className="py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+          <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
             <Network className="w-4 h-4" />
             Your Ecosystem
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
             Your Digital{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               Footprint
             </span>
           </h2>
@@ -216,10 +190,10 @@ export default function DigitalFootprintVisual() {
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, type: 'spring' }}
+            transition={{ duration: 0.5, type: 'spring' }}
           >
             <div className="relative">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-2xl relative z-10 overflow-hidden p-[3px]">
+              <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-xl relative z-10 overflow-hidden p-[2px]">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white relative">
                   <Image
                     src="/images/vinit-shahdeo.png"
@@ -256,13 +230,13 @@ export default function DigitalFootprintVisual() {
               
               {/* Glowing pulse effect */}
               <motion.div
-                className="absolute inset-0 rounded-full bg-blue-500/20 blur-lg"
+                className="absolute inset-0 rounded-full bg-blue-500/15 blur-lg"
                 animate={{ 
-                  scale: [1, 1.08, 1],
-                  opacity: [0.2, 0.35, 0.2]
+                  scale: [1, 1.05, 1],
+                  opacity: [0.15, 0.25, 0.15]
                 }}
                 transition={{ 
-                  duration: 3,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
@@ -372,14 +346,14 @@ export default function DigitalFootprintVisual() {
             >
               <div className="relative group cursor-pointer">
                 {/* Pulsing outer ring */}
-                <motion.div
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${element.color} opacity-0 group-hover:opacity-20 blur-xl`}
+              <motion.div
+                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${element.color} opacity-0 group-hover:opacity-10 blur-lg`}
                   animate={{
-                    scale: [1, 1.15, 1],
-                    opacity: [0.1, 0.25, 0.1]
+                    scale: [1, 1.1, 1],
+                    opacity: [0.05, 0.15, 0.05]
                   }}
                   transition={{
-                    duration: 3,
+                    duration: 4,
                     repeat: Infinity,
                     delay: element.delay,
                     ease: "easeInOut"
@@ -387,18 +361,18 @@ export default function DigitalFootprintVisual() {
                 />
                 
                 {/* Doodle circle background */}
-                <div className={`relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br ${element.color} flex items-center justify-center shadow-lg border-4 border-white group-hover:shadow-2xl transition-all duration-300`}>
-                  <element.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                <div className={`relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br ${element.color} flex items-center justify-center shadow-md border-3 border-white group-hover:shadow-lg transition-all duration-200`}>
+                  <element.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
                   
                   {/* Small pulsing dot indicator */}
                   <motion.div
-                    className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white shadow-sm"
+                    className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white"
                     animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.8, 1, 0.8]
+                      scale: [1, 1.15, 1],
+                      opacity: [0.7, 1, 0.7]
                     }}
                     transition={{
-                      duration: 2,
+                      duration: 2.5,
                       repeat: Infinity,
                       delay: element.delay,
                       ease: "easeInOut"

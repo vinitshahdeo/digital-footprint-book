@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function BookIntro() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,7 +15,7 @@ export default function BookIntro() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+          <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
             <BookOpen className="w-4 h-4" />
             The Solution
           </p>
@@ -61,12 +61,14 @@ export default function BookIntro() {
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black tracking-tight leading-[1.1]">
-              Introducing{' '}
+              Introducing
+            </h2>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mt-2">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Digital Footprint
               </span>
-            </h2>
-            <p className="text-sm text-slate-400 mt-2 mb-6">for software engineers</p>
+            </h3>
+            <p className="text-lg md:text-xl text-slate-500 mt-3 mb-6 font-medium tracking-wide">for software engineers</p>
           </div>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -109,37 +111,37 @@ export default function BookIntro() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="space-y-8"
           >
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm">
-                <Sparkles className="w-5 h-5 text-blue-600" />
-                <span className="text-slate-700 font-medium">12 Actionable Chapters</span>
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
+                <Sparkles className="w-4 h-4 text-blue-600" />
+                <span className="text-slate-700 text-sm font-medium">38 Actionable Chapters</span>
               </div>
-              <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm">
-                <Sparkles className="w-5 h-5 text-purple-600" />
-                <span className="text-slate-700 font-medium">Real Frameworks & Examples</span>
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
+                <Sparkles className="w-4 h-4 text-purple-600" />
+                <span className="text-slate-700 text-sm font-medium">Real Frameworks & Examples</span>
               </div>
-              <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm">
-                <Sparkles className="w-5 h-5 text-blue-600" />
-                <span className="text-slate-700 font-medium">Written by an Engineer</span>
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
+                <Sparkles className="w-4 h-4 text-blue-600" />
+                <span className="text-slate-700 text-sm font-medium">Written by an Engineer</span>
               </div>
             </div>
 
-            <p className="text-lg text-slate-500 italic">
+            <p className="text-base text-slate-500 italic">
               This isn't about becoming an influencer. It's about making sure your best work doesn't go unnoticed.
             </p>
 
             {/* Who is this for */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-              <h3 className="text-base font-semibold text-slate-900 mb-4">Perfect for:</h3>
-              <div className="flex flex-wrap gap-2">
+            <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
+              <h3 className="text-sm font-semibold text-slate-900 mb-3">Perfect for:</h3>
+              <div className="flex flex-wrap gap-1.5">
                 {['Engineering Students', 'Entry-level Engineers', 'SDE-1/2', 'Mid-level Developers', 'Senior Engineers', 'Staff Engineers', 'Tech Leads', 'Engineering Managers', 'Startup Founders'].map((role, index) => (
                   <motion.span
                     key={role}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
-                    className="px-3 py-1.5 bg-slate-100 text-slate-700 text-sm rounded-lg font-medium"
+                    transition={{ duration: 0.2, delay: 0.3 + index * 0.03 }}
+                    className="px-2.5 py-1 bg-white text-slate-600 text-xs rounded-md font-medium border border-slate-200"
                   >
                     {role}
                   </motion.span>
@@ -153,26 +155,26 @@ export default function BookIntro() {
                 href="https://www.amazon.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 w-full sm:w-auto"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-all duration-200 w-full sm:w-auto"
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
               >
-                <ShoppingCart className="w-5 h-5" />
-                <span>Buy on Amazon</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ShoppingCart className="w-4 h-4" />
+                <span className="text-sm">Buy on Amazon</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </motion.a>
               
               <motion.a
                 href="https://www.flipkart.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 w-full sm:w-auto"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-slate-300 text-slate-700 rounded-lg font-medium hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 w-full sm:w-auto"
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
               >
-                <ShoppingCart className="w-5 h-5" />
-                <span>Buy on Flipkart</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ShoppingCart className="w-4 h-4" />
+                <span className="text-sm">Buy on Flipkart</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </motion.a>
             </div>
 
@@ -181,11 +183,11 @@ export default function BookIntro() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="pt-6 text-center"
+              transition={{ duration: 0.4, delay: 0.3 }}
+              className="pt-5 text-center"
             >
-              <p className="text-xs text-slate-400 mb-3">Trusted by engineers at</p>
-              <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-slate-600">
+              <p className="text-xs text-slate-500 mb-2">Trusted by engineers at</p>
+              <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-slate-600">
                 <span>Microsoft</span>
                 <span className="text-slate-300">•</span>
                 <span>Cloudflare</span>

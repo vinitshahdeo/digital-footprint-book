@@ -5,18 +5,18 @@ import { motion } from 'framer-motion'
 
 export default function GoogleYourself() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
+          <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
             <Search className="w-4 h-4" />
             Reality Check
           </p>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
             Ever{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               Googled
             </span>{' '}
             yourself?
@@ -25,7 +25,7 @@ export default function GoogleYourself() {
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
             Recruiters do. Hiring managers do. Everyone does.
           </p>
-          <p className="text-xl font-handwriting text-blue-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg italic text-slate-600 max-w-2xl mx-auto mb-8">
             What shows up when they search your name?
           </p>
           
@@ -97,17 +97,17 @@ export default function GoogleYourself() {
                   initial={{ scale: 0.5, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, type: "spring", delay: 0.3 }}
+                  transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
                 >
-                  <div className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent leading-none">
+                  <div className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none">
                     70%
                   </div>
                 </motion.div>
                 <div>
-                  <p className="text-2xl md:text-3xl font-semibold text-slate-900 mb-2">
+                  <p className="text-xl md:text-2xl font-semibold text-slate-900 mb-1">
                     of recruiters Google you first
                   </p>
-                  <p className="text-lg text-slate-600">
+                  <p className="text-base text-slate-600">
                     before they even schedule an interview
                   </p>
                 </div>
@@ -126,18 +126,18 @@ export default function GoogleYourself() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   <motion.div 
-                    className="text-7xl font-bold bg-gradient-to-br from-purple-400 to-purple-600 bg-clip-text text-transparent mb-4"
+                    className="text-6xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-3"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
+                    transition={{ duration: 0.7, type: "spring", delay: 0.5 }}
                   >
                     85%
                   </motion.div>
-                  <p className="text-xl font-semibold text-slate-900 mb-1">
+                  <p className="text-lg font-semibold text-slate-900 mb-1">
                     Check social profiles
                   </p>
-                  <p className="text-slate-600">
+                  <p className="text-slate-600 text-sm">
                     GitHub & LinkedIn before your résumé
                   </p>
                 </motion.div>
@@ -150,18 +150,18 @@ export default function GoogleYourself() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
                   <motion.div 
-                    className="text-7xl font-bold bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4"
+                    className="text-6xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-3"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, type: "spring", delay: 0.6 }}
+                    transition={{ duration: 0.7, type: "spring", delay: 0.6 }}
                   >
                     63%
                   </motion.div>
-                  <p className="text-xl font-semibold text-slate-900 mb-1">
+                  <p className="text-lg font-semibold text-slate-900 mb-1">
                     Candidates rejected
                   </p>
-                  <p className="text-slate-600">
+                  <p className="text-slate-600 text-sm">
                     due to poor online presence
                   </p>
                 </motion.div>
@@ -169,16 +169,16 @@ export default function GoogleYourself() {
 
               {/* Bottom CTA */}
               <motion.div 
-                className="pt-8 text-center"
-                initial={{ opacity: 0, y: 20 }}
+                className="pt-10 text-center"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <p className="text-2xl md:text-3xl font-handwriting text-blue-600 mb-3">
+                <p className="text-lg md:text-xl italic font-medium text-slate-700 mb-2">
                   If you don't control your digital footprint,
                 </p>
-                <p className="text-3xl md:text-4xl font-bold text-slate-900">
+                <p className="text-2xl md:text-3xl font-bold text-slate-900">
                   Google will.
                 </p>
               </motion.div>
