@@ -61,12 +61,14 @@ export default function BookIntro() {
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black tracking-tight leading-[1.1]">
-              Introducing{' '}
+              Introducing
+            </h2>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mt-2">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Digital Footprint
               </span>
-            </h2>
-            <p className="text-sm text-slate-400 mt-2 mb-6">for software engineers</p>
+            </h3>
+            <p className="text-lg md:text-xl text-slate-500 mt-3 mb-6 font-medium tracking-wide">for software engineers</p>
           </div>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
