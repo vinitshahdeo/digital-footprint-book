@@ -68,7 +68,7 @@ export default function Author() {
             
             <div className="space-y-5 text-lg text-slate-600 leading-relaxed mb-8">
               <p>
-                A software engineer and engineering leader who has worked across developer platforms, fintech, and large-scale distributed systems.
+                A software engineer and engineering leader who has worked across developer platforms, fintech, AI-driven products, and large-scale distributed systems.
               </p>
               
               <p>

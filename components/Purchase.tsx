@@ -4,10 +4,10 @@ import { ArrowRight, ShoppingCart, Rocket, Check, BookOpen, TabletSmartphone, Fi
 import { motion } from 'framer-motion'
 
 const benefits = [
-  'Instant digital download',
-  '12 comprehensive chapters',
-  'Real-world frameworks',
-  'Lifetime access'
+  '38 actionable chapters',
+  '11 comprehensive sections',
+  '350+ pages of insights',
+  'Real-world frameworks'
 ]
 
 export default function Purchase() {

@@ -114,7 +114,7 @@ export default function BookIntro() {
             <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
                 <Sparkles className="w-4 h-4 text-blue-600" />
-                <span className="text-slate-700 text-sm font-medium">12 Actionable Chapters</span>
+                <span className="text-slate-700 text-sm font-medium">38 Actionable Chapters</span>
               </div>
               <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
                 <Sparkles className="w-4 h-4 text-purple-600" />
