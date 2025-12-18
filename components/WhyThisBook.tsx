@@ -28,7 +28,7 @@ const reasons = [
 
 export default function WhyThisBook() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           className="text-center mb-16"
@@ -41,14 +41,14 @@ export default function WhyThisBook() {
             <Sparkles className="w-4 h-4" />
             Why This Book
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
             Not another{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               LinkedIn
             </span>{' '}
             guru
           </h2>
-          <p className="text-xl text-slate-600">
+          <p className="text-lg text-slate-600">
             Written by an engineer, for engineers
           </p>
         </motion.div>
@@ -66,18 +66,18 @@ export default function WhyThisBook() {
             >
               {/* Simple Icon */}
               <motion.div 
-                className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center mb-6"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                className="w-11 h-11 rounded-xl bg-blue-600 flex items-center justify-center mb-5"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
-                <reason.icon className="w-6 h-6 text-white" />
+                <reason.icon className="w-5 h-5 text-white" />
               </motion.div>
               
               {/* Content */}
-              <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-blue-600 transition-colors duration-300">
+              <h3 className="text-lg font-semibold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors duration-200">
                 {reason.title}
               </h3>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 text-sm leading-relaxed">
                 {reason.description}
               </p>
             </motion.div>
@@ -92,7 +92,7 @@ export default function WhyThisBook() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-12 md:p-20">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-10 md:p-16">
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10"></div>
             
@@ -117,7 +117,7 @@ export default function WhyThisBook() {
               </motion.div>
 
               <motion.p 
-                className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-relaxed mb-8 max-w-3xl mx-auto"
+                className="text-xl md:text-2xl lg:text-3xl font-medium text-white leading-relaxed mb-6 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

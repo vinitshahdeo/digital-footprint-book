@@ -26,7 +26,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative py-16 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50 border-t border-slate-200">
+    <footer className="relative py-14 px-6 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto">
         {/* Footer Grid - 4 Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10">
@@ -36,19 +36,19 @@ export default function Footer() {
               <div className="flex items-center gap-2.5 mb-1">
                 <motion.div
                   animate={{ 
-                    rotate: [0, 5, -5, 0],
-                    scale: [1, 1.05, 1]
+                    rotate: [0, 3, -3, 0],
+                    scale: [1, 1.02, 1]
                   }}
                   transition={{ 
                     repeat: Infinity, 
-                    duration: 4, 
+                    duration: 6, 
                     ease: "easeInOut" 
                   }}
                 >
                   <Footprints className="w-5 h-5 text-blue-600" />
                 </motion.div>
                 <div>
-                  <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+                  <h3 className="text-base font-semibold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent leading-tight">
                     Digital Footprint
                   </h3>
                   <p className="text-xs text-slate-500">for software engineers</p>
@@ -60,13 +60,13 @@ export default function Footer() {
             </p>
             <motion.a
               href="#purchase"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group text-sm w-fit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all duration-200 group text-sm w-fit"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
             >
               <BookOpen className="w-4 h-4" />
               Get the book
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
             </motion.a>
           </div>
 

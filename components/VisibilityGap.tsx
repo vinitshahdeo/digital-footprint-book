@@ -29,7 +29,7 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
 
 export default function VisibilityGap() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -37,9 +37,9 @@ export default function VisibilityGap() {
             <TrendingUp className="w-4 h-4" />
             The Visibility Gap
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
             Hard work doesn't{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               compound
             </span>
             <br />
@@ -66,14 +66,14 @@ export default function VisibilityGap() {
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, type: "spring", delay: 0.2 }}
+                  transition={{ duration: 0.7, type: "spring", delay: 0.2 }}
                 >
-                  <p className="text-9xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-6">
-                    <Counter value={100} duration={1.5} /><span className="text-6xl">%</span>
+                  <p className="text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-5">
+                    <Counter value={100} duration={1.5} /><span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-6" />
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">Work Done</h3>
+                <div className="h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-5" />
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Work Done</h3>
                 <p className="text-slate-600 leading-relaxed">
                   Great engineers shipping quality code every day
                 </p>
@@ -93,14 +93,14 @@ export default function VisibilityGap() {
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, type: "spring", delay: 0.35 }}
+                  transition={{ duration: 0.7, type: "spring", delay: 0.35 }}
                 >
-                  <p className="text-9xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-6">
-                    <Counter value={40} duration={1.5} /><span className="text-6xl">%</span>
+                  <p className="text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-5">
+                    <Counter value={40} duration={1.5} /><span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-6 mx-auto" style={{ width: '40%' }} />
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">Documented</h3>
+                <div className="h-1.5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-5 mx-auto" style={{ width: '40%' }} />
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Documented</h3>
                 <p className="text-slate-600 leading-relaxed">
                   Creating internal docs, READMEs, and notes
                 </p>
@@ -120,14 +120,14 @@ export default function VisibilityGap() {
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
+                  transition={{ duration: 0.7, type: "spring", delay: 0.5 }}
                 >
-                  <p className="text-9xl font-bold bg-gradient-to-br from-slate-700 to-slate-800 bg-clip-text text-transparent leading-none mb-6">
-                    <Counter value={20} duration={1.5} /><span className="text-6xl">%</span>
+                  <p className="text-8xl font-bold bg-gradient-to-br from-slate-600 to-slate-700 bg-clip-text text-transparent leading-none mb-5">
+                    <Counter value={20} duration={1.5} /><span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-2 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full mb-6 mx-auto" style={{ width: '20%' }} />
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">Discoverable</h3>
+                <div className="h-1.5 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full mb-5 mx-auto" style={{ width: '20%' }} />
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Discoverable</h3>
                 <p className="text-slate-600 leading-relaxed">
                   Actually visible and searchable online
                 </p>
@@ -137,16 +137,16 @@ export default function VisibilityGap() {
 
           {/* Gap Explanation */}
           <motion.div 
-            className="text-center mt-16"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center mt-14"
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <p className="text-3xl font-handwriting text-blue-600 mb-4">
+            <p className="text-2xl font-handwriting text-blue-600 mb-3">
               The gap is opportunity
             </p>
-            <p className="text-xl text-slate-700 font-semibold">
+            <p className="text-lg text-slate-700 font-semibold">
               Same skills. Same effort.{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Exponentially different outcomes.
@@ -167,28 +167,28 @@ export default function VisibilityGap() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <div className="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center">
-                    <EyeOff className="w-7 h-7 text-slate-500" />
+                <div className="flex items-center justify-center gap-3 mb-5">
+                  <div className="w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center">
+                    <EyeOff className="w-6 h-6 text-slate-500" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Invisible Engineer</h3>
+                  <h3 className="text-xl font-bold text-slate-900">Invisible Engineer</h3>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
-                    <p className="text-slate-700">Great work, but only your team knows</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <p className="text-slate-600 text-sm">Great work, but only your team knows</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
-                    <p className="text-slate-700">Résumé gets lost in the pile</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <p className="text-slate-600 text-sm">Résumé gets lost in the pile</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
-                    <p className="text-slate-700">Google shows nothing or outdated info</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <p className="text-slate-600 text-sm">Google shows nothing or outdated info</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-sm">✕</span>
-                    <p className="text-slate-700">Cold applications, low response rate</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <p className="text-slate-600 text-sm">Cold applications, low response rate</p>
                   </div>
                 </div>
               </motion.div>
@@ -201,28 +201,28 @@ export default function VisibilityGap() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.15 }}
               >
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                    <Eye className="w-7 h-7 text-white" />
+                <div className="flex items-center justify-center gap-3 mb-5">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md shadow-blue-500/20">
+                    <Eye className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Searchable Engineer</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Searchable Engineer</h3>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
-                    <p className="text-slate-900 font-medium">Work visible across GitHub, blogs, LinkedIn</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
+                    <p className="text-slate-800 font-medium text-sm">Work visible across GitHub, blogs, LinkedIn</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
-                    <p className="text-slate-900 font-medium">First-page Google results you control</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
+                    <p className="text-slate-800 font-medium text-sm">First-page Google results you control</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
-                    <p className="text-slate-900 font-medium">Inbound messages from recruiters</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
+                    <p className="text-slate-800 font-medium text-sm">Inbound messages from recruiters</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-sm font-bold">✓</span>
-                    <p className="text-slate-900 font-medium">Opportunities find you</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
+                    <p className="text-slate-800 font-medium text-sm">Opportunities find you</p>
                   </div>
                 </div>
               </motion.div>

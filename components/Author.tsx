@@ -12,7 +12,7 @@ const achievements = [
 
 export default function Author() {
   return (
-    <section className="py-24 px-6 bg-slate-50">
+    <section className="py-28 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Clean Author Image */}
@@ -24,15 +24,15 @@ export default function Author() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.div 
-              className="relative w-80 h-80 lg:w-96 lg:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-xl"
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="relative w-72 h-72 lg:w-80 lg:h-80 bg-slate-200 rounded-2xl overflow-hidden shadow-lg"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <motion.div
-                initial={{ scale: 1.2 }}
+                initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <Image
                   src="/images/vinit-shahdeo.png"
@@ -45,23 +45,23 @@ export default function Author() {
               
               {/* Animated border accent */}
               <motion.div
-                className="absolute inset-0 border-4 border-blue-500 rounded-3xl opacity-0"
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
+                className="absolute inset-0 border-2 border-blue-500 rounded-2xl opacity-0"
+                whileHover={{ opacity: 0.8 }}
+                transition={{ duration: 0.25 }}
               />
             </motion.div>
           </motion.div>
 
           {/* Clean Author Bio */}
           <div className="order-1 md:order-2">
-            <p className="text-sm font-semibold text-blue-600 mb-4 tracking-wider uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full font-accent">
-              <User className="w-4 h-4" />
+            <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 rounded-full">
+              <User className="w-3.5 h-3.5" />
               About the Author
             </p>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-5 tracking-tight leading-[1.1]">
               Vinit{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                 Shahdeo
               </span>
             </h2>
@@ -89,10 +89,10 @@ export default function Author() {
               href="https://vinitshahdeo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300 group"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium text-sm hover:text-blue-700 transition-all duration-200 group"
             >
               Learn more about Vinit
-              <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+              <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
             </a>
           </div>
         </div>

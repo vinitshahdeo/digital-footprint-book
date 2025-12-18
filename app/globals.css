@@ -12,20 +12,22 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
+
   body {
     @apply text-slate-900 bg-white antialiased;
   }
-  
-  /* Focus states for keyboard navigation */
+
+  /* Refined focus states for keyboard navigation */
   :focus-visible {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    @apply outline-none ring-2 ring-blue-500/50 ring-offset-2;
   }
-  
-  /* Premium text selection styling */
+
+  /* Subtle text selection styling */
   ::selection {
-    @apply bg-blue-100 text-blue-900;
+    @apply bg-blue-100/80 text-blue-900;
   }
 }
 
@@ -33,95 +35,116 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  /* Section spacing utility */
+  .section-padding {
+    @apply py-24 px-6;
+  }
+
+  .section-padding-lg {
+    @apply py-32 px-6;
+  }
+
   /* Grid Pattern */
   .bg-grid-slate-100 {
-    background-image: linear-gradient(to right, rgb(241 245 249 / 0.5) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(241 245 249 / 0.5) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(241 245 249 / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(241 245 249 / 0.4) 1px, transparent 1px);
   }
-  
+
   .bg-grid-slate-200 {
-    background-image: linear-gradient(to right, rgb(226 232 240 / 0.5) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(226 232 240 / 0.5) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(226 232 240 / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(226 232 240 / 0.4) 1px, transparent 1px);
   }
-  
+
   .bg-grid-slate-700 {
-    background-image: linear-gradient(to right, rgb(51 65 85 / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(51 65 85 / 0.3) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(51 65 85 / 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(51 65 85 / 0.2) 1px, transparent 1px);
   }
-  
+
   .bg-grid-slate-800 {
-    background-image: linear-gradient(to right, rgb(30 41 59 / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(30 41 59 / 0.3) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(30 41 59 / 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(30 41 59 / 0.2) 1px, transparent 1px);
   }
 }
 
 @layer components {
+
   /* Custom Animations */
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-20px);
     }
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
   }
-  
+
   @keyframes slideUp {
     from {
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   @keyframes gradientShift {
-    0%, 100% {
+
+    0%,
+    100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
   }
-  
+
   @keyframes bounceWord {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
   }
-  
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
     opacity: 0;
   }
-  
+
   .animate-gradient-shift {
     animation: gradientShift 8s ease-in-out infinite;
   }
-  
+
   .animate-bounce-word {
     animation: bounceWord 0.6s ease-out;
   }
