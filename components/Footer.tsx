@@ -1,6 +1,6 @@
 'use client'
 
-import { Linkedin, Github, Twitter, ArrowRight, Footprints, Coffee, BookOpen } from 'lucide-react'
+import { Linkedin, Github, Twitter, ArrowRight, Footprints, Coffee, BookOpen, Mail, Globe } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
@@ -154,6 +154,7 @@ export default function Footer() {
               Connect
             </h4>
             <div className="space-y-4">
+              {/* Social Icons Row */}
               <div className="flex flex-wrap gap-2.5">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -174,26 +175,48 @@ export default function Footer() {
                   </motion.a>
                 ))}
               </div>
-              <a
-                href="https://vinitshahdeo.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-600 hover:text-blue-600 transition-colors text-sm font-medium flex items-center gap-1 group w-fit"
-              >
-                vinitshahdeo.com
-                <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-              </a>
-              <motion.a
-                href="https://www.buymeacoffee.com/vinitshahdeo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 text-sm text-slate-600 hover:text-blue-700 shadow-sm hover:shadow-md w-fit"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Coffee className="w-4 h-4" />
-                <span>Buy me a coffee</span>
-              </motion.a>
+              
+              {/* Contact Links */}
+              <div className="space-y-2">
+                <a
+                  href="mailto:vinitshahdeo@gmail.com"
+                  className="text-slate-600 hover:text-blue-600 transition-colors text-sm flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4 text-slate-400" />
+                  <span>vinitshahdeo[at]gmail[dot]com</span>
+                </a>
+                <a
+                  href="https://vinitshahdeo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-600 hover:text-blue-600 transition-colors text-sm flex items-center gap-2"
+                >
+                  <Globe className="w-4 h-4 text-slate-400" />
+                  <span>vinitshahdeo.com</span>
+                </a>
+              </div>
+              
+              {/* Badges Row */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                <a
+                  href="https://github.com/vinitshahdeo/digital-footprint-book"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-full text-xs text-slate-600 hover:text-slate-800 transition-colors"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  <span>Open Source</span>
+                </a>
+                <a
+                  href="https://www.buymeacoffee.com/vinitshahdeo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-full text-xs text-slate-600 hover:text-slate-800 transition-colors"
+                >
+                  <Coffee className="w-3.5 h-3.5" />
+                  <span>Buy me a coffee</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
