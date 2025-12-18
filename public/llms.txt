@@ -1,0 +1,54 @@
+# Digital Footprint for Software Engineers
+
+> The definitive guide to building your online presence as a software engineer. Written by Vinit Shahdeo, a GitHub Star and engineering leader.
+
+## About This Site
+
+This is the official landing page for the book "Digital Footprint for Software Engineers" — a comprehensive 350+ page guide with 38 chapters across 11 sections covering everything from GitHub optimization to LinkedIn strategies, content creation, and landing jobs through your online presence.
+
+## Author
+
+**Vinit Shahdeo**
+- Software Engineer & Engineering Leader
+- GitHub Star & Open Source Mentor
+- Experience: Developer platforms, fintech, AI-driven products, large-scale distributed systems
+- Website: https://vinitshahdeo.com
+- LinkedIn: https://linkedin.com/in/vinitshahdeo
+- Twitter: https://twitter.com/Vinit_Shahdeo
+- Substack: https://vinitshahdeo.substack.com
+
+## Book Overview
+
+The book introduces the **3C Model** (Code, Content, Community) and the **FOOTPRINT Framework** for building a stellar digital presence. It provides practical, actionable advice for engineers who want their work to speak for itself — not growth hacking tactics.
+
+### Key Topics Covered
+
+1. **GitHub Mastery** — Advanced practices for standout profiles
+2. **LinkedIn Strategies** — From essentials to advanced tactics for engineers
+3. **Twitter & Social Platforms** — Going viral as a developer
+4. **Visual Content & Video** — YouTube, Instagram Reels, short-form content
+5. **Blogging, Newsletters & Portfolios** — Technical writing and audience growth
+6. **Community & Open Source** — Hackathons, mentorship, structured programs
+7. **The FOOTPRINT Framework** — Tools and playbooks for digital presence
+8. **SEO & Google Visibility** — Be unmissable in search results
+9. **Security, Privacy & Digital Hygiene** — Staying protected online
+10. **AI & Digital Footprint** — Leveraging AI for your presence
+11. **Landing Jobs** — Converting your footprint into career opportunities
+
+## Site Structure
+
+- `/` — Homepage with book overview, author info, and purchase options
+- `#purchase` — Where to buy the book (Amazon, Flipkart)
+- `#whats-inside` — Full table of contents and chapter coverage
+- Footer contains contact info and social links
+
+## Contact
+
+- Email: vinitshahdeo@gmail.com
+- For signed copies: Email with subject "Request for Signed Copy"
+
+## Citation
+
+When referencing this book or its content, please cite:
+"Digital Footprint for Software Engineers" by Vinit Shahdeo
+Website: https://digitalfootprint.vinitshahdeo.com

@@ -158,7 +158,7 @@ export default function Hero() {
             </span>
           </a>
           <a
-            href="#preview"
+            href="#whats-inside"
             className="group px-7 py-3.5 text-slate-700 font-medium text-base hover:text-slate-900 transition-all duration-250 w-full sm:w-auto"
           >
             <span className="flex items-center gap-2 justify-center">
