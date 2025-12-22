@@ -8,6 +8,7 @@ import DigitalFootprintVisual from '@/components/DigitalFootprintVisual'
 import BookIntro from '@/components/BookIntro'
 import Author from '@/components/Author'
 import WhyThisBook from '@/components/WhyThisBook'
+import Testimonials from '@/components/Testimonials'
 import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
@@ -31,6 +32,7 @@ export default function Home() {
       <WhyThisBook />
       
       {/* 4. Reinforcement Zone - Value & Proof */}
+      <Testimonials />
       <Searchability />
       <DigitalFootprintVisual />
       <CallToAction />
@@ -42,3 +44,4 @@ export default function Home() {
     </main>
   )
 }
+
