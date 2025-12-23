@@ -14,10 +14,12 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
     @apply text-slate-900 bg-white antialiased;
+    overflow-x: hidden;
   }
 
   /* Refined focus states for keyboard navigation */
