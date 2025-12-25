@@ -160,7 +160,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://vinitshahdeo.com/talk" 
+                  href="https://topmate.io/vinitshahdeo/1860443" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
