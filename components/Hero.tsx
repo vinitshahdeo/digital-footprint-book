@@ -11,7 +11,7 @@ const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, pos
     style={{ ...position }}
     initial={{ opacity: 0 }}
     animate={{ 
-      opacity: [0.15, 0.25, 0.15],
+      opacity: [0.20, 0.35, 0.20],
       y: [0, -10, 0],
     }}
     transition={{
