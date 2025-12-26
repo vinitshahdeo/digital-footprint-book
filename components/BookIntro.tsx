@@ -68,7 +68,29 @@ export default function BookIntro() {
                 Digital Footprint
               </span>
             </h3>
-            <p className="text-lg md:text-xl text-slate-500 mt-3 mb-6 font-medium tracking-wide">for software engineers</p>
+            <p className="text-lg md:text-xl text-slate-500 mt-3 font-medium tracking-wide">for software engineers</p>
+            
+            {/* Binary representation of "Digital Footprint" */}
+            <style jsx>{`
+              @keyframes subtlePulse {
+                0%, 100% { opacity: 0.5; }
+                50% { opacity: 0.8; }
+              }
+              .binary-pulse {
+                animation: subtlePulse 4s ease-in-out infinite;
+              }
+            `}</style>
+            <div className="font-mono text-xs md:text-sm tracking-tight mt-3 mb-6 opacity-50">
+              <div className="flex justify-center gap-1.5 flex-wrap">
+                <span className="text-slate-400">01000100</span>
+                <span className="text-blue-500 binary-pulse">01101001</span>
+                <span className="text-slate-400">01100111</span>
+                <span className="text-blue-500 binary-pulse">01101001</span>
+                <span className="text-slate-400">01110100</span>
+                <span className="text-blue-500 binary-pulse">01100001</span>
+                <span className="text-slate-400">01101100</span>
+              </div>
+            </div>
           </div>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
