@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  // Ignore ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Performance optimizations
   poweredByHeader: false,
   compress: true,

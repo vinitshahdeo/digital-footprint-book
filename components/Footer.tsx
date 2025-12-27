@@ -199,11 +199,13 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#reviews"
+                  href="https://vinitshahdeo.substack.com/p/digital-footprint-giveaway"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
                 >
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
-                  Goodreads Reviews
+                  Get a Free Copy
                 </a>
               </li>
               <li>
