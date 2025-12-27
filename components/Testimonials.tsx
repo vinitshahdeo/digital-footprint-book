@@ -11,7 +11,7 @@ const testimonials = [
     name: 'Shreya Anand',
     role: 'Software Engineer',
     company: 'Microsoft',
-    avatar: '/images/testimonials/avatar-1.jpg',
+    avatar: '/images/testimonials/shreya.jpg',
   },
   {
     quote:
@@ -19,56 +19,56 @@ const testimonials = [
     name: 'Aman Kumar',
     role: 'SRE',
     company: 'Cloudflare',
-    avatar: '/images/testimonials/avatar-2.jpg',
+    avatar: '/images/testimonials/aman.jpg',
   },
   {
     quote: 'I wish I had this when I started my career. Would have saved years of trial and error.',
     name: 'Archit Roy',
     role: 'Software Engineer',
     company: 'Bank of America',
-    avatar: '/images/testimonials/avatar-3.jpg',
+    avatar: '/images/testimonials/archit.jpg',
   },
   {
     quote: 'No fluff, no cringe content advice. Just honest frameworks that actually work.',
     name: 'Shivam Shukla',
     role: 'Senior Software Engineer',
     company: 'IBM',
-    avatar: '/images/testimonials/avatar-4.jpg',
+    avatar: '/images/testimonials/shivam.jpg',
   },
   {
     quote: 'The GitHub and LinkedIn chapters alone are worth it. My profile views went up 3x.',
     name: 'Anshika Verma',
     role: 'Frontend Engineer',
     company: 'Deloitte',
-    avatar: '/images/testimonials/avatar-5.jpg',
+    avatar: '/images/testimonials/anshika.jpg',
   },
   {
     quote: "Vinit writes like an engineer, not a marketer. That's exactly what I needed.",
     name: 'Prabhat Singh Tomar',
     role: 'DevOps Engineer',
     company: 'Microsoft',
-    avatar: '/images/testimonials/avatar-6.jpg',
+    avatar: '/images/testimonials/prabhat.jpg',
   },
   {
     quote: 'Started getting inbound opportunities within weeks of applying the strategies.',
-    name: 'Abha Himani',
+    name: 'Jaya Singh',
     role: 'Software Engineer',
-    company: 'Atlassian',
-    avatar: '/images/testimonials/avatar-7.jpg',
+    company: 'Cognizant',
+    avatar: '/images/testimonials/jaya.jpg',
   },
   {
     quote: 'The security and privacy chapter is gold. Nobody else talks about this.',
     name: 'Raghav Khandelwal',
     role: 'Senior Software Engineer',
     company: 'Oracle',
-    avatar: '/images/testimonials/avatar-8.jpg',
+    avatar: '/images/testimonials/raghav.jpg',
   },
   {
     quote: 'Helped me build a presence that feels authentic. Recruiters now come to me.',
-    name: 'Shashank',
-    role: 'Founder',
-    company: 'CredShields',
-    avatar: '/images/testimonials/avatar-9.jpg',
+    name: 'Sharmishtha Dash',
+    role: 'Director',
+    company: 'CloudFiles',
+    avatar: '/images/testimonials/sharmishtha.jpg',
   },
 ]
 
@@ -204,15 +204,15 @@ export default function Testimonials() {
 
                     {/* Author info */}
                     <div className="flex items-center gap-3">
-                      {/* Avatar placeholder - using initials fallback */}
-                      <div
-                        className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-sm font-medium"
-                        aria-hidden="true"
-                      >
-                        {testimonial.name
-                          .split(' ')
-                          .map((n) => n[0])
-                          .join('')}
+                      {/* Avatar image */}
+                      <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-blue-500/30 flex-shrink-0">
+                        <Image
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          width={40}
+                          height={40}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
 
                       <div className="flex-1 min-w-0">
