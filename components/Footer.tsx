@@ -5,6 +5,7 @@ import {
   Github,
   Twitter,
   ArrowRight,
+  ArrowUp,
   Footprints,
   Coffee,
   BookOpen,
@@ -299,6 +300,19 @@ export default function Footer() {
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Vinit Shahdeo. All rights reserved.</p>
+          
+          {/* Go to Top Button */}
+          <motion.button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-600 transition-all duration-200 group"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
+            <span className="text-xs font-medium">Back to Top</span>
+          </motion.button>
+          
           <p className="text-slate-400">Made for engineers who ship ✨</p>
         </div>
 
