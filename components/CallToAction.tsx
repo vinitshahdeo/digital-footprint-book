@@ -68,14 +68,7 @@ export default function CallToAction() {
           
           {/* GitHub Contribution Chart Only */}
           <div className="mb-8 flex flex-col items-center">
-            <div className="relative">
-              {/* GitHub Icon overlaid */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-                <div className="bg-white rounded-full p-1.5 md:p-2 shadow-sm">
-                  <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-400" />
-                </div>
-              </div>
-              
+            <div className="relative">              
               <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-60">
                 {Array.from({ length: 52 }).map((_, weekIndex) => (
                   <div key={weekIndex} className="flex flex-col gap-[2px] md:gap-[3px]">
@@ -102,14 +95,15 @@ export default function CallToAction() {
               </div>
             </div>
             
-            {/* Subtle GitHub link */}
+            {/* GitHub Profile Link */}
             <a 
               href="https://github.com/vinitshahdeo" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="mt-4 text-xs text-slate-400 hover:text-blue-500 transition-colors"
+              className="mt-4 inline-flex items-center gap-1 text-[11px] text-slate-500 hover:text-blue-500 transition-colors opacity-60 hover:opacity-100"
             >
-              View @vinitshahdeo on GitHub →
+              <Github className="w-3 h-3" />
+              View @vinitshahdeo on GitHub
             </a>
           </div>
           
