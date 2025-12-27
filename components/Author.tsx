@@ -35,7 +35,7 @@ export default function Author() {
                 transition={{ duration: 0.8, ease: 'easeOut' }}
               >
                 <Image
-                  src="/images/vinitshahdeo.jpg"
+                  src="/images/vinit-shahdeo.jpg"
                   alt="Vinit Shahdeo"
                   width={400}
                   height={400}

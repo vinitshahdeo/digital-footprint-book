@@ -17,7 +17,7 @@ const testimonials = [
     quote:
       'The FOOTPRINT framework changed how I think about my online presence. Practical and actionable.',
     name: 'Aman Kumar',
-    role: 'SRE',
+    role: 'Site Reliability Engineer',
     company: 'Cloudflare',
     avatar: '/images/testimonials/aman.jpg',
   },

@@ -210,7 +210,7 @@ export default function DigitalFootprintVisual() {
                 <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-xl relative z-10 overflow-hidden p-[2px]">
                   <div className="w-full h-full rounded-full overflow-hidden bg-white relative">
                     <Image
-                      src="/images/vinit-shahdeo.png"
+                      src="/images/vinit-shahdeo.jpg"
                       alt="Vinit Shahdeo"
                       width={160}
                       height={160}
