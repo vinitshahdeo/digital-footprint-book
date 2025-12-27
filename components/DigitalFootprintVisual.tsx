@@ -2,72 +2,87 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Github, Linkedin, FileText, Video, MessageCircle, Globe, Code, Users, Network, Star, TrendingUp, Heart, Package, Twitter } from 'lucide-react'
+import {
+  Github,
+  Linkedin,
+  FileText,
+  Video,
+  MessageCircle,
+  Globe,
+  Code,
+  Users,
+  Network,
+  Star,
+  TrendingUp,
+  Heart,
+  Package,
+  Twitter,
+} from 'lucide-react'
 
 const footprintElements = [
-  { 
-    icon: Github, 
-    label: 'GitHub', 
+  {
+    icon: Github,
+    label: 'GitHub',
     color: 'from-slate-600 to-slate-700',
     position: { top: '5%', left: '25%' },
     delay: 0.1,
-    id: 'github'
+    id: 'github',
   },
-  { 
-    icon: Linkedin, 
-    label: 'LinkedIn', 
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
     color: 'from-blue-600 to-blue-700',
     position: { top: '5%', right: '25%' },
     delay: 0.2,
-    id: 'linkedin'
+    id: 'linkedin',
   },
-  { 
-    icon: FileText, 
-    label: 'Blog Posts', 
+  {
+    icon: FileText,
+    label: 'Blog Posts',
     color: 'from-blue-500 to-purple-600',
     position: { top: '25%', left: '5%' },
     delay: 0.3,
-    id: 'blog'
+    id: 'blog',
   },
-  { 
-    icon: Video, 
-    label: 'Talks', 
+  {
+    icon: Video,
+    label: 'Talks',
     color: 'from-purple-500 to-purple-700',
     position: { top: '25%', right: '5%' },
     delay: 0.4,
-    id: 'talks'
+    id: 'talks',
   },
-  { 
-    icon: MessageCircle, 
-    label: 'Social Media', 
+  {
+    icon: MessageCircle,
+    label: 'Social Media',
     color: 'from-blue-400 to-blue-600',
     position: { bottom: '5%', left: '25%' },
     delay: 0.5,
-    id: 'social'
+    id: 'social',
   },
-  { 
-    icon: Globe, 
-    label: 'Portfolio', 
+  {
+    icon: Globe,
+    label: 'Portfolio',
     color: 'from-slate-700 to-slate-800',
     position: { bottom: '5%', right: '25%' },
     delay: 0.6,
-    id: 'portfolio'
+    id: 'portfolio',
   },
-  { 
-    icon: Code, 
-    label: 'Open Source', 
+  {
+    icon: Code,
+    label: 'Open Source',
     color: 'from-slate-500 to-slate-700',
     position: { bottom: '25%', left: '5%' },
     delay: 0.7,
-    id: 'opensource'
+    id: 'opensource',
   },
-  { 
-    icon: Users, 
-    label: 'Community', 
+  {
+    icon: Users,
+    label: 'Community',
     color: 'from-purple-600 to-purple-700',
     position: { bottom: '25%', right: '5%' },
     delay: 0.8,
-    id: 'community'
+    id: 'community',
   },
 ]
 
@@ -83,7 +98,7 @@ const activityFeed = [
     iconColor: 'text-slate-700',
     bgColor: 'bg-slate-50',
     timeAgo: '2m ago',
-    delay: 0.2
+    delay: 0.2,
   },
   {
     id: 2,
@@ -95,7 +110,7 @@ const activityFeed = [
     iconColor: 'text-blue-600',
     bgColor: 'bg-blue-50',
     timeAgo: '15m ago',
-    delay: 0.4
+    delay: 0.4,
   },
   {
     id: 3,
@@ -107,7 +122,7 @@ const activityFeed = [
     iconColor: 'text-orange-600',
     bgColor: 'bg-orange-50',
     timeAgo: '1h ago',
-    delay: 0.6
+    delay: 0.6,
   },
   {
     id: 4,
@@ -119,7 +134,7 @@ const activityFeed = [
     iconColor: 'text-red-600',
     bgColor: 'bg-red-50',
     timeAgo: '3h ago',
-    delay: 0.8
+    delay: 0.8,
   },
   {
     id: 5,
@@ -131,7 +146,7 @@ const activityFeed = [
     iconColor: 'text-pink-600',
     bgColor: 'bg-pink-50',
     timeAgo: '5h ago',
-    delay: 1.0
+    delay: 1.0,
   },
   {
     id: 6,
@@ -143,7 +158,7 @@ const activityFeed = [
     iconColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     timeAgo: '8h ago',
-    delay: 1.2
+    delay: 1.2,
   },
   {
     id: 7,
@@ -155,10 +170,9 @@ const activityFeed = [
     iconColor: 'text-purple-600',
     bgColor: 'bg-purple-50',
     timeAgo: '1d ago',
-    delay: 1.4
+    delay: 1.4,
   },
 ]
-
 
 export default function DigitalFootprintVisual() {
   return (
@@ -184,229 +198,236 @@ export default function DigitalFootprintVisual() {
         <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-start">
           {/* Visual Doodle Map */}
           <div className="relative h-[600px] md:h-[700px]">
-          {/* Center Circle - "You" */}
-          <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, type: 'spring' }}
-          >
-            <div className="relative">
-              <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-xl relative z-10 overflow-hidden p-[2px]">
-                <div className="w-full h-full rounded-full overflow-hidden bg-white relative">
-                  <Image
-                    src="/images/vinit-shahdeo.png"
-                    alt="Vinit Shahdeo"
-                    width={160}
-                    height={160}
-                    className="w-full h-full object-cover"
-                    priority
-                  />
-                  {/* Subtle overlay label */}
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent pt-8 pb-2">
-                    <span className="text-white text-sm md:text-base font-semibold tracking-wide block text-center">YOU</span>
+            {/* Center Circle - "You" */}
+            <motion.div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, type: 'spring' }}
+            >
+              <div className="relative">
+                <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-xl relative z-10 overflow-hidden p-[2px]">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-white relative">
+                    <Image
+                      src="/images/vinit-shahdeo.png"
+                      alt="Vinit Shahdeo"
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                    {/* Subtle overlay label */}
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent pt-8 pb-2">
+                      <span className="text-white text-sm md:text-base font-semibold tracking-wide block text-center">
+                        YOU
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Ripple effect - multiple rings */}
-              {[0, 1].map((delay) => (
-                <motion.div
-                  key={delay}
-                  className="absolute inset-0 rounded-full border-2 border-blue-400"
-                  animate={{ 
-                    scale: [1, 1.4], 
-                    opacity: [0.4, 0] 
-                  }}
-                  transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
-                    delay: delay * 2,
-                    ease: "easeOut"
-                  }}
-                />
-              ))}
-              
-              {/* Glowing pulse effect */}
-              <motion.div
-                className="absolute inset-0 rounded-full bg-blue-500/15 blur-lg"
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  opacity: [0.15, 0.25, 0.15]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-            </div>
-          </motion.div>
 
-          {/* Connecting Lines (SVG) */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-            <defs>
-              <marker
-                id="arrowhead"
-                markerWidth="10"
-                markerHeight="10"
-                refX="9"
-                refY="3"
-                orient="auto"
-              >
-                <polygon points="0 0, 10 3, 0 6" fill="#cbd5e1" />
-              </marker>
-              {/* Gradient for lines */}
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
-                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3" />
-              </linearGradient>
-            </defs>
-            {footprintElements.map((element, index) => {
-              const startX = '50%'
-              const startY = '50%'
-              const endX = element.position.left || element.position.right
-              const endY = element.position.top || element.position.bottom
-              
-              return (
-                <g key={index}>
-                  {/* Main connection line */}
-                  <motion.path
-                    d={`M ${startX} ${startY} Q ${startX} ${endY}, ${endX} ${endY}`}
-                    stroke="url(#lineGradient)"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeDasharray="8,8"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    whileInView={{ pathLength: 1, opacity: 0.6 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: element.delay }}
-                  />
-                  
-                  {/* Animated traveling dot */}
-                  <motion.circle
-                    r="4"
-                    fill="#3b82f6"
-                    initial={{ opacity: 0 }}
-                    animate={{ 
-                      opacity: [0, 1, 1, 0],
-                      offsetDistance: ['0%', '100%']
+                {/* Ripple effect - multiple rings */}
+                {[0, 1].map((delay) => (
+                  <motion.div
+                    key={delay}
+                    className="absolute inset-0 rounded-full border-2 border-blue-400"
+                    animate={{
+                      scale: [1, 1.4],
+                      opacity: [0.4, 0],
                     }}
                     transition={{
-                      duration: 3,
-                      delay: element.delay + 1,
+                      duration: 4,
                       repeat: Infinity,
-                      repeatDelay: 2,
-                      ease: "easeInOut"
+                      delay: delay * 2,
+                      ease: 'easeOut',
                     }}
-                  >
-                    <animateMotion
-                      dur="3s"
-                      repeatCount="indefinite"
-                      begin={`${element.delay + 1}s`}
-                    >
-                      <mpath href={`#path-${index}`} />
-                    </animateMotion>
-                  </motion.circle>
-                  
-                  {/* Hidden path for motion */}
-                  <path
-                    id={`path-${index}`}
-                    d={`M ${startX} ${startY} Q ${startX} ${endY}, ${endX} ${endY}`}
-                    fill="none"
-                    stroke="none"
                   />
-                </g>
-              )
-            })}
-          </svg>
+                ))}
 
-          {/* Footprint Elements */}
-          {footprintElements.map((element, index) => (
-            <motion.div
-              key={index}
-              className="absolute"
-              style={element.position}
-              initial={{ scale: 0, opacity: 0, rotate: -180 }}
-              whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.6, 
-                delay: element.delay,
-                type: 'spring',
-                stiffness: 200
-              }}
-              whileHover={{ 
-                scale: 1.05, 
-                rotate: 2,
-                transition: { duration: 0.3, ease: "easeOut" }
-              }}
-            >
-              <div className="relative group cursor-pointer">
-                {/* Pulsing outer ring */}
-              <motion.div
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${element.color} opacity-0 group-hover:opacity-10 blur-lg`}
+                {/* Glowing pulse effect */}
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-blue-500/15 blur-lg"
                   animate={{
-                    scale: [1, 1.1, 1],
-                    opacity: [0.05, 0.15, 0.05]
+                    scale: [1, 1.05, 1],
+                    opacity: [0.15, 0.25, 0.15],
                   }}
                   transition={{
                     duration: 4,
                     repeat: Infinity,
-                    delay: element.delay,
-                    ease: "easeInOut"
+                    ease: 'easeInOut',
                   }}
                 />
-                
-                {/* Doodle circle background */}
-                <div className={`relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br ${element.color} flex items-center justify-center shadow-md border-3 border-white group-hover:shadow-lg transition-all duration-200`}>
-                  <element.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
-                  
-                  {/* Small pulsing dot indicator */}
-                  <motion.div
-                    className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white"
-                    animate={{
-                      scale: [1, 1.15, 1],
-                      opacity: [0.7, 1, 0.7]
-                    }}
-                    transition={{
-                      duration: 2.5,
-                      repeat: Infinity,
-                      delay: element.delay,
-                      ease: "easeInOut"
-                    }}
-                  />
-                </div>
-                
-                {/* Label */}
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                  <span className="text-xs md:text-sm font-medium text-slate-700 bg-white px-3 py-1 rounded-full shadow-sm border border-slate-200">
-                    {element.label}
-                  </span>
-                </div>
-
-                {/* Doodle underline effect */}
-                <motion.svg
-                  className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100"
-                  width="80"
-                  height="4"
-                  initial={{ pathLength: 0 }}
-                  whileHover={{ pathLength: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.path
-                    d="M 5 2 Q 40 1, 75 2"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    className="text-blue-500"
-                  />
-                </motion.svg>
               </div>
             </motion.div>
-          ))}
+
+            {/* Connecting Lines (SVG) */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              style={{ zIndex: 1 }}
+            >
+              <defs>
+                <marker
+                  id="arrowhead"
+                  markerWidth="10"
+                  markerHeight="10"
+                  refX="9"
+                  refY="3"
+                  orient="auto"
+                >
+                  <polygon points="0 0, 10 3, 0 6" fill="#cbd5e1" />
+                </marker>
+                {/* Gradient for lines */}
+                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3" />
+                </linearGradient>
+              </defs>
+              {footprintElements.map((element, index) => {
+                const startX = '50%'
+                const startY = '50%'
+                const endX = element.position.left || element.position.right
+                const endY = element.position.top || element.position.bottom
+
+                return (
+                  <g key={index}>
+                    {/* Main connection line */}
+                    <motion.path
+                      d={`M ${startX} ${startY} Q ${startX} ${endY}, ${endX} ${endY}`}
+                      stroke="url(#lineGradient)"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeDasharray="8,8"
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 0.6 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: element.delay }}
+                    />
+
+                    {/* Animated traveling dot */}
+                    <motion.circle
+                      r="4"
+                      fill="#3b82f6"
+                      initial={{ opacity: 0 }}
+                      animate={{
+                        opacity: [0, 1, 1, 0],
+                        offsetDistance: ['0%', '100%'],
+                      }}
+                      transition={{
+                        duration: 3,
+                        delay: element.delay + 1,
+                        repeat: Infinity,
+                        repeatDelay: 2,
+                        ease: 'easeInOut',
+                      }}
+                    >
+                      <animateMotion
+                        dur="3s"
+                        repeatCount="indefinite"
+                        begin={`${element.delay + 1}s`}
+                      >
+                        <mpath href={`#path-${index}`} />
+                      </animateMotion>
+                    </motion.circle>
+
+                    {/* Hidden path for motion */}
+                    <path
+                      id={`path-${index}`}
+                      d={`M ${startX} ${startY} Q ${startX} ${endY}, ${endX} ${endY}`}
+                      fill="none"
+                      stroke="none"
+                    />
+                  </g>
+                )
+              })}
+            </svg>
+
+            {/* Footprint Elements */}
+            {footprintElements.map((element, index) => (
+              <motion.div
+                key={index}
+                className="absolute"
+                style={element.position}
+                initial={{ scale: 0, opacity: 0, rotate: -180 }}
+                whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: element.delay,
+                  type: 'spring',
+                  stiffness: 200,
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 2,
+                  transition: { duration: 0.3, ease: 'easeOut' },
+                }}
+              >
+                <div className="relative group cursor-pointer">
+                  {/* Pulsing outer ring */}
+                  <motion.div
+                    className={`absolute inset-0 rounded-full bg-gradient-to-br ${element.color} opacity-0 group-hover:opacity-10 blur-lg`}
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.05, 0.15, 0.05],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      delay: element.delay,
+                      ease: 'easeInOut',
+                    }}
+                  />
+
+                  {/* Doodle circle background */}
+                  <div
+                    className={`relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br ${element.color} flex items-center justify-center shadow-md border-3 border-white group-hover:shadow-lg transition-all duration-200`}
+                  >
+                    <element.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
+
+                    {/* Small pulsing dot indicator */}
+                    <motion.div
+                      className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white"
+                      animate={{
+                        scale: [1, 1.15, 1],
+                        opacity: [0.7, 1, 0.7],
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        delay: element.delay,
+                        ease: 'easeInOut',
+                      }}
+                    />
+                  </div>
+
+                  {/* Label */}
+                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <span className="text-xs md:text-sm font-medium text-slate-700 bg-white px-3 py-1 rounded-full shadow-sm border border-slate-200">
+                      {element.label}
+                    </span>
+                  </div>
+
+                  {/* Doodle underline effect */}
+                  <motion.svg
+                    className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100"
+                    width="80"
+                    height="4"
+                    initial={{ pathLength: 0 }}
+                    whileHover={{ pathLength: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.path
+                      d="M 5 2 Q 40 1, 75 2"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      className="text-blue-500"
+                    />
+                  </motion.svg>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           {/* Activity Feed */}
@@ -419,7 +440,7 @@ export default function DigitalFootprintVisual() {
                 </div>
                 <p className="text-blue-100 text-sm mt-1">Signals building your footprint</p>
               </div>
-              
+
               <div className="divide-y divide-slate-100 max-h-[600px] overflow-y-auto">
                 {activityFeed.map((item) => (
                   <motion.div
@@ -431,16 +452,16 @@ export default function DigitalFootprintVisual() {
                     transition={{ duration: 0.5, delay: item.delay }}
                   >
                     <div className="flex items-start gap-3">
-                      <div className={`${item.bgColor} rounded-lg p-2 shrink-0 group-hover:scale-110 transition-transform duration-200`}>
+                      <div
+                        className={`${item.bgColor} rounded-lg p-2 shrink-0 group-hover:scale-110 transition-transform duration-200`}
+                      >
                         <item.icon className={`w-4 h-4 ${item.iconColor}`} />
                       </div>
-                      
+
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-slate-900">
-                          <span className="font-semibold">vinitshahdeo</span>
-                          {' '}
-                          <span className="text-slate-600">{item.activity}</span>
-                          {' '}
+                          <span className="font-semibold">vinitshahdeo</span>{' '}
+                          <span className="text-slate-600">{item.activity}</span>{' '}
                           <span className="font-medium text-slate-900">{item.target}</span>
                         </p>
                         <div className="flex items-center gap-2 mt-1">
@@ -455,12 +476,12 @@ export default function DigitalFootprintVisual() {
                         className="w-2 h-2 rounded-full bg-green-400 shrink-0 mt-1"
                         animate={{
                           scale: [1, 1.3, 1],
-                          opacity: [0.7, 1, 0.7]
+                          opacity: [0.7, 1, 0.7],
                         }}
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          delay: item.delay
+                          delay: item.delay,
                         }}
                       />
                     </div>

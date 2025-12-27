@@ -1,6 +1,21 @@
 'use client'
 
-import { Code2, Linkedin, FileText, Users, Search, Lightbulb, Twitter, Shield, Sparkles, Briefcase, Youtube, Rocket, ChevronLeft, ChevronRight } from 'lucide-react'
+import {
+  Code2,
+  Linkedin,
+  FileText,
+  Users,
+  Search,
+  Lightbulb,
+  Twitter,
+  Shield,
+  Sparkles,
+  Briefcase,
+  Youtube,
+  Rocket,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
@@ -9,74 +24,74 @@ const topics = [
     icon: Lightbulb,
     title: 'The 3C Model: Code, Content & Community',
     description: 'The foundational framework for building your digital presence',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Code2,
     title: 'GitHub Mastery',
     description: 'Advanced practices to craft a standout profile and make your code shine',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Linkedin,
     title: 'LinkedIn Strategies for Engineers',
     description: 'From essentials to advanced tactics for professional networking',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Twitter,
     title: 'Mastering Twitter & Social Platforms',
     description: 'Crack the code to going viral as a developer',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Youtube,
     title: 'Visual Content & Video',
     description: 'YouTube, Instagram Reels, and short-form magic for engineers',
-    gradient: 'from-purple-500 to-purple-600'
+    gradient: 'from-purple-500 to-purple-600',
   },
   {
     icon: FileText,
     title: 'Blogging, Newsletters & Portfolios',
     description: 'Technical writing, developer portfolios, and growing your audience',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Users,
     title: 'Community & Open Source',
     description: 'Hackathons, mentorship, and structured programs to grow influence',
-    gradient: 'from-purple-500 to-purple-600'
+    gradient: 'from-purple-500 to-purple-600',
   },
   {
     icon: Rocket,
     title: 'The FOOTPRINT Framework',
     description: 'Your blueprint to a stellar digital presence with tools & playbooks',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Search,
     title: 'SEO & Google Visibility',
     description: 'Be unmissable — show up when people search for you',
-    gradient: 'from-purple-500 to-purple-600'
+    gradient: 'from-purple-500 to-purple-600',
   },
   {
     icon: Shield,
     title: 'Security, Privacy & Digital Hygiene',
     description: 'Protect yourself while building a healthy online presence',
-    gradient: 'from-blue-500 to-blue-600'
+    gradient: 'from-blue-500 to-blue-600',
   },
   {
     icon: Sparkles,
     title: 'AI & Your Digital Footprint',
     description: 'How AI impacts and helps you build your online presence',
-    gradient: 'from-purple-500 to-purple-600'
+    gradient: 'from-purple-500 to-purple-600',
   },
   {
     icon: Briefcase,
     title: 'Landing Jobs with Strong Presence',
     description: 'Turn your digital footprint into career opportunities',
-    gradient: 'from-blue-500 to-blue-600'
-  }
+    gradient: 'from-blue-500 to-blue-600',
+  },
 ]
 
 export default function BookCoverage() {
@@ -122,7 +137,7 @@ export default function BookCoverage() {
           {/* Cards Grid with Animation */}
           <div className="overflow-hidden">
             <AnimatePresence mode="wait">
-              <motion.div 
+              <motion.div
                 key={currentIndex}
                 className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                 initial={{ opacity: 0, x: 100 }}
@@ -130,43 +145,45 @@ export default function BookCoverage() {
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
               >
-                  {getCurrentCards().map((topic, index) => (
-                    <motion.div 
-                      key={currentIndex * cardsPerView + index} 
-                      className="relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300 group cursor-default overflow-hidden"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      whileHover={{ y: -4 }}
-                    >
+                {getCurrentCards().map((topic, index) => (
+                  <motion.div
+                    key={currentIndex * cardsPerView + index}
+                    className="relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300 group cursor-default overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ y: -4 }}
+                  >
                     {/* Subtle gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                    
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                    />
+
                     {/* Icon with gradient background */}
-                      <div className="relative mb-5">
-                        <motion.div 
-                          className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${topic.gradient}`}
-                          whileHover={{ scale: 1.05 }}
-                          transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                        >
-                          <topic.icon className="w-6 h-6 text-white" strokeWidth={2} />
-                        </motion.div>
-                      </div>
-                    
+                    <div className="relative mb-5">
+                      <motion.div
+                        className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${topic.gradient}`}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+                      >
+                        <topic.icon className="w-6 h-6 text-white" strokeWidth={2} />
+                      </motion.div>
+                    </div>
+
                     {/* Content */}
-                      <div className="relative">
-                        <h3 className="text-base font-semibold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-200">
-                          {topic.title}
-                        </h3>
-                        <p className="text-sm text-slate-600 leading-relaxed">
-                          {topic.description}
-                        </p>
-                      </div>
+                    <div className="relative">
+                      <h3 className="text-base font-semibold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-200">
+                        {topic.title}
+                      </h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">{topic.description}</p>
+                    </div>
 
                     {/* Bottom accent line */}
-                      <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${topic.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                    </motion.div>
-                  ))}
+                    <div
+                      className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${topic.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    />
+                  </motion.div>
+                ))}
               </motion.div>
             </AnimatePresence>
           </div>
@@ -189,8 +206,8 @@ export default function BookCoverage() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex 
-                      ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500' 
+                    index === currentIndex
+                      ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500'
                       : 'w-2 bg-slate-300 hover:bg-slate-400'
                   }`}
                   whileHover={{ scale: 1.2 }}

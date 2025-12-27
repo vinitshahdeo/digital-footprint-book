@@ -90,11 +90,15 @@ export default function DecisionTable() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span className="text-blue-900 font-medium">Inbound opportunities from recruiters</span>
+                <span className="text-blue-900 font-medium">
+                  Inbound opportunities from recruiters
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span className="text-blue-900 font-medium">Searchable, credible online presence</span>
+                <span className="text-blue-900 font-medium">
+                  Searchable, credible online presence
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
@@ -102,11 +106,15 @@ export default function DecisionTable() {
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span className="text-blue-900 font-medium">First-page Google results you control</span>
+                <span className="text-blue-900 font-medium">
+                  First-page Google results you control
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span className="text-blue-900 font-medium">Work visible across GitHub, blogs, LinkedIn</span>
+                <span className="text-blue-900 font-medium">
+                  Work visible across GitHub, blogs, LinkedIn
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />

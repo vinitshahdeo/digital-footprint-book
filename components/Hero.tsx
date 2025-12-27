@@ -1,24 +1,47 @@
 'use client'
 
-import { ArrowRight, BookOpen, Eye, Github, Twitter, Clapperboard, Instagram, Youtube, Rocket, Globe, Mail, Twitch, Rss, Sparkles } from 'lucide-react'
+import {
+  ArrowRight,
+  BookOpen,
+  Eye,
+  Github,
+  Twitter,
+  Clapperboard,
+  Instagram,
+  Youtube,
+  Rocket,
+  Globe,
+  Mail,
+  Twitch,
+  Rss,
+  Sparkles,
+} from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, position: { top: string, left: string } }) => (
+const FloatingIcon = ({
+  Icon,
+  delay,
+  position,
+}: {
+  Icon: any
+  delay: number
+  position: { top: string; left: string }
+}) => (
   <motion.div
     className="absolute text-slate-200"
     style={{ ...position }}
     initial={{ opacity: 0 }}
-    animate={{ 
-      opacity: [0.20, 0.35, 0.20],
+    animate={{
+      opacity: [0.2, 0.35, 0.2],
       y: [0, -10, 0],
     }}
     transition={{
       duration: 12,
       delay,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: 'easeInOut',
     }}
   >
     <Icon className="w-8 h-8 md:w-12 md:h-12" />
@@ -27,14 +50,14 @@ const FloatingIcon = ({ Icon, delay, position }: { Icon: any, delay: number, pos
 
 const AnimatedSignature = () => {
   return (
-    <motion.div 
+    <motion.div
       className="relative inline-block opacity-75"
       initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 0.70, scale: 1 }}
-      transition={{ 
-        duration: 1, 
+      animate={{ opacity: 0.7, scale: 1 }}
+      transition={{
+        duration: 1,
         delay: 1,
-        ease: "easeOut"
+        ease: 'easeOut',
       }}
     >
       <Image
@@ -54,7 +77,7 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOnlineCount(prev => {
+      setOnlineCount((prev) => {
         const increment = Math.random() * 0.0001
         const newCount = prev + increment
         return parseFloat(newCount.toFixed(4))
@@ -74,19 +97,19 @@ export default function Hero() {
         {/* Top Icons */}
         <FloatingIcon Icon={Github} delay={0} position={{ top: '8%', left: '10%' }} />
         <FloatingIcon Icon={Youtube} delay={1} position={{ top: '10%', left: '85%' }} />
-        
+
         {/* Middle Left */}
         <FloatingIcon Icon={Twitter} delay={2} position={{ top: '35%', left: '5%' }} />
         <FloatingIcon Icon={Twitch} delay={1.5} position={{ top: '60%', left: '7%' }} />
-        
+
         {/* Middle Right */}
         <FloatingIcon Icon={Instagram} delay={2.5} position={{ top: '40%', left: '90%' }} />
         <FloatingIcon Icon={Rocket} delay={0.5} position={{ top: '55%', left: '88%' }} />
-        
+
         {/* Bottom Icons */}
         <FloatingIcon Icon={Rss} delay={3.5} position={{ top: '85%', left: '12%' }} />
         <FloatingIcon Icon={Mail} delay={2.8} position={{ top: '88%', left: '82%' }} />
-        
+
         {/* Additional Balance */}
         <FloatingIcon Icon={Clapperboard} delay={1.8} position={{ top: '25%', left: '92%' }} />
         <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} />
@@ -94,16 +117,16 @@ export default function Hero() {
 
       <div className="relative max-w-5xl mx-auto text-center animate-fade-in">
         {/* Book Badge */}
-        <motion.div 
+        <motion.div
           className="inline-block mb-10"
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.span 
+          <motion.span
             className="px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-full inline-flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400 }}
+            transition={{ type: 'spring', stiffness: 400 }}
           >
             <Sparkles className="w-4 h-4" />
             Now Available – Get Your Copy!
@@ -111,7 +134,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Live Counter */}
-        <motion.div 
+        <motion.div
           className="mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -119,7 +142,7 @@ export default function Hero() {
         >
           <p className="text-sm md:text-base text-slate-500 font-mono">
             <span className="inline-flex items-center gap-2">
-              <motion.span 
+              <motion.span
                 className="w-2 h-2 bg-green-500 rounded-full"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ repeat: Infinity, duration: 2 }}
@@ -130,10 +153,11 @@ export default function Hero() {
         </motion.div>
 
         {/* Large Apple-style Headline with Hook */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-8 leading-[1.08] tracking-tight animate-slide-up" style={{animationDelay: '0.1s'}}>
-          <span className="text-slate-900">
-            Your code speaks.
-          </span>
+        <h1
+          className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-8 leading-[1.08] tracking-tight animate-slide-up"
+          style={{ animationDelay: '0.1s' }}
+        >
+          <span className="text-slate-900">Your code speaks.</span>
           <br />
           <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
             Does the internet know about you?
@@ -141,12 +165,19 @@ export default function Hero() {
         </h1>
 
         {/* Clean Subheading */}
-        <p className="text-lg md:text-xl text-slate-600 mb-14 max-w-2xl mx-auto leading-relaxed font-normal animate-slide-up" style={{animationDelay: '0.2s'}}>
-          A practical playbook to build a strong, authentic digital presence—without feeling like a self-promoter.
+        <p
+          className="text-lg md:text-xl text-slate-600 mb-14 max-w-2xl mx-auto leading-relaxed font-normal animate-slide-up"
+          style={{ animationDelay: '0.2s' }}
+        >
+          A practical playbook to build a strong, authentic digital presence—without feeling like a
+          self-promoter.
         </p>
 
         {/* Apple-style CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{animationDelay: '0.3s'}}>
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+          style={{ animationDelay: '0.3s' }}
+        >
           <a
             href="#purchase"
             className="group px-7 py-3.5 bg-slate-900 text-white rounded-lg font-medium text-base hover:bg-slate-800 transition-all duration-250 w-full sm:w-auto"
@@ -170,7 +201,7 @@ export default function Hero() {
         </div>
 
         {/* Quote */}
-        <motion.div 
+        <motion.div
           className="mt-20 max-w-xl mx-auto"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}

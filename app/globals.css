@@ -49,31 +49,33 @@
 
   /* Grid Pattern */
   .bg-grid-slate-100 {
-    background-image: linear-gradient(to right, rgb(241 245 249 / 0.4) 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, rgb(241 245 249 / 0.4) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(241 245 249 / 0.4) 1px, transparent 1px);
   }
 
   .bg-grid-slate-200 {
-    background-image: linear-gradient(to right, rgb(226 232 240 / 0.4) 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, rgb(226 232 240 / 0.4) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(226 232 240 / 0.4) 1px, transparent 1px);
   }
 
   .bg-grid-slate-700 {
-    background-image: linear-gradient(to right, rgb(51 65 85 / 0.2) 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, rgb(51 65 85 / 0.2) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(51 65 85 / 0.2) 1px, transparent 1px);
   }
 
   .bg-grid-slate-800 {
-    background-image: linear-gradient(to right, rgb(30 41 59 / 0.2) 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, rgb(30 41 59 / 0.2) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(30 41 59 / 0.2) 1px, transparent 1px);
   }
 }
 
 @layer components {
-
   /* Custom Animations */
   @keyframes float {
-
     0%,
     100% {
       transform: translateY(0px);
@@ -107,7 +109,6 @@
   }
 
   @keyframes gradientShift {
-
     0%,
     100% {
       background-position: 0% 50%;
@@ -119,7 +120,6 @@
   }
 
   @keyframes bounceWord {
-
     0%,
     100% {
       transform: translateY(0);

@@ -4,7 +4,6 @@ import { TrendingUp, MessageSquare, Zap, Camera } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function CareerImpact() {
-
   return (
     <section className="py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -29,7 +28,7 @@ export default function CareerImpact() {
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical connecting line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400/60 via-purple-400/60 to-blue-400/60 transform -translate-x-1/2 hidden md:block" />
-          
+
           {/* Metric 1 - 5× More visibility */}
           <motion.div
             className="relative mb-16"
@@ -45,7 +44,7 @@ export default function CareerImpact() {
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
+                  transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
                 >
                   <p className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3">
                     5×
@@ -53,9 +52,9 @@ export default function CareerImpact() {
                 </motion.div>
                 <p className="text-xl font-semibold text-slate-900 mb-2">More visibility</p>
               </div>
-              
+
               {/* Center icon */}
-              <motion.div 
+              <motion.div
                 className="relative z-10 flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
@@ -64,11 +63,14 @@ export default function CareerImpact() {
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
               </motion.div>
-              
+
               {/* Right side - Description */}
               <div className="flex-1 text-center md:text-left">
                 <p className="text-lg text-slate-600 max-w-xs">
-                  Engineers who blog receive <span className="font-semibold text-slate-900">5× more inbound opportunities</span>
+                  Engineers who blog receive{' '}
+                  <span className="font-semibold text-slate-900">
+                    5× more inbound opportunities
+                  </span>
                 </p>
               </div>
             </div>
@@ -89,7 +91,7 @@ export default function CareerImpact() {
                   initial={{ scale: 0, rotate: 180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.15, type: "spring", bounce: 0.4 }}
+                  transition={{ duration: 0.7, delay: 0.15, type: 'spring', bounce: 0.4 }}
                 >
                   <p className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-3">
                     3×
@@ -97,9 +99,9 @@ export default function CareerImpact() {
                 </motion.div>
                 <p className="text-xl font-semibold text-slate-900 mb-2">More interviews</p>
               </div>
-              
+
               {/* Center icon */}
-              <motion.div 
+              <motion.div
                 className="relative z-10 flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
@@ -108,11 +110,12 @@ export default function CareerImpact() {
                   <MessageSquare className="w-8 h-8 text-white" />
                 </div>
               </motion.div>
-              
+
               {/* Left side - Description */}
               <div className="flex-1 text-center md:text-right">
                 <p className="text-lg text-slate-600 max-w-xs md:ml-auto">
-                  Open-source contributors get <span className="font-semibold text-slate-900">3× more interview calls</span>
+                  Open-source contributors get{' '}
+                  <span className="font-semibold text-slate-900">3× more interview calls</span>
                 </p>
               </div>
             </div>
@@ -133,7 +136,7 @@ export default function CareerImpact() {
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.3, type: "spring", bounce: 0.4 }}
+                  transition={{ duration: 0.7, delay: 0.3, type: 'spring', bounce: 0.4 }}
                 >
                   <p className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3">
                     14×
@@ -141,9 +144,9 @@ export default function CareerImpact() {
                 </motion.div>
                 <p className="text-xl font-semibold text-slate-900 mb-2">Profile views</p>
               </div>
-              
+
               {/* Center icon */}
-              <motion.div 
+              <motion.div
                 className="relative z-10 flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
@@ -152,17 +155,17 @@ export default function CareerImpact() {
                   <Camera className="w-8 h-8 text-white" />
                 </div>
               </motion.div>
-              
+
               {/* Right side - Description */}
               <div className="flex-1 text-center md:text-left">
                 <p className="text-lg text-slate-600 max-w-xs">
-                  Profiles with photos get <span className="font-semibold text-slate-900">14× more profile views</span>
+                  Profiles with photos get{' '}
+                  <span className="font-semibold text-slate-900">14× more profile views</span>
                 </p>
               </div>
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   )

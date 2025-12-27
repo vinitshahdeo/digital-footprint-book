@@ -27,34 +27,34 @@ export default function BookIntro() {
               initial={{ opacity: 0, x: -20, rotate: -15 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               viewport={{ once: true }}
-              animate={{ 
+              animate={{
                 y: [0, -10, 0],
-                rotate: [-5, 5, -5]
+                rotate: [-5, 5, -5],
               }}
-              transition={{ 
+              transition={{
                 opacity: { duration: 0.8, delay: 0.2 },
                 x: { duration: 0.8, delay: 0.2 },
-                y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
-                rotate: { repeat: Infinity, duration: 4, ease: "easeInOut" }
+                y: { repeat: Infinity, duration: 3, ease: 'easeInOut' },
+                rotate: { repeat: Infinity, duration: 4, ease: 'easeInOut' },
               }}
             >
               <Footprints className="w-12 h-12 md:w-16 md:h-16" />
             </motion.div>
-            
+
             <motion.div
               className="absolute -right-8 md:-right-16 top-8 text-purple-500/20"
               initial={{ opacity: 0, x: 20, rotate: 15 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               viewport={{ once: true }}
-              animate={{ 
+              animate={{
                 y: [0, 10, 0],
-                rotate: [5, -5, 5]
+                rotate: [5, -5, 5],
               }}
-              transition={{ 
+              transition={{
                 opacity: { duration: 0.8, delay: 0.3 },
                 x: { duration: 0.8, delay: 0.3 },
-                y: { repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 0.5 },
-                rotate: { repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }
+                y: { repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 0.5 },
+                rotate: { repeat: Infinity, duration: 4.5, ease: 'easeInOut', delay: 0.5 },
               }}
             >
               <Footprints className="w-10 h-10 md:w-14 md:h-14" />
@@ -68,13 +68,20 @@ export default function BookIntro() {
                 Digital Footprint
               </span>
             </h3>
-            <p className="text-lg md:text-xl text-slate-500 mt-3 font-medium tracking-wide">for software engineers</p>
-            
+            <p className="text-lg md:text-xl text-slate-500 mt-3 font-medium tracking-wide">
+              for software engineers
+            </p>
+
             {/* Binary representation of "Digital Footprint" */}
             <style jsx>{`
               @keyframes subtlePulse {
-                0%, 100% { opacity: 0.5; }
-                50% { opacity: 0.8; }
+                0%,
+                100% {
+                  opacity: 0.5;
+                }
+                50% {
+                  opacity: 0.8;
+                }
               }
               .binary-pulse {
                 animation: subtlePulse 4s ease-in-out infinite;
@@ -94,7 +101,8 @@ export default function BookIntro() {
           </div>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            A practical playbook for software engineers who want their work to be discoverable, credible, and career-defining
+            A practical playbook for software engineers who want their work to be discoverable,
+            credible, and career-defining
           </p>
         </motion.div>
 
@@ -111,7 +119,7 @@ export default function BookIntro() {
             <motion.div
               className="relative"
               whileHover={{ scale: 1.05, rotateY: 5 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-3xl blur-3xl"></div>
               <Image
@@ -140,7 +148,9 @@ export default function BookIntro() {
               </div>
               <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
                 <Sparkles className="w-4 h-4 text-purple-600" />
-                <span className="text-slate-700 text-sm font-medium">Real Frameworks & Examples</span>
+                <span className="text-slate-700 text-sm font-medium">
+                  Real Frameworks & Examples
+                </span>
               </div>
               <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-slate-200">
                 <Sparkles className="w-4 h-4 text-blue-600" />
@@ -149,14 +159,25 @@ export default function BookIntro() {
             </div>
 
             <p className="text-base text-slate-500 italic">
-              This isn't about becoming an influencer. It's about making sure your best work doesn't go unnoticed.
+              This isn't about becoming an influencer. It's about making sure your best work doesn't
+              go unnoticed.
             </p>
 
             {/* Who is this for */}
             <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
               <h3 className="text-sm font-semibold text-slate-900 mb-3">Perfect for:</h3>
               <div className="flex flex-wrap gap-1.5">
-                {['Engineering Students', 'Entry-level Engineers', 'SDE-1/2', 'Mid-level Developers', 'Senior Engineers', 'Staff Engineers', 'Tech Leads', 'Engineering Managers', 'Startup Founders'].map((role, index) => (
+                {[
+                  'Engineering Students',
+                  'Entry-level Engineers',
+                  'SDE-1/2',
+                  'Mid-level Developers',
+                  'Senior Engineers',
+                  'Staff Engineers',
+                  'Tech Leads',
+                  'Engineering Managers',
+                  'Startup Founders',
+                ].map((role, index) => (
                   <motion.span
                     key={role}
                     initial={{ opacity: 0 }}
@@ -185,7 +206,7 @@ export default function BookIntro() {
                 <span className="text-sm">Buy on Amazon</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </motion.a>
-              
+
               <motion.a
                 href="https://www.flipkart.com"
                 target="_blank"

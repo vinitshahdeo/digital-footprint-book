@@ -5,35 +5,35 @@ import { Users } from 'lucide-react'
 import Image from 'next/image'
 
 const companies = [
-  { 
-    name: 'Microsoft', 
+  {
+    name: 'Microsoft',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
     width: 120,
-    height: 26
+    height: 26,
   },
-  { 
-    name: 'Cloudflare', 
+  {
+    name: 'Cloudflare',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png',
     width: 120,
-    height: 30
+    height: 30,
   },
-  { 
-    name: 'Postman', 
+  {
+    name: 'Postman',
     logo: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-ar21.svg',
     width: 110,
-    height: 30
+    height: 30,
   },
-  { 
-    name: 'Atlassian', 
+  {
+    name: 'Atlassian',
     logo: 'https://www.vectorlogo.zone/logos/atlassian/atlassian-ar21.svg',
     width: 120,
-    height: 30
+    height: 30,
   },
-  { 
-    name: 'IBM', 
+  {
+    name: 'IBM',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg',
     width: 80,
-    height: 32
+    height: 32,
   },
 ]
 

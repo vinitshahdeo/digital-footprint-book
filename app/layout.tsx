@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -13,8 +13,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://digitalfootprint.vinitshahdeo.com'),
   title: 'Digital Footprint for Software Engineers | Vinit Shahdeo',
-  description: 'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work—without fake self-promotion. A practical playbook by Vinit Shahdeo.',
-  keywords: 'software engineering, digital footprint, github, linkedin, portfolio, blog, open source, personal branding, career growth, developer visibility',
+  description:
+    'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work—without fake self-promotion. A practical playbook by Vinit Shahdeo.',
+  keywords:
+    'software engineering, digital footprint, github, linkedin, portfolio, blog, open source, personal branding, career growth, developer visibility',
   authors: [{ name: 'Vinit Shahdeo', url: 'https://vinitshahdeo.com' }],
   creator: 'Vinit Shahdeo',
   publisher: 'Vinit Shahdeo',
@@ -25,7 +27,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Digital Footprint for Software Engineers',
-    description: 'Your code speaks. But what does the internet say about you? A practical playbook for engineers who want their work to be discoverable.',
+    description:
+      'Your code speaks. But what does the internet say about you? A practical playbook for engineers who want their work to be discoverable.',
     type: 'website',
     url: 'https://digitalfootprint.vinitshahdeo.com',
     siteName: 'Digital Footprint',
@@ -62,11 +65,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
       <body className={`${inter.className} font-sans antialiased`}>{children}</body>

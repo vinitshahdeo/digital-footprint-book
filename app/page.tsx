@@ -19,24 +19,24 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden">
       {/* 1. First Impression */}
       <Hero />
-      
+
       {/* 2. Problem Zone - Hook & Pain Points */}
       <GoogleYourself />
       <VisibilityGap />
       <CareerImpact />
-      
+
       {/* 3. Solution Zone - The Book & Author */}
       <BookIntro />
       <Author />
       <BookCoverage />
       <WhyThisBook />
-      
+
       {/* 4. Reinforcement Zone - Value & Proof */}
       <Testimonials />
       <Searchability />
       <DigitalFootprintVisual />
       <CallToAction />
-      
+
       {/* 5. Conversion Zone */}
       {/* <DecisionTable /> */}
       <Purchase />
@@ -44,4 +44,3 @@ export default function Home() {
     </main>
   )
 }
-

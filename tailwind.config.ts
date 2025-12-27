@@ -9,18 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: [
+          'var(--font-sans)',
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+        ],
       },
       letterSpacing: {
-        'tighter': '-0.04em',
-        'tight': '-0.02em',
-        'snug': '-0.015em',
+        tighter: '-0.04em',
+        tight: '-0.02em',
+        snug: '-0.015em',
       },
       lineHeight: {
-        'tighter': '1.1',
-        'snug': '1.25',
-        'comfortable': '1.6',
-        'relaxed': '1.75',
+        tighter: '1.1',
+        snug: '1.25',
+        comfortable: '1.6',
+        relaxed: '1.75',
       },
       spacing: {
         '18': '4.5rem',

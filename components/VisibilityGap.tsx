@@ -8,7 +8,7 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
   const ref = useRef<HTMLSpanElement>(null)
   const motionValue = useMotionValue(0)
   const springValue = useSpring(motionValue, { duration: duration * 1000 })
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   useEffect(() => {
     if (isInView) {
@@ -17,7 +17,7 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
   }, [isInView, motionValue, value])
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    springValue.on('change', (latest) => {
       if (ref.current) {
         ref.current.textContent = Math.floor(latest).toString()
       }
@@ -66,10 +66,11 @@ export default function VisibilityGap() {
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, type: "spring", delay: 0.2 }}
+                  transition={{ duration: 0.7, type: 'spring', delay: 0.2 }}
                 >
                   <p className="text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-5">
-                    <Counter value={100} duration={1.5} /><span className="text-5xl">%</span>
+                    <Counter value={100} duration={1.5} />
+                    <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
                 <div className="h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-5" />
@@ -93,13 +94,17 @@ export default function VisibilityGap() {
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, type: "spring", delay: 0.35 }}
+                  transition={{ duration: 0.7, type: 'spring', delay: 0.35 }}
                 >
                   <p className="text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-5">
-                    <Counter value={40} duration={1.5} /><span className="text-5xl">%</span>
+                    <Counter value={40} duration={1.5} />
+                    <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-1.5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-5 mx-auto" style={{ width: '40%' }} />
+                <div
+                  className="h-1.5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-5 mx-auto"
+                  style={{ width: '40%' }}
+                />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Documented</h3>
                 <p className="text-slate-600 leading-relaxed">
                   Creating internal docs, READMEs, and notes
@@ -120,13 +125,17 @@ export default function VisibilityGap() {
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.7, type: "spring", delay: 0.5 }}
+                  transition={{ duration: 0.7, type: 'spring', delay: 0.5 }}
                 >
                   <p className="text-8xl font-bold bg-gradient-to-br from-slate-600 to-slate-700 bg-clip-text text-transparent leading-none mb-5">
-                    <Counter value={20} duration={1.5} /><span className="text-5xl">%</span>
+                    <Counter value={20} duration={1.5} />
+                    <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-1.5 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full mb-5 mx-auto" style={{ width: '20%' }} />
+                <div
+                  className="h-1.5 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full mb-5 mx-auto"
+                  style={{ width: '20%' }}
+                />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Discoverable</h3>
                 <p className="text-slate-600 leading-relaxed">
                   Actually visible and searchable online
@@ -136,16 +145,14 @@ export default function VisibilityGap() {
           </div>
 
           {/* Gap Explanation */}
-          <motion.div 
+          <motion.div
             className="text-center mt-14"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <p className="text-xl italic font-medium text-slate-700 mb-3">
-              The gap is opportunity
-            </p>
+            <p className="text-xl italic font-medium text-slate-700 mb-3">The gap is opportunity</p>
             <p className="text-lg text-slate-700 font-semibold">
               Same skills. Same effort.{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -175,19 +182,27 @@ export default function VisibilityGap() {
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                      ✕
+                    </span>
                     <p className="text-slate-600 text-sm">Great work, but only your team knows</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                      ✕
+                    </span>
                     <p className="text-slate-600 text-sm">Résumé gets lost in the pile</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                      ✕
+                    </span>
                     <p className="text-slate-600 text-sm">Google shows nothing or outdated info</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">✕</span>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                      ✕
+                    </span>
                     <p className="text-slate-600 text-sm">Cold applications, low response rate</p>
                   </div>
                 </div>
@@ -205,23 +220,39 @@ export default function VisibilityGap() {
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md shadow-blue-500/20">
                     <Eye className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Searchable Engineer</h3>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Searchable Engineer
+                  </h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
-                    <p className="text-slate-800 font-medium text-sm">Work visible across GitHub, blogs, LinkedIn</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">
+                      ✓
+                    </span>
+                    <p className="text-slate-800 font-medium text-sm">
+                      Work visible across GitHub, blogs, LinkedIn
+                    </p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
-                    <p className="text-slate-800 font-medium text-sm">First-page Google results you control</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">
+                      ✓
+                    </span>
+                    <p className="text-slate-800 font-medium text-sm">
+                      First-page Google results you control
+                    </p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
-                    <p className="text-slate-800 font-medium text-sm">Inbound messages from recruiters</p>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">
+                      ✓
+                    </span>
+                    <p className="text-slate-800 font-medium text-sm">
+                      Inbound messages from recruiters
+                    </p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">✓</span>
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">
+                      ✓
+                    </span>
                     <p className="text-slate-800 font-medium text-sm">Opportunities find you</p>
                   </div>
                 </div>

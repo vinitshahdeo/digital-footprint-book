@@ -19,9 +19,9 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 
 ## 📦 Quick Links
 
-- [Buy on Amazon](#)  
-- [Buy on Flipkart](#)  
-- [Get ebook on Kindle](#)  
+- [Buy on Amazon](#)
+- [Buy on Flipkart](#)
+- [Get ebook on Kindle](#)
 - [View landing page](http://localhost:3000)
 
 ## 🛠️ Local Setup
@@ -36,24 +36,19 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
    ```
 3. Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-
 ## 🌩️ Lighthouse Score
 
 <img width="904" height="169" alt="Screenshot 2025-12-18 at 11 04 10 PM" src="https://github.com/user-attachments/assets/c50cfb31-3a60-45d1-aa41-ba475ffc6571" />
 
-
-
 ## 📄 License
 
 MIT © Vinit Shahdeo
-
 
 ---
 
 <img width="2848" height="1504" alt="digital-footprint-og-min-min" src="https://github.com/user-attachments/assets/aa4ddb6a-24a3-471b-aea7-7dc97ea432f3" />
 
 ---
-
 
 <p align="center">
   <em>A practical playbook for engineers who want their work to be seen.</em>
@@ -66,4 +61,3 @@ MIT © Vinit Shahdeo
   <br /><br />
   <a href="https://github.com/vinitshahdeo"><img src="https://img.shields.io/github/followers/vinitshahdeo?label=Follow%20on%20GitHub&style=social" alt="Follow Vinit Shahdeo on GitHub"></a>
 </p>
-

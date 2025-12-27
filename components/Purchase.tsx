@@ -1,25 +1,37 @@
 'use client'
 
-import { ArrowRight, ShoppingCart, Rocket, Check, BookOpen, TabletSmartphone, FileText, Headphones } from 'lucide-react'
+import {
+  ArrowRight,
+  ShoppingCart,
+  Rocket,
+  Check,
+  BookOpen,
+  TabletSmartphone,
+  FileText,
+  Headphones,
+} from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const benefits = [
   '38 actionable chapters',
   '11 comprehensive sections',
   '350+ pages of insights',
-  'Real-world frameworks'
+  'Real-world frameworks',
 ]
 
 export default function Purchase() {
   return (
-    <section id="purchase" className="relative py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section
+      id="purchase"
+      className="relative py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950"
+    >
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-blue-400 mb-6 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
             <Rocket className="w-4 h-4" />
             Ready to Start?
           </p>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 tracking-tight leading-[1.1]">
             <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
               Digital Footprint
@@ -29,7 +41,7 @@ export default function Purchase() {
               for Software Engineers
             </span>
           </h2>
-          
+
           <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
             Get your copy today and start building your online presence
           </p>
@@ -37,7 +49,7 @@ export default function Purchase() {
           {/* Benefits */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {benefits.map((benefit, index) => (
-              <div 
+              <div
                 key={index}
                 className="flex items-center gap-2 px-3.5 py-1.5 bg-white/5 rounded-full border border-white/10"
               >
@@ -60,7 +72,7 @@ export default function Purchase() {
             <span>Buy on Amazon</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
           </a>
-          
+
           <a
             href="https://www.flipkart.com"
             target="_blank"
