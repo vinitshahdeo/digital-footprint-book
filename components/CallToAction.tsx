@@ -104,7 +104,7 @@ export default function CallToAction() {
               className="mt-4 inline-flex items-center gap-1 text-[11px] text-slate-500 hover:text-blue-500 transition-colors opacity-60 hover:opacity-100"
             >
               <Github className="w-3 h-3" />
-              View @vinitshahdeo on GitHub
+              View {/* @vinitshahdeo */} on GitHub
             </a>
           </div>
 
