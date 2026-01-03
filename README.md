@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="260" alt="Digital Footprint for Software Engineers - Book Cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
-</p>
+<img width="1536" height="1024" alt="ChatGPT Image Jan 3, 2026, 02_34_39 AM" src="https://github.com/user-attachments/assets/5ef60b4b-da46-47d0-9a15-eda90c592506" />
 
 # Digital Footprint for Software Engineers
 
@@ -44,11 +42,9 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 
 MIT © Vinit Shahdeo
 
----
-
-<img width="2848" height="1504" alt="digital-footprint-og-min-min" src="https://github.com/user-attachments/assets/aa4ddb6a-24a3-471b-aea7-7dc97ea432f3" />
-
----
+<p align="center">
+  <img width="100" alt="Digital Footprint for Software Engineers - Book Cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
+</p>
 
 <p align="center">
   <em>A practical playbook for engineers who want their work to be seen.</em>
