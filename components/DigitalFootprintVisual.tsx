@@ -165,7 +165,7 @@ const activityFeed = [
     platform: 'Conference',
     icon: Video,
     activity: 'spoke at',
-    target: 'DevConf 2024',
+    target: 'DevConf 2026',
     color: 'from-purple-400 to-purple-600',
     iconColor: 'text-purple-600',
     bgColor: 'bg-purple-50',
