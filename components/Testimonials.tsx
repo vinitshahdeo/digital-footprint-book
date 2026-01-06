@@ -70,6 +70,27 @@ const testimonials = [
     company: 'CloudFiles',
     avatar: '/images/testimonials/sharmishtha.jpg',
   },
+  {
+    quote: 'The chapter on open source gave me the confidence to share my work. Game changer.',
+    name: 'Ishika Kesharwani',
+    role: 'Software Engineer',
+    company: 'Dell',
+    avatar: '/images/testimonials/ishika.jpg',
+  },
+  {
+    quote: 'Clear, structured advice that helped me grow my network authentically. Highly recommend.',
+    name: 'Abha Himani',
+    role: 'Software Engineer',
+    company: 'Atlassian',
+    avatar: '/images/testimonials/abha.jpg',
+  },
+  {
+    quote: 'As a DevOps engineer, I never thought about personal branding. This book changed that.',
+    name: 'Susheer Zingade',
+    role: 'Senior DevOps Engineer',
+    company: 'Cisco',
+    avatar: '/images/testimonials/susheer.jpg',
+  }
 ]
 
 // Responsive hook for cards per view
