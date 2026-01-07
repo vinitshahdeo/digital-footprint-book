@@ -300,7 +300,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Vinit Shahdeo. All rights reserved.</p>
-          
+
           {/* Go to Top Button */}
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -312,7 +312,7 @@ export default function Footer() {
             <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
             <span className="text-xs font-medium">Back to Top</span>
           </motion.button>
-          
+
           <p className="text-slate-400">Made for engineers who ship ✨</p>
         </div>
 

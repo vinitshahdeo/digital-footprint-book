@@ -78,7 +78,8 @@ const testimonials = [
     avatar: '/images/testimonials/ishika.jpg',
   },
   {
-    quote: 'Clear, structured advice that helped me grow my network authentically. Highly recommend.',
+    quote:
+      'Clear, structured advice that helped me grow my network authentically. Highly recommend.',
     name: 'Abha Himani',
     role: 'Software Engineer',
     company: 'Atlassian',
@@ -90,7 +91,7 @@ const testimonials = [
     role: 'Senior DevOps Engineer',
     company: 'Cisco',
     avatar: '/images/testimonials/susheer.jpg',
-  }
+  },
 ]
 
 // Responsive hook for cards per view
