@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Bot, ExternalLink } from 'lucide-react'
 
 export default function AIFutureSection() {
-  const geminiUrl = `https://gemini.google.com/app?text=${encodeURIComponent('Who is Vinit Shahdeo?')}`
+  const geminiUrl = 'https://www.google.com/search?q=Who+is+Vinit+Shahdeo&udm=50'
 
   return (
     <section className="relative py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
