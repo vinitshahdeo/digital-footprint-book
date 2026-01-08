@@ -11,6 +11,7 @@ export default function CallToAction() {
         className="absolute top-16 left-[10%] text-blue-200"
         animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        aria-hidden="true"
       >
         <Sparkles className="w-6 h-6" />
       </motion.div>
@@ -19,6 +20,7 @@ export default function CallToAction() {
         className="absolute top-24 right-[15%] text-blue-200"
         animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        aria-hidden="true"
       >
         <Rocket className="w-5 h-5" />
       </motion.div>
@@ -27,6 +29,7 @@ export default function CallToAction() {
         className="absolute bottom-20 left-[20%] text-blue-200"
         animate={{ y: [0, -6, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        aria-hidden="true"
       >
         <Star className="w-5 h-5" />
       </motion.div>
@@ -35,6 +38,7 @@ export default function CallToAction() {
         className="absolute bottom-24 right-[12%] text-blue-200"
         animate={{ y: [0, 8, 0], rotate: [0, 10, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+        aria-hidden="true"
       >
         <Zap className="w-4 h-4" />
       </motion.div>

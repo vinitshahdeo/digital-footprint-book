@@ -43,6 +43,7 @@ const FloatingIcon = ({
       repeat: Infinity,
       ease: 'easeInOut',
     }}
+    aria-hidden="true"
   >
     <Icon className="w-8 h-8 md:w-12 md:h-12" />
   </motion.div>
