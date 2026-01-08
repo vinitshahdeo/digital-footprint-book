@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Bot, Sparkles, ExternalLink } from 'lucide-react'
+import { Bot, ExternalLink } from 'lucide-react'
 
 export default function AIFutureSection() {
   const geminiUrl = `https://gemini.google.com/app?text=${encodeURIComponent('Who is Vinit Shahdeo?')}`
@@ -42,15 +42,29 @@ export default function AIFutureSection() {
               See for yourself—ask AI about the author of this book
             </p>
 
+            {/* Gradient border button */}
             <a
               href={geminiUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 hover:scale-[1.02] transition-all duration-200"
+              className="group relative inline-flex items-center hover:scale-[1.02] transition-transform duration-200"
             >
-              <Sparkles className="w-4 h-4 animate-pulse" />
-              Ask AI
-              <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+              {/* Gradient border wrapper with glow on hover */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-pink-500 p-[2px] group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-shadow duration-200">
+                <span className="block h-full w-full rounded-full bg-slate-900" />
+              </span>
+              
+              {/* Content */}
+              <span className="relative inline-flex items-center gap-2.5 px-7 py-3.5 text-white font-medium">
+                {/* AI Sparkle Icon - two 4-pointed stars */}
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M10 2L11.5 7.5L17 9L11.5 10.5L10 16L8.5 10.5L3 9L8.5 7.5L10 2Z" />
+                  <path d="M18 12L19 15L22 16L19 17L18 20L17 17L14 16L17 15L18 12Z" />
+                </svg>
+                <span>Ask AI</span>
+                <span className="text-white/60 font-normal">about Vinit Shahdeo</span>
+                <ExternalLink className="w-4 h-4 text-white/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+              </span>
             </a>
 
             <p className="text-xs text-slate-500">Opens Google Gemini with a pre-filled prompt</p>
