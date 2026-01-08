@@ -32,8 +32,8 @@ export default function AIFutureSection() {
 
           {/* Subheadline */}
           <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-14 leading-relaxed">
-            The next wave of hiring won&apos;t start with a job application. It&apos;ll start with an AI
-            agent researching candidates online. Make sure it finds the right story about you.
+            The next wave of hiring won&apos;t start with a job application. It&apos;ll start with
+            an AI agent researching candidates online. Make sure it finds the right story about you.
           </p>
 
           {/* CTA Section - consistent spacing */}
@@ -53,7 +53,7 @@ export default function AIFutureSection() {
               <span className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-pink-500 p-[2px] group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-shadow duration-200">
                 <span className="block h-full w-full rounded-full bg-slate-900" />
               </span>
-              
+
               {/* Content */}
               <span className="relative inline-flex items-center gap-2.5 px-7 py-3.5 text-white font-medium">
                 {/* AI Sparkle Icon - two 4-pointed stars */}
