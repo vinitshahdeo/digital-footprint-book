@@ -7,21 +7,8 @@ export default function AIFutureSection() {
   const geminiUrl = `https://gemini.google.com/app?text=${encodeURIComponent('Who is Vinit Shahdeo?')}`
 
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 relative overflow-hidden">
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px',
-        }}
-      />
-
-      {/* Glow effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-
-      <div className="max-w-6xl mx-auto relative">
+    <section className="relative py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+      <div className="relative max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,8 +16,8 @@ export default function AIFutureSection() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          {/* Badge - matched sizing with other sections */}
-          <p className="text-xs font-medium text-blue-300 mb-6 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/30 rounded-full">
+          {/* Badge - consistent with Purchase section */}
+          <p className="text-sm font-medium text-blue-400 mb-6 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
             <Bot className="w-4 h-4" />
             The Future of Hiring
           </p>
