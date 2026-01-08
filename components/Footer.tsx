@@ -55,7 +55,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative py-14 px-6 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
+    <footer className="relative py-16 px-6 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto">
         {/* Footer Grid - 4 Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10">
@@ -298,7 +298,7 @@ export default function Footer() {
         <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-8" />
 
         {/* Copyright */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Vinit Shahdeo. All rights reserved.</p>
 
           {/* Go to Top Button */}

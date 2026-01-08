@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Searchability() {
   return (
-    <section className="py-28 px-6 bg-white">
+    <section className="py-16 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -171,7 +171,7 @@ export default function Searchability() {
 
             <div className="space-y-3">
               <motion.div
-                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg p-4 text-white shadow-md cursor-default"
+                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-md cursor-default"
                 initial={{ opacity: 0, x: 15 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

@@ -113,7 +113,7 @@ export default function BookCoverage() {
   }
 
   return (
-    <section id="whats-inside" className="py-28 px-6 bg-white">
+    <section id="whats-inside" className="py-16 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Apple-style Section Header */}
         <div className="text-center mb-16">
@@ -200,14 +200,17 @@ export default function BookCoverage() {
             </motion.button>
 
             {/* Dot Indicators */}
-            <div className="flex gap-2">
+            <div className="flex gap-2" role="tablist" aria-label="Book coverage pages">
               {Array.from({ length: totalSlides }).map((_, index) => (
                 <motion.button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
+                  role="tab"
+                  aria-selected={index === currentIndex}
+                  aria-label={`Go to page ${index + 1}`}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500'
+                      ? 'w-8 bg-gradient-to-r from-blue-500 to-blue-600'
                       : 'w-2 bg-slate-300 hover:bg-slate-400'
                   }`}
                   whileHover={{ scale: 1.2 }}

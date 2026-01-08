@@ -12,7 +12,7 @@ const achievements = [
 
 export default function Author() {
   return (
-    <section className="py-28 px-6 bg-slate-50">
+    <section className="py-16 md:py-28 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Clean Author Image */}
@@ -54,7 +54,7 @@ export default function Author() {
 
           {/* Clean Author Bio */}
           <div className="order-1 md:order-2">
-            <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 rounded-full">
+            <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
               <User className="w-3.5 h-3.5" />
               About the Author
             </p>

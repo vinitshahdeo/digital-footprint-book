@@ -7,7 +7,7 @@ export default function AIFutureSection() {
   const geminiUrl = 'https://www.google.com/search?q=Who+is+Vinit+Shahdeo&udm=50'
 
   return (
-    <section className="relative py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="relative py-16 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="relative max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

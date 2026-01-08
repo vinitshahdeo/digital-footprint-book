@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function CareerImpact() {
   return (
-    <section className="py-28 px-6 bg-white">
+    <section className="py-16 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

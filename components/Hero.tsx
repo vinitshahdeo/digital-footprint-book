@@ -175,7 +175,7 @@ export default function Hero() {
 
         {/* Apple-style CTA Buttons */}
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center animate-slide-up"
           style={{ animationDelay: '0.3s' }}
         >
           <a

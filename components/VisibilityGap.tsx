@@ -29,7 +29,7 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
 
 export default function VisibilityGap() {
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
+    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

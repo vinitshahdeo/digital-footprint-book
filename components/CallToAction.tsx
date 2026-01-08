@@ -5,7 +5,7 @@ import { Target, Sparkles, Zap, Star, Rocket, Github } from 'lucide-react'
 
 export default function CallToAction() {
   return (
-    <section className="py-28 px-6 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-28 px-6 bg-white relative overflow-hidden">
       {/* Subtle floating icons */}
       <motion.div
         className="absolute top-16 left-[10%] text-blue-200"
@@ -101,7 +101,7 @@ export default function CallToAction() {
               href="https://github.com/vinitshahdeo"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1 text-[11px] text-slate-500 hover:text-blue-500 transition-colors opacity-60 hover:opacity-100"
+              className="mt-4 inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-blue-500 transition-colors opacity-60 hover:opacity-100"
             >
               <Github className="w-3 h-3" />
               View {/* @vinitshahdeo */} on GitHub

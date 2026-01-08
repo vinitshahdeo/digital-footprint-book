@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function BookIntro() {
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
+    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

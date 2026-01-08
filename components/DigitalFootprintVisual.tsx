@@ -176,7 +176,7 @@ const activityFeed = [
 
 export default function DigitalFootprintVisual() {
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
+    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

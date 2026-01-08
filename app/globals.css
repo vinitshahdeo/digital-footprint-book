@@ -24,7 +24,7 @@
 
   /* Refined focus states for keyboard navigation */
   :focus-visible {
-    @apply outline-none ring-2 ring-blue-500/50 ring-offset-2;
+    @apply outline-none ring-2 ring-blue-500/40 ring-offset-2 ring-offset-white;
   }
 
   /* Subtle text selection styling */
@@ -134,6 +134,7 @@
     0% {
       background-position: 200% 0;
     }
+
     100% {
       background-position: -200% 0;
     }

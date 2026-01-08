@@ -23,7 +23,7 @@ export default function Purchase() {
   return (
     <section
       id="purchase"
-      className="relative py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950"
+      className="relative py-16 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950"
     >
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -66,7 +66,7 @@ export default function Purchase() {
             href="https://www.amazon.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 rounded-lg font-medium hover:bg-slate-100 transition-all duration-200 w-full sm:w-auto"
+            className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 rounded-lg font-medium hover:bg-slate-100 transition-all duration-250 w-full sm:w-auto"
           >
             <ShoppingCart className="w-4 h-4" />
             <span>Buy on Amazon</span>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function GoogleYourself() {
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
+    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

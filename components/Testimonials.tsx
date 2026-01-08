@@ -158,7 +158,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="py-28 px-6 bg-gradient-to-b from-white to-slate-50/80"
+      className="py-16 md:py-28 px-6 bg-gradient-to-b from-white to-slate-50/80"
       aria-label="Testimonials from engineers"
     >
       <div className="max-w-6xl mx-auto">
@@ -214,7 +214,7 @@ export default function Testimonials() {
                   >
                     {/* Quote icon */}
                     <div className="mb-5">
-                      <Quote className="w-8 h-8 text-blue-100" />
+                      <Quote className="w-8 h-8 text-blue-200" />
                     </div>
 
                     {/* Quote text */}
