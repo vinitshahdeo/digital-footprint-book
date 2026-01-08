@@ -12,6 +12,7 @@ import Testimonials from '@/components/Testimonials'
 import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
+import AIFutureSection from '@/components/AIFutureSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <GoogleYourself />
       <VisibilityGap />
       <CareerImpact />
+      <AIFutureSection />
 
       {/* 3. Solution Zone - The Book & Author */}
       <BookIntro />
