@@ -65,9 +65,112 @@ export const metadata: Metadata = {
   },
 }
 
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    // Book Schema
+    {
+      '@type': 'Book',
+      '@id': 'https://digitalfootprint.vinitshahdeo.com/#book',
+      name: 'Digital Footprint for Software Engineers',
+      description:
+        'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work—without fake self-promotion.',
+      isbn: '978-93-7197-527-8',
+      numberOfPages: 350,
+      bookFormat: 'https://schema.org/Paperback',
+      inLanguage: 'en',
+      author: {
+        '@type': 'Person',
+        '@id': 'https://digitalfootprint.vinitshahdeo.com/#author',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Notion Press',
+      },
+      image: 'https://digitalfootprint.vinitshahdeo.com/images/digital-footprint-og.jpg',
+      url: 'https://digitalfootprint.vinitshahdeo.com',
+      offers: [
+        {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          priceCurrency: 'INR',
+          seller: {
+            '@type': 'Organization',
+            name: 'Amazon',
+          },
+          url: 'https://www.amazon.in/dp/B0DT384MJ9',
+        },
+        {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          priceCurrency: 'INR',
+          seller: {
+            '@type': 'Organization',
+            name: 'Flipkart',
+          },
+          url: 'https://www.flipkart.com',
+        },
+      ],
+    },
+    // Author Schema
+    {
+      '@type': 'Person',
+      '@id': 'https://digitalfootprint.vinitshahdeo.com/#author',
+      name: 'Vinit Shahdeo',
+      url: 'https://vinitshahdeo.com',
+      sameAs: [
+        'https://twitter.com/Vinit_Shahdeo',
+        'https://linkedin.com/in/vinitshahdeo',
+        'https://github.com/vinitshahdeo',
+        'https://vinitshahdeo.substack.com',
+      ],
+      jobTitle: 'Software Engineer',
+      description:
+        'Software Engineer and author helping developers build authentic digital presence.',
+      image: 'https://vinitshahdeo.com/images/vinit-shahdeo.jpg',
+    },
+    // WebSite Schema
+    {
+      '@type': 'WebSite',
+      '@id': 'https://digitalfootprint.vinitshahdeo.com/#website',
+      url: 'https://digitalfootprint.vinitshahdeo.com',
+      name: 'Digital Footprint for Software Engineers',
+      description: 'A practical playbook for engineers who want their work to be discoverable.',
+      publisher: {
+        '@type': 'Person',
+        '@id': 'https://digitalfootprint.vinitshahdeo.com/#author',
+      },
+      inLanguage: 'en',
+    },
+    // WebPage Schema
+    {
+      '@type': 'WebPage',
+      '@id': 'https://digitalfootprint.vinitshahdeo.com/#webpage',
+      url: 'https://digitalfootprint.vinitshahdeo.com',
+      name: 'Digital Footprint for Software Engineers | Vinit Shahdeo',
+      isPartOf: {
+        '@id': 'https://digitalfootprint.vinitshahdeo.com/#website',
+      },
+      about: {
+        '@id': 'https://digitalfootprint.vinitshahdeo.com/#book',
+      },
+      description:
+        'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work.',
+      inLanguage: 'en',
+    },
+  ],
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.className} font-sans antialiased`}>{children}</body>
     </html>
   )
