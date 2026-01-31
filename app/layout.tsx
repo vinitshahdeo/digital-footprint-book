@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       'Your code speaks. But what does the internet say about you? A practical playbook for engineers who want their work to be discoverable.',
     type: 'website',
-    url: 'https://digitalfootprintbook.com',
+    url: 'https://digital-footprint-book.vercel.app',
     siteName: 'Digital Footprint',
     locale: 'en_US',
     images: [
