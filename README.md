@@ -49,7 +49,7 @@ MIT © Vinit Shahdeo
 <p align="center">
   <em>A practical playbook for engineers who want their work to be seen.</em>
   <br /><br />
-  <a href="https://digitalfootprint.in"><strong>digitalfootprint.in</strong></a> &nbsp;|&nbsp; <a href="https://vinitshahdeo.com"><strong>vinitshahdeo.com</strong></a>
+  <a href="https://digitalfootprintbook.com"><strong>digitalfootprintbook.com</strong></a> &nbsp;|&nbsp; <a href="https://vinitshahdeo.com"><strong>vinitshahdeo.com</strong></a>
   <br /><br />
   <a href="https://www.amazon.in/dp/B0C7SHJZ2K"><img src="https://img.shields.io/badge/📕%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
   &nbsp;

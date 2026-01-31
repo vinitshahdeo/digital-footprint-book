@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://digitalfootprint.vinitshahdeo.com/sitemap.xml
+Sitemap: https://digitalfootprintbook.com/sitemap.xml
