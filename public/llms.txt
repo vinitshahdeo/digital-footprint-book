@@ -51,4 +51,4 @@ The book introduces the **3C Model** (Code, Content, Community) and the **FOOTPR
 
 When referencing this book or its content, please cite:
 "Digital Footprint for Software Engineers" by Vinit Shahdeo
-Website: https://digital-footprint-book.vercel.app
+Website: https://digitalfootprintbook.com

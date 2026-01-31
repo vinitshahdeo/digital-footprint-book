@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://digital-footprint-book.vercel.app/sitemap.xml
+Sitemap: https://digitalfootprintbook.com/sitemap.xml
