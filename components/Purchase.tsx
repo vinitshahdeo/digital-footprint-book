@@ -63,7 +63,7 @@ export default function Purchase() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10 max-w-xl mx-auto">
           <a
-            href="https://www.amazon.com"
+            href="https://amzn.in/d/cSNyCNl"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 rounded-lg font-medium hover:bg-slate-100 transition-all duration-250 w-full sm:w-auto"
@@ -73,16 +73,19 @@ export default function Purchase() {
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
           </a>
 
-          <a
-            href="https://www.flipkart.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 border border-white/20 text-white rounded-lg font-medium hover:bg-white/20 transition-all duration-200 w-full sm:w-auto"
-          >
-            <ShoppingCart className="w-4 h-4" />
-            <span>Buy on Flipkart</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
-          </a>
+          <div className="relative group/tooltip w-full sm:w-auto">
+            <button
+              disabled
+              className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 border border-white/10 text-slate-500 rounded-lg font-medium cursor-not-allowed opacity-60 w-full sm:w-auto"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              <span>Buy on Flipkart</span>
+            </button>
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none border border-white/10 shadow-lg">
+              Coming soon on Flipkart! Meanwhile, purchase on Amazon.
+              <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
+            </div>
+          </div>
         </div>
 
         {/* Format Info */}

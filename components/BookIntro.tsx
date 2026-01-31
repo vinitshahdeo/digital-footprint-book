@@ -195,7 +195,7 @@ export default function BookIntro() {
             {/* Buy Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
-                href="https://www.amazon.com"
+                href="https://amzn.in/d/cSNyCNl"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-all duration-200 w-full sm:w-auto"

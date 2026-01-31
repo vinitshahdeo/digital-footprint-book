@@ -88,7 +88,9 @@ export default function Footer() {
               A practical playbook for engineers who want their work to be seen.
             </p>
             <motion.a
-              href="#purchase"
+              href="https://amzn.in/d/cSNyCNl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all duration-200 group text-sm w-fit"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
