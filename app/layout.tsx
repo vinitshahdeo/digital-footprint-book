@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://digitalfootprintbook.com'),
+  metadataBase: new URL('https://digital-footprint-book.vercel.app'),
   title: 'Digital Footprint for Software Engineers | Vinit Shahdeo',
   description:
     'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work—without fake self-promotion. A practical playbook by Vinit Shahdeo.',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://digitalfootprintbook.com',
+    canonical: 'https://digital-footprint-book.vercel.app',
   },
 }
 
@@ -72,7 +72,7 @@ const jsonLd = {
     // Book Schema
     {
       '@type': 'Book',
-      '@id': 'https://digitalfootprintbook.com/#book',
+      '@id': 'https://digital-footprint-book.vercel.app/#book',
       name: 'Digital Footprint for Software Engineers',
       description:
         'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work—without fake self-promotion.',
@@ -82,14 +82,14 @@ const jsonLd = {
       inLanguage: 'en',
       author: {
         '@type': 'Person',
-        '@id': 'https://digitalfootprintbook.com/#author',
+        '@id': 'https://digital-footprint-book.vercel.app/#author',
       },
       publisher: {
         '@type': 'Organization',
         name: 'Notion Press',
       },
-      image: 'https://digitalfootprintbook.com/images/digital-footprint-og.jpg',
-      url: 'https://digitalfootprintbook.com',
+      image: 'https://digital-footprint-book.vercel.app/images/digital-footprint-og.jpg',
+      url: 'https://digital-footprint-book.vercel.app',
       offers: [
         {
           '@type': 'Offer',
@@ -116,7 +116,7 @@ const jsonLd = {
     // Author Schema
     {
       '@type': 'Person',
-      '@id': 'https://digitalfootprintbook.com/#author',
+      '@id': 'https://digital-footprint-book.vercel.app/#author',
       name: 'Vinit Shahdeo',
       url: 'https://vinitshahdeo.com',
       sameAs: [
@@ -133,27 +133,27 @@ const jsonLd = {
     // WebSite Schema
     {
       '@type': 'WebSite',
-      '@id': 'https://digitalfootprintbook.com/#website',
-      url: 'https://digitalfootprintbook.com',
+      '@id': 'https://digital-footprint-book.vercel.app/#website',
+      url: 'https://digital-footprint-book.vercel.app',
       name: 'Digital Footprint for Software Engineers',
       description: 'A practical playbook for engineers who want their work to be discoverable.',
       publisher: {
         '@type': 'Person',
-        '@id': 'https://digitalfootprintbook.com/#author',
+        '@id': 'https://digital-footprint-book.vercel.app/#author',
       },
       inLanguage: 'en',
     },
     // WebPage Schema
     {
       '@type': 'WebPage',
-      '@id': 'https://digitalfootprintbook.com/#webpage',
-      url: 'https://digitalfootprintbook.com',
+      '@id': 'https://digital-footprint-book.vercel.app/#webpage',
+      url: 'https://digital-footprint-book.vercel.app',
       name: 'Digital Footprint for Software Engineers | Vinit Shahdeo',
       isPartOf: {
-        '@id': 'https://digitalfootprintbook.com/#website',
+        '@id': 'https://digital-footprint-book.vercel.app/#website',
       },
       about: {
-        '@id': 'https://digitalfootprintbook.com/#book',
+        '@id': 'https://digital-footprint-book.vercel.app/#book',
       },
       description:
         'Build a strong, authentic digital footprint using GitHub, LinkedIn, blogs, portfolios, and community work.',
