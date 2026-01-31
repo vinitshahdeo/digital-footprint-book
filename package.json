@@ -1,7 +1,32 @@
 {
-  "name": "digital-footprint-landing",
+  "name": "digital-footprint-for-software-engineers",
   "version": "0.1.0",
   "private": true,
+  "description": "Landing page for 'Digital Footprint for Software Engineers' - A practical playbook for engineers who want their work to be seen.",
+  "author": {
+    "name": "Vinit Shahdeo",
+    "email": "vinitshahdeo@gmail.com",
+    "url": "https://vinitshahdeo.com"
+  },
+  "license": "MIT",
+  "homepage": "https://digitalfootprintbook.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinitshahdeo/digital-footprint"
+  },
+  "bugs": {
+    "url": "https://github.com/vinitshahdeo/digital-footprint/issues"
+  },
+  "keywords": [
+    "digital-footprint",
+    "software-engineers",
+    "personal-branding",
+    "career-growth",
+    "online-presence",
+    "developer-marketing",
+    "next.js",
+    "react"
+  ],
   "scripts": {
     "dev": "next dev",
     "dev:network": "next dev -H 0.0.0.0",
