@@ -7,11 +7,13 @@
   <a href="https://github.com/vinitshahdeo/digital-footprint/blob/main/LICENSE"><img src="https://img.shields.io/github/license/vinitshahdeo/digital-footprint?color=blue&logo=github" alt="License" /></a>
   <a href="https://twitter.com/Vinit_Shahdeo"><img src="https://img.shields.io/twitter/follow/Vinit_Shahdeo?style=social" alt="Follow on Twitter"></a>
   <a href="https://www.linkedin.com/in/vinitshahdeo"><img src="https://img.shields.io/badge/LinkedIn-vinitshahdeo-blue?logo=linkedin&logoColor=white" alt="Follow on LinkedIn"></a>
-  <a href="https://www.flipkart.com/digital-footprint-software-engineers/p/itm1b2e7e2e7e2e7"><img src="https://img.shields.io/badge/📘%20Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a>
-  <a href="https://www.amazon.in/dp/B0C7SHJZ2K"><img src="https://img.shields.io/badge/📕%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
+  <a href="https://www.flipkart.com/"><img src="https://img.shields.io/badge/📘%20Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a>
+  <a href="https://amzn.in/d/cSNyCNl"><img src="https://img.shields.io/badge/📕%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
 </p>
 
 The official landing page for the book **Digital Footprint for Software Engineers** by [Vinit Shahdeo](https://vinitshahdeo.com).
+
+➨ [digitalfootprintbook.com](https://digitalfootprintbook.com)
 
 Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is designed to showcase the book, its formats, reviews, and the author's digital presence in a visually engaging and interactive way.
 
@@ -20,7 +22,7 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 - [Buy on Amazon](https://amzn.in/d/cSNyCNl)
 - [Buy on Flipkart](#)
 - [Get ebook on Kindle](#)
-- [View landing page](http://localhost:3000)
+- [View landing page](https://digitalfootprintbook.com)
 
 ## 🛠️ Local Setup
 
@@ -51,9 +53,9 @@ MIT © Vinit Shahdeo
   <br /><br />
   <a href="https://digitalfootprintbook.com"><strong>digitalfootprintbook.com</strong></a> &nbsp;|&nbsp; <a href="https://vinitshahdeo.com"><strong>vinitshahdeo.com</strong></a>
   <br /><br />
-  <a href="https://www.amazon.in/dp/B0C7SHJZ2K"><img src="https://img.shields.io/badge/📕%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
+  <a href="https://amzn.in/d/cSNyCNl"><img src="https://img.shields.io/badge/📕%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
   &nbsp;
-  <a href="https://www.flipkart.com/digital-footprint-software-engineers/p/itm1b2e7e2e7e2e7"><img src="https://img.shields.io/badge/📘%20Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a>
+  <a href="https://www.flipkart.com"><img src="https://img.shields.io/badge/📘%20Buy%20on-Flipkart-blue?logo=flipkart&logoColor=white" alt="Buy on Flipkart"></a>
   <br /><br />
   <a href="https://github.com/vinitshahdeo"><img src="https://img.shields.io/github/followers/vinitshahdeo?label=Follow%20on%20GitHub&style=social" alt="Follow Vinit Shahdeo on GitHub"></a>
 </p>
