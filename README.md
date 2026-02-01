@@ -20,7 +20,7 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 ## 📦 Quick Links
 
 - [Buy on Amazon](https://amzn.in/d/cSNyCNl)
-- [Buy on Flipkart](#)
+- [Buy on Flipkart (Coming soon!)](#)
 - [Get ebook on Kindle](#)
 - [View landing page](https://digitalfootprintbook.com)
 
