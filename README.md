@@ -11,7 +11,7 @@
   <a href="https://amzn.in/d/cSNyCNl"><img src="https://img.shields.io/badge/📕%20Buy%20on-Amazon-orange?logo=amazon&logoColor=white" alt="Buy on Amazon"></a>
 </p>
 
-The official landing page for the book **Digital Footprint for Software Engineers** by [Vinit Shahdeo](https://vinitshahdeo.com).
+The official landing page for the book **Digital Footprint for Software Engineers** by [Vinit Shahdeo](https://vinitshahdeo.com). Learn more about the book [here](https://vinitshahdeo.substack.com/p/digital-footprint-for-software-engineers).
 
 ➨ [digitalfootprintbook.com](https://digitalfootprintbook.com)
 
@@ -23,6 +23,7 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 - [Buy on Flipkart (Coming soon!)](#)
 - [Get ebook on Kindle](#)
 - [View landing page](https://digitalfootprintbook.com)
+- [Author's Note](https://vinitshahdeo.substack.com/p/digital-footprint-for-software-engineers)
 
 ## 🛠️ Local Setup
 
