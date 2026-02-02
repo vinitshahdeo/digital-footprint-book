@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="ChatGPT Image Jan 3, 2026, 02_34_39 AM" src="https://github.com/user-attachments/assets/5ef60b4b-da46-47d0-9a15-eda90c592506" />
+![Digital Footprint for Software Engineers | Book by Vinit Shahdeo](https://github.com/user-attachments/assets/5ef60b4b-da46-47d0-9a15-eda90c592506)
 
 # Digital Footprint for Software Engineers
 
