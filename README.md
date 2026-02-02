@@ -43,7 +43,7 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 
 ## 📄 License
 
-MIT © Vinit Shahdeo
+MIT © [Vinit Shahdeo](./LICENSE)
 
 <p align="center">
   <img width="100" alt="Digital Footprint for Software Engineers - Book Cover" src="https://github.com/user-attachments/assets/66c1d762-06b2-469c-a3cd-3143e337a672" />
