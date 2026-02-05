@@ -193,7 +193,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://vinitshahdeo.substack.com/p/digital-footprint-for-software-engineers"
+                  href="https://peerlist.io/vinitshahdeo/articles/digital-footprint-for-software-engineers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
