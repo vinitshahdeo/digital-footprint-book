@@ -117,6 +117,24 @@ export default function CallToAction() {
             The engineers who get noticed aren't always the best coders — they're the ones who show
             up. Start building your footprint today.
           </p>
+
+          {/* Peerlist Launch Badge */}
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://peerlist.io/vinitshahdeo/project/digital-footprint-for-software-engineers"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View on Peerlist"
+            >
+              <img
+                src="/images/digital-footprint-badge.svg"
+                alt="Digital Footprint - Launch on Peerlist"
+                width={245}
+                height={72}
+                className="hover:opacity-80 transition-opacity duration-200"
+              />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
