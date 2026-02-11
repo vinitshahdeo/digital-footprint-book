@@ -13,6 +13,7 @@ import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
 import AIFutureSection from '@/components/AIFutureSection'
+import FeaturedReels from '@/components/FeaturedReels'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
 
       {/* 4. Reinforcement Zone - Value & Proof */}
       <Testimonials />
+      {/* <FeaturedReels /> */}
       <Searchability />
       <DigitalFootprintVisual />
       <CallToAction />
