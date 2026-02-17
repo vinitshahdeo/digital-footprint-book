@@ -159,7 +159,7 @@ export default function CallToAction() {
                 alt="Uneed Embed Badge"
                 width={250}
                 height={72}
-                className="hover:opacity-80 transition-opacity duration-200"
+                className="hover:opacity-80 transition-opacity duration-200 grayscale"
               />
             </a>
           </div>
