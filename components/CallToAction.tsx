@@ -148,6 +148,20 @@ export default function CallToAction() {
                 className="hover:opacity-80 transition-opacity duration-200"
               />
             </a>
+            <a
+              href="https://www.uneed.best/tool/digital-footprint-for-software-engineers"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Featured on Uneed"
+            >
+              <img
+                src="https://www.uneed.best/EMBED3.png"
+                alt="Uneed Embed Badge"
+                width={250}
+                height={72}
+                className="hover:opacity-80 transition-opacity duration-200"
+              />
+            </a>
           </div>
         </motion.div>
       </div>
