@@ -118,8 +118,8 @@ export default function CallToAction() {
             up. Start building your footprint today.
           </p>
 
-          {/* Peerlist Launch Badge */}
-          <div className="mt-8 flex justify-center">
+          {/* Launch Badges */}
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
             <a
               href="https://peerlist.io/vinitshahdeo/project/digital-footprint-for-software-engineers"
               target="_blank"
@@ -130,6 +130,20 @@ export default function CallToAction() {
                 src="/images/digital-footprint-badge.svg"
                 alt="Digital Footprint - Launch on Peerlist"
                 width={245}
+                height={72}
+                className="hover:opacity-80 transition-opacity duration-200"
+              />
+            </a>
+            <a
+              href="https://builtbyindies.com/products/digital-footprint-for-software-engineers"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Featured on BuiltByIndies"
+            >
+              <img
+                src="https://images.builtbyindies.com/badges/featured-on-builtbyindies.svg"
+                alt="Featured on BuiltByIndies"
+                width={250}
                 height={72}
                 className="hover:opacity-80 transition-opacity duration-200"
               />
