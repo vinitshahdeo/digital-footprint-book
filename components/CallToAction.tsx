@@ -121,20 +121,6 @@ export default function CallToAction() {
           {/* Launch Badges */}
           <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
             <a
-              href="https://peerlist.io/vinitshahdeo/project/digital-footprint-for-software-engineers"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View on Peerlist"
-            >
-              <img
-                src="/images/digital-footprint-badge.svg"
-                alt="Digital Footprint - Launch on Peerlist"
-                width={245}
-                height={72}
-                className="hover:opacity-80 transition-opacity duration-200"
-              />
-            </a>
-            <a
               href="https://builtbyindies.com/products/digital-footprint-for-software-engineers"
               target="_blank"
               rel="noopener noreferrer"
@@ -144,6 +130,20 @@ export default function CallToAction() {
                 src="https://images.builtbyindies.com/badges/featured-on-builtbyindies.svg"
                 alt="Featured on BuiltByIndies"
                 width={250}
+                height={72}
+                className="hover:opacity-80 transition-opacity duration-200"
+              />
+            </a>
+            <a
+              href="https://peerlist.io/vinitshahdeo/project/digital-footprint-for-software-engineers"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View on Peerlist"
+            >
+              <img
+                src="/images/digital-footprint-badge.svg"
+                alt="Digital Footprint - Launch on Peerlist"
+                width={245}
                 height={72}
                 className="hover:opacity-80 transition-opacity duration-200"
               />
