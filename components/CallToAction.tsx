@@ -176,6 +176,19 @@ export default function CallToAction() {
                 className="hover:opacity-80 transition-opacity duration-200"
               />
             </a>
+            <a
+              href="https://toolfame.com/item/digital-footprint-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Featured on ToolFame"
+            >
+              <img
+                src="https://toolfame.com/badge-dark.svg"
+                alt="Featured on toolfame.com"
+                height={54}
+                className="hover:opacity-80 transition-opacity duration-200 w-auto"
+              />
+            </a>
           </div>
         </motion.div>
       </div>
