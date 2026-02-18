@@ -14,6 +14,7 @@ import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
 import AIFutureSection from '@/components/AIFutureSection'
 import FeaturedReels from '@/components/FeaturedReels'
+import FeaturedOn from '@/components/FeaturedOn'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -40,10 +41,12 @@ export default function Home() {
       <Searchability />
       <DigitalFootprintVisual />
       <CallToAction />
+      {/* <FeaturedOn /> */}
 
       {/* 5. Conversion Zone */}
       {/* <DecisionTable /> */}
       <Purchase />
+      <FeaturedOn />
       <Footer />
     </main>
   )
