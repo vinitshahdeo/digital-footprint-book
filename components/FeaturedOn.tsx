@@ -52,6 +52,12 @@ const badges = [
     src: 'https://twelve.tools/badge0-light.svg',
     width: 200,
   },
+  {
+    name: 'ufind.best',
+    href: 'https://ufind.best/products/digital-footprint-for-software-engineers?utm_source=ufind.best',
+    src: 'https://ufind.best/badges/ufind-best-badge-light.svg',
+    width: 150,
+  },
 ]
 
 export default function FeaturedOn() {
