@@ -165,7 +165,7 @@ export default function CallToAction() {
                 />
               </a>
             </div>
-            {/* Row 2: LaunchIgniter, ToolFame */}
+            {/* Row 2: LaunchIgniter, ToolFame, Findly */}
             <div className="flex flex-wrap justify-center items-center gap-4">
               <a
                 href="https://launchigniter.com/product/digital-footprint-for-software-engineers-book?ref=badge-digital-footprint-for-software-engineers-book"
@@ -178,6 +178,19 @@ export default function CallToAction() {
                   alt="Featured on LaunchIgniter"
                   width={212}
                   height={55}
+                  className="hover:opacity-80 transition-opacity duration-200"
+                />
+              </a>
+              <a
+                href="https://findly.tools/digital-footprint-for-software-engineers-book?utm_source=digital-footprint-for-software-engineers-book"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Featured on Findly Tools"
+              >
+                <img
+                  src="https://findly.tools/badges/findly-tools-badge-light.svg"
+                  alt="Featured on findly.tools"
+                  width={150}
                   className="hover:opacity-80 transition-opacity duration-200"
                 />
               </a>
