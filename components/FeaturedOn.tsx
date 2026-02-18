@@ -40,6 +40,18 @@ const badges = [
     src: 'https://toolfame.com/badge-dark.svg',
     width: 160,
   },
+  {
+    name: 'Wired Business',
+    href: 'https://wired.business',
+    src: 'https://wired.business/badge0-light.svg',
+    width: 200,
+  },
+  {
+    name: 'Twelve Tools',
+    href: 'https://twelve.tools',
+    src: 'https://twelve.tools/badge0-light.svg',
+    width: 200,
+  },
 ]
 
 export default function FeaturedOn() {
