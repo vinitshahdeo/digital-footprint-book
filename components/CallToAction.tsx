@@ -162,6 +162,20 @@ export default function CallToAction() {
                 className="hover:opacity-80 transition-opacity duration-200 grayscale"
               />
             </a>
+            <a
+              href="https://launchigniter.com/product/digital-footprint-for-software-engineers-book?ref=badge-digital-footprint-for-software-engineers-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Featured on LaunchIgniter"
+            >
+              <img
+                src="https://launchigniter.com/api/badge/digital-footprint-for-software-engineers-book?theme=neutral"
+                alt="Featured on LaunchIgniter"
+                width={212}
+                height={55}
+                className="hover:opacity-80 transition-opacity duration-200"
+              />
+            </a>
           </div>
         </motion.div>
       </div>
