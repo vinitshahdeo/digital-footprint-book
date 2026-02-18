@@ -58,6 +58,12 @@ const badges = [
     src: 'https://ufind.best/badges/ufind-best-badge-light.svg',
     width: 150,
   },
+  {
+    name: 'Aura++',
+    href: 'https://auraplusplus.com/projects/digital-footprint-for-software-engineers',
+    src: 'https://auraplusplus.com/images/badges/featured-on-light.svg',
+    width: 220,
+  },
 ]
 
 export default function FeaturedOn() {
