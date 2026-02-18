@@ -118,7 +118,7 @@ export default function FeaturedOn() {
               className="flex-shrink-0 mx-6 md:mx-10 flex items-center"
             >
               {badge.textOnly ? (
-                <span className="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-full text-sm font-medium text-slate-500 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <span className="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-md text-sm font-medium text-slate-500 opacity-70 hover:opacity-100 transition-opacity duration-300">
                   {badge.icon === 'js' ? (
                     <JSIcon className="w-4 h-4" />
                   ) : (
