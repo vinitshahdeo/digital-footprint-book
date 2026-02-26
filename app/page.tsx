@@ -8,6 +8,13 @@ import DigitalFootprintVisual from '@/components/DigitalFootprintVisual'
 import BookIntro from '@/components/BookIntro'
 import Author from '@/components/Author'
 import WhyThisBook from '@/components/WhyThisBook'
+import WhyThisBookV1 from '@/components/WhyThisBookV1'
+import WhyThisBookV2 from '@/components/WhyThisBookV2'
+import WhyThisBookV3 from '@/components/WhyThisBookV3'
+import WhyThisBookV4 from '@/components/WhyThisBookV4'
+import WhyThisBookV5 from '@/components/WhyThisBookV5'
+import WhyThisBookV6 from '@/components/WhyThisBookV6'
+import WhyThisBookV7 from '@/components/WhyThisBookV7'
 import Testimonials from '@/components/Testimonials'
 import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
@@ -35,7 +42,14 @@ export default function Home() {
       <BookIntro />
       <Author />
       <BookCoverage />
-      <WhyThisBook />
+      {/* <WhyThisBook /> */}
+      {/* <WhyThisBookV1 /> */}
+      <WhyThisBookV2 />
+      {/* <WhyThisBookV3 />
+      <WhyThisBookV4 />
+      <WhyThisBookV5 />
+      <WhyThisBookV6 />
+      <WhyThisBookV7 /> */}
 
       {/* 4. Reinforcement Zone - Value & Proof */}
       <Testimonials />
