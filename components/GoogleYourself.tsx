@@ -2,11 +2,12 @@
 
 import { Search } from 'lucide-react'
 import { motion } from 'framer-motion'
+import GoogleSearchSimulator from './GoogleSearchSimulator'
 
 export default function GoogleYourself() {
   return (
     <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
@@ -22,10 +23,10 @@ export default function GoogleYourself() {
             yourself?
           </h2>
 
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-3">
             Recruiters do. Hiring managers do. Everyone does.
           </p>
-          <p className="text-lg italic text-slate-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg italic text-slate-600 max-w-2xl mx-auto mb-6">
             What shows up when they search your name?
           </p>
 
@@ -103,20 +104,20 @@ export default function GoogleYourself() {
           </motion.div>
         </div>
 
-        {/* Stats - Modern Split Layout */}
-        <div className="max-w-6xl mx-auto">
-          {/* Large Statement with Integrated Stats */}
+        {/* Two-Column Layout: Stats + Google Search Simulator */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left Column — Stats */}
           <motion.div
-            className="relative p-12 md:p-16"
-            initial={{ opacity: 0, scale: 0.95 }}
+            className="relative p-4 md:p-6 lg:sticky lg:top-24 self-start"
+            initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
-            <div className="relative space-y-12">
+            <div className="relative space-y-8">
               {/* First Stat */}
               <motion.div
-                className="flex flex-col items-center gap-6 text-center"
+                className="flex flex-col items-center gap-4 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -129,15 +130,15 @@ export default function GoogleYourself() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, type: 'spring', delay: 0.3 }}
                 >
-                  <div className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none">
+                  <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none">
                     70%
                   </div>
                 </motion.div>
                 <div>
-                  <p className="text-xl md:text-2xl font-semibold text-slate-900 mb-1">
+                  <p className="text-lg md:text-xl font-semibold text-slate-900 mb-1">
                     of recruiters Google you first
                   </p>
-                  <p className="text-base text-slate-600">before they even schedule an interview</p>
+                  <p className="text-sm md:text-base text-slate-600">before they even schedule an interview</p>
                 </div>
               </motion.div>
 
@@ -145,7 +146,7 @@ export default function GoogleYourself() {
               <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
 
               {/* Second & Third Stats - Side by Side */}
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-6">
                 <motion.div
                   className="flex flex-col items-center text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -154,7 +155,7 @@ export default function GoogleYourself() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   <motion.div
-                    className="text-6xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-3"
+                    className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
@@ -162,8 +163,8 @@ export default function GoogleYourself() {
                   >
                     85%
                   </motion.div>
-                  <p className="text-lg font-semibold text-slate-900 mb-1">Check social profiles</p>
-                  <p className="text-slate-600 text-sm">GitHub & LinkedIn before your résumé</p>
+                  <p className="text-sm md:text-base font-semibold text-slate-900 mb-0.5">Check social profiles</p>
+                  <p className="text-slate-600 text-xs md:text-sm">GitHub & LinkedIn before your résumé</p>
                 </motion.div>
 
                 <motion.div
@@ -174,7 +175,7 @@ export default function GoogleYourself() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
                   <motion.div
-                    className="text-6xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-3"
+                    className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
@@ -182,26 +183,31 @@ export default function GoogleYourself() {
                   >
                     63%
                   </motion.div>
-                  <p className="text-lg font-semibold text-slate-900 mb-1">Candidates rejected</p>
-                  <p className="text-slate-600 text-sm">due to poor online presence</p>
+                  <p className="text-sm md:text-base font-semibold text-slate-900 mb-0.5">Candidates rejected</p>
+                  <p className="text-slate-600 text-xs md:text-sm">due to poor online presence</p>
                 </motion.div>
               </div>
 
               {/* Bottom CTA */}
               <motion.div
-                className="pt-10 text-center"
+                className="pt-6 text-center"
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <p className="text-lg md:text-xl italic font-medium text-slate-700 mb-2">
-                  If you don't control your digital footprint,
+                <p className="text-base md:text-lg italic font-medium text-slate-700 mb-1.5">
+                  If you don&apos;t control your digital footprint,
                 </p>
-                <p className="text-2xl md:text-3xl font-bold text-slate-900">Google will.</p>
+                <p className="text-xl md:text-2xl font-bold text-slate-900">Google will.</p>
               </motion.div>
             </div>
           </motion.div>
+
+          {/* Right Column — Google Search Simulator */}
+          <div>
+            <GoogleSearchSimulator />
+          </div>
         </div>
       </div>
     </section>
