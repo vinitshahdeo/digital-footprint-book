@@ -19,74 +19,36 @@ import {
   Twitter,
 } from 'lucide-react'
 
-const footprintElements = [
-  {
-    icon: Github,
-    label: 'GitHub',
-    color: 'from-slate-600 to-slate-700',
-    position: { top: '5%', left: '25%' },
-    delay: 0.1,
-    id: 'github',
-  },
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    color: 'from-blue-600 to-blue-700',
-    position: { top: '5%', right: '25%' },
-    delay: 0.2,
-    id: 'linkedin',
-  },
-  {
-    icon: FileText,
-    label: 'Blog Posts',
-    color: 'from-blue-500 to-purple-600',
-    position: { top: '25%', left: '5%' },
-    delay: 0.3,
-    id: 'blog',
-  },
-  {
-    icon: Video,
-    label: 'Talks',
-    color: 'from-purple-500 to-purple-700',
-    position: { top: '25%', right: '5%' },
-    delay: 0.4,
-    id: 'talks',
-  },
-  {
-    icon: MessageCircle,
-    label: 'Social Media',
-    color: 'from-blue-400 to-blue-600',
-    position: { bottom: '5%', left: '25%' },
-    delay: 0.5,
-    id: 'social',
-  },
-  {
-    icon: Globe,
-    label: 'Portfolio',
-    color: 'from-slate-700 to-slate-800',
-    position: { bottom: '5%', right: '25%' },
-    delay: 0.6,
-    id: 'portfolio',
-  },
-  {
-    icon: Code,
-    label: 'Open Source',
-    color: 'from-slate-500 to-slate-700',
-    position: { bottom: '25%', left: '5%' },
-    delay: 0.7,
-    id: 'opensource',
-  },
-  {
-    icon: Users,
-    label: 'Community',
-    color: 'from-purple-600 to-purple-700',
-    position: { bottom: '25%', right: '5%' },
-    delay: 0.8,
-    id: 'community',
-  },
+/**
+ * Orbital nodes — placed on two concentric rings around the center.
+ *
+ * `angle` is in degrees (0 = top, clockwise).
+ * `ring` determines which orbit circle the node sits on.
+ */
+/**
+ * `pulseDelay` staggers the pulse ring so they fire one-by-one around the orbit.
+ * Total cycle = 12s, each node gets a 1.5s window.
+ */
+const orbitNodes = [
+  // Inner ring (ring 1) — primary platforms
+  { icon: Github, label: 'GitHub', bg: 'bg-slate-800', ring: 1, angle: 0, delay: 0.1, pulseDelay: 0 },
+  { icon: Linkedin, label: 'LinkedIn', bg: 'bg-blue-600', ring: 1, angle: 90, delay: 0.2, pulseDelay: 1.5 },
+  { icon: FileText, label: 'Blog Posts', bg: 'bg-indigo-600', ring: 1, angle: 180, delay: 0.3, pulseDelay: 3.0 },
+  { icon: Video, label: 'Talks', bg: 'bg-purple-600', ring: 1, angle: 270, delay: 0.4, pulseDelay: 4.5 },
+
+  // Outer ring (ring 2) — secondary channels
+  { icon: MessageCircle, label: 'Social', bg: 'bg-sky-500', ring: 2, angle: 45, delay: 0.5, pulseDelay: 6.0 },
+  { icon: Globe, label: 'Portfolio', bg: 'bg-slate-700', ring: 2, angle: 135, delay: 0.6, pulseDelay: 7.5 },
+  { icon: Code, label: 'Open Source', bg: 'bg-emerald-600', ring: 2, angle: 225, delay: 0.7, pulseDelay: 9.0 },
+  { icon: Users, label: 'Community', bg: 'bg-violet-600', ring: 2, angle: 315, delay: 0.8, pulseDelay: 10.5 },
 ]
 
-// Activity feed showcasing signals that build digital footprint
+// Responsive orbit radii (px). Updated via CSS custom properties.
+const RING_1_RADIUS = 130
+const RING_2_RADIUS = 220
+const RING_1_RADIUS_MD = 160
+const RING_2_RADIUS_MD = 260
+
 const activityFeed = [
   {
     id: 1,
@@ -94,11 +56,9 @@ const activityFeed = [
     icon: Github,
     activity: 'committed to',
     target: 'digital-footprint repo',
-    color: 'from-slate-600 to-slate-800',
     iconColor: 'text-slate-700',
-    bgColor: 'bg-slate-50',
+    bgColor: 'bg-slate-100',
     timeAgo: '2m ago',
-    delay: 0.2,
   },
   {
     id: 2,
@@ -106,11 +66,9 @@ const activityFeed = [
     icon: Twitter,
     activity: 'tweeted about',
     target: 'building in public',
-    color: 'from-blue-400 to-blue-600',
-    iconColor: 'text-blue-600',
-    bgColor: 'bg-blue-50',
+    iconColor: 'text-sky-600',
+    bgColor: 'bg-sky-50',
     timeAgo: '15m ago',
-    delay: 0.4,
   },
   {
     id: 3,
@@ -118,11 +76,9 @@ const activityFeed = [
     icon: FileText,
     activity: 'published',
     target: 'Engineering Career Growth',
-    color: 'from-orange-400 to-orange-600',
     iconColor: 'text-orange-600',
     bgColor: 'bg-orange-50',
     timeAgo: '1h ago',
-    delay: 0.6,
   },
   {
     id: 4,
@@ -130,11 +86,9 @@ const activityFeed = [
     icon: Package,
     activity: 'published',
     target: '@vinitshahdeo/cli-toolkit',
-    color: 'from-red-400 to-red-600',
     iconColor: 'text-red-600',
     bgColor: 'bg-red-50',
     timeAgo: '3h ago',
-    delay: 0.8,
   },
   {
     id: 5,
@@ -142,11 +96,9 @@ const activityFeed = [
     icon: Heart,
     activity: 'reel reached',
     target: '1M views',
-    color: 'from-pink-400 to-pink-600',
     iconColor: 'text-pink-600',
     bgColor: 'bg-pink-50',
     timeAgo: '5h ago',
-    delay: 1.0,
   },
   {
     id: 6,
@@ -154,11 +106,9 @@ const activityFeed = [
     icon: Linkedin,
     activity: 'wrote article on',
     target: 'Software Architecture',
-    color: 'from-blue-500 to-blue-700',
     iconColor: 'text-blue-700',
     bgColor: 'bg-blue-50',
     timeAgo: '8h ago',
-    delay: 1.2,
   },
   {
     id: 7,
@@ -166,13 +116,20 @@ const activityFeed = [
     icon: Video,
     activity: 'spoke at',
     target: 'DevConf 2026',
-    color: 'from-purple-400 to-purple-600',
     iconColor: 'text-purple-600',
     bgColor: 'bg-purple-50',
     timeAgo: '1d ago',
-    delay: 1.4,
   },
 ]
+
+/**
+ * Convert polar coordinates (angle + radius) to Cartesian translate values.
+ * Angle 0 = top (12 o'clock), increases clockwise.
+ */
+function polarToXY(angleDeg: number, radius: number) {
+  const rad = ((angleDeg - 90) * Math.PI) / 180
+  return { x: Math.cos(rad) * radius, y: Math.sin(rad) * radius }
+}
 
 export default function DigitalFootprintVisual() {
   return (
@@ -195,305 +152,218 @@ export default function DigitalFootprintVisual() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-start">
-          {/* Visual Doodle Map */}
-          <div className="relative h-[600px] md:h-[700px]">
-            {/* Center Circle - "You" */}
+        <div className="grid lg:grid-cols-[1fr_380px] gap-12 lg:gap-16 items-start">
+          {/* Orbital Map */}
+          <div className="relative flex items-center justify-center min-h-[500px] md:min-h-[620px]">
+            {/* Orbit rings — slowly rotating in opposite directions */}
             <motion.div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+              className="absolute rounded-full border border-dashed border-slate-200 w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+            />
+            <motion.div
+              className="absolute rounded-full border border-dashed border-slate-200/60 w-[440px] h-[440px] md:w-[520px] md:h-[520px]"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
+            />
+
+            {/* Center — Profile */}
+            <motion.div
+              className="relative z-10"
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, type: 'spring' }}
+              transition={{ duration: 0.5, type: 'spring', stiffness: 200 }}
             >
-              <div className="relative">
-                <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-xl relative z-10 overflow-hidden p-[2px]">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-white relative">
-                    <Image
-                      src="/images/vinit-shahdeo.jpg"
-                      alt="Vinit Shahdeo"
-                      width={160}
-                      height={160}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                    {/* Subtle overlay label */}
-                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent pt-8 pb-2">
-                      <span className="text-white text-sm md:text-base font-semibold tracking-wide block text-center">
-                        YOU
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Ripple effect - multiple rings */}
-                {[0, 1].map((delay) => (
-                  <motion.div
-                    key={delay}
-                    className="absolute inset-0 rounded-full border-2 border-blue-400"
-                    animate={{
-                      scale: [1, 1.4],
-                      opacity: [0.4, 0],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      delay: delay * 2,
-                      ease: 'easeOut',
-                    }}
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full p-[3px] bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/15">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white relative">
+                  <Image
+                    src="/images/vinit-shahdeo.jpg"
+                    alt="Vinit Shahdeo"
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-cover"
+                    priority
                   />
-                ))}
-
-                {/* Glowing pulse effect */}
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-blue-500/15 blur-lg"
-                  animate={{
-                    scale: [1, 1.05, 1],
-                    opacity: [0.15, 0.25, 0.15],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                />
-              </div>
-            </motion.div>
-
-            {/* Connecting Lines (SVG) */}
-            <svg
-              className="absolute inset-0 w-full h-full pointer-events-none"
-              style={{ zIndex: 1 }}
-              aria-hidden="true"
-            >
-              <defs>
-                <marker
-                  id="arrowhead"
-                  markerWidth="10"
-                  markerHeight="10"
-                  refX="9"
-                  refY="3"
-                  orient="auto"
-                >
-                  <polygon points="0 0, 10 3, 0 6" fill="#cbd5e1" />
-                </marker>
-                {/* Gradient for lines */}
-                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
-                  <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.5" />
-                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3" />
-                </linearGradient>
-              </defs>
-              {footprintElements.map((element, index) => {
-                const startX = '50%'
-                const startY = '50%'
-                const endX = element.position.left || element.position.right
-                const endY = element.position.top || element.position.bottom
-
-                return (
-                  <g key={index}>
-                    {/* Main connection line */}
-                    <motion.path
-                      d={`M ${startX} ${startY} Q ${startX} ${endY}, ${endX} ${endY}`}
-                      stroke="url(#lineGradient)"
-                      strokeWidth="3"
-                      fill="none"
-                      strokeDasharray="8,8"
-                      initial={{ pathLength: 0, opacity: 0 }}
-                      whileInView={{ pathLength: 1, opacity: 0.6 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: element.delay }}
-                    />
-
-                    {/* Animated traveling dot */}
-                    <motion.circle
-                      r="4"
-                      fill="#3b82f6"
-                      initial={{ opacity: 0 }}
-                      animate={{
-                        opacity: [0, 1, 1, 0],
-                        offsetDistance: ['0%', '100%'],
-                      }}
-                      transition={{
-                        duration: 3,
-                        delay: element.delay + 1,
-                        repeat: Infinity,
-                        repeatDelay: 2,
-                        ease: 'easeInOut',
-                      }}
-                    >
-                      <animateMotion
-                        dur="3s"
-                        repeatCount="indefinite"
-                        begin={`${element.delay + 1}s`}
-                      >
-                        <mpath href={`#path-${index}`} />
-                      </animateMotion>
-                    </motion.circle>
-
-                    {/* Hidden path for motion */}
-                    <path
-                      id={`path-${index}`}
-                      d={`M ${startX} ${startY} Q ${startX} ${endY}, ${endX} ${endY}`}
-                      fill="none"
-                      stroke="none"
-                    />
-                  </g>
-                )
-              })}
-            </svg>
-
-            {/* Footprint Elements */}
-            {footprintElements.map((element, index) => (
-              <motion.div
-                key={index}
-                className="absolute"
-                style={element.position}
-                initial={{ scale: 0, opacity: 0, rotate: -180 }}
-                whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: element.delay,
-                  type: 'spring',
-                  stiffness: 200,
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  rotate: 2,
-                  transition: { duration: 0.3, ease: 'easeOut' },
-                }}
-              >
-                <div className="relative group cursor-pointer">
-                  {/* Pulsing outer ring */}
-                  <motion.div
-                    className={`absolute inset-0 rounded-full bg-gradient-to-br ${element.color} opacity-0 group-hover:opacity-10 blur-lg`}
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.05, 0.15, 0.05],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      delay: element.delay,
-                      ease: 'easeInOut',
-                    }}
-                  />
-
-                  {/* Doodle circle background */}
-                  <div
-                    className={`relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br ${element.color} flex items-center justify-center shadow-md border-3 border-white group-hover:shadow-lg transition-all duration-200`}
-                  >
-                    <element.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
-
-                    {/* Small pulsing dot indicator */}
-                    <motion.div
-                      className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white"
-                      animate={{
-                        scale: [1, 1.15, 1],
-                        opacity: [0.7, 1, 0.7],
-                      }}
-                      transition={{
-                        duration: 2.5,
-                        repeat: Infinity,
-                        delay: element.delay,
-                        ease: 'easeInOut',
-                      }}
-                    />
-                  </div>
-
-                  {/* Label */}
-                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                    <span className="text-xs md:text-sm font-medium text-slate-700 bg-white px-3 py-1 rounded-full shadow-sm border border-slate-200">
-                      {element.label}
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 to-transparent pt-6 pb-1.5">
+                    <span className="text-white text-[10px] md:text-xs font-semibold tracking-widest uppercase block text-center">
+                      You
                     </span>
                   </div>
-
-                  {/* Doodle underline effect */}
-                  <motion.svg
-                    className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100"
-                    width="80"
-                    height="4"
-                    initial={{ pathLength: 0 }}
-                    whileHover={{ pathLength: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.path
-                      d="M 5 2 Q 40 1, 75 2"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      className="text-blue-500"
-                    />
-                  </motion.svg>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+
+              {/* Pulsing rings — two staggered ripples */}
+              <motion.div
+                className="absolute inset-0 rounded-full border-2 border-blue-400/40"
+                animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: 'easeOut' }}
+              />
+              <motion.div
+                className="absolute inset-0 rounded-full border border-purple-400/30"
+                animate={{ scale: [1, 1.7], opacity: [0.4, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: 'easeOut', delay: 1.25 }}
+              />
+
+              {/* Soft glow pulse behind the image */}
+              <motion.div
+                className="absolute inset-0 rounded-full bg-blue-500/10 blur-md -z-10"
+                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              />
+            </motion.div>
+
+            {/* Orbital Nodes — mobile */}
+            {orbitNodes.map((node, i) => {
+              const r = node.ring === 1 ? RING_1_RADIUS : RING_2_RADIUS
+              const { x, y } = polarToXY(node.angle, r)
+              return (
+                <div
+                  key={`m-${i}`}
+                  className="absolute z-10 md:hidden"
+                  style={{
+                    left: '50%',
+                    top: '50%',
+                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                  }}
+                >
+                  <motion.div
+                    className="group relative flex flex-col items-center"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: node.delay, type: 'spring', stiffness: 260, damping: 20 }}
+                  >
+                    <div className="relative">
+                      <motion.div
+                        className={`relative z-10 w-11 h-11 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-2 ring-white`}
+                        whileHover={{ scale: 1.12, y: -2 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <node.icon className="w-5 h-5 text-white" />
+                      </motion.div>
+
+                      {/* Pulse ring — fires once per cycle, staggered per node */}
+                      <motion.div
+                        className={`absolute inset-0 rounded-full ${node.bg} opacity-0`}
+                        animate={{ scale: [1, 2.2], opacity: [0.35, 0] }}
+                        transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 10.8, delay: node.pulseDelay, ease: 'easeOut' }}
+                      />
+                    </div>
+                    <span className="mt-1.5 text-[10px] font-medium text-slate-600 bg-white/90 px-2 py-0.5 rounded-full shadow-sm border border-slate-100 whitespace-nowrap">
+                      {node.label}
+                    </span>
+                  </motion.div>
+                </div>
+              )
+            })}
+
+            {/* Orbital Nodes — desktop */}
+            {orbitNodes.map((node, i) => {
+              const r = node.ring === 1 ? RING_1_RADIUS_MD : RING_2_RADIUS_MD
+              const { x, y } = polarToXY(node.angle, r)
+              return (
+                <div
+                  key={`d-${i}`}
+                  className="absolute z-10 hidden md:block"
+                  style={{
+                    left: '50%',
+                    top: '50%',
+                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                  }}
+                >
+                  <motion.div
+                    className="group relative flex flex-col items-center cursor-pointer"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: node.delay, type: 'spring', stiffness: 260, damping: 20 }}
+                  >
+                    <div className="relative">
+                      <motion.div
+                        className={`relative z-10 w-14 h-14 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-[3px] ring-white`}
+                        whileHover={{ scale: 1.12, y: -3 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <node.icon className="w-6 h-6 text-white" />
+                      </motion.div>
+
+                      {/* Pulse ring — fires once per cycle, staggered per node */}
+                      <motion.div
+                        className={`absolute inset-0 rounded-full ${node.bg} opacity-0`}
+                        animate={{ scale: [1, 2.4], opacity: [0.35, 0] }}
+                        transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 10.8, delay: node.pulseDelay, ease: 'easeOut' }}
+                      />
+                    </div>
+                    <span className="mt-2 text-xs font-medium text-slate-700 bg-white/90 px-2.5 py-1 rounded-full shadow-sm border border-slate-100 whitespace-nowrap group-hover:bg-white group-hover:shadow-md transition-all duration-200">
+                      {node.label}
+                    </span>
+                  </motion.div>
+                </div>
+              )
+            })}
           </div>
 
           {/* Activity Feed */}
           <div className="lg:sticky lg:top-24">
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4">
-                <div className="flex items-center gap-2 text-white">
-                  <TrendingUp className="w-5 h-5" />
-                  <h3 className="font-semibold text-lg">Live Activity</h3>
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+              {/* Header */}
+              <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm text-slate-900">Live Activity</h3>
+                    <p className="text-xs text-slate-500">Signals building your footprint</p>
+                  </div>
                 </div>
-                <p className="text-blue-100 text-sm mt-1">Signals building your footprint</p>
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-green-500"
+                  animate={{ opacity: [1, 0.4, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
               </div>
 
-              <div className="divide-y divide-slate-100 max-h-[600px] overflow-y-auto">
-                {activityFeed.map((item) => (
+              {/* Feed items */}
+              <div className="divide-y divide-slate-50">
+                {activityFeed.map((item, index) => (
                   <motion.div
                     key={item.id}
-                    className="p-4 hover:bg-slate-50 transition-colors duration-200 cursor-pointer group"
-                    initial={{ opacity: 0, x: 20 }}
+                    className="px-5 py-3.5 hover:bg-slate-50/70 transition-colors duration-150 group"
+                    initial={{ opacity: 0, x: 15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: item.delay }}
+                    transition={{ duration: 0.35, delay: index * 0.08 }}
                   >
                     <div className="flex items-start gap-3">
                       <div
-                        className={`${item.bgColor} rounded-lg p-2 shrink-0 group-hover:scale-110 transition-transform duration-200`}
+                        className={`${item.bgColor} rounded-lg p-2 shrink-0 group-hover:scale-105 transition-transform duration-150`}
                       >
-                        <item.icon className={`w-4 h-4 ${item.iconColor}`} />
+                        <item.icon className={`w-3.5 h-3.5 ${item.iconColor}`} />
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm text-slate-900">
+                        <p className="text-sm text-slate-800 leading-snug">
                           <span className="font-semibold">vinitshahdeo</span>{' '}
-                          <span className="text-slate-600">{item.activity}</span>{' '}
-                          <span className="font-medium text-slate-900">{item.target}</span>
+                          <span className="text-slate-500">{item.activity}</span>{' '}
+                          <span className="font-medium text-slate-800">{item.target}</span>
                         </p>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-xs text-slate-500">{item.platform}</span>
-                          <span className="text-xs text-slate-400">•</span>
-                          <span className="text-xs text-slate-500">{item.timeAgo}</span>
+                        <div className="flex items-center gap-1.5 mt-1">
+                          <span className="text-[11px] text-slate-400">{item.platform}</span>
+                          <span className="text-[11px] text-slate-300">&middot;</span>
+                          <span className="text-[11px] text-slate-400">{item.timeAgo}</span>
                         </div>
                       </div>
-
-                      {/* Pulse indicator */}
-                      <motion.div
-                        className="w-2 h-2 rounded-full bg-green-400 shrink-0 mt-1"
-                        animate={{
-                          scale: [1, 1.3, 1],
-                          opacity: [0.7, 1, 0.7],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          delay: item.delay,
-                        }}
-                      />
                     </div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Footer */}
-              <div className="px-6 py-4 bg-slate-50 border-t border-slate-200">
-                <p className="text-xs text-slate-600 text-center">
-                  <Star className="w-3 h-3 inline mr-1 text-yellow-500" />
+              <div className="px-5 py-3.5 bg-slate-50/80 border-t border-slate-100">
+                <p className="text-[11px] text-slate-500 text-center flex items-center justify-center gap-1.5">
+                  <Star className="w-3 h-3 text-amber-500" />
                   Each signal amplifies your presence
                 </p>
               </div>
@@ -507,7 +377,7 @@ export default function DigitalFootprintVisual() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-base text-slate-600 max-w-2xl mx-auto">
             Build your digital footprint strategically—each element amplifies the others
@@ -515,9 +385,9 @@ export default function DigitalFootprintVisual() {
         </motion.div>
       </div>
 
-      {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-30" />
+      {/* Background blurs */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-20 pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-20 pointer-events-none" />
     </section>
   )
 }
