@@ -12,6 +12,7 @@ import Testimonials from '@/components/Testimonials'
 import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
+import AskAI from '@/components/AskAI'
 import AIFutureSection from '@/components/AIFutureSection'
 import FeaturedReels from '@/components/FeaturedReels'
 import FeaturedOn from '@/components/FeaturedOn'
@@ -25,6 +26,7 @@ export default function Home() {
 
       {/* 2. Problem Zone - Hook & Pain Points */}
       <GoogleYourself />
+      <AskAI />
       <VisibilityGap />
       <CareerImpact />
       <AIFutureSection />

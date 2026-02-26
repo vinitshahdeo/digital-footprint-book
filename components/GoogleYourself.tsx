@@ -130,7 +130,7 @@ export default function GoogleYourself() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, type: 'spring', delay: 0.3 }}
                 >
-                  <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none">
+                  <div className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none">
                     70%
                   </div>
                 </motion.div>
@@ -155,7 +155,7 @@ export default function GoogleYourself() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <motion.div
-                    className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2"
+                    className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
@@ -175,7 +175,7 @@ export default function GoogleYourself() {
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
                   <motion.div
-                    className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
+                    className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
