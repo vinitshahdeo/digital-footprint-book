@@ -10,10 +10,10 @@ export default function AIFutureSection() {
     <section className="relative py-16 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="relative max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center"
         >
           {/* Badge - consistent with Purchase section */}

@@ -144,7 +144,7 @@ export default function Searchability() {
 
             <motion.div
               className="bg-slate-50 rounded-xl p-6 border border-slate-200 mt-8"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.5 }}
@@ -172,11 +172,11 @@ export default function Searchability() {
             <div className="space-y-3">
               <motion.div
                 className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-md cursor-default"
-                initial={{ opacity: 0, x: 15 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: 0.1 }}
-                whileHover={{ x: 3 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                whileHover={{ x: 4 }}
               >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">GitHub Activity</p>
@@ -327,7 +327,7 @@ export default function Searchability() {
 
         <motion.p
           className="text-center text-lg text-slate-500 mt-16 max-w-xl mx-auto"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}

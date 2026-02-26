@@ -112,16 +112,16 @@ export default function GoogleYourself() {
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
           >
             <div className="relative space-y-8">
               {/* First Stat */}
               <motion.div
                 className="flex flex-col items-center gap-4 text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.div
                   className="flex-shrink-0"
@@ -149,10 +149,10 @@ export default function GoogleYourself() {
               <div className="grid grid-cols-2 gap-6">
                 <motion.div
                   className="flex flex-col items-center text-center"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <motion.div
                     className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2"
@@ -169,10 +169,10 @@ export default function GoogleYourself() {
 
                 <motion.div
                   className="flex flex-col items-center text-center"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
                 >
                   <motion.div
                     className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
@@ -191,7 +191,7 @@ export default function GoogleYourself() {
               {/* Bottom CTA */}
               <motion.div
                 className="pt-6 text-center"
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}

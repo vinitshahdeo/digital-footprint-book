@@ -165,10 +165,10 @@ export default function Testimonials() {
         {/* Section Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
             <MessageSquare className="w-4 h-4" />

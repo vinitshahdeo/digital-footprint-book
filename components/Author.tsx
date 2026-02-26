@@ -18,10 +18,10 @@ export default function Author() {
           {/* Clean Author Image */}
           <motion.div
             className="flex justify-center md:justify-end order-2 md:order-1"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <motion.div
               className="relative w-72 h-72 lg:w-80 lg:h-80 bg-slate-200 rounded-2xl overflow-hidden shadow-lg"
@@ -32,7 +32,7 @@ export default function Author() {
                 initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
               >
                 <Image
                   src="/images/vinit-shahdeo.jpg"
