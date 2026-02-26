@@ -117,8 +117,6 @@ export default function CallToAction() {
             The engineers who get noticed aren't always the best coders — they're the ones who show
             up. Start building your footprint today.
           </p>
-
-
         </motion.div>
       </div>
     </section>

@@ -31,16 +31,80 @@ import {
  */
 const orbitNodes = [
   // Inner ring (ring 1) — primary platforms
-  { icon: Github, label: 'GitHub', bg: 'bg-slate-800', ring: 1, angle: 0, delay: 0.1, pulseDelay: 0 },
-  { icon: Linkedin, label: 'LinkedIn', bg: 'bg-blue-600', ring: 1, angle: 90, delay: 0.2, pulseDelay: 1.5 },
-  { icon: FileText, label: 'Blog Posts', bg: 'bg-indigo-600', ring: 1, angle: 180, delay: 0.3, pulseDelay: 3.0 },
-  { icon: Video, label: 'Talks', bg: 'bg-purple-600', ring: 1, angle: 270, delay: 0.4, pulseDelay: 4.5 },
+  {
+    icon: Github,
+    label: 'GitHub',
+    bg: 'bg-slate-800',
+    ring: 1,
+    angle: 0,
+    delay: 0.1,
+    pulseDelay: 0,
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    bg: 'bg-blue-600',
+    ring: 1,
+    angle: 90,
+    delay: 0.2,
+    pulseDelay: 1.5,
+  },
+  {
+    icon: FileText,
+    label: 'Blog Posts',
+    bg: 'bg-indigo-600',
+    ring: 1,
+    angle: 180,
+    delay: 0.3,
+    pulseDelay: 3.0,
+  },
+  {
+    icon: Video,
+    label: 'Talks',
+    bg: 'bg-purple-600',
+    ring: 1,
+    angle: 270,
+    delay: 0.4,
+    pulseDelay: 4.5,
+  },
 
   // Outer ring (ring 2) — secondary channels
-  { icon: MessageCircle, label: 'Social', bg: 'bg-sky-500', ring: 2, angle: 45, delay: 0.5, pulseDelay: 6.0 },
-  { icon: Globe, label: 'Portfolio', bg: 'bg-slate-700', ring: 2, angle: 135, delay: 0.6, pulseDelay: 7.5 },
-  { icon: Code, label: 'Open Source', bg: 'bg-emerald-600', ring: 2, angle: 225, delay: 0.7, pulseDelay: 9.0 },
-  { icon: Users, label: 'Community', bg: 'bg-violet-600', ring: 2, angle: 315, delay: 0.8, pulseDelay: 10.5 },
+  {
+    icon: MessageCircle,
+    label: 'Social',
+    bg: 'bg-sky-500',
+    ring: 2,
+    angle: 45,
+    delay: 0.5,
+    pulseDelay: 6.0,
+  },
+  {
+    icon: Globe,
+    label: 'Portfolio',
+    bg: 'bg-slate-700',
+    ring: 2,
+    angle: 135,
+    delay: 0.6,
+    pulseDelay: 7.5,
+  },
+  {
+    icon: Code,
+    label: 'Open Source',
+    bg: 'bg-emerald-600',
+    ring: 2,
+    angle: 225,
+    delay: 0.7,
+    pulseDelay: 9.0,
+  },
+  {
+    icon: Users,
+    label: 'Community',
+    bg: 'bg-violet-600',
+    ring: 2,
+    angle: 315,
+    delay: 0.8,
+    pulseDelay: 10.5,
+  },
 ]
 
 // Responsive orbit radii (px). Updated via CSS custom properties.
@@ -232,7 +296,13 @@ export default function DigitalFootprintVisual() {
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: node.delay, type: 'spring', stiffness: 260, damping: 20 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: node.delay,
+                      type: 'spring',
+                      stiffness: 260,
+                      damping: 20,
+                    }}
                   >
                     <div className="relative">
                       <motion.div
@@ -247,7 +317,13 @@ export default function DigitalFootprintVisual() {
                       <motion.div
                         className={`absolute inset-0 rounded-full ${node.bg} opacity-0`}
                         animate={{ scale: [1, 2.2], opacity: [0.35, 0] }}
-                        transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 10.8, delay: node.pulseDelay, ease: 'easeOut' }}
+                        transition={{
+                          duration: 1.2,
+                          repeat: Infinity,
+                          repeatDelay: 10.8,
+                          delay: node.pulseDelay,
+                          ease: 'easeOut',
+                        }}
                       />
                     </div>
                     <span className="mt-1.5 text-[10px] font-medium text-slate-600 bg-white/90 px-2 py-0.5 rounded-full shadow-sm border border-slate-100 whitespace-nowrap">
@@ -277,7 +353,13 @@ export default function DigitalFootprintVisual() {
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: node.delay, type: 'spring', stiffness: 260, damping: 20 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: node.delay,
+                      type: 'spring',
+                      stiffness: 260,
+                      damping: 20,
+                    }}
                   >
                     <div className="relative">
                       <motion.div
@@ -292,7 +374,13 @@ export default function DigitalFootprintVisual() {
                       <motion.div
                         className={`absolute inset-0 rounded-full ${node.bg} opacity-0`}
                         animate={{ scale: [1, 2.4], opacity: [0.35, 0] }}
-                        transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 10.8, delay: node.pulseDelay, ease: 'easeOut' }}
+                        transition={{
+                          duration: 1.2,
+                          repeat: Infinity,
+                          repeatDelay: 10.8,
+                          delay: node.pulseDelay,
+                          ease: 'easeOut',
+                        }}
                       />
                     </div>
                     <span className="mt-2 text-xs font-medium text-slate-700 bg-white/90 px-2.5 py-1 rounded-full shadow-sm border border-slate-100 whitespace-nowrap group-hover:bg-white group-hover:shadow-md transition-all duration-200">

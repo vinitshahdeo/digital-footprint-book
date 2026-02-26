@@ -52,7 +52,8 @@ export default function GoogleYourself() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-2">
-              Recruiters do. Hiring managers do. <span className="text-slate-900 font-medium">Everyone does.</span>
+              Recruiters do. Hiring managers do.{' '}
+              <span className="text-slate-900 font-medium">Everyone does.</span>
             </p>
             <p className="text-lg italic text-slate-500 max-w-2xl mx-auto">
               What shows up when they search your name?
@@ -163,7 +164,9 @@ export default function GoogleYourself() {
                 <p className="relative text-lg md:text-xl font-semibold text-slate-900 mb-1">
                   of recruiters Google you first
                 </p>
-                <p className="relative text-sm text-slate-500">before they even schedule an interview</p>
+                <p className="relative text-sm text-slate-500">
+                  before they even schedule an interview
+                </p>
               </motion.div>
 
               {/* Two Stats Side by Side */}
@@ -184,7 +187,9 @@ export default function GoogleYourself() {
                   >
                     85%
                   </motion.div>
-                  <p className="text-sm font-semibold text-slate-900 mb-0.5">Check social profiles</p>
+                  <p className="text-sm font-semibold text-slate-900 mb-0.5">
+                    Check social profiles
+                  </p>
                   <p className="text-slate-500 text-xs">GitHub & LinkedIn before your résumé</p>
                 </motion.div>
 

@@ -84,13 +84,13 @@ const ResultIcon = ({ type }: { type: string }) => {
         </div>
       )
     case 'linkedin':
-        return (
-            <div className="w-7 h-7 rounded-full bg-[#303134] flex items-center justify-center flex-shrink-0">
-              <svg className={iconClasses} viewBox="0 0 24 24" fill="#0A66C2">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.369-1.852 3.602 0 4.268 2.37 4.268 5.455v6.288zM5.337 7.433c-1.144 0-2.069-.926-2.069-2.069 0-1.144.925-2.069 2.069-2.069 1.144 0 2.069.925 2.069 2.069 0 1.143-.925 2.069-2.069 2.069zM6.814 20.452H3.861V9h2.953v11.452z" />
-              </svg>
-            </div>
-        )
+      return (
+        <div className="w-7 h-7 rounded-full bg-[#303134] flex items-center justify-center flex-shrink-0">
+          <svg className={iconClasses} viewBox="0 0 24 24" fill="#0A66C2">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.369-1.852 3.602 0 4.268 2.37 4.268 5.455v6.288zM5.337 7.433c-1.144 0-2.069-.926-2.069-2.069 0-1.144.925-2.069 2.069-2.069 1.144 0 2.069.925 2.069 2.069 0 1.143-.925 2.069-2.069 2.069zM6.814 20.452H3.861V9h2.953v11.452z" />
+          </svg>
+        </div>
+      )
     default:
       return null
   }
@@ -120,45 +120,46 @@ const searchResults = [
     url: 'https://www.linkedin.com/in/vinitshahdeo',
     displayUrl: 'linkedin.com › in › vinitshahdeo',
     siteName: 'LinkedIn',
-    description: 'Engineering Leader @ ZZAZZ.ai | 3× GitHub Star | GSoC Mentor | SaaS → FinTech → AI | Ex-Novo, Ex-Postman',
+    description:
+      'Engineering Leader @ ZZAZZ.ai | 3× GitHub Star | GSoC Mentor | SaaS → FinTech → AI | Ex-Novo, Ex-Postman',
     type: 'linkedin',
   },
-//   {
-//     title: 'Vinit Shahdeo (@Vinit_Shahdeo) / X',
-//     url: 'https://x.com/Vinit_Shahdeo',
-//     displayUrl: 'x.com › Vinit_Shahdeo',
-//     siteName: 'X (formerly Twitter)',
-//     description:
-//       'Software Engineer. Open Source. Author of Digital Footprint. Sharing insights on engineering, career growth, and building in public. Joined 2017.',
-//     type: 'twitter',
-//   },
-//   {
-//     title: 'Vinit Shahdeo — GitHub Stars',
-//     url: 'https://stars.github.com/profiles/vinitshahdeo',
-//     displayUrl: 'stars.github.com › profiles › vinitshahdeo',
-//     siteName: 'GitHub Stars',
-//     description:
-//       'GitHub Star recognized for impactful open-source contributions, community leadership, and dedication to helping developers worldwide.',
-//     type: 'stars',
-//   },
-//   {
-//     title: 'Vinit Shahdeo — Peerlist',
-//     url: 'https://peerlist.io/vinitshahdeo',
-//     displayUrl: 'peerlist.io › vinitshahdeo',
-//     siteName: 'Peerlist',
-//     description:
-//       'View Vinit Shahdeo\'s professional profile on Peerlist — work history, projects, recommendations, and proof of work all in one place.',
-//     type: 'peerlist',
-//   },
-//   {
-//     title: 'Vinit Shahdeo — Blog & Writing',
-//     url: 'https://vinitshahdeo.dev/blog',
-//     displayUrl: 'vinitshahdeo.dev › blog',
-//     siteName: 'vinitshahdeo.dev',
-//     description:
-//       'Articles on software engineering, open source, digital presence, and career growth. Practical insights for developers who want to stand out and get noticed.',
-//     type: 'blog',
-//   },
+  //   {
+  //     title: 'Vinit Shahdeo (@Vinit_Shahdeo) / X',
+  //     url: 'https://x.com/Vinit_Shahdeo',
+  //     displayUrl: 'x.com › Vinit_Shahdeo',
+  //     siteName: 'X (formerly Twitter)',
+  //     description:
+  //       'Software Engineer. Open Source. Author of Digital Footprint. Sharing insights on engineering, career growth, and building in public. Joined 2017.',
+  //     type: 'twitter',
+  //   },
+  //   {
+  //     title: 'Vinit Shahdeo — GitHub Stars',
+  //     url: 'https://stars.github.com/profiles/vinitshahdeo',
+  //     displayUrl: 'stars.github.com › profiles › vinitshahdeo',
+  //     siteName: 'GitHub Stars',
+  //     description:
+  //       'GitHub Star recognized for impactful open-source contributions, community leadership, and dedication to helping developers worldwide.',
+  //     type: 'stars',
+  //   },
+  //   {
+  //     title: 'Vinit Shahdeo — Peerlist',
+  //     url: 'https://peerlist.io/vinitshahdeo',
+  //     displayUrl: 'peerlist.io › vinitshahdeo',
+  //     siteName: 'Peerlist',
+  //     description:
+  //       'View Vinit Shahdeo\'s professional profile on Peerlist — work history, projects, recommendations, and proof of work all in one place.',
+  //     type: 'peerlist',
+  //   },
+  //   {
+  //     title: 'Vinit Shahdeo — Blog & Writing',
+  //     url: 'https://vinitshahdeo.dev/blog',
+  //     displayUrl: 'vinitshahdeo.dev › blog',
+  //     siteName: 'vinitshahdeo.dev',
+  //     description:
+  //       'Articles on software engineering, open source, digital presence, and career growth. Practical insights for developers who want to stand out and get noticed.',
+  //     type: 'blog',
+  //   },
 ]
 
 const peopleAlsoSearchFor = [
