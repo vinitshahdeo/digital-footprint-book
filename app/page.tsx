@@ -24,12 +24,22 @@ import AIFutureSection from '@/components/AIFutureSection'
 import FeaturedReels from '@/components/FeaturedReels'
 import FeaturedOn from '@/components/FeaturedOn'
 import Footer from '@/components/Footer'
+import HeroV1 from '@/components/HeroV1'
+import HeroV2 from '@/components/HeroV2'
+import HeroV3 from '@/components/HeroV3'
+import HeroV4 from '@/components/HeroV4'
+import HeroV5 from '@/components/HeroV5'
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
       {/* 1. First Impression */}
-      <Hero />
+      {/* <Hero /> */}
+      <HeroV1 />
+      {/* <HeroV2 />
+      <HeroV3 />
+      <HeroV4 />
+      <HeroV5 /> */}
 
       {/* 2. Problem Zone - Hook & Pain Points */}
       <GoogleYourself />
