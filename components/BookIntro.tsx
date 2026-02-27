@@ -258,14 +258,16 @@ export default function BookIntro() {
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-3xl blur-3xl"></div>
-              <Image
-                src="/images/digital-footprint-for-software-engineers-book-cover.jpg"
-                alt="Digital Footprint for Software Engineers Book Cover"
-                width={400}
-                height={600}
-                className="relative rounded-2xl shadow-2xl shadow-blue-500/20"
-                priority
-              />
+              <div className="relative p-[2px] rounded-2xl bg-gradient-to-br from-blue-400/60 via-purple-400/60 to-blue-500/60">
+                <Image
+                  src="/images/digital-footprint-for-software-engineers-book-cover.jpg"
+                  alt="Digital Footprint for Software Engineers Book Cover"
+                  width={400}
+                  height={600}
+                  className="rounded-2xl shadow-2xl shadow-blue-500/20"
+                  priority
+                />
+              </div>
             </motion.div>
           </motion.div>
 
