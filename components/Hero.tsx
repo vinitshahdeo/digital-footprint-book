@@ -358,7 +358,7 @@ export default function HeroV1() {
                         {showVideo ? (
                           <>
                             <iframe
-                              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3&disablekb=1&fs=0`}
+                              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&rel=0&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3&disablekb=1&fs=0`}
                               title="Digital Footprint for Software Engineers – Book Introduction"
                               className="absolute inset-x-0 -top-[62px] -bottom-[62px] w-full"
                               style={{ height: 'calc(100% + 124px)' }}
