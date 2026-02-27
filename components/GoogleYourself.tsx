@@ -72,7 +72,7 @@ export default function GoogleYourself() {
               href="https://www.google.com/search?q=Vinit+Shahdeo"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Search Google for Vinit Shahdeo"
+              aria-label="Search on Google for Vinit Shahdeo"
               className="inline-flex items-center gap-3 pl-4 pr-3 py-2.5 bg-white rounded-full border border-slate-300 shadow-sm hover:shadow-lg hover:border-slate-400 transition-all duration-200 group max-w-sm"
             >
               {/* Google Logo */}

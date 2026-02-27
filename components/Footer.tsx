@@ -110,7 +110,7 @@ export default function Footer() {
               href="https://www.google.com/search?q=Vinit+Shahdeo"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Search Google for Vinit Shahdeo"
+              aria-label="Search on Google for Vinit Shahdeo"
               className="inline-flex items-center gap-3 px-4 py-2.5 bg-white rounded-full border border-slate-300 hover:shadow-lg hover:border-blue-400 transition-all duration-200 group"
             >
               <svg

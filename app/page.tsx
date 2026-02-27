@@ -1,3 +1,4 @@
+import Hero from '@/components/Hero'
 import GoogleYourself from '@/components/GoogleYourself'
 import VisibilityGap from '@/components/VisibilityGap'
 import BookCoverage from '@/components/BookCoverage'
@@ -14,7 +15,6 @@ import AskAI from '@/components/AskAI'
 import AIFutureSection from '@/components/AIFutureSection'
 import FeaturedOn from '@/components/FeaturedOn'
 import Footer from '@/components/Footer'
-import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
