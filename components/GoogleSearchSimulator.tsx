@@ -308,7 +308,12 @@ export default function GoogleSearchSimulator() {
                 {typedText}
                 {(phase === 'typing' || phase === 'idle') && <TypewriterCursor />}
               </div>
-              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg
+                className="w-4 h-4 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
                 <path
                   d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"
                   fill="#4285F4"
@@ -318,7 +323,12 @@ export default function GoogleSearchSimulator() {
                   fill="#34A853"
                 />
               </svg>
-              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 192 192" fill="none" aria-hidden="true">
+              <svg
+                className="w-4 h-4 flex-shrink-0"
+                viewBox="0 0 192 192"
+                fill="none"
+                aria-hidden="true"
+              >
                 <circle cx="96" cy="96" r="70" stroke="#4285F4" strokeWidth="16" fill="none" />
                 <circle cx="96" cy="96" r="28" fill="#34A853" />
                 <path

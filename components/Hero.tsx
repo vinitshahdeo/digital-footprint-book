@@ -74,9 +74,7 @@ export default function HeroV1() {
   useEffect(() => {
     const updateClock = () => {
       const now = new Date()
-      setCurrentTime(
-        now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
-      )
+      setCurrentTime(now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }))
     }
     updateClock()
     const timer = setInterval(updateClock, 60_000)
@@ -96,12 +94,42 @@ export default function HeroV1() {
         <FloatingIcon Icon={Mail} delay={2.8} position={{ top: '88%', left: '82%' }} />
 
         {/* Mid-section & edge icons — hidden on mobile to avoid overlapping content */}
-        <FloatingIcon Icon={Twitter} delay={2} position={{ top: '35%', left: '5%' }} className="hidden md:block" />
-        <FloatingIcon Icon={Twitch} delay={1.5} position={{ top: '60%', left: '7%' }} className="hidden md:block" />
-        <FloatingIcon Icon={Instagram} delay={2.5} position={{ top: '40%', left: '90%' }} className="hidden md:block" />
-        <FloatingIcon Icon={Rocket} delay={0.5} position={{ top: '55%', left: '88%' }} className="hidden md:block" />
-        <FloatingIcon Icon={Clapperboard} delay={1.8} position={{ top: '25%', left: '92%' }} className="hidden md:block" />
-        <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} className="hidden md:block" />
+        <FloatingIcon
+          Icon={Twitter}
+          delay={2}
+          position={{ top: '35%', left: '5%' }}
+          className="hidden md:block"
+        />
+        <FloatingIcon
+          Icon={Twitch}
+          delay={1.5}
+          position={{ top: '60%', left: '7%' }}
+          className="hidden md:block"
+        />
+        <FloatingIcon
+          Icon={Instagram}
+          delay={2.5}
+          position={{ top: '40%', left: '90%' }}
+          className="hidden md:block"
+        />
+        <FloatingIcon
+          Icon={Rocket}
+          delay={0.5}
+          position={{ top: '55%', left: '88%' }}
+          className="hidden md:block"
+        />
+        <FloatingIcon
+          Icon={Clapperboard}
+          delay={1.8}
+          position={{ top: '25%', left: '92%' }}
+          className="hidden md:block"
+        />
+        <FloatingIcon
+          Icon={Globe}
+          delay={3}
+          position={{ top: '75%', left: '6%' }}
+          className="hidden md:block"
+        />
       </div>
 
       <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 lg:gap-12 items-center">
@@ -160,8 +188,8 @@ export default function HeroV1() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            A practical playbook to build a strong, authentic digital presence—without feeling like a
-            self-promoter.
+            A practical playbook to build a strong, authentic digital presence—without feeling like
+            a self-promoter.
           </motion.p>
 
           {/* CTAs */}
@@ -276,17 +304,45 @@ export default function HeroV1() {
                       </span>
                       <div className="flex items-center gap-1">
                         {/* Signal bars */}
-                        <svg width="14" height="10" viewBox="0 0 14 10" className="text-white/90" fill="currentColor">
+                        <svg
+                          width="14"
+                          height="10"
+                          viewBox="0 0 14 10"
+                          className="text-white/90"
+                          fill="currentColor"
+                        >
                           <rect x="0" y="7" width="2.5" height="3" rx="0.5" />
                           <rect x="3.5" y="5" width="2.5" height="5" rx="0.5" />
                           <rect x="7" y="2.5" width="2.5" height="7.5" rx="0.5" />
                           <rect x="10.5" y="0" width="2.5" height="10" rx="0.5" />
                         </svg>
                         {/* Battery */}
-                        <svg width="22" height="10" viewBox="0 0 22 10" className="text-white/90 ml-0.5">
-                          <rect x="0" y="0.5" width="18" height="9" rx="2" stroke="currentColor" strokeWidth="1" fill="none" />
+                        <svg
+                          width="22"
+                          height="10"
+                          viewBox="0 0 22 10"
+                          className="text-white/90 ml-0.5"
+                        >
+                          <rect
+                            x="0"
+                            y="0.5"
+                            width="18"
+                            height="9"
+                            rx="2"
+                            stroke="currentColor"
+                            strokeWidth="1"
+                            fill="none"
+                          />
                           <rect x="1.5" y="2" width="12" height="6" rx="1" fill="currentColor" />
-                          <rect x="18.5" y="3" width="2" height="4" rx="0.5" fill="currentColor" opacity="0.4" />
+                          <rect
+                            x="18.5"
+                            y="3"
+                            width="2"
+                            height="4"
+                            rx="0.5"
+                            fill="currentColor"
+                            opacity="0.4"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -360,7 +416,8 @@ export default function HeroV1() {
                     <div
                       className="absolute inset-0 z-10 pointer-events-none"
                       style={{
-                        background: 'linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.06) 50%, transparent 55%)',
+                        background:
+                          'linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.06) 50%, transparent 55%)',
                       }}
                     />
 
