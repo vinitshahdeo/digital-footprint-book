@@ -19,10 +19,10 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
   useEffect(() => {
     springValue.on('change', (latest) => {
       if (ref.current) {
-        ref.current.textContent = Math.floor(latest).toString()
+        ref.current.textContent = Math.min(Math.floor(latest), value).toString()
       }
     })
-  }, [springValue])
+  }, [springValue, value])
 
   return <span ref={ref}>0</span>
 }
