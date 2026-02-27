@@ -6,7 +6,7 @@ import Searchability from '@/components/Searchability'
 import DigitalFootprintVisual from '@/components/DigitalFootprintVisual'
 import BookIntro from '@/components/BookIntro'
 import Author from '@/components/Author'
-import WhyThisBookV2 from '@/components/WhyThisBookV2'
+import WhyThisBook from '@/components/WhyThisBook'
 import Testimonials from '@/components/Testimonials'
 import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
@@ -14,13 +14,13 @@ import AskAI from '@/components/AskAI'
 import AIFutureSection from '@/components/AIFutureSection'
 import FeaturedOn from '@/components/FeaturedOn'
 import Footer from '@/components/Footer'
-import HeroV1 from '@/components/HeroV1'
+import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
       {/* 1. First Impression */}
-      <HeroV1 />
+      <Hero />
 
       {/* 2. Problem Zone - Hook & Pain Points */}
       <GoogleYourself />
@@ -33,7 +33,7 @@ export default function Home() {
       <BookIntro />
       <Author />
       <BookCoverage />
-      <WhyThisBookV2 />
+      <WhyThisBook />
 
       {/* 4. Reinforcement Zone - Value & Proof */}
       <Testimonials />
