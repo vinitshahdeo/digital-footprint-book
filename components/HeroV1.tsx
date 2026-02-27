@@ -19,7 +19,7 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -54,9 +54,10 @@ const FloatingIcon = ({
   </motion.div>
 )
 
+const YOUTUBE_VIDEO_ID = 'GK6TIHiov4A'
+
 export default function HeroV1() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [showVideo, setShowVideo] = useState(false)
   const [onlineCount, setOnlineCount] = useState(5.35)
 
   useEffect(() => {
@@ -248,28 +249,38 @@ export default function HeroV1() {
 
               {/* Screen */}
               <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16]">
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  controls={isPlaying}
-                  preload="metadata"
-                  playsInline
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
-                  poster="/images/digital-footprint-cover.png"
-                >
-                  <source src="/videos/intro.mp4" type="video/mp4" />
-                </video>
-
-                {/* Play Button Overlay */}
-                {!isPlaying && (
+                {showVideo ? (
+                  <>
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3&disablekb=1&fs=0`}
+                      title="Digital Footprint for Software Engineers – Book Introduction"
+                      className="absolute inset-x-0 -top-[62px] -bottom-[62px] w-full"
+                      style={{ height: 'calc(100% + 124px)' }}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      loading="lazy"
+                    />
+                    {/* Gradient overlays to hide YouTube title and branding */}
+                    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
+                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
+                  </>
+                ) : (
                   <button
-                    onClick={() => videoRef.current?.play()}
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors duration-300 cursor-pointer group"
-                    aria-label="Play video"
+                    onClick={() => setShowVideo(true)}
+                    className="absolute inset-0 w-full h-full cursor-pointer group"
+                    aria-label="Play introduction video"
                   >
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-6 h-6 md:w-7 md:h-7 text-slate-900 ml-0.5" />
+                    <Image
+                      src="/images/digital-footprint-cover.png"
+                      alt="Digital Footprint for Software Engineers – Book Cover"
+                      fill
+                      sizes="(max-width: 768px) 270px, (max-width: 1024px) 290px, 320px"
+                      className="object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <Play className="w-6 h-6 md:w-7 md:h-7 text-slate-900 ml-0.5" />
+                      </div>
                     </div>
                   </button>
                 )}
