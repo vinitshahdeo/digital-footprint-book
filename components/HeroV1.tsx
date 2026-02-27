@@ -238,56 +238,123 @@ export default function HeroV1() {
           animate={{ opacity: 1, x: 0, rotateY: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
         >
-          <div className="relative w-[270px] md:w-[290px] lg:w-[320px]">
-            {/* Glow behind phone */}
-            <div className="absolute -inset-6 bg-gradient-to-r from-blue-100 to-slate-100 rounded-[3rem] blur-3xl opacity-60" />
+          <div className="relative w-[260px] md:w-[280px] lg:w-[300px]">
+            {/* Ambient glow */}
+            <div className="absolute -inset-8 bg-gradient-to-br from-blue-200/40 via-indigo-100/30 to-slate-100/40 rounded-[4rem] blur-3xl" />
 
-            {/* Phone Frame */}
-            <div className="relative bg-slate-900 rounded-[2.5rem] p-2.5 shadow-2xl shadow-slate-300/50 ring-1 ring-slate-800">
-              {/* Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-slate-900 rounded-b-2xl z-10" />
+            {/* Phone chassis */}
+            <div className="relative">
+              {/* Side buttons – left (silent switch + volume) */}
+              <div className="absolute -left-[1.5px] top-[72px] w-[3px] h-[14px] bg-slate-700 rounded-l-sm" />
+              <div className="absolute -left-[1.5px] top-[100px] w-[3px] h-[28px] bg-slate-700 rounded-l-sm" />
+              <div className="absolute -left-[1.5px] top-[136px] w-[3px] h-[28px] bg-slate-700 rounded-l-sm" />
+              {/* Side button – right (power) */}
+              <div className="absolute -right-[1.5px] top-[112px] w-[3px] h-[36px] bg-slate-700 rounded-r-sm" />
 
-              {/* Screen */}
-              <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16]">
-                {showVideo ? (
-                  <>
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3&disablekb=1&fs=0`}
-                      title="Digital Footprint for Software Engineers – Book Introduction"
-                      className="absolute inset-x-0 -top-[62px] -bottom-[62px] w-full"
-                      style={{ height: 'calc(100% + 124px)' }}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      loading="lazy"
-                    />
-                    {/* Gradient overlays to hide YouTube title and branding */}
-                    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
-                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
-                  </>
-                ) : (
-                  <button
-                    onClick={() => setShowVideo(true)}
-                    className="absolute inset-0 w-full h-full cursor-pointer group"
-                    aria-label="Play introduction video"
-                  >
-                    <Image
-                      src="/images/digital-footprint-cover.png"
-                      alt="Digital Footprint for Software Engineers – Book Cover"
-                      fill
-                      sizes="(max-width: 768px) 270px, (max-width: 1024px) 290px, 320px"
-                      className="object-cover"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <Play className="w-6 h-6 md:w-7 md:h-7 text-slate-900 ml-0.5" />
+              {/* Frame body */}
+              <div className="relative bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800 rounded-[2.8rem] p-[7px] shadow-[0_8px_40px_rgba(15,23,42,0.25),0_2px_12px_rgba(15,23,42,0.15)] ring-1 ring-white/[0.08]">
+                {/* Inner bezel ring */}
+                <div className="relative rounded-[2.4rem] ring-1 ring-black/40 overflow-hidden">
+                  {/* Screen */}
+                  <div className="relative bg-black aspect-[9/19.5]">
+                    {/* Status bar */}
+                    <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-6 pt-3 pb-1 pointer-events-none">
+                      <span className="text-[10px] font-semibold text-white/90 tracking-tight">9:41</span>
+                      <div className="flex items-center gap-1">
+                        {/* Signal bars */}
+                        <svg width="14" height="10" viewBox="0 0 14 10" className="text-white/90" fill="currentColor">
+                          <rect x="0" y="7" width="2.5" height="3" rx="0.5" />
+                          <rect x="3.5" y="5" width="2.5" height="5" rx="0.5" />
+                          <rect x="7" y="2.5" width="2.5" height="7.5" rx="0.5" />
+                          <rect x="10.5" y="0" width="2.5" height="10" rx="0.5" />
+                        </svg>
+                        {/* Battery */}
+                        <svg width="22" height="10" viewBox="0 0 22 10" className="text-white/90 ml-0.5">
+                          <rect x="0" y="0.5" width="18" height="9" rx="2" stroke="currentColor" strokeWidth="1" fill="none" />
+                          <rect x="1.5" y="2" width="12" height="6" rx="1" fill="currentColor" />
+                          <rect x="18.5" y="3" width="2" height="4" rx="0.5" fill="currentColor" opacity="0.4" />
+                        </svg>
                       </div>
                     </div>
-                  </button>
-                )}
-              </div>
 
-              {/* Home Indicator */}
-              <div className="mt-2 mx-auto w-24 h-1 bg-slate-600 rounded-full" />
+                    {/* Dynamic Island */}
+                    <div className="absolute top-2.5 left-1/2 -translate-x-1/2 z-20 w-[84px] h-[22px] bg-black rounded-full flex items-center justify-end pr-[7px]">
+                      <div className="w-[8px] h-[8px] rounded-full bg-slate-800 ring-1 ring-slate-700/50" />
+                    </div>
+
+                    {/* Video / Thumbnail area – clipped to 9:16 centered within the taller screen */}
+                    <div className="absolute inset-x-0 top-0 bottom-0 flex items-center">
+                      <div className="relative w-full aspect-[9/16] mx-auto overflow-hidden">
+                        {showVideo ? (
+                          <>
+                            <iframe
+                              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3&disablekb=1&fs=0`}
+                              title="Digital Footprint for Software Engineers – Book Introduction"
+                              className="absolute inset-x-0 -top-[62px] -bottom-[62px] w-full"
+                              style={{ height: 'calc(100% + 124px)' }}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              loading="lazy"
+                            />
+                            {/* Soft fade overlays to mask YouTube chrome */}
+                            <div className="absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-black via-black/60 to-transparent z-10 pointer-events-none" />
+                            <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black via-black/60 to-transparent z-10 pointer-events-none" />
+                          </>
+                        ) : (
+                          <button
+                            onClick={() => setShowVideo(true)}
+                            className="absolute inset-0 w-full h-full cursor-pointer group"
+                            aria-label="Play introduction video"
+                          >
+                            <Image
+                              src="/images/digital-footprint-cover.png"
+                              alt="Digital Footprint for Software Engineers – Book Cover"
+                              fill
+                              sizes="(max-width: 768px) 260px, (max-width: 1024px) 280px, 300px"
+                              className="object-cover"
+                              priority
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20 group-hover:from-black/50 group-hover:via-black/20 group-hover:to-black/30 transition-all duration-300 flex flex-col items-center justify-center gap-3">
+                              <motion.div
+                                className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-[0_4px_24px_rgba(0,0,0,0.2)] group-hover:scale-110 transition-transform duration-300"
+                                animate={{ scale: [1, 1.05, 1] }}
+                                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                              >
+                                <Play className="w-6 h-6 md:w-7 md:h-7 text-slate-900 ml-0.5 fill-slate-900" />
+                              </motion.div>
+                              {/* Tooltip below play button */}
+                              <motion.div
+                                className="flex items-center gap-1.5 px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium rounded-full whitespace-nowrap"
+                                initial={{ opacity: 0, y: -4 }}
+                                animate={{ opacity: [0, 1, 1, 0], y: [-4, 0, 0, 4] }}
+                                transition={{
+                                  delay: 1.4,
+                                  duration: 3,
+                                  repeat: Infinity,
+                                  repeatDelay: 2,
+                                  ease: 'easeInOut',
+                                }}
+                              >
+                                Tap to watch intro
+                              </motion.div>
+                            </div>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Screen reflection / glare */}
+                    <div
+                      className="absolute inset-0 z-10 pointer-events-none"
+                      style={{
+                        background: 'linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.06) 50%, transparent 55%)',
+                      }}
+                    />
+
+                    {/* Home indicator */}
+                    <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 z-20 w-[100px] h-[4px] bg-white/30 rounded-full" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
