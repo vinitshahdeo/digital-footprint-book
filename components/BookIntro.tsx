@@ -259,7 +259,7 @@ export default function BookIntro() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-3xl blur-3xl"></div>
               <Image
-                src="/images/digital-footprint-for-software-engineers-book-cover.png"
+                src="/images/digital-footprint-for-software-engineers-book-cover.jpg"
                 alt="Digital Footprint for Software Engineers Book Cover"
                 width={400}
                 height={600}

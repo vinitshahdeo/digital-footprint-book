@@ -320,7 +320,7 @@ export default function HeroV1() {
                             aria-label="Play introduction video"
                           >
                             <Image
-                              src="/images/digital-footprint-cover.png"
+                              src="/images/digital-footprint-cover.jpg"
                               alt="Digital Footprint for Software Engineers – Book Cover"
                               fill
                               sizes="(max-width: 768px) 260px, (max-width: 1024px) 280px, 300px"
