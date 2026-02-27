@@ -92,7 +92,7 @@ export default function HeroV1() {
         <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} className="hidden md:block" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 lg:gap-12 items-center">
         {/* Left: Text Content */}
         <div className="text-left">
           {/* Badge */}
