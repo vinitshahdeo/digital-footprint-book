@@ -131,7 +131,8 @@ export default function FeaturedOn() {
                   src={badge.src}
                   alt={`Featured on ${badge.name}`}
                   width={badge.width}
-                  className={`h-auto opacity-70 hover:opacity-100 transition-opacity duration-300 ${
+                  height={40}
+                  className={`h-10 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 ${
                     badge.grayscale ? 'grayscale' : ''
                   }`}
                 />

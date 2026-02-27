@@ -110,6 +110,7 @@ export default function Footer() {
               href="https://www.google.com/search?q=Vinit+Shahdeo"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Search on Google for Vinit Shahdeo"
               className="inline-flex items-center gap-3 px-4 py-2.5 bg-white rounded-full border border-slate-300 hover:shadow-lg hover:border-blue-400 transition-all duration-200 group"
             >
               <svg
@@ -306,7 +307,7 @@ export default function Footer() {
           {/* Go to Top Button */}
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-600 transition-all duration-200 group"
+            className="cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-600 transition-all duration-200 group"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Scroll to top"

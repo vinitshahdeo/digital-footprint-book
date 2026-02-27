@@ -1,55 +1,59 @@
 'use client'
 
-import { ExternalLink, Award, Users, Code, User } from 'lucide-react'
+import { ExternalLink, User } from 'lucide-react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-
-const achievements = [
-  { icon: Code, label: 'Engineering Leader' },
-  { icon: Award, label: 'GitHub Star' },
-  { icon: Users, label: 'Open Source Mentor' },
-]
 
 export default function Author() {
   return (
     <section className="py-16 md:py-28 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Clean Author Image */}
+          {/* Editorial Author Image */}
           <motion.div
             className="flex justify-center md:justify-end order-2 md:order-1"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <motion.div
-              className="relative w-72 h-72 lg:w-80 lg:h-80 bg-slate-200 rounded-2xl overflow-hidden shadow-lg"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
-            >
+            <div className="relative">
+              {/* Offset decorative frame */}
               <motion.div
-                initial={{ scale: 1.1 }}
-                whileInView={{ scale: 1 }}
+                className="absolute -bottom-4 -right-4 w-72 h-72 lg:w-80 lg:h-80 border border-slate-300 rounded-lg"
+                initial={{ opacity: 0, x: 10, y: 10 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
+              />
+
+              {/* Accent line */}
+              <motion.div
+                className="absolute -top-3 -left-3 w-12 h-12 border-t-2 border-l-2 border-blue-500 rounded-tl-lg"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.5, ease: 'easeOut' }}
+              />
+
+              {/* Main image */}
+              <motion.div
+                className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] ring-1 ring-slate-200/60"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
               >
                 <Image
                   src="/images/vinit-shahdeo.jpg"
                   alt="Vinit Shahdeo"
                   width={400}
                   height={400}
-                  className="object-cover"
+                  className="object-cover w-full h-full grayscale-[15%] hover:grayscale-0 transition-all duration-500"
                 />
-              </motion.div>
 
-              {/* Animated border accent */}
-              <motion.div
-                className="absolute inset-0 border-2 border-blue-500 rounded-2xl opacity-0"
-                whileHover={{ opacity: 0.8 }}
-                transition={{ duration: 0.25 }}
-              />
-            </motion.div>
+                {/* Subtle gradient overlay for polish */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent pointer-events-none" />
+              </motion.div>
+            </div>
           </motion.div>
 
           {/* Clean Author Bio */}
@@ -59,7 +63,7 @@ export default function Author() {
               About the Author
             </p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-5 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
               Vinit{' '}
               <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                 Shahdeo

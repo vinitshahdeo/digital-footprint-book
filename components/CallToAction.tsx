@@ -46,10 +46,10 @@ export default function CallToAction() {
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           className="text-center"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Section badge */}
           <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
@@ -58,7 +58,7 @@ export default function CallToAction() {
           </p>
 
           {/* Main headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
             Your Name Is a Brand{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               — Build It.
@@ -117,8 +117,6 @@ export default function CallToAction() {
             The engineers who get noticed aren't always the best coders — they're the ones who show
             up. Start building your footprint today.
           </p>
-
-
         </motion.div>
       </div>
     </section>

@@ -9,11 +9,10 @@ import BookIntro from '@/components/BookIntro'
 import Author from '@/components/Author'
 import WhyThisBook from '@/components/WhyThisBook'
 import Testimonials from '@/components/Testimonials'
-import DecisionTable from '@/components/DecisionTable'
 import Purchase from '@/components/Purchase'
 import CallToAction from '@/components/CallToAction'
+import AskAI from '@/components/AskAI'
 import AIFutureSection from '@/components/AIFutureSection'
-import FeaturedReels from '@/components/FeaturedReels'
 import FeaturedOn from '@/components/FeaturedOn'
 import Footer from '@/components/Footer'
 
@@ -25,6 +24,7 @@ export default function Home() {
 
       {/* 2. Problem Zone - Hook & Pain Points */}
       <GoogleYourself />
+      <AskAI />
       <VisibilityGap />
       <CareerImpact />
       <AIFutureSection />
@@ -37,14 +37,11 @@ export default function Home() {
 
       {/* 4. Reinforcement Zone - Value & Proof */}
       <Testimonials />
-      {/* <FeaturedReels /> */}
       <Searchability />
       <DigitalFootprintVisual />
       <CallToAction />
-      {/* <FeaturedOn /> */}
 
       {/* 5. Conversion Zone */}
-      {/* <DecisionTable /> */}
       <Purchase />
       <FeaturedOn />
       <Footer />

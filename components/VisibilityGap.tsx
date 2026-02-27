@@ -19,10 +19,10 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
   useEffect(() => {
     springValue.on('change', (latest) => {
       if (ref.current) {
-        ref.current.textContent = Math.floor(latest).toString()
+        ref.current.textContent = Math.min(Math.floor(latest), value).toString()
       }
     })
-  }, [springValue])
+  }, [springValue, value])
 
   return <span ref={ref}>0</span>
 }
@@ -56,10 +56,10 @@ export default function VisibilityGap() {
             {/* 100% - Work Done */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
             >
               <div className="text-center mb-4">
                 <motion.div
@@ -84,10 +84,10 @@ export default function VisibilityGap() {
             {/* 40% - Work Documented */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               <div className="text-center mb-4">
                 <motion.div
@@ -115,10 +115,10 @@ export default function VisibilityGap() {
             {/* 20% - Publicly Discoverable */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="text-center mb-4">
                 <motion.div
@@ -147,7 +147,7 @@ export default function VisibilityGap() {
           {/* Gap Explanation */}
           <motion.div
             className="text-center mt-14"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}

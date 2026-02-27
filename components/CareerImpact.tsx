@@ -32,10 +32,10 @@ export default function CareerImpact() {
           {/* Metric 1 - 5× More visibility */}
           <motion.div
             className="relative mb-16"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Left side - Number */}
@@ -79,10 +79,10 @@ export default function CareerImpact() {
           {/* Metric 2 - 3× More interviews */}
           <motion.div
             className="relative mb-16"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="flex flex-col md:flex-row-reverse items-center gap-8">
               {/* Right side - Number */}
@@ -124,10 +124,10 @@ export default function CareerImpact() {
           {/* Metric 3 - 14× Profile views */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Left side - Number */}
