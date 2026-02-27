@@ -68,7 +68,7 @@ export default function HeroV1() {
   }, [])
 
   return (
-    <section className="relative lg:min-h-screen flex items-center px-6 py-16 lg:py-24 overflow-hidden bg-white">
+    <section className="relative lg:min-h-screen flex items-center px-6 py-16 md:py-28 overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30" />
 
       {/* Floating Background Icons */}
@@ -241,13 +241,13 @@ export default function HeroV1() {
             {/* Elegant frame */}
             <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-white to-slate-100 p-4 shadow-xl shadow-slate-200/40 border border-slate-200/60">
               {/* Inner accent border */}
-              <div className="rounded-xl bg-gradient-to-br from-slate-200/40 via-blue-100/20 to-slate-200/40 p-[1px]">
+              <div className="rounded-xl bg-gradient-to-br from-slate-200/40 via-blue-100/20 to-slate-200/40 p-[1px] overflow-hidden">
                 <Image
                   src="/images/digital-footprint-cover.png"
                   alt="Digital Footprint for Software Engineers book cover"
                   width={420}
                   height={560}
-                  className="relative rounded-xl w-72 md:w-80 lg:w-96 h-auto"
+                  className="relative rounded-xl w-72 md:w-80 lg:w-96 h-auto transition-transform duration-500 ease-out hover:scale-105"
                   priority
                 />
               </div>

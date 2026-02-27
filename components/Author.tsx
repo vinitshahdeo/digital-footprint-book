@@ -63,7 +63,7 @@ export default function Author() {
               About the Author
             </p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-5 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
               Vinit{' '}
               <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                 Shahdeo

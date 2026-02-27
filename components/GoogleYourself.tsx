@@ -17,7 +17,7 @@ export default function GoogleYourself() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.p
