@@ -57,7 +57,7 @@ export default function AIFutureSection() {
               {/* Content */}
               <span className="relative inline-flex items-center gap-2.5 px-7 py-3.5 text-white font-medium">
                 {/* AI Sparkle Icon - two 4-pointed stars */}
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M10 2L11.5 7.5L17 9L11.5 10.5L10 16L8.5 10.5L3 9L8.5 7.5L10 2Z" />
                   <path d="M18 12L19 15L22 16L19 17L18 20L17 17L14 16L17 15L18 12Z" />
                 </svg>
@@ -80,6 +80,7 @@ export default function AIFutureSection() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  aria-hidden="true"
                 >
                   <path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z" />
                 </svg>
@@ -90,6 +91,7 @@ export default function AIFutureSection() {
                   href="https://chat.openai.com/?q=Who%20is%20Vinit%20Shahdeo%3F"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Ask ChatGPT about Vinit Shahdeo"
                   className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#10a37f]"
                 >
                   <svg
@@ -99,6 +101,7 @@ export default function AIFutureSection() {
                     fill="none"
                     viewBox="0 0 24 24"
                     className="text-[#10a37f]"
+                    aria-hidden="true"
                   >
                     <path
                       fill="currentColor"
@@ -111,6 +114,7 @@ export default function AIFutureSection() {
                   href="https://www.google.com/search?q=Who+is+Vinit+Shahdeo&udm=50"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Ask Gemini about Vinit Shahdeo"
                   className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#4285f4]"
                 >
                   <svg
@@ -120,6 +124,7 @@ export default function AIFutureSection() {
                     fill="none"
                     viewBox="0 0 24 24"
                     className="text-[#4285f4]"
+                    aria-hidden="true"
                   >
                     <g clipPath="url(#gemini_clip_ai)">
                       <path
@@ -139,6 +144,7 @@ export default function AIFutureSection() {
                   href="https://claude.ai/new?q=Who%20is%20Vinit%20Shahdeo%3F"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Ask Claude about Vinit Shahdeo"
                   className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#d97706]"
                 >
                   <svg
@@ -148,6 +154,7 @@ export default function AIFutureSection() {
                     fill="none"
                     viewBox="0 0 24 24"
                     className="text-[#d97706]"
+                    aria-hidden="true"
                   >
                     <g clipPath="url(#claude_clip_ai)">
                       <path
@@ -167,6 +174,7 @@ export default function AIFutureSection() {
                   href="https://perplexity.ai/?q=Who%20is%20Vinit%20Shahdeo%3F"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Ask Perplexity about Vinit Shahdeo"
                   className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#20b8cd]"
                 >
                   <svg
@@ -176,6 +184,7 @@ export default function AIFutureSection() {
                     fill="none"
                     viewBox="0 0 24 24"
                     className="text-[#20b8cd]"
+                    aria-hidden="true"
                   >
                     <g clipPath="url(#perplexity_clip_ai)">
                       <path

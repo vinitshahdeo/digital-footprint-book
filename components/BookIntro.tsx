@@ -118,6 +118,7 @@ export default function BookIntro() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z" />
               </svg>
@@ -128,6 +129,7 @@ export default function BookIntro() {
                 href="https://chat.openai.com/?q=Tell%20me%20about%20the%20book%20Digital%20Footprint%20for%20Software%20Engineers%20by%20Vinit%20Shahdeo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask ChatGPT about this book"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#10a37f]"
               >
                 <svg
@@ -137,6 +139,7 @@ export default function BookIntro() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#10a37f]"
+                  aria-hidden="true"
                 >
                   <path
                     fill="currentColor"
@@ -149,6 +152,7 @@ export default function BookIntro() {
                 href="https://www.google.com/search?q=Tell%20me%20about%20the%20book%20Digital%20Footprint%20for%20Software%20Engineers%20by%20Vinit%20Shahdeo&udm=50"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask Gemini about this book"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#4285f4]"
               >
                 <svg
@@ -158,6 +162,7 @@ export default function BookIntro() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#4285f4]"
+                  aria-hidden="true"
                 >
                   <g clipPath="url(#gemini_clip_bi)">
                     <path
@@ -177,6 +182,7 @@ export default function BookIntro() {
                 href="https://claude.ai/new?q=Tell%20me%20about%20the%20book%20Digital%20Footprint%20for%20Software%20Engineers%20by%20Vinit%20Shahdeo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask Claude about this book"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#d97706]"
               >
                 <svg
@@ -186,6 +192,7 @@ export default function BookIntro() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#d97706]"
+                  aria-hidden="true"
                 >
                   <g clipPath="url(#claude_clip_bi)">
                     <path
@@ -205,6 +212,7 @@ export default function BookIntro() {
                 href="https://perplexity.ai/?q=Tell%20me%20about%20the%20book%20Digital%20Footprint%20for%20Software%20Engineers%20by%20Vinit%20Shahdeo"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask Perplexity about this book"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#20b8cd]"
               >
                 <svg
@@ -214,6 +222,7 @@ export default function BookIntro() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#20b8cd]"
+                  aria-hidden="true"
                 >
                   <g clipPath="url(#perplexity_clip_bi)">
                     <path

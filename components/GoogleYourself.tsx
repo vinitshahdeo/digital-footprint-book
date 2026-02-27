@@ -72,6 +72,7 @@ export default function GoogleYourself() {
               href="https://www.google.com/search?q=Vinit+Shahdeo"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Search Google for Vinit Shahdeo"
               className="inline-flex items-center gap-3 pl-4 pr-3 py-2.5 bg-white rounded-full border border-slate-300 shadow-sm hover:shadow-lg hover:border-slate-400 transition-all duration-200 group max-w-sm"
             >
               {/* Google Logo */}
@@ -80,6 +81,7 @@ export default function GoogleYourself() {
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"
@@ -110,6 +112,7 @@ export default function GoogleYourself() {
                   className="w-4 h-4 text-blue-500 opacity-60 group-hover:opacity-100 transition-opacity"
                   viewBox="0 0 24 24"
                   fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
                   <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
@@ -122,6 +125,7 @@ export default function GoogleYourself() {
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  aria-hidden="true"
                 >
                   <circle cx="11" cy="11" r="8" />
                   <path d="M21 21l-4.35-4.35" />

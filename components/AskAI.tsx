@@ -65,6 +65,7 @@ export default function AskAI() {
                 href="https://chat.openai.com/?q=Who%20is%20Vinit%20Shahdeo%3F"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask ChatGPT about Vinit Shahdeo"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#10a37f]"
               >
                 <svg
@@ -74,6 +75,7 @@ export default function AskAI() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#10a37f]"
+                  aria-hidden="true"
                 >
                   <path
                     fill="currentColor"
@@ -86,6 +88,7 @@ export default function AskAI() {
                 href="https://www.google.com/search?q=Who+is+Vinit+Shahdeo&udm=50"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask Gemini about Vinit Shahdeo"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#4285f4]"
               >
                 <svg
@@ -95,6 +98,7 @@ export default function AskAI() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#4285f4]"
+                  aria-hidden="true"
                 >
                   <g clipPath="url(#gemini_clip_ask)">
                     <path
@@ -114,6 +118,7 @@ export default function AskAI() {
                 href="https://claude.ai/new?q=Who%20is%20Vinit%20Shahdeo%3F"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask Claude about Vinit Shahdeo"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#d97706]"
               >
                 <svg
@@ -123,6 +128,7 @@ export default function AskAI() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#d97706]"
+                  aria-hidden="true"
                 >
                   <g clipPath="url(#claude_clip_ask)">
                     <path
@@ -142,6 +148,7 @@ export default function AskAI() {
                 href="https://perplexity.ai/?q=Who%20is%20Vinit%20Shahdeo%3F"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask Perplexity about Vinit Shahdeo"
                 className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#20b8cd]"
               >
                 <svg
@@ -151,6 +158,7 @@ export default function AskAI() {
                   fill="none"
                   viewBox="0 0 24 24"
                   className="text-[#20b8cd]"
+                  aria-hidden="true"
                 >
                   <g clipPath="url(#perplexity_clip_ask)">
                     <path

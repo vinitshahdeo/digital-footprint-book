@@ -264,7 +264,7 @@ export default function GoogleSearchSimulator() {
       <div className="rounded-xl border border-slate-700/40 bg-[#202124] shadow-xl shadow-black/20 overflow-hidden">
         {/* Browser Tab Bar */}
         <div className="bg-[#292a2d] border-b border-[#3c4043] px-4 py-2.5 flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5" aria-hidden="true">
             <div className="w-2.5 h-2.5 rounded-full bg-[#ed6a5e]" />
             <div className="w-2.5 h-2.5 rounded-full bg-[#f5bf4f]" />
             <div className="w-2.5 h-2.5 rounded-full bg-[#62c554]" />
@@ -278,6 +278,7 @@ export default function GoogleSearchSimulator() {
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -307,7 +308,7 @@ export default function GoogleSearchSimulator() {
                 {typedText}
                 {(phase === 'typing' || phase === 'idle') && <TypewriterCursor />}
               </div>
-              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path
                   d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"
                   fill="#4285F4"
@@ -317,7 +318,7 @@ export default function GoogleSearchSimulator() {
                   fill="#34A853"
                 />
               </svg>
-              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 192 192" fill="none">
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 192 192" fill="none" aria-hidden="true">
                 <circle cx="96" cy="96" r="70" stroke="#4285F4" strokeWidth="16" fill="none" />
                 <circle cx="96" cy="96" r="28" fill="#34A853" />
                 <path

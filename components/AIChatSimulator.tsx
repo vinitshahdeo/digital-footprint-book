@@ -427,6 +427,7 @@ export default function AIChatSimulator() {
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -597,7 +598,7 @@ export default function AIChatSimulator() {
                   )}
                 </div>
                 <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                  className={`w-7 h-7 rounded-full flex items-center justify-center ${
                     active.typedQuestion.length > 0 && active.phase === 'typing-question'
                       ? isDark
                         ? 'bg-white'
@@ -606,6 +607,8 @@ export default function AIChatSimulator() {
                         ? 'bg-[#3f3f3f]'
                         : 'bg-slate-200'
                   }`}
+                  role="button"
+                  aria-label="Send message"
                 >
                   <svg
                     className={`w-3.5 h-3.5 ${
@@ -623,6 +626,7 @@ export default function AIChatSimulator() {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    aria-hidden="true"
                   >
                     <path d="M12 19V5M5 12l7-7 7 7" />
                   </svg>
