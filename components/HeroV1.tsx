@@ -63,11 +63,10 @@ export default function HeroV1() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOnlineCount((prev) => {
-        const increment = Math.random() * 0.0001
-        const newCount = prev + increment
-        return parseFloat(newCount.toFixed(4))
+        const increment = Math.random() * 0.002
+        return parseFloat((prev + increment).toFixed(4))
       })
-    }, 100)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
 
