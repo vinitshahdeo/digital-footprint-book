@@ -10,6 +10,7 @@ import {
   Globe,
   Instagram,
   Mail,
+  Play,
   Quote,
   Rocket,
   Rss,
@@ -18,7 +19,7 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -54,6 +55,8 @@ const FloatingIcon = ({
 )
 
 export default function HeroV1() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
   const [onlineCount, setOnlineCount] = useState(5.35)
 
   useEffect(() => {
@@ -68,7 +71,7 @@ export default function HeroV1() {
   }, [])
 
   return (
-    <section className="relative lg:min-h-screen flex items-center px-6 py-16 md:py-28 overflow-hidden bg-white">
+    <section className="relative lg:min-h-screen flex items-center px-6 py-14 md:py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30" />
 
       {/* Floating Background Icons */}
@@ -88,12 +91,12 @@ export default function HeroV1() {
         <FloatingIcon Icon={Globe} delay={3} position={{ top: '75%', left: '6%' }} className="hidden md:block" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         {/* Left: Text Content */}
         <div className="text-left">
           {/* Badge */}
           <motion.div
-            className="inline-block mb-6 lg:mb-8"
+            className="inline-block mb-5 lg:mb-6"
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -106,7 +109,7 @@ export default function HeroV1() {
 
           {/* Live Counter */}
           <motion.div
-            className="mb-6"
+            className="mb-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -125,7 +128,7 @@ export default function HeroV1() {
 
           {/* Headline */}
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 tracking-tight leading-[1.1]"
+            className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-5 tracking-tight leading-[1.1]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -139,7 +142,7 @@ export default function HeroV1() {
 
           {/* Subheading */}
           <motion.p
-            className="text-lg text-slate-600 mb-8 lg:mb-10 max-w-lg leading-relaxed"
+            className="text-lg text-slate-600 mb-7 lg:mb-8 max-w-lg leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -150,7 +153,7 @@ export default function HeroV1() {
 
           {/* CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mb-8 lg:mb-12"
+            className="flex flex-col sm:flex-row gap-4 mb-7 lg:mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -234,29 +237,46 @@ export default function HeroV1() {
           animate={{ opacity: 1, x: 0, rotateY: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
         >
-          <div className="relative">
-            {/* Glow effect behind book */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-blue-100 to-slate-100 rounded-3xl blur-3xl opacity-60" />
+          <div className="relative w-[270px] md:w-[290px] lg:w-[320px]">
+            {/* Glow behind phone */}
+            <div className="absolute -inset-6 bg-gradient-to-r from-blue-100 to-slate-100 rounded-[3rem] blur-3xl opacity-60" />
 
-            {/* Elegant frame */}
-            <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-white to-slate-100 p-4 shadow-xl shadow-slate-200/40 border border-slate-200/60">
-              {/* Inner accent border */}
-              <div className="rounded-xl bg-gradient-to-br from-slate-200/40 via-blue-100/20 to-slate-200/40 p-[1px] overflow-hidden">
-                <Image
-                  src="/images/digital-footprint-cover.png"
-                  alt="Digital Footprint for Software Engineers book cover"
-                  width={420}
-                  height={560}
-                  className="relative rounded-xl w-72 md:w-80 lg:w-96 h-auto transition-transform duration-500 ease-out hover:scale-105"
-                  priority
-                />
+            {/* Phone Frame */}
+            <div className="relative bg-slate-900 rounded-[2.5rem] p-2.5 shadow-2xl shadow-slate-300/50 ring-1 ring-slate-800">
+              {/* Notch */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-slate-900 rounded-b-2xl z-10" />
+
+              {/* Screen */}
+              <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/16]">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover"
+                  controls={isPlaying}
+                  preload="metadata"
+                  playsInline
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                  poster="/images/digital-footprint-cover.png"
+                >
+                  <source src="/videos/intro.mp4" type="video/mp4" />
+                </video>
+
+                {/* Play Button Overlay */}
+                {!isPlaying && (
+                  <button
+                    onClick={() => videoRef.current?.play()}
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors duration-300 cursor-pointer group"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Play className="w-6 h-6 md:w-7 md:h-7 text-slate-900 ml-0.5" />
+                    </div>
+                  </button>
+                )}
               </div>
 
-              {/* Corner accents */}
-              <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-slate-300/50 rounded-tl-lg" />
-              <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-slate-300/50 rounded-tr-lg" />
-              <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-slate-300/50 rounded-bl-lg" />
-              <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-slate-300/50 rounded-br-lg" />
+              {/* Home Indicator */}
+              <div className="mt-2 mx-auto w-24 h-1 bg-slate-600 rounded-full" />
             </div>
           </div>
         </motion.div>
