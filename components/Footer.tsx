@@ -306,7 +306,7 @@ export default function Footer() {
           {/* Go to Top Button */}
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-600 transition-all duration-200 group"
+            className="cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-600 transition-all duration-200 group"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Scroll to top"

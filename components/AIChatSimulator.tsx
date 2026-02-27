@@ -397,7 +397,7 @@ export default function AIChatSimulator() {
               <button
                 key={t}
                 onClick={() => setActiveTab(t)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-t-lg text-xs font-medium transition-colors whitespace-nowrap ${
+                className={`cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-t-lg text-xs font-medium transition-colors whitespace-nowrap ${
                   activeTab === t
                     ? isDark
                       ? 'bg-[#212121] text-[#e8eaed]'

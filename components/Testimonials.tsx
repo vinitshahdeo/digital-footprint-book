@@ -256,7 +256,7 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-4 mt-10">
             <motion.button
               onClick={prevSlide}
-              className="group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
+              className="cursor-pointer group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               aria-label="Previous testimonials"
@@ -270,7 +270,7 @@ export default function Testimonials() {
                 <motion.button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`cursor-pointer h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? 'w-8 bg-gradient-to-r from-blue-500 to-blue-600'
                       : 'w-2 bg-slate-300 hover:bg-slate-400'
@@ -286,7 +286,7 @@ export default function Testimonials() {
 
             <motion.button
               onClick={nextSlide}
-              className="group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
+              className="cursor-pointer group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               aria-label="Next testimonials"

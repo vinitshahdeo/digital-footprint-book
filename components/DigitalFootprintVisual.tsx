@@ -221,12 +221,12 @@ export default function DigitalFootprintVisual() {
           <div className="relative flex items-center justify-center min-h-[500px] md:min-h-[620px]">
             {/* Orbit rings — slowly rotating in opposite directions */}
             <motion.div
-              className="absolute rounded-full border border-dashed border-slate-200 w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
+              className="absolute rounded-full border border-dashed border-blue-300/50 w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
               animate={{ rotate: 360 }}
               transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute rounded-full border border-dashed border-slate-200/60 w-[440px] h-[440px] md:w-[520px] md:h-[520px]"
+              className="absolute rounded-full border border-dashed border-blue-200/60 w-[440px] h-[440px] md:w-[520px] md:h-[520px]"
               animate={{ rotate: -360 }}
               transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
             />

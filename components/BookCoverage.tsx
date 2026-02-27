@@ -193,7 +193,7 @@ export default function BookCoverage() {
             <motion.button
               onClick={prevSlide}
               aria-label="Previous topics"
-              className="group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
+              className="cursor-pointer group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -209,7 +209,7 @@ export default function BookCoverage() {
                   role="tab"
                   aria-selected={index === currentIndex}
                   aria-label={`Go to page ${index + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`cursor-pointer h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? 'w-8 bg-gradient-to-r from-blue-500 to-blue-600'
                       : 'w-2 bg-slate-300 hover:bg-slate-400'
@@ -223,7 +223,7 @@ export default function BookCoverage() {
             <motion.button
               onClick={nextSlide}
               aria-label="Next topics"
-              className="group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
+              className="cursor-pointer group p-3 rounded-full bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >
