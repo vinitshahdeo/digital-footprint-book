@@ -18,7 +18,7 @@ export default function AskAI() {
             transition={{ duration: 0.5 }}
           >
             <Bot className="w-4 h-4" />
-            The AI Test
+            AI Discovery
           </motion.p>
 
           <div className="relative">
@@ -29,11 +29,11 @@ export default function AskAI() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Ever{' '}
+              What does{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                asked AI
+                AI
               </span>{' '}
-              about yourself?
+              know about you?
             </motion.h2>
           </div>
 
