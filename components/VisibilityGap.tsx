@@ -1,6 +1,6 @@
 'use client'
 
-import { Eye, EyeOff, TrendingUp } from 'lucide-react'
+import { Eye, EyeOff, TrendingUp, ArrowRight } from 'lucide-react'
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
@@ -51,7 +51,7 @@ export default function VisibilityGap() {
         </div>
 
         {/* Modern Step Flow */}
-        <div className="max-w-6xl mx-auto mb-20">
+        <div className="mb-20">
           <div className="grid md:grid-cols-3 gap-8">
             {/* 100% - Work Done */}
             <motion.div
@@ -61,7 +61,7 @@ export default function VisibilityGap() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="text-center mb-4">
+              <div className="text-center">
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
@@ -73,9 +73,9 @@ export default function VisibilityGap() {
                     <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-5" />
+                <div className="h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-5 mx-auto" />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Work Done</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   Great engineers shipping quality code every day
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function VisibilityGap() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
             >
-              <div className="text-center mb-4">
+              <div className="text-center">
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
@@ -106,7 +106,7 @@ export default function VisibilityGap() {
                   style={{ width: '40%' }}
                 />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Documented</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   Creating internal docs, READMEs, and notes
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function VisibilityGap() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="text-center mb-4">
+              <div className="text-center">
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
@@ -137,7 +137,7 @@ export default function VisibilityGap() {
                   style={{ width: '20%' }}
                 />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Discoverable</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   Actually visible and searchable online
                 </p>
               </div>
@@ -146,77 +146,92 @@ export default function VisibilityGap() {
 
           {/* Gap Explanation */}
           <motion.div
-            className="text-center mt-14"
+            className="text-center mt-14 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <p className="text-xl italic font-medium text-slate-700 mb-3">The gap is opportunity</p>
-            <p className="text-lg text-slate-700 font-semibold">
-              Same skills. Same effort.{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Exponentially different outcomes.
-              </span>
-            </p>
+            <div className="bg-gradient-to-br from-slate-50 to-blue-50/60 border border-slate-200 rounded-2xl p-8">
+              <p className="text-xs text-slate-500 font-medium mb-2 tracking-wide uppercase">
+                The gap is opportunity
+              </p>
+              <p className="text-2xl font-bold text-slate-900 mb-3">
+                80% of your work is invisible today
+              </p>
+              <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-3 rounded-full" />
+              <p className="text-lg text-slate-700 font-semibold">
+                Same skills. Same effort.{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Exponentially different outcomes.
+                </span>
+              </p>
+            </div>
           </motion.div>
         </div>
 
         {/* Before/After Comparison - Split Design */}
         <div className="max-w-5xl mx-auto">
           <div className="relative">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Invisible Engineer */}
               <motion.div
-                className="relative p-8"
+                className="relative bg-slate-50 border border-slate-200 rounded-2xl p-8"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="flex items-center justify-center gap-3 mb-5">
+                <div className="flex items-center justify-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center">
-                    <EyeOff className="w-6 h-6 text-slate-500" />
+                    <EyeOff className="w-6 h-6 text-slate-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">Invisible Engineer</h3>
+                  <h3 className="text-xl font-bold text-slate-700">Invisible Engineer</h3>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-400 flex-shrink-0 text-xs">
                       ✕
                     </span>
-                    <p className="text-slate-600 text-sm">Great work, but only your team knows</p>
+                    <p className="text-slate-500 text-sm">Great work, but only your team knows</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-400 flex-shrink-0 text-xs">
                       ✕
                     </span>
-                    <p className="text-slate-600 text-sm">Résumé gets lost in the pile</p>
+                    <p className="text-slate-500 text-sm">Résumé gets lost in the pile</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-400 flex-shrink-0 text-xs">
                       ✕
                     </span>
-                    <p className="text-slate-600 text-sm">Google shows nothing or outdated info</p>
+                    <p className="text-slate-500 text-sm">Google shows nothing or outdated info</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-500 flex-shrink-0 text-xs">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-200 text-slate-400 flex-shrink-0 text-xs">
                       ✕
                     </span>
-                    <p className="text-slate-600 text-sm">Cold applications, low response rate</p>
+                    <p className="text-slate-500 text-sm">Cold applications, low response rate</p>
                   </div>
                 </div>
               </motion.div>
 
+              {/* VS Divider - visible on md+ */}
+              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center shadow-sm">
+                  <ArrowRight className="w-4 h-4 text-blue-600" />
+                </div>
+              </div>
+
               {/* Searchable Engineer */}
               <motion.div
-                className="relative p-8"
+                className="relative bg-white border border-blue-100 rounded-2xl p-8 shadow-sm shadow-blue-500/5"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.15 }}
               >
-                <div className="flex items-center justify-center gap-3 mb-5">
+                <div className="flex items-center justify-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md shadow-blue-500/20">
                     <Eye className="w-6 h-6 text-white" />
                   </div>
@@ -224,7 +239,7 @@ export default function VisibilityGap() {
                     Searchable Engineer
                   </h3>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0 text-xs font-bold">
                       ✓
