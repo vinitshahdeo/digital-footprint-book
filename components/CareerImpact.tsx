@@ -66,7 +66,7 @@ export default function CareerImpact() {
 
               {/* Right side - Description */}
               <div className="flex-1 text-center md:text-left">
-                <p className="text-lg text-slate-600 max-w-xs">
+                <p className="text-lg text-slate-600 max-w-xs mx-auto md:mx-0">
                   Engineers who blog receive{' '}
                   <span className="font-semibold text-slate-900">
                     5× more inbound opportunities
@@ -113,7 +113,7 @@ export default function CareerImpact() {
 
               {/* Left side - Description */}
               <div className="flex-1 text-center md:text-right">
-                <p className="text-lg text-slate-600 max-w-xs md:ml-auto">
+                <p className="text-lg text-slate-600 max-w-xs mx-auto md:mx-0 md:ml-auto">
                   Open-source contributors get{' '}
                   <span className="font-semibold text-slate-900">3× more interview calls</span>
                 </p>
@@ -158,7 +158,7 @@ export default function CareerImpact() {
 
               {/* Right side - Description */}
               <div className="flex-1 text-center md:text-left">
-                <p className="text-lg text-slate-600 max-w-xs">
+                <p className="text-lg text-slate-600 max-w-xs mx-auto md:mx-0">
                   Profiles with photos get{' '}
                   <span className="font-semibold text-slate-900">14× more profile views</span>
                 </p>

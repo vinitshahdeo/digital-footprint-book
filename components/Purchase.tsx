@@ -27,7 +27,7 @@ export default function Purchase() {
     >
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-blue-400 mb-6 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
+          <p className="text-sm font-medium text-blue-400 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
             <Rocket className="w-4 h-4" />
             Ready to Start?
           </p>
@@ -66,7 +66,7 @@ export default function Purchase() {
             href="https://amzn.in/d/cSNyCNl"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 rounded-lg font-medium hover:bg-slate-100 transition-all duration-250 w-full sm:w-auto"
+            className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 rounded-lg font-medium hover:bg-slate-100 transition-all duration-200 w-full sm:w-auto"
           >
             <ShoppingCart className="w-4 h-4" />
             <span>Buy on Amazon</span>
@@ -76,12 +76,18 @@ export default function Purchase() {
           <div className="relative group/tooltip w-full sm:w-auto">
             <button
               disabled
+              aria-label="Buy on Flipkart — Coming soon"
+              aria-describedby="flipkart-tooltip"
               className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 border border-white/10 text-slate-500 rounded-lg font-medium cursor-not-allowed opacity-60 w-full sm:w-auto"
             >
               <ShoppingCart className="w-4 h-4" />
               <span>Buy on Flipkart</span>
             </button>
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none border border-white/10 shadow-lg">
+            <div
+              id="flipkart-tooltip"
+              role="tooltip"
+              className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none border border-white/10 shadow-lg"
+            >
               Coming soon on Flipkart! Meanwhile, purchase on Amazon.
               <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
             </div>
@@ -89,22 +95,22 @@ export default function Purchase() {
         </div>
 
         {/* Format Info */}
-        <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-sm">
           <div className="flex items-center gap-2 text-slate-400">
             <BookOpen className="w-4 h-4" />
             <span>Paperback</span>
           </div>
-          <span className="text-slate-600">•</span>
+          <span className="text-slate-600 hidden sm:inline">•</span>
           <div className="flex items-center gap-2 text-slate-400">
             <TabletSmartphone className="w-4 h-4" />
             <span>Kindle</span>
           </div>
-          <span className="text-slate-600">•</span>
+          <span className="text-slate-600 hidden sm:inline">•</span>
           <div className="flex items-center gap-2 text-slate-400">
             <FileText className="w-4 h-4" />
             <span>ePub</span>
           </div>
-          <span className="text-slate-600">•</span>
+          <span className="text-slate-600 hidden sm:inline">•</span>
           <div className="flex items-center gap-2 text-slate-500/60">
             <Headphones className="w-4 h-4" />
             <span className="italic">Audiobook coming soon</span>

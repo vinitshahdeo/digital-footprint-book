@@ -20,7 +20,7 @@ export default function Author() {
             <div className="relative">
               {/* Offset decorative frame */}
               <motion.div
-                className="absolute -bottom-4 -right-4 w-72 h-72 lg:w-80 lg:h-80 border border-slate-300 rounded-lg"
+                className="absolute -bottom-4 -right-4 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 border border-slate-300 rounded-lg"
                 initial={{ opacity: 0, x: 10, y: 10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
@@ -38,7 +38,7 @@ export default function Author() {
 
               {/* Main image */}
               <motion.div
-                className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] ring-1 ring-slate-200/60"
+                className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] ring-1 ring-slate-200/60"
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: 'easeOut' }}
               >

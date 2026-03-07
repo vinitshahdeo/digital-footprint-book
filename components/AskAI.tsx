@@ -9,7 +9,7 @@ export default function AskAI() {
     <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <motion.p
             className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full"
             initial={{ opacity: 0, y: 10 }}
