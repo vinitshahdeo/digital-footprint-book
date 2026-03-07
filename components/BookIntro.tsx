@@ -23,7 +23,7 @@ export default function BookIntro() {
           <div className="relative">
             {/* Floating Footprint Icons */}
             <motion.div
-              className="absolute -left-8 md:-left-16 top-0 text-blue-500/20"
+              className="absolute -left-8 md:-left-16 top-0 text-blue-500/20 hidden md:block"
               initial={{ opacity: 0, x: -20, rotate: -15 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default function BookIntro() {
             </motion.div>
 
             <motion.div
-              className="absolute -right-8 md:-right-16 top-8 text-purple-500/20"
+              className="absolute -right-8 md:-right-16 top-8 text-purple-500/20 hidden md:block"
               initial={{ opacity: 0, x: 20, rotate: 15 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               viewport={{ once: true }}
@@ -265,7 +265,6 @@ export default function BookIntro() {
                   width={400}
                   height={600}
                   className="rounded-2xl shadow-2xl shadow-blue-500/20"
-                  priority
                 />
               </div>
             </motion.div>

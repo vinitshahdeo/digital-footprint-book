@@ -107,9 +107,9 @@ const orbitNodes = [
   },
 ]
 
-// Responsive orbit radii (px). Updated via CSS custom properties.
-const RING_1_RADIUS = 130
-const RING_2_RADIUS = 220
+// Responsive orbit radii (px).
+const RING_1_RADIUS = 105
+const RING_2_RADIUS = 170
 const RING_1_RADIUS_MD = 160
 const RING_2_RADIUS_MD = 260
 
@@ -218,15 +218,15 @@ export default function DigitalFootprintVisual() {
 
         <div className="grid lg:grid-cols-[1fr_380px] gap-12 lg:gap-16 items-start">
           {/* Orbital Map */}
-          <div className="relative flex items-center justify-center min-h-[500px] md:min-h-[620px]">
+          <div className="relative flex items-center justify-center min-h-[420px] md:min-h-[620px]">
             {/* Orbit rings — slowly rotating in opposite directions */}
             <motion.div
-              className="absolute rounded-full border border-dashed border-blue-300/50 w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
+              className="absolute rounded-full border border-dashed border-blue-300/50 w-[210px] h-[210px] md:w-[320px] md:h-[320px]"
               animate={{ rotate: 360 }}
               transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute rounded-full border border-dashed border-blue-200/60 w-[440px] h-[440px] md:w-[520px] md:h-[520px]"
+              className="absolute rounded-full border border-dashed border-blue-200/60 w-[340px] h-[340px] md:w-[520px] md:h-[520px]"
               animate={{ rotate: -360 }}
               transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
             />
@@ -247,7 +247,6 @@ export default function DigitalFootprintVisual() {
                     width={160}
                     height={160}
                     className="w-full h-full object-cover"
-                    priority
                   />
                   <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 to-transparent pt-6 pb-1.5">
                     <span className="text-white text-[10px] md:text-xs font-semibold tracking-widest uppercase block text-center">
@@ -467,7 +466,7 @@ export default function DigitalFootprintVisual() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <p className="text-base text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Build your digital footprint strategically—each element amplifies the others
           </p>
         </motion.div>

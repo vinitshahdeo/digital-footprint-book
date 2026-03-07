@@ -17,7 +17,7 @@ import {
   ChevronRight,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const topics = [
   {
@@ -94,9 +94,31 @@ const topics = [
   },
 ]
 
+function useCardsPerView() {
+  const [cardsPerView, setCardsPerView] = useState(3)
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerView(1)
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2)
+      } else {
+        setCardsPerView(3)
+      }
+    }
+
+    updateCardsPerView()
+    window.addEventListener('resize', updateCardsPerView)
+    return () => window.removeEventListener('resize', updateCardsPerView)
+  }, [])
+
+  return cardsPerView
+}
+
 export default function BookCoverage() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const cardsPerView = 3
+  const cardsPerView = useCardsPerView()
   const totalSlides = Math.ceil(topics.length / cardsPerView)
 
   const nextSlide = () => {
@@ -106,6 +128,13 @@ export default function BookCoverage() {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
   }
+
+  // Reset index when cardsPerView changes to prevent out-of-bounds
+  useEffect(() => {
+    if (currentIndex >= totalSlides) {
+      setCurrentIndex(0)
+    }
+  }, [totalSlides, currentIndex])
 
   const getCurrentCards = () => {
     const start = currentIndex * cardsPerView

@@ -17,7 +17,7 @@ export default function AIFutureSection() {
           className="text-center"
         >
           {/* Badge - consistent with Purchase section */}
-          <p className="text-sm font-medium text-blue-400 mb-6 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
+          <p className="text-sm font-medium text-blue-400 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
             <Bot className="w-4 h-4" />
             The Future of Hiring
           </p>
