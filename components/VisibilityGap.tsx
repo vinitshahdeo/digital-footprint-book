@@ -17,11 +17,12 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
   }, [isInView, motionValue, value])
 
   useEffect(() => {
-    springValue.on('change', (latest) => {
+    const unsubscribe = springValue.on('change', (latest) => {
       if (ref.current) {
         ref.current.textContent = Math.min(Math.floor(latest), value).toString()
       }
     })
+    return unsubscribe
   }, [springValue, value])
 
   return <span ref={ref}>0</span>
@@ -73,7 +74,15 @@ export default function VisibilityGap() {
                     <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div className="h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-5 mx-auto" />
+                <div className="relative h-3 w-full rounded-full bg-slate-200 mb-5 mx-auto overflow-hidden">
+                  <motion.div
+                    className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-sm shadow-blue-500/30"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '100%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Work Done</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Great engineers shipping quality code every day
@@ -101,10 +110,15 @@ export default function VisibilityGap() {
                     <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div
-                  className="h-1.5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-5 mx-auto"
-                  style={{ width: '40%' }}
-                />
+                <div className="relative h-3 w-full rounded-full bg-slate-200 mb-5 mx-auto overflow-hidden">
+                  <motion.div
+                    className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 shadow-sm shadow-purple-500/30"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '40%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Documented</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Creating internal docs, READMEs, and notes
@@ -132,10 +146,15 @@ export default function VisibilityGap() {
                     <span className="text-5xl">%</span>
                   </p>
                 </motion.div>
-                <div
-                  className="h-1.5 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full mb-5 mx-auto"
-                  style={{ width: '20%' }}
-                />
+                <div className="relative h-3 w-full rounded-full bg-slate-200 mb-5 mx-auto overflow-hidden">
+                  <motion.div
+                    className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-slate-600 to-slate-700 shadow-sm shadow-slate-500/30"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '20%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Discoverable</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Actually visible and searchable online
@@ -144,7 +163,7 @@ export default function VisibilityGap() {
             </motion.div>
           </div>
 
-          {/* Gap Explanation */}
+          {/* Gap Explanation with Ring Chart */}
           <motion.div
             className="text-center mt-14 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -152,13 +171,85 @@ export default function VisibilityGap() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <div className="bg-gradient-to-br from-slate-50 to-blue-50/60 border border-slate-200 rounded-2xl p-8">
-              <p className="text-xs text-slate-500 font-medium mb-2 tracking-wide uppercase">
+            <div className="bg-gradient-to-br from-slate-50 to-blue-50/60 border border-slate-200 rounded-2xl p-8 md:p-10">
+              <p className="text-xs text-slate-500 font-medium mb-8 tracking-wide uppercase">
                 The gap is opportunity
               </p>
-              <p className="text-2xl font-bold text-slate-900 mb-3">
-                80% of your work is invisible today
-              </p>
+
+              {/* Ring chart + text */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 mb-8">
+                {/* Ring chart */}
+                <div className="relative w-40 h-40 flex-shrink-0">
+                  <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
+                    <defs>
+                      <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#3b82f6" />
+                        <stop offset="100%" stopColor="#7c3aed" />
+                      </linearGradient>
+                    </defs>
+                    {/* Background ring — represents the invisible 80% */}
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r="48"
+                      fill="none"
+                      stroke="#cbd5e1"
+                      strokeWidth="11"
+                    />
+                    {/* Foreground arc — the visible 20% */}
+                    <motion.circle
+                      cx="60"
+                      cy="60"
+                      r="48"
+                      fill="none"
+                      stroke="url(#ringGradient)"
+                      strokeWidth="11"
+                      strokeLinecap="round"
+                      strokeDasharray={`${2 * Math.PI * 48}`}
+                      initial={{ strokeDashoffset: 2 * Math.PI * 48 }}
+                      whileInView={{
+                        strokeDashoffset: 2 * Math.PI * 48 * 0.8,
+                      }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1.4,
+                        delay: 0.8,
+                        ease: [0.25, 0.46, 0.45, 0.94],
+                      }}
+                    />
+                  </svg>
+                  {/* Center label */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <span className="text-5xl font-bold text-slate-900 leading-none tracking-tight">
+                      <Counter value={80} duration={1.5} />
+                      <span className="text-3xl">%</span>
+                    </span>
+                    <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest mt-1.5">
+                      Invisible
+                    </span>
+                  </div>
+                </div>
+
+                {/* Text beside ring */}
+                <div className="text-center sm:text-left">
+                  <p className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
+                    of your work is
+                    <br />
+                    invisible today
+                  </p>
+                  <div className="flex items-center gap-5 justify-center sm:justify-start text-xs text-slate-500 font-medium">
+                    <span className="flex items-center gap-2">
+                      <span className="inline-block w-3 h-3 rounded-full bg-gradient-to-br from-blue-500 to-purple-600" />
+                      Visible (20%)
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="inline-block w-3 h-3 rounded-full bg-slate-300" />
+                      Invisible (80%)
+                    </span>
+                  </div>
+                </div>
+              </div>
+
               <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-3 rounded-full" />
               <p className="text-lg text-slate-700 font-semibold">
                 Same skills. Same effort.{' '}
