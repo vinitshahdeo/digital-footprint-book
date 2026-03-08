@@ -171,7 +171,7 @@ export default function HeroV1() {
 
           {/* Headline */}
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-5"
+            className="text-4xl md:text-5xl lg:text-6xl font-medium mb-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
