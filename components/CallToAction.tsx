@@ -72,6 +72,12 @@ export default function CallToAction() {
 
           {/* GitHub Contribution Chart Only */}
           <div className="mb-8 flex flex-col items-center">
+            <style>{`
+              @keyframes contribution-shimmer {
+                0%, 100% { opacity: 1; filter: brightness(1); }
+                50% { opacity: 0.55; filter: brightness(1.2); }
+              }
+            `}</style>
             <div className="relative max-w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-60 w-max mx-auto">
                 {Array.from({ length: 52 }).map((_, weekIndex) => (
@@ -92,6 +98,14 @@ export default function CallToAction() {
                         <div
                           key={dayIndex}
                           className={`w-[5px] h-[5px] md:w-2 md:h-2 rounded-[1px] ${colors[level]}`}
+                          style={
+                            level > 0
+                              ? {
+                                  animation: 'contribution-shimmer 5s ease-in-out infinite',
+                                  animationDelay: `${weekIndex * 0.08 + dayIndex * 0.03}s`,
+                                }
+                              : undefined
+                          }
                         />
                       )
                     })}
