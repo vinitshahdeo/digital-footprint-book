@@ -7,7 +7,7 @@ export default function AIFutureSection() {
   const geminiUrl = 'https://www.google.com/search?q=Who+is+Vinit+Shahdeo&udm=50'
 
   return (
-    <section className="relative py-16 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="relative py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="relative max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,7 @@ export default function AIFutureSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Ask ChatGPT about Vinit Shahdeo"
-                  className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#10a37f]"
+                  className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#10a37f]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ export default function AIFutureSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Ask Gemini about Vinit Shahdeo"
-                  className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#4285f4]"
+                  className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#4285f4]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@ export default function AIFutureSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Ask Claude about Vinit Shahdeo"
-                  className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#d97706]"
+                  className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#d97706]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ export default function AIFutureSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Ask Perplexity about Vinit Shahdeo"
-                  className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#20b8cd]"
+                  className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-white/10 rounded-lg bg-white/5 hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-400 hover:text-[#20b8cd]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

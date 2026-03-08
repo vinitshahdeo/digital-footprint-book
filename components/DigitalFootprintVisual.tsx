@@ -197,7 +197,7 @@ function polarToXY(angleDeg: number, radius: number) {
 
 export default function DigitalFootprintVisual() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -289,16 +289,18 @@ export default function DigitalFootprintVisual() {
                 <div
                   key={i}
                   className="absolute z-10"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                    // Mobile positions by default, overridden by CSS custom properties for md
-                    '--mobile-x': `${mobilePos.x}px`,
-                    '--mobile-y': `${mobilePos.y}px`,
-                    '--desktop-x': `${desktopPos.x}px`,
-                    '--desktop-y': `${desktopPos.y}px`,
-                    transform: `translate(calc(-50% + var(--node-x, var(--mobile-x))), calc(-50% + var(--node-y, var(--mobile-y))))`,
-                  } as React.CSSProperties}
+                  style={
+                    {
+                      left: '50%',
+                      top: '50%',
+                      // Mobile positions by default, overridden by CSS custom properties for md
+                      '--mobile-x': `${mobilePos.x}px`,
+                      '--mobile-y': `${mobilePos.y}px`,
+                      '--desktop-x': `${desktopPos.x}px`,
+                      '--desktop-y': `${desktopPos.y}px`,
+                      transform: `translate(calc(-50% + var(--node-x, var(--mobile-x))), calc(-50% + var(--node-y, var(--mobile-y))))`,
+                    } as React.CSSProperties
+                  }
                 >
                   <motion.div
                     className="group relative flex flex-col items-center md:cursor-pointer"

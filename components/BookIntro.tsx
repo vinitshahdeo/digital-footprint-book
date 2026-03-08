@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function BookIntro() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,7 +114,7 @@ export default function BookIntro() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask ChatGPT about this book"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#10a37f]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#10a37f]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ export default function BookIntro() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask Gemini about this book"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#4285f4]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#4285f4]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +167,7 @@ export default function BookIntro() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask Claude about this book"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#d97706]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#d97706]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ export default function BookIntro() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask Perplexity about this book"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#20b8cd]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#20b8cd]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -329,18 +329,21 @@ export default function BookIntro() {
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </motion.a>
 
-              <motion.a
-                href="https://www.flipkart.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-slate-300 text-slate-700 rounded-lg font-medium hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 w-full sm:w-auto"
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
-              >
-                <ShoppingCart className="w-4 h-4" />
-                <span className="text-sm">Buy on Flipkart</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
-              </motion.a>
+              <div className="relative group/tooltip w-full sm:w-auto">
+                <motion.button
+                  disabled
+                  aria-label="Buy on Flipkart — Coming soon"
+                  className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-slate-300 text-slate-400 rounded-lg font-medium cursor-not-allowed opacity-60 w-full sm:w-auto"
+                  whileTap={{ scale: 0.99 }}
+                >
+                  <ShoppingCart className="w-4 h-4" />
+                  <span className="text-sm">Buy on Flipkart</span>
+                </motion.button>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
+                  Coming soon on Flipkart! Meanwhile, purchase on Amazon.
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
+                </div>
+              </div>
             </div>
 
             {/* Trusted By */}

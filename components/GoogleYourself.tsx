@@ -6,7 +6,7 @@ import GoogleSearchSimulator from './GoogleSearchSimulator'
 
 export default function GoogleYourself() {
   return (
-    <section className="relative py-16 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50 overflow-hidden">
+    <section className="relative py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-white via-slate-50/50 to-slate-50 overflow-hidden">
       {/* Subtle grid texture */}
       <div
         className="absolute inset-0 bg-grid-slate-100 opacity-60"

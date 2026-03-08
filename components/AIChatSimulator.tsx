@@ -443,7 +443,7 @@ export default function AIChatSimulator() {
 
         {/* Chat UI */}
         <div
-          className="h-[640px] sm:h-[540px] flex flex-col"
+          className="h-[520px] sm:h-[540px] flex flex-col"
           role="img"
           aria-label={`Simulated ${cfg.label} conversation asking Who is Vinit Shahdeo`}
         >

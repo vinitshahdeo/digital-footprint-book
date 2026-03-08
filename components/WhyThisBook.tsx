@@ -28,7 +28,7 @@ const reasons = [
 
 export default function WhyThisBook() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"

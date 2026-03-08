@@ -39,7 +39,7 @@ const companies = [
 
 export default function TrustedBy() {
   return (
-    <section className="py-16 px-6 bg-white border-t border-slate-200/60">
+    <section className="py-12 sm:py-14 md:py-16 px-6 bg-white border-t border-slate-200/60">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

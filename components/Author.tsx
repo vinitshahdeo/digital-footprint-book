@@ -6,9 +6,9 @@ import { motion } from 'framer-motion'
 
 export default function Author() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-slate-50">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Editorial Author Image */}
           <motion.div
             className="flex justify-center md:justify-end order-2 md:order-1"
