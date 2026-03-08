@@ -443,7 +443,7 @@ export default function AIChatSimulator() {
 
         {/* Chat UI */}
         <div
-          className="h-[640px] sm:h-[540px] flex flex-col"
+          className="h-[520px] sm:h-[540px] flex flex-col"
           role="img"
           aria-label={`Simulated ${cfg.label} conversation asking Who is Vinit Shahdeo`}
         >
@@ -597,7 +597,8 @@ export default function AIChatSimulator() {
                     </span>
                   )}
                 </div>
-                <div
+                <button
+                  type="button"
                   className={`w-7 h-7 rounded-full flex items-center justify-center ${
                     active.typedQuestion.length > 0 && active.phase === 'typing-question'
                       ? isDark
@@ -607,7 +608,6 @@ export default function AIChatSimulator() {
                         ? 'bg-[#3f3f3f]'
                         : 'bg-slate-200'
                   }`}
-                  role="button"
                   aria-label="Send message"
                 >
                   <svg
@@ -630,7 +630,7 @@ export default function AIChatSimulator() {
                   >
                     <path d="M12 19V5M5 12l7-7 7 7" />
                   </svg>
-                </div>
+                </button>
               </div>
               <p
                 className={`text-[10px] text-center mt-2 ${isDark ? 'text-[#8e8ea0]' : 'text-slate-400'}`}

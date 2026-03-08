@@ -1,5 +1,3 @@
-'use client'
-
 import {
   ArrowRight,
   ShoppingCart,
@@ -10,7 +8,6 @@ import {
   FileText,
   Headphones,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 const benefits = [
   '38 actionable chapters',
@@ -23,7 +20,7 @@ export default function Purchase() {
   return (
     <section
       id="purchase"
-      className="relative py-16 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950"
+      className="relative py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950"
     >
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center mb-16">

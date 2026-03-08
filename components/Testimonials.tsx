@@ -96,24 +96,32 @@ const testimonials = [
 
 // Responsive hook for cards per view
 function useCardsPerView() {
-  const [cardsPerView, setCardsPerView] = useState(3)
+  // Default to 1 to match SSR output (mobile-first) and avoid hydration mismatch
+  const [cardsPerView, setCardsPerView] = useState(1)
 
   useEffect(() => {
-    const updateCardsPerView = () => {
-      if (typeof window !== 'undefined') {
-        if (window.innerWidth < 768) {
-          setCardsPerView(1)
-        } else if (window.innerWidth < 1024) {
-          setCardsPerView(2)
-        } else {
-          setCardsPerView(3)
-        }
-      }
+    let timeoutId: ReturnType<typeof setTimeout>
+    const getCardsPerView = () => {
+      if (window.innerWidth < 768) return 1
+      if (window.innerWidth < 1024) return 2
+      return 3
     }
 
-    updateCardsPerView()
+    const updateCardsPerView = () => {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        setCardsPerView(getCardsPerView())
+      }, 150)
+    }
+
+    // Set correct value immediately on mount
+    setCardsPerView(getCardsPerView())
+
     window.addEventListener('resize', updateCardsPerView)
-    return () => window.removeEventListener('resize', updateCardsPerView)
+    return () => {
+      clearTimeout(timeoutId)
+      window.removeEventListener('resize', updateCardsPerView)
+    }
   }, [])
 
   return cardsPerView
@@ -158,7 +166,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="py-16 md:py-28 px-6 bg-gradient-to-b from-white to-slate-50/80"
+      className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-white to-slate-50/80"
       aria-label="Testimonials from engineers"
     >
       <div className="max-w-6xl mx-auto">

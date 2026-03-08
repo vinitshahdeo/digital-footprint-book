@@ -6,7 +6,7 @@ import AIChatSimulator from './AIChatSimulator'
 
 export default function AskAI() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -66,7 +66,7 @@ export default function AskAI() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask ChatGPT about Vinit Shahdeo"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#10a37f]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#10a37f]/40 hover:shadow-[0_2px_8px_rgba(16,163,127,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#10a37f]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ export default function AskAI() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask Gemini about Vinit Shahdeo"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#4285f4]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#4285f4]/40 hover:shadow-[0_2px_8px_rgba(66,133,244,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#4285f4]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ export default function AskAI() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask Claude about Vinit Shahdeo"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#d97706]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#d97706]/40 hover:shadow-[0_2px_8px_rgba(217,119,6,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#d97706]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ export default function AskAI() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ask Perplexity about Vinit Shahdeo"
-                className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#20b8cd]"
+                className="group inline-flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] text-[11px] font-semibold font-mono uppercase tracking-wider border border-slate-200 rounded-lg bg-white hover:border-[#20b8cd]/40 hover:shadow-[0_2px_8px_rgba(32,184,205,0.15)] transition-all duration-200 ease-out active:scale-95 select-none text-slate-600 hover:text-[#20b8cd]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

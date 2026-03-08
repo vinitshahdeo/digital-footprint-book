@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 
 export default function DecisionTable() {
   return (
-    <section className="py-24 px-6 bg-slate-50">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-slate-50">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-black mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-4 tracking-tight">
             Same effort.{' '}
             <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               Exponentially different results.

@@ -197,7 +197,7 @@ function polarToXY(angleDeg: number, radius: number) {
 
 export default function DigitalFootprintVisual() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-50/70 to-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -219,15 +219,17 @@ export default function DigitalFootprintVisual() {
         <div className="grid lg:grid-cols-[1fr_380px] gap-12 lg:gap-16 items-start">
           {/* Orbital Map */}
           <div className="relative flex items-center justify-center min-h-[420px] md:min-h-[620px]">
-            {/* Orbit rings — slowly rotating in opposite directions */}
+            {/* Orbit rings — slowly rotating in opposite directions, only when in view */}
             <motion.div
               className="absolute rounded-full border border-dashed border-blue-300/50 w-[210px] h-[210px] md:w-[320px] md:h-[320px]"
-              animate={{ rotate: 360 }}
+              whileInView={{ rotate: 360 }}
+              viewport={{ once: false }}
               transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
               className="absolute rounded-full border border-dashed border-blue-200/60 w-[340px] h-[340px] md:w-[520px] md:h-[520px]"
-              animate={{ rotate: -360 }}
+              whileInView={{ rotate: -360 }}
+              viewport={{ once: false }}
               transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
             />
 
@@ -246,6 +248,7 @@ export default function DigitalFootprintVisual() {
                     alt="Vinit Shahdeo"
                     width={160}
                     height={160}
+                    sizes="(max-width: 768px) 96px, 128px"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/80 to-transparent pt-6 pb-1.5">
@@ -276,22 +279,31 @@ export default function DigitalFootprintVisual() {
               />
             </motion.div>
 
-            {/* Orbital Nodes — mobile */}
+            {/* Orbital Nodes — single set, responsive sizing */}
             {orbitNodes.map((node, i) => {
-              const r = node.ring === 1 ? RING_1_RADIUS : RING_2_RADIUS
-              const { x, y } = polarToXY(node.angle, r)
+              const rMobile = node.ring === 1 ? RING_1_RADIUS : RING_2_RADIUS
+              const rDesktop = node.ring === 1 ? RING_1_RADIUS_MD : RING_2_RADIUS_MD
+              const mobilePos = polarToXY(node.angle, rMobile)
+              const desktopPos = polarToXY(node.angle, rDesktop)
               return (
                 <div
-                  key={`m-${i}`}
-                  className="absolute z-10 md:hidden"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                  }}
+                  key={i}
+                  className="absolute z-10"
+                  style={
+                    {
+                      left: '50%',
+                      top: '50%',
+                      // Mobile positions by default, overridden by CSS custom properties for md
+                      '--mobile-x': `${mobilePos.x}px`,
+                      '--mobile-y': `${mobilePos.y}px`,
+                      '--desktop-x': `${desktopPos.x}px`,
+                      '--desktop-y': `${desktopPos.y}px`,
+                      transform: `translate(calc(-50% + var(--node-x, var(--mobile-x))), calc(-50% + var(--node-y, var(--mobile-y))))`,
+                    } as React.CSSProperties
+                  }
                 >
                   <motion.div
-                    className="group relative flex flex-col items-center"
+                    className="group relative flex flex-col items-center md:cursor-pointer"
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
@@ -305,17 +317,18 @@ export default function DigitalFootprintVisual() {
                   >
                     <div className="relative">
                       <motion.div
-                        className={`relative z-10 w-11 h-11 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-2 ring-white`}
+                        className={`relative z-10 w-11 h-11 md:w-14 md:h-14 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-2 md:ring-[3px] ring-white`}
                         whileHover={{ scale: 1.12, y: -2 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <node.icon className="w-5 h-5 text-white" />
+                        <node.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </motion.div>
 
                       {/* Pulse ring — fires once per cycle, staggered per node */}
                       <motion.div
                         className={`absolute inset-0 rounded-full ${node.bg} opacity-0`}
-                        animate={{ scale: [1, 2.2], opacity: [0.35, 0] }}
+                        whileInView={{ scale: [1, 2.2], opacity: [0.35, 0] }}
+                        viewport={{ once: false }}
                         transition={{
                           duration: 1.2,
                           repeat: Infinity,
@@ -325,64 +338,7 @@ export default function DigitalFootprintVisual() {
                         }}
                       />
                     </div>
-                    <span className="mt-1.5 text-[10px] font-medium text-slate-600 bg-white/90 px-2 py-0.5 rounded-full shadow-sm border border-slate-100 whitespace-nowrap">
-                      {node.label}
-                    </span>
-                  </motion.div>
-                </div>
-              )
-            })}
-
-            {/* Orbital Nodes — desktop */}
-            {orbitNodes.map((node, i) => {
-              const r = node.ring === 1 ? RING_1_RADIUS_MD : RING_2_RADIUS_MD
-              const { x, y } = polarToXY(node.angle, r)
-              return (
-                <div
-                  key={`d-${i}`}
-                  className="absolute z-10 hidden md:block"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                  }}
-                >
-                  <motion.div
-                    className="group relative flex flex-col items-center cursor-pointer"
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.4,
-                      delay: node.delay,
-                      type: 'spring',
-                      stiffness: 260,
-                      damping: 20,
-                    }}
-                  >
-                    <div className="relative">
-                      <motion.div
-                        className={`relative z-10 w-14 h-14 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-[3px] ring-white`}
-                        whileHover={{ scale: 1.12, y: -3 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <node.icon className="w-6 h-6 text-white" />
-                      </motion.div>
-
-                      {/* Pulse ring — fires once per cycle, staggered per node */}
-                      <motion.div
-                        className={`absolute inset-0 rounded-full ${node.bg} opacity-0`}
-                        animate={{ scale: [1, 2.4], opacity: [0.35, 0] }}
-                        transition={{
-                          duration: 1.2,
-                          repeat: Infinity,
-                          repeatDelay: 10.8,
-                          delay: node.pulseDelay,
-                          ease: 'easeOut',
-                        }}
-                      />
-                    </div>
-                    <span className="mt-2 text-xs font-medium text-slate-700 bg-white/90 px-2.5 py-1 rounded-full shadow-sm border border-slate-100 whitespace-nowrap group-hover:bg-white group-hover:shadow-md transition-all duration-200">
+                    <span className="mt-1.5 md:mt-2 text-[10px] md:text-xs font-medium text-slate-600 md:text-slate-700 bg-white/90 px-2 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-sm border border-slate-100 whitespace-nowrap group-hover:bg-white group-hover:shadow-md transition-all duration-200">
                       {node.label}
                     </span>
                   </motion.div>

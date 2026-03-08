@@ -19,7 +19,7 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -58,15 +58,17 @@ const YOUTUBE_VIDEO_ID = 'GK6TIHiov4A'
 
 export default function HeroV1() {
   const [showVideo, setShowVideo] = useState(false)
-  const [onlineCount, setOnlineCount] = useState(5.35)
   const [currentTime, setCurrentTime] = useState('')
+  const counterRef = useRef<HTMLSpanElement>(null)
 
+  // Direct DOM mutation to avoid re-rendering the entire Hero every 2s
   useEffect(() => {
+    let count = 5.35
     const interval = setInterval(() => {
-      setOnlineCount((prev) => {
-        const increment = Math.random() * 0.002
-        return parseFloat((prev + increment).toFixed(4))
-      })
+      count = parseFloat((count + Math.random() * 0.002).toFixed(4))
+      if (counterRef.current) {
+        counterRef.current.textContent = `${count.toFixed(2)}B internet users worldwide`
+      }
     }, 2000)
     return () => clearInterval(interval)
   }, [])
@@ -162,7 +164,7 @@ export default function HeroV1() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Infinity, duration: 2 }}
                 />
-                {onlineCount.toFixed(2)}B internet users worldwide
+                <span ref={counterRef}>5.35B internet users worldwide</span>
               </span>
             </p>
           </motion.div>

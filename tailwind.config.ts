@@ -20,6 +20,16 @@ const config: Config = {
           'Arial',
           'sans-serif',
         ],
+        mono: [
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'Liberation Mono',
+          'Courier New',
+          'monospace',
+        ],
       },
       letterSpacing: {
         tighter: '-0.04em',

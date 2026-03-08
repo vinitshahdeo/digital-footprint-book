@@ -30,7 +30,7 @@ function Counter({ value, duration = 1 }: { value: number; duration?: number }) 
 
 export default function VisibilityGap() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -52,7 +52,7 @@ export default function VisibilityGap() {
         </div>
 
         {/* Modern Step Flow */}
-        <div className="mb-20">
+        <div className="mb-14 md:mb-20">
           <div className="grid md:grid-cols-3 gap-8">
             {/* 100% - Work Done */}
             <motion.div
@@ -169,7 +169,7 @@ export default function VisibilityGap() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="bg-gradient-to-br from-slate-50 to-blue-50/60 border border-slate-200 rounded-2xl p-8 md:p-10">
               <p className="text-xs text-slate-500 font-medium mb-8 tracking-wide uppercase">
@@ -188,14 +188,7 @@ export default function VisibilityGap() {
                       </linearGradient>
                     </defs>
                     {/* Background ring — represents the invisible 80% */}
-                    <circle
-                      cx="60"
-                      cy="60"
-                      r="48"
-                      fill="none"
-                      stroke="#cbd5e1"
-                      strokeWidth="11"
-                    />
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#cbd5e1" strokeWidth="11" />
                     {/* Foreground arc — the visible 20% */}
                     <motion.circle
                       cx="60"
@@ -213,7 +206,7 @@ export default function VisibilityGap() {
                       viewport={{ once: true }}
                       transition={{
                         duration: 1.4,
-                        delay: 0.8,
+                        delay: 0.4,
                         ease: [0.25, 0.46, 0.45, 0.94],
                       }}
                     />

@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', 'New York', Georgia, serif;
-  --font-handwriting: 'Caveat', cursive;
-  --font-accent: 'Space Grotesk', 'Inter', sans-serif;
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -22,6 +15,12 @@
     overflow-x: hidden;
   }
 
+  /* Geist for section headlines, Inter for everything else */
+  h1,
+  h2 {
+    font-family: var(--font-geist-sans), 'Inter', sans-serif;
+  }
+
   /* Refined focus states for keyboard navigation */
   :focus-visible {
     @apply outline-none ring-2 ring-blue-500/40 ring-offset-2 ring-offset-white;
@@ -30,6 +29,14 @@
   /* Subtle text selection styling */
   ::selection {
     @apply bg-blue-100/80 text-blue-900;
+  }
+
+  /* Gradient text fallback for high-contrast / forced-colors mode */
+  @media (forced-colors: active) {
+    .bg-clip-text {
+      -webkit-text-fill-color: unset;
+      color: LinkText;
+    }
   }
 }
 
@@ -173,5 +180,43 @@
   .animate-marquee {
     animation: marquee 60s linear infinite;
     width: max-content;
+  }
+
+  /* Binary code pulse animation (used in BookIntro) */
+  @keyframes subtlePulse {
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  .binary-pulse {
+    animation: subtlePulse 4s ease-in-out infinite;
+  }
+
+  /* Contribution chart shimmer (used in CallToAction) */
+  @keyframes contribution-shimmer {
+    0%,
+    100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+
+    50% {
+      opacity: 0.55;
+      filter: brightness(1.2);
+    }
+  }
+
+  /* Responsive orbital node positioning */
+  @media (min-width: 768px) {
+    [style*='--desktop-x'] {
+      --node-x: var(--desktop-x) !important;
+      --node-y: var(--desktop-y) !important;
+    }
   }
 }

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Searchability() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-white">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -36,7 +36,6 @@ export default function Searchability() {
             <h3 className="text-2xl font-bold text-slate-900 mb-8">The Discovery Funnel</h3>
 
             <div className="relative space-y-3">
-
               {/* Stage 1 - Widest */}
               <motion.div
                 className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-md w-full mx-auto"
@@ -108,7 +107,7 @@ export default function Searchability() {
 
               {/* Stage 4 - Narrowest */}
               <motion.div
-                className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-5 text-white shadow-md shadow-blue-500/20 w-[45%] mx-auto"
+                className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-5 text-white shadow-md shadow-blue-500/20 w-[55%] sm:w-[45%] mx-auto"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -261,7 +260,7 @@ export default function Searchability() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.5 }}
+                  transition={{ duration: 0.3, delay: 0.35 }}
                 >
                   <span className="text-blue-600 font-bold text-lg">✓</span>
                   <span className="text-sm leading-relaxed">
@@ -274,7 +273,7 @@ export default function Searchability() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.6 }}
+                  transition={{ duration: 0.3, delay: 0.42 }}
                 >
                   <span className="text-blue-600 font-bold text-lg">✓</span>
                   <span className="text-sm leading-relaxed">
@@ -287,7 +286,7 @@ export default function Searchability() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.7 }}
+                  transition={{ duration: 0.3, delay: 0.49 }}
                 >
                   <span className="text-blue-600 font-bold text-lg">✓</span>
                   <span className="text-sm leading-relaxed">
@@ -300,7 +299,7 @@ export default function Searchability() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.8 }}
+                  transition={{ duration: 0.3, delay: 0.56 }}
                 >
                   <span className="text-blue-600 font-bold text-lg">✓</span>
                   <span className="text-sm leading-relaxed">

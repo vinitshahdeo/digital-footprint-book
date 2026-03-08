@@ -1,20 +1,23 @@
 import Hero from '@/components/Hero'
-import GoogleYourself from '@/components/GoogleYourself'
-import VisibilityGap from '@/components/VisibilityGap'
-import BookCoverage from '@/components/BookCoverage'
-import CareerImpact from '@/components/CareerImpact'
-import Searchability from '@/components/Searchability'
-import DigitalFootprintVisual from '@/components/DigitalFootprintVisual'
-import BookIntro from '@/components/BookIntro'
-import Author from '@/components/Author'
-import WhyThisBook from '@/components/WhyThisBook'
-import Testimonials from '@/components/Testimonials'
 import Purchase from '@/components/Purchase'
-import CallToAction from '@/components/CallToAction'
-import AskAI from '@/components/AskAI'
-import AIFutureSection from '@/components/AIFutureSection'
 import FeaturedOn from '@/components/FeaturedOn'
-import Footer from '@/components/Footer'
+import dynamic from 'next/dynamic'
+
+// Below-fold client components — code-split for smaller initial JS bundle
+const GoogleYourself = dynamic(() => import('@/components/GoogleYourself'))
+const AskAI = dynamic(() => import('@/components/AskAI'))
+const VisibilityGap = dynamic(() => import('@/components/VisibilityGap'))
+const CareerImpact = dynamic(() => import('@/components/CareerImpact'))
+const AIFutureSection = dynamic(() => import('@/components/AIFutureSection'))
+const BookIntro = dynamic(() => import('@/components/BookIntro'))
+const Author = dynamic(() => import('@/components/Author'))
+const BookCoverage = dynamic(() => import('@/components/BookCoverage'))
+const WhyThisBook = dynamic(() => import('@/components/WhyThisBook'))
+const Testimonials = dynamic(() => import('@/components/Testimonials'))
+const Searchability = dynamic(() => import('@/components/Searchability'))
+const DigitalFootprintVisual = dynamic(() => import('@/components/DigitalFootprintVisual'))
+const CallToAction = dynamic(() => import('@/components/CallToAction'))
+const Footer = dynamic(() => import('@/components/Footer'))
 
 export default function Home() {
   return (

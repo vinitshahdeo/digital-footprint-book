@@ -29,7 +29,6 @@ const nextConfig = {
   },
 
   // Production optimizations
-  swcMinify: true,
 
   // Compiler optimizations
   compiler: {

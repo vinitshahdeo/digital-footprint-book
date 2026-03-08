@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function CareerImpact() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-white">
+    <section className="py-16 sm:py-20 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -31,7 +31,7 @@ export default function CareerImpact() {
 
           {/* Metric 1 - 5× More visibility */}
           <motion.div
-            className="relative mb-16"
+            className="relative mb-10 md:mb-16"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -78,7 +78,7 @@ export default function CareerImpact() {
 
           {/* Metric 2 - 3× More interviews */}
           <motion.div
-            className="relative mb-16"
+            className="relative mb-10 md:mb-16"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
