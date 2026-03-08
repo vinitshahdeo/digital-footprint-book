@@ -13,12 +13,32 @@
   body {
     @apply text-slate-900 bg-white antialiased;
     overflow-x: hidden;
+    letter-spacing: -0.011em;
   }
 
-  /* Geist for section headlines, Inter for everything else */
+  /* Sora for headlines, Inter for body */
   h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading), 'Sora', 'Inter', sans-serif;
+  }
+
+  h1 {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+  }
+
   h2 {
-    font-family: var(--font-geist-sans), 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
   }
 
   /* Refined focus states for keyboard navigation */

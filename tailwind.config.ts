@@ -20,6 +20,12 @@ const config: Config = {
           'Arial',
           'sans-serif',
         ],
+        heading: [
+          'var(--font-heading)',
+          'Sora',
+          'Inter',
+          'sans-serif',
+        ],
         mono: [
           'ui-monospace',
           'SFMono-Regular',

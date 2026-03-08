@@ -23,7 +23,7 @@ export default function AskAI() {
 
           <div className="relative">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]"
+              className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

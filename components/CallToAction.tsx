@@ -61,7 +61,7 @@ export default function CallToAction() {
           </p>
 
           {/* Main headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1] text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6 text-balance">
             Your Name Is a Brand{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               — Build It.

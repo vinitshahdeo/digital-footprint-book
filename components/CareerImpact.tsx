@@ -13,7 +13,7 @@ export default function CareerImpact() {
             <Zap className="w-4 h-4" />
             Career Acceleration
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6">
             The same skills.{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               Different outcomes.
@@ -46,7 +46,7 @@ export default function CareerImpact() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
                 >
-                  <p className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3">
                     5×
                   </p>
                 </motion.div>
@@ -93,7 +93,7 @@ export default function CareerImpact() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, delay: 0.15, type: 'spring', bounce: 0.4 }}
                 >
-                  <p className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-3">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-3">
                     3×
                   </p>
                 </motion.div>
@@ -138,7 +138,7 @@ export default function CareerImpact() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, delay: 0.3, type: 'spring', bounce: 0.4 }}
                 >
-                  <p className="text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3">
                     14×
                   </p>
                 </motion.div>

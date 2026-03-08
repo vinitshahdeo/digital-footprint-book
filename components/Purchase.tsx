@@ -29,7 +29,7 @@ export default function Purchase() {
             Ready to Start?
           </p>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
               Digital Footprint
             </span>

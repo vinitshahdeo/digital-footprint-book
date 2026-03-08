@@ -58,10 +58,10 @@ export default function BookIntro() {
               <Footprints className="w-10 h-10 md:w-14 md:h-14" />
             </motion.div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900">
               Introducing
             </h2>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mt-2">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium mt-2">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Digital Footprint
               </span>

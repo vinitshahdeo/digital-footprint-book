@@ -38,7 +38,7 @@ export default function VisibilityGap() {
             <TrendingUp className="w-4 h-4" />
             The Visibility Gap
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6">
             Hard work doesn't{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               compound
@@ -69,9 +69,9 @@ export default function VisibilityGap() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, type: 'spring', delay: 0.2 }}
                 >
-                  <p className="text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-5">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-5">
                     <Counter value={100} duration={1.5} />
-                    <span className="text-5xl">%</span>
+                    <span className="text-4xl sm:text-5xl">%</span>
                   </p>
                 </motion.div>
                 <div className="relative h-3 w-full rounded-full bg-slate-200 mb-5 mx-auto overflow-hidden">
@@ -83,7 +83,7 @@ export default function VisibilityGap() {
                     transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                   />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Work Done</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">Work Done</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Great engineers shipping quality code every day
                 </p>
@@ -105,9 +105,9 @@ export default function VisibilityGap() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, type: 'spring', delay: 0.35 }}
                 >
-                  <p className="text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-5">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent leading-none mb-5">
                     <Counter value={40} duration={1.5} />
-                    <span className="text-5xl">%</span>
+                    <span className="text-4xl sm:text-5xl">%</span>
                   </p>
                 </motion.div>
                 <div className="relative h-3 w-full rounded-full bg-slate-200 mb-5 mx-auto overflow-hidden">
@@ -119,7 +119,7 @@ export default function VisibilityGap() {
                     transition={{ duration: 1.2, delay: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
                   />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Documented</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">Documented</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Creating internal docs, READMEs, and notes
                 </p>
@@ -141,9 +141,9 @@ export default function VisibilityGap() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, type: 'spring', delay: 0.5 }}
                 >
-                  <p className="text-8xl font-bold bg-gradient-to-br from-slate-600 to-slate-700 bg-clip-text text-transparent leading-none mb-5">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-slate-600 to-slate-700 bg-clip-text text-transparent leading-none mb-5">
                     <Counter value={20} duration={1.5} />
-                    <span className="text-5xl">%</span>
+                    <span className="text-4xl sm:text-5xl">%</span>
                   </p>
                 </motion.div>
                 <div className="relative h-3 w-full rounded-full bg-slate-200 mb-5 mx-auto overflow-hidden">
@@ -155,7 +155,7 @@ export default function VisibilityGap() {
                     transition={{ duration: 1.2, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                   />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Discoverable</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">Discoverable</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Actually visible and searchable online
                 </p>
@@ -270,7 +270,7 @@ export default function VisibilityGap() {
                   <div className="w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center">
                     <EyeOff className="w-6 h-6 text-slate-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-700">Invisible Engineer</h3>
+                  <h3 className="text-xl font-semibold text-slate-700">Invisible Engineer</h3>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -319,7 +319,7 @@ export default function VisibilityGap() {
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md shadow-blue-500/20">
                     <Eye className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Searchable Engineer
                   </h3>
                 </div>

@@ -108,8 +108,8 @@ const orbitNodes = [
 ]
 
 // Responsive orbit radii (px).
-const RING_1_RADIUS = 105
-const RING_2_RADIUS = 170
+const RING_1_RADIUS = 90
+const RING_2_RADIUS = 140
 const RING_1_RADIUS_MD = 160
 const RING_2_RADIUS_MD = 260
 
@@ -205,7 +205,7 @@ export default function DigitalFootprintVisual() {
             <Network className="w-4 h-4" />
             Your Ecosystem
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6">
             Your Digital{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               Footprint
@@ -218,16 +218,16 @@ export default function DigitalFootprintVisual() {
 
         <div className="grid lg:grid-cols-[1fr_380px] gap-12 lg:gap-16 items-start">
           {/* Orbital Map */}
-          <div className="relative flex items-center justify-center min-h-[420px] md:min-h-[620px]">
+          <div className="relative flex items-center justify-center min-h-[360px] sm:min-h-[420px] md:min-h-[620px]">
             {/* Orbit rings — slowly rotating in opposite directions, only when in view */}
             <motion.div
-              className="absolute rounded-full border border-dashed border-blue-300/50 w-[210px] h-[210px] md:w-[320px] md:h-[320px]"
+              className="absolute rounded-full border border-dashed border-blue-300/50 w-[180px] h-[180px] sm:w-[210px] sm:h-[210px] md:w-[320px] md:h-[320px]"
               whileInView={{ rotate: 360 }}
               viewport={{ once: false }}
               transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute rounded-full border border-dashed border-blue-200/60 w-[340px] h-[340px] md:w-[520px] md:h-[520px]"
+              className="absolute rounded-full border border-dashed border-blue-200/60 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[520px] md:h-[520px]"
               whileInView={{ rotate: -360 }}
               viewport={{ once: false }}
               transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
@@ -317,11 +317,11 @@ export default function DigitalFootprintVisual() {
                   >
                     <div className="relative">
                       <motion.div
-                        className={`relative z-10 w-11 h-11 md:w-14 md:h-14 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-2 md:ring-[3px] ring-white`}
+                        className={`relative z-10 w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-14 rounded-full ${node.bg} flex items-center justify-center shadow-md ring-2 md:ring-[3px] ring-white`}
                         whileHover={{ scale: 1.12, y: -2 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <node.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                        <node.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                       </motion.div>
 
                       {/* Pulse ring — fires once per cycle, staggered per node */}
@@ -338,7 +338,7 @@ export default function DigitalFootprintVisual() {
                         }}
                       />
                     </div>
-                    <span className="mt-1.5 md:mt-2 text-[10px] md:text-xs font-medium text-slate-600 md:text-slate-700 bg-white/90 px-2 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-sm border border-slate-100 whitespace-nowrap group-hover:bg-white group-hover:shadow-md transition-all duration-200">
+                    <span className="mt-1 sm:mt-1.5 md:mt-2 text-[9px] sm:text-[10px] md:text-xs font-medium text-slate-600 md:text-slate-700 bg-white/90 px-1.5 sm:px-2 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-sm border border-slate-100 whitespace-nowrap group-hover:bg-white group-hover:shadow-md transition-all duration-200">
                       {node.label}
                     </span>
                   </motion.div>

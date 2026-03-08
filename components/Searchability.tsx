@@ -13,7 +13,7 @@ export default function Searchability() {
             <Search className="w-4 h-4" />
             First Impressions
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6">
             If someone Googles you{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               today
@@ -33,7 +33,7 @@ export default function Searchability() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-8">The Discovery Funnel</h3>
+            <h3 className="text-2xl font-semibold text-slate-900 mb-8">The Discovery Funnel</h3>
 
             <div className="relative space-y-3">
               {/* Stage 1 - Widest */}
@@ -61,7 +61,7 @@ export default function Searchability() {
 
               {/* Stage 2 */}
               <motion.div
-                className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-5 text-white shadow-md w-[85%] mx-auto"
+                className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-5 text-white shadow-md w-[90%] sm:w-[85%] mx-auto"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -84,7 +84,7 @@ export default function Searchability() {
 
               {/* Stage 3 */}
               <motion.div
-                className="relative bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-5 text-white shadow-md w-[65%] mx-auto"
+                className="relative bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-5 text-white shadow-md w-[80%] sm:w-[70%] md:w-[65%] mx-auto"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -107,7 +107,7 @@ export default function Searchability() {
 
               {/* Stage 4 - Narrowest */}
               <motion.div
-                className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-5 text-white shadow-md shadow-blue-500/20 w-[55%] sm:w-[45%] mx-auto"
+                className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-5 text-white shadow-md shadow-blue-500/20 w-[70%] sm:w-[55%] md:w-[45%] mx-auto"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -154,7 +154,7 @@ export default function Searchability() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-8">Signals That Matter</h3>
+            <h3 className="text-2xl font-semibold text-slate-900 mb-8">Signals That Matter</h3>
 
             <div className="space-y-3">
               <motion.div

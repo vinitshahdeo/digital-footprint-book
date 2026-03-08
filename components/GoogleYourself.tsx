@@ -32,7 +32,7 @@ export default function GoogleYourself() {
           </motion.p>
 
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]"
+            className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -157,7 +157,7 @@ export default function GoogleYourself() {
                 {/* Subtle blue glow behind number */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-blue-100/60 blur-3xl" />
                 <motion.div
-                  className="relative text-8xl md:text-9xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3"
+                  className="relative text-7xl sm:text-8xl md:text-9xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent leading-none mb-3"
                   initial={{ scale: 0.5, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
@@ -174,16 +174,16 @@ export default function GoogleYourself() {
               </motion.div>
 
               {/* Two Stats Side by Side */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <motion.div
-                  className="rounded-xl border border-slate-200/80 bg-white p-5 text-center shadow-sm"
+                  className="rounded-xl border border-slate-200/80 bg-white p-3 sm:p-5 text-center shadow-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <motion.div
-                    className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2"
+                    className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
@@ -198,14 +198,14 @@ export default function GoogleYourself() {
                 </motion.div>
 
                 <motion.div
-                  className="rounded-xl border border-slate-200/80 bg-white p-5 text-center shadow-sm"
+                  className="rounded-xl border border-slate-200/80 bg-white p-3 sm:p-5 text-center shadow-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <motion.div
-                    className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
+                    className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
