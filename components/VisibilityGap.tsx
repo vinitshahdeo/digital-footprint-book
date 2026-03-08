@@ -169,7 +169,7 @@ export default function VisibilityGap() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="bg-gradient-to-br from-slate-50 to-blue-50/60 border border-slate-200 rounded-2xl p-8 md:p-10">
               <p className="text-xs text-slate-500 font-medium mb-8 tracking-wide uppercase">
@@ -213,7 +213,7 @@ export default function VisibilityGap() {
                       viewport={{ once: true }}
                       transition={{
                         duration: 1.4,
-                        delay: 0.8,
+                        delay: 0.4,
                         ease: [0.25, 0.46, 0.45, 0.94],
                       }}
                     />

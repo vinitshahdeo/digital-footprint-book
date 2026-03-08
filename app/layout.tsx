@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 import Script from 'next/script'
 import './globals.css'
 
@@ -165,7 +166,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${GeistSans.variable}`}>
       <head>
         {/* JSON-LD Structured Data */}
         <script

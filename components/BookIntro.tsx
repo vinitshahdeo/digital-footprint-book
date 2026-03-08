@@ -23,17 +23,16 @@ export default function BookIntro() {
           <div className="relative">
             {/* Floating Footprint Icons */}
             <motion.div
-              className="absolute -left-8 md:-left-16 top-0 text-blue-500/20"
-              initial={{ opacity: 0, x: -20, rotate: -15 }}
-              whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-              viewport={{ once: true }}
-              animate={{
+              className="absolute -left-8 md:-left-16 top-0 text-blue-500/20 hidden md:block"
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
                 y: [0, -10, 0],
                 rotate: [-5, 5, -5],
               }}
+              viewport={{ once: true }}
               transition={{
-                opacity: { duration: 0.8, delay: 0.2 },
-                x: { duration: 0.8, delay: 0.2 },
+                opacity: { duration: 0.8 },
                 y: { repeat: Infinity, duration: 3, ease: 'easeInOut' },
                 rotate: { repeat: Infinity, duration: 4, ease: 'easeInOut' },
               }}
@@ -42,17 +41,16 @@ export default function BookIntro() {
             </motion.div>
 
             <motion.div
-              className="absolute -right-8 md:-right-16 top-8 text-purple-500/20"
-              initial={{ opacity: 0, x: 20, rotate: 15 }}
-              whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-              viewport={{ once: true }}
-              animate={{
+              className="absolute -right-8 md:-right-16 top-8 text-purple-500/20 hidden md:block"
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
                 y: [0, 10, 0],
                 rotate: [5, -5, 5],
               }}
+              viewport={{ once: true }}
               transition={{
-                opacity: { duration: 0.8, delay: 0.3 },
-                x: { duration: 0.8, delay: 0.3 },
+                opacity: { duration: 0.8 },
                 y: { repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 0.5 },
                 rotate: { repeat: Infinity, duration: 4.5, ease: 'easeInOut', delay: 0.5 },
               }}
@@ -73,20 +71,6 @@ export default function BookIntro() {
             </p>
 
             {/* Binary representation of "Digital Footprint" */}
-            <style jsx>{`
-              @keyframes subtlePulse {
-                0%,
-                100% {
-                  opacity: 0.5;
-                }
-                50% {
-                  opacity: 0.8;
-                }
-              }
-              .binary-pulse {
-                animation: subtlePulse 4s ease-in-out infinite;
-              }
-            `}</style>
             <div className="font-mono text-xs md:text-sm tracking-tight mt-3 mb-6 opacity-50">
               <div className="flex justify-center gap-1.5 flex-wrap">
                 <span className="text-slate-400">01000100</span>
@@ -264,8 +248,8 @@ export default function BookIntro() {
                   alt="Digital Footprint for Software Engineers Book Cover"
                   width={400}
                   height={600}
+                  sizes="(max-width: 768px) 100vw, 400px"
                   className="rounded-2xl shadow-2xl shadow-blue-500/20"
-                  priority
                 />
               </div>
             </motion.div>

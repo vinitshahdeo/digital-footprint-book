@@ -19,7 +19,7 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -58,15 +58,17 @@ const YOUTUBE_VIDEO_ID = 'GK6TIHiov4A'
 
 export default function HeroV1() {
   const [showVideo, setShowVideo] = useState(false)
-  const [onlineCount, setOnlineCount] = useState(5.35)
   const [currentTime, setCurrentTime] = useState('')
+  const counterRef = useRef<HTMLSpanElement>(null)
 
+  // Direct DOM mutation to avoid re-rendering the entire Hero every 2s
   useEffect(() => {
+    let count = 5.35
     const interval = setInterval(() => {
-      setOnlineCount((prev) => {
-        const increment = Math.random() * 0.002
-        return parseFloat((prev + increment).toFixed(4))
-      })
+      count = parseFloat((count + Math.random() * 0.002).toFixed(4))
+      if (counterRef.current) {
+        counterRef.current.textContent = `${count.toFixed(2)}B internet users worldwide`
+      }
     }, 2000)
     return () => clearInterval(interval)
   }, [])
@@ -162,7 +164,7 @@ export default function HeroV1() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Infinity, duration: 2 }}
                 />
-                {onlineCount.toFixed(2)}B internet users worldwide
+                <span ref={counterRef}>5.35B internet users worldwide</span>
               </span>
             </p>
           </motion.div>
@@ -201,68 +203,87 @@ export default function HeroV1() {
           >
             <a
               href="#purchase"
-              className="group px-7 py-3.5 bg-slate-900 text-white rounded-lg font-medium text-base hover:bg-slate-800 transition-all duration-250 w-full sm:w-auto"
+              className="group px-7 py-3.5 bg-slate-900 text-white rounded-lg font-medium text-base hover:bg-slate-800 transition-all duration-200 w-full sm:w-auto"
             >
               <span className="flex items-center gap-2 justify-center">
                 <BookOpen className="w-4 h-4" />
                 Get the book
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-250" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
               </span>
             </a>
             <a
               href="#whats-inside"
-              className="group px-7 py-3.5 text-slate-700 font-medium text-base hover:text-slate-900 transition-all duration-250 w-full sm:w-auto border border-slate-200 sm:border-transparent rounded-lg"
+              className="group px-7 py-3.5 text-slate-700 font-medium text-base hover:text-slate-900 transition-all duration-200 w-full sm:w-auto border border-slate-200 sm:border-transparent rounded-lg"
             >
               <span className="flex items-center gap-2 justify-center">
                 <Eye className="w-4 h-4" />
                 See what&apos;s inside
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-250" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
               </span>
             </a>
           </motion.div>
 
           {/* Author Quote */}
           <motion.div
-            className="relative max-w-md rounded-2xl bg-white/60 backdrop-blur-sm px-5 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] ring-1 ring-slate-900/[0.06]"
+            className="relative max-w-md"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.7 }}
           >
-            {/* Quote badge */}
-            <div className="absolute -top-3 -left-3 w-7 h-7 bg-blue-50 rounded-full flex items-center justify-center ring-1 ring-blue-100/50 shadow-sm">
-              <Quote className="w-3.5 h-3.5 text-blue-500/50 fill-blue-200/50" />
-            </div>
+            <div className="relative rounded-2xl bg-gradient-to-br from-white via-white to-slate-50/80 backdrop-blur-sm px-6 py-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] ring-1 ring-slate-900/[0.05]">
+              {/* Quote badge */}
+              <div className="absolute -top-3 -left-3 w-7 h-7 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center shadow-sm ring-1 ring-blue-100">
+                <Quote className="w-3.5 h-3.5 text-blue-400 fill-blue-200/60" />
+              </div>
 
-            {/* Background footprint decorations */}
-            <Footprints className="absolute top-2.5 right-3 w-9 h-9 text-slate-100 -rotate-[20deg] select-none pointer-events-none" />
-            <Footprints className="absolute bottom-1.5 right-14 w-6 h-6 text-slate-100/60 rotate-[15deg] select-none pointer-events-none" />
-
-            <div className="relative flex items-start gap-3.5">
-              <Image
-                src="/images/vinit-shahdeo.jpg"
-                alt="Vinit Shahdeo"
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-full object-cover ring-2 ring-white shadow-sm shrink-0"
+              {/* Background footprint decorations */}
+              <Footprints
+                className="absolute top-3 right-4 w-8 h-8 text-slate-100 -rotate-[20deg] select-none pointer-events-none"
+                aria-hidden="true"
+              />
+              <Footprints
+                className="absolute bottom-2 right-16 w-5 h-5 text-slate-100/50 rotate-[15deg] select-none pointer-events-none"
+                aria-hidden="true"
               />
 
-              <div className="min-w-0 flex-1 pt-0.5">
-                <p className="text-[15px] text-slate-700 leading-relaxed italic">
-                  Write code for machines. Build a footprint for people.
-                </p>
+              {/* Quote text */}
+              <p className="relative text-[15px] text-slate-700 leading-relaxed italic">
+                &ldquo;Write code for machines. Build a footprint for people.&rdquo;
+              </p>
+
+              {/* Divider */}
+              <div className="my-3.5 h-px bg-gradient-to-r from-slate-200/80 via-slate-200/40 to-transparent" />
+
+              {/* Author attribution */}
+              <div className="relative flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-blue-500/30 shrink-0">
+                  <Image
+                    src="/images/vinit-shahdeo.jpg"
+                    alt="Vinit Shahdeo"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover scale-[1.15]"
+                  />
+                </div>
+
+                <div className="flex-1 min-w-0">
+                  <p className="text-[13px] font-semibold text-slate-900 leading-tight">
+                    Vinit Shahdeo
+                  </p>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Author &amp; GitHub Star</p>
+                </div>
 
                 <motion.div
-                  className="mt-2.5"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.6 }}
+                  animate={{ opacity: 0.55 }}
                   transition={{ duration: 1, delay: 1.2, ease: 'easeOut' }}
                 >
                   <Image
                     src="/images/signature.png"
-                    alt="Vinit Shahdeo"
+                    alt="Vinit Shahdeo's signature"
                     width={88}
                     height={26}
-                    className="w-[72px] h-auto"
+                    className="w-[68px] h-auto"
                     style={{ filter: 'contrast(1.1)' }}
                   />
                 </motion.div>

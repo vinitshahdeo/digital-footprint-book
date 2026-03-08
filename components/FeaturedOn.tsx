@@ -1,7 +1,4 @@
-'use client'
-
 import { Award, Globe } from 'lucide-react'
-import { type ReactNode } from 'react'
 
 // JavaScript icon
 const JSIcon = ({ className }: { className?: string }) => (
@@ -14,7 +11,7 @@ const badges = [
   {
     name: 'Peerlist',
     href: 'https://peerlist.io/vinitshahdeo/project/digital-footprint-for-software-engineers',
-    src: '/images/digital-footprint-badge.svg',
+    src: '/images/digital-footprint-badge.png',
     width: 200,
   },
   {
@@ -132,6 +129,8 @@ export default function FeaturedOn() {
                   alt={`Featured on ${badge.name}`}
                   width={badge.width}
                   height={40}
+                  loading="lazy"
+                  decoding="async"
                   className={`h-10 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 ${
                     badge.grayscale ? 'grayscale' : ''
                   }`}

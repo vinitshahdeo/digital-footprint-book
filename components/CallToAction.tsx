@@ -72,8 +72,8 @@ export default function CallToAction() {
 
           {/* GitHub Contribution Chart Only */}
           <div className="mb-8 flex flex-col items-center">
-            <div className="relative">
-              <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-60">
+            <div className="relative max-w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-60 w-max mx-auto">
                 {Array.from({ length: 52 }).map((_, weekIndex) => (
                   <div key={weekIndex} className="flex flex-col gap-[2px] md:gap-[3px]">
                     {Array.from({ length: 7 }).map((_, dayIndex) => {

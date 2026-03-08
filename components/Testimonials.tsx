@@ -99,8 +99,10 @@ function useCardsPerView() {
   const [cardsPerView, setCardsPerView] = useState(3)
 
   useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout>
     const updateCardsPerView = () => {
-      if (typeof window !== 'undefined') {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
         if (window.innerWidth < 768) {
           setCardsPerView(1)
         } else if (window.innerWidth < 1024) {
@@ -108,12 +110,21 @@ function useCardsPerView() {
         } else {
           setCardsPerView(3)
         }
-      }
+      }, 150)
     }
 
-    updateCardsPerView()
+    // Run immediately on mount (no debounce)
+    if (window.innerWidth < 768) {
+      setCardsPerView(1)
+    } else if (window.innerWidth < 1024) {
+      setCardsPerView(2)
+    }
+
     window.addEventListener('resize', updateCardsPerView)
-    return () => window.removeEventListener('resize', updateCardsPerView)
+    return () => {
+      clearTimeout(timeoutId)
+      window.removeEventListener('resize', updateCardsPerView)
+    }
   }, [])
 
   return cardsPerView

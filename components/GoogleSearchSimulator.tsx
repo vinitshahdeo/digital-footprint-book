@@ -124,42 +124,6 @@ const searchResults = [
       'Engineering Leader @ ZZAZZ.ai | 3× GitHub Star | GSoC Mentor | SaaS → FinTech → AI | Ex-Novo, Ex-Postman',
     type: 'linkedin',
   },
-  //   {
-  //     title: 'Vinit Shahdeo (@Vinit_Shahdeo) / X',
-  //     url: 'https://x.com/Vinit_Shahdeo',
-  //     displayUrl: 'x.com › Vinit_Shahdeo',
-  //     siteName: 'X (formerly Twitter)',
-  //     description:
-  //       'Software Engineer. Open Source. Author of Digital Footprint. Sharing insights on engineering, career growth, and building in public. Joined 2017.',
-  //     type: 'twitter',
-  //   },
-  //   {
-  //     title: 'Vinit Shahdeo — GitHub Stars',
-  //     url: 'https://stars.github.com/profiles/vinitshahdeo',
-  //     displayUrl: 'stars.github.com › profiles › vinitshahdeo',
-  //     siteName: 'GitHub Stars',
-  //     description:
-  //       'GitHub Star recognized for impactful open-source contributions, community leadership, and dedication to helping developers worldwide.',
-  //     type: 'stars',
-  //   },
-  //   {
-  //     title: 'Vinit Shahdeo — Peerlist',
-  //     url: 'https://peerlist.io/vinitshahdeo',
-  //     displayUrl: 'peerlist.io › vinitshahdeo',
-  //     siteName: 'Peerlist',
-  //     description:
-  //       'View Vinit Shahdeo\'s professional profile on Peerlist — work history, projects, recommendations, and proof of work all in one place.',
-  //     type: 'peerlist',
-  //   },
-  //   {
-  //     title: 'Vinit Shahdeo — Blog & Writing',
-  //     url: 'https://vinitshahdeo.dev/blog',
-  //     displayUrl: 'vinitshahdeo.dev › blog',
-  //     siteName: 'vinitshahdeo.dev',
-  //     description:
-  //       'Articles on software engineering, open source, digital presence, and career growth. Practical insights for developers who want to stand out and get noticed.',
-  //     type: 'blog',
-  //   },
 ]
 
 const peopleAlsoSearchFor = [

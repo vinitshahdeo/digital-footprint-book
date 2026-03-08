@@ -187,7 +187,7 @@ export default function GoogleYourself() {
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7, type: 'spring', delay: 0.5 }}
+                    transition={{ duration: 0.7, type: 'spring', delay: 0.3 }}
                   >
                     85%
                   </motion.div>
@@ -202,14 +202,14 @@ export default function GoogleYourself() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <motion.div
                     className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2"
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7, type: 'spring', delay: 0.6 }}
+                    transition={{ duration: 0.7, type: 'spring', delay: 0.35 }}
                   >
                     63%
                   </motion.div>
@@ -224,7 +224,7 @@ export default function GoogleYourself() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <p className="text-base md:text-lg italic font-medium text-slate-600 mb-1">
                   If you don&apos;t control your digital footprint,

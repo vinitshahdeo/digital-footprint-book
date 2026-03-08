@@ -138,7 +138,7 @@ export default function WhyThisBook() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
+                  transition={{ duration: 0.4, delay: 0.45 }}
                 >
                   <div className="h-px w-10 bg-gradient-to-r from-transparent to-blue-400"></div>
                   <CheckCircle2 className="w-4 h-4 text-blue-400" />
@@ -149,7 +149,7 @@ export default function WhyThisBook() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
                 >
                   Real frameworks from real engineering experience
                 </motion.p>
@@ -158,7 +158,7 @@ export default function WhyThisBook() {
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
+                  transition={{ duration: 0.4, delay: 0.55 }}
                 >
                   <a
                     href="https://www.google.com/search?q=Vinit+Shahdeo"

@@ -64,10 +64,11 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2.5 mb-1">
                 <motion.div
-                  animate={{
+                  whileInView={{
                     rotate: [0, 3, -3, 0],
                     scale: [1, 1.02, 1],
                   }}
+                  viewport={{ once: true }}
                   transition={{
                     repeat: Infinity,
                     duration: 6,
