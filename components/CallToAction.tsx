@@ -5,7 +5,7 @@ import { Target, Sparkles, Zap, Star, Rocket, Github } from 'lucide-react'
 
 export default function CallToAction() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white relative overflow-hidden">
       {/* Subtle floating icons */}
       <motion.div
         className="absolute top-16 left-[10%] text-blue-200"
@@ -79,7 +79,7 @@ export default function CallToAction() {
               }
             `}</style>
             <div className="relative max-w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-              <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-60 w-max mx-auto">
+              <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-70 w-max mx-auto">
                 {Array.from({ length: 52 }).map((_, weekIndex) => (
                   <div key={weekIndex} className="flex flex-col gap-[2px] md:gap-[3px]">
                     {Array.from({ length: 7 }).map((_, dayIndex) => {
@@ -128,8 +128,11 @@ export default function CallToAction() {
 
           {/* Motivational text */}
           <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-            The engineers who get noticed aren't always the best coders — they're the ones who show
-            up. Start building your footprint today.
+            The engineers who get noticed aren&apos;t always the best coders —{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-medium">
+              they&apos;re the ones who show up.
+            </span>{' '}
+            Start building your footprint today.
           </p>
         </motion.div>
       </div>
