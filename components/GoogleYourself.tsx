@@ -55,7 +55,7 @@ export default function GoogleYourself() {
               Recruiters do. Hiring managers do.{' '}
               <span className="text-slate-900 font-medium">Everyone does.</span>
             </p>
-            <p className="text-lg italic text-slate-500 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto">
               What shows up when they search your name?
             </p>
           </motion.div>

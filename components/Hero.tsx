@@ -90,10 +90,30 @@ export default function HeroV1() {
       {/* Floating Background Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Corner icons — hidden on very small screens, visible from sm+ */}
-        <FloatingIcon Icon={Github} delay={0} position={{ top: '8%', left: '10%' }} className="hidden sm:block" />
-        <FloatingIcon Icon={Youtube} delay={1} position={{ top: '10%', left: '85%' }} className="hidden sm:block" />
-        <FloatingIcon Icon={Rss} delay={3.5} position={{ top: '85%', left: '12%' }} className="hidden sm:block" />
-        <FloatingIcon Icon={Mail} delay={2.8} position={{ top: '88%', left: '82%' }} className="hidden sm:block" />
+        <FloatingIcon
+          Icon={Github}
+          delay={0}
+          position={{ top: '8%', left: '10%' }}
+          className="hidden sm:block"
+        />
+        <FloatingIcon
+          Icon={Youtube}
+          delay={1}
+          position={{ top: '10%', left: '85%' }}
+          className="hidden sm:block"
+        />
+        <FloatingIcon
+          Icon={Rss}
+          delay={3.5}
+          position={{ top: '85%', left: '12%' }}
+          className="hidden sm:block"
+        />
+        <FloatingIcon
+          Icon={Mail}
+          delay={2.8}
+          position={{ top: '88%', left: '82%' }}
+          className="hidden sm:block"
+        />
 
         {/* Mid-section & edge icons — hidden on mobile to avoid overlapping content */}
         <FloatingIcon
@@ -262,7 +282,7 @@ export default function HeroV1() {
                     alt="Vinit Shahdeo"
                     width={40}
                     height={40}
-                    className="w-full h-full object-cover scale-[1.15]"
+                    className="w-full h-full object-cover scale-[1.35]"
                   />
                 </div>
 

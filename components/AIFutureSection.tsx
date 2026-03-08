@@ -57,7 +57,12 @@ export default function AIFutureSection() {
               {/* Content */}
               <span className="relative inline-flex items-center gap-2 sm:gap-2.5 px-5 sm:px-7 py-3.5 text-white font-medium flex-wrap justify-center text-sm sm:text-base">
                 {/* AI Sparkle Icon - two 4-pointed stars */}
-                <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg
+                  className="w-5 h-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
                   <path d="M10 2L11.5 7.5L17 9L11.5 10.5L10 16L8.5 10.5L3 9L8.5 7.5L10 2Z" />
                   <path d="M18 12L19 15L22 16L19 17L18 20L17 17L14 16L17 15L18 12Z" />
                 </svg>

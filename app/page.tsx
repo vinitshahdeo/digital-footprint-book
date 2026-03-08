@@ -2,13 +2,13 @@ import Hero from '@/components/Hero'
 import Purchase from '@/components/Purchase'
 import FeaturedOn from '@/components/FeaturedOn'
 import dynamic from 'next/dynamic'
-
 // Below-fold client components — code-split for smaller initial JS bundle
 const GoogleYourself = dynamic(() => import('@/components/GoogleYourself'))
 const AskAI = dynamic(() => import('@/components/AskAI'))
 const VisibilityGap = dynamic(() => import('@/components/VisibilityGap'))
 const CareerImpact = dynamic(() => import('@/components/CareerImpact'))
 const AIFutureSection = dynamic(() => import('@/components/AIFutureSection'))
+const DecisionTable = dynamic(() => import('@/components/DecisionTable'))
 const BookIntro = dynamic(() => import('@/components/BookIntro'))
 const Author = dynamic(() => import('@/components/Author'))
 const BookCoverage = dynamic(() => import('@/components/BookCoverage'))
@@ -34,8 +34,9 @@ export default function Home() {
 
       {/* 3. Solution Zone - The Book & Author */}
       <BookIntro />
-      <Author />
+      <DecisionTable />
       <BookCoverage />
+      <Author />
       <WhyThisBook />
 
       {/* 4. Reinforcement Zone - Value & Proof */}
