@@ -30,6 +30,14 @@
   ::selection {
     @apply bg-blue-100/80 text-blue-900;
   }
+
+  /* Gradient text fallback for high-contrast / forced-colors mode */
+  @media (forced-colors: active) {
+    .bg-clip-text {
+      -webkit-text-fill-color: unset;
+      color: LinkText;
+    }
+  }
 }
 
 @layer utilities {
@@ -188,6 +196,20 @@
 
   .binary-pulse {
     animation: subtlePulse 4s ease-in-out infinite;
+  }
+
+  /* Contribution chart shimmer (used in CallToAction) */
+  @keyframes contribution-shimmer {
+    0%,
+    100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+
+    50% {
+      opacity: 0.55;
+      filter: brightness(1.2);
+    }
   }
 
   /* Responsive orbital node positioning */

@@ -5,42 +5,45 @@ import { Target, Sparkles, Zap, Star, Rocket, Github } from 'lucide-react'
 
 export default function CallToAction() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white relative overflow-hidden">
-      {/* Subtle floating icons */}
+    <section
+      id="bottom-line"
+      className="py-16 sm:py-20 md:py-28 px-6 bg-gradient-to-b from-slate-50/80 to-white relative overflow-hidden"
+    >
+      {/* Subtle floating icons — hidden on mobile to prevent overlap with content */}
       <motion.div
-        className="absolute top-16 left-[10%] text-blue-200"
+        className="absolute top-16 left-[10%] text-blue-200 hidden md:block"
         animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
       >
-        <Sparkles className="w-6 h-6" />
+        <Sparkles className="w-6 h-6 lg:w-8 lg:h-8" />
       </motion.div>
 
       <motion.div
-        className="absolute top-24 right-[15%] text-blue-200"
+        className="absolute top-24 right-[15%] text-blue-200 hidden md:block"
         animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         aria-hidden="true"
       >
-        <Rocket className="w-5 h-5" />
+        <Rocket className="w-5 h-5 lg:w-7 lg:h-7" />
       </motion.div>
 
       <motion.div
-        className="absolute bottom-20 left-[20%] text-blue-200"
+        className="absolute bottom-20 left-[20%] text-blue-200 hidden md:block"
         animate={{ y: [0, -6, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
         aria-hidden="true"
       >
-        <Star className="w-5 h-5" />
+        <Star className="w-5 h-5 lg:w-7 lg:h-7" />
       </motion.div>
 
       <motion.div
-        className="absolute bottom-24 right-[12%] text-blue-200"
+        className="absolute bottom-24 right-[12%] text-blue-200 hidden md:block"
         animate={{ y: [0, 8, 0], rotate: [0, 10, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         aria-hidden="true"
       >
-        <Zap className="w-4 h-4" />
+        <Zap className="w-4 h-4 lg:w-6 lg:h-6" />
       </motion.div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -48,7 +51,7 @@ export default function CallToAction() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
           {/* Section badge */}
@@ -58,7 +61,7 @@ export default function CallToAction() {
           </p>
 
           {/* Main headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6 tracking-tight leading-[1.1] text-balance">
             Your Name Is a Brand{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               — Build It.
@@ -66,20 +69,18 @@ export default function CallToAction() {
           </h2>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-slate-500 mb-6 font-medium">
+          <p className="text-lg md:text-xl text-slate-500 mb-4 font-medium max-w-2xl mx-auto">
             Be Seen. Be Heard. Be Found.
           </p>
 
-          {/* GitHub Contribution Chart Only */}
+          {/* GitHub Contribution Chart */}
           <div className="mb-8 flex flex-col items-center">
-            <style>{`
-              @keyframes contribution-shimmer {
-                0%, 100% { opacity: 1; filter: brightness(1); }
-                50% { opacity: 0.55; filter: brightness(1.2); }
-              }
-            `}</style>
             <div className="relative max-w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-              <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-70 w-max mx-auto">
+              {/* Fade edges to hint at scrollable overflow on mobile */}
+              <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none md:hidden" />
+              <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none md:hidden" />
+
+              <div className="flex justify-center gap-[2px] md:gap-[3px] opacity-80 w-max mx-auto px-4 md:px-0">
                 {Array.from({ length: 52 }).map((_, weekIndex) => (
                   <div key={weekIndex} className="flex flex-col gap-[2px] md:gap-[3px]">
                     {Array.from({ length: 7 }).map((_, dayIndex) => {
@@ -97,7 +98,7 @@ export default function CallToAction() {
                       return (
                         <div
                           key={dayIndex}
-                          className={`w-[5px] h-[5px] md:w-2 md:h-2 rounded-[1px] ${colors[level]}`}
+                          className={`w-[4px] h-[4px] sm:w-[5px] sm:h-[5px] md:w-2 md:h-2 rounded-[1px] ${colors[level]}`}
                           style={
                             level > 0
                               ? {
@@ -114,20 +115,20 @@ export default function CallToAction() {
               </div>
             </div>
 
-            {/* GitHub Profile Link */}
+            {/* GitHub Profile Link — min touch target 44×44 */}
             <a
               href="https://github.com/vinitshahdeo"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-blue-500 transition-colors opacity-60 hover:opacity-100"
+              className="mt-3 inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-blue-500 transition-colors hover:opacity-100 min-h-[44px] min-w-[44px] px-3 justify-center"
             >
-              <Github className="w-3 h-3" />
-              View {/* @vinitshahdeo */} on GitHub
+              <Github className="w-3.5 h-3.5" />
+              @vinitshahdeo on GitHub
             </a>
           </div>
 
           {/* Motivational text */}
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             The engineers who get noticed aren&apos;t always the best coders —{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-medium">
               they&apos;re the ones who show up.
