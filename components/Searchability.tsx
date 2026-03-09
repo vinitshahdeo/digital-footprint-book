@@ -163,11 +163,11 @@ export default function Searchability() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                whileHover={{ x: 4 }}
+                whileHover={{ y: -2 }}
               >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">GitHub Activity</p>
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-xs font-medium">
                     Critical
                   </span>
                 </div>
@@ -175,16 +175,16 @@ export default function Searchability() {
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-5 text-white shadow-lg shadow-slate-800/30 cursor-default"
+                className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-5 text-white shadow-md cursor-default"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.15 }}
-                whileHover={{ x: 5, boxShadow: '0 15px 35px rgba(0, 0, 0, 0.25)' }}
+                whileHover={{ y: -2 }}
               >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">LinkedIn Profile</p>
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-blue-500/25 text-blue-200 rounded-full text-xs font-medium">
                     Critical
                   </span>
                 </div>
@@ -192,16 +192,16 @@ export default function Searchability() {
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-5 text-white shadow-md shadow-slate-700/20 cursor-default"
+                className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl p-5 text-white shadow-md cursor-default"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                whileHover={{ x: 5, boxShadow: '0 12px 30px rgba(0, 0, 0, 0.2)' }}
+                whileHover={{ y: -2 }}
               >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">Blog Posts</p>
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-blue-400/20 text-blue-100 rounded-full text-xs font-medium">
                     High
                   </span>
                 </div>
@@ -209,12 +209,12 @@ export default function Searchability() {
               </motion.div>
 
               <motion.div
-                className="bg-gradient-to-br from-slate-400 to-slate-500 rounded-xl p-5 text-white shadow-md shadow-slate-500/15 cursor-default"
+                className="bg-gradient-to-br from-slate-400 to-slate-500 rounded-xl p-5 text-white shadow-md cursor-default"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.25 }}
-                whileHover={{ x: 5, boxShadow: '0 10px 25px rgba(0, 0, 0, 0.15)' }}
+                whileHover={{ y: -2 }}
               >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">Talks & Podcasts</p>
@@ -231,11 +231,11 @@ export default function Searchability() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                whileHover={{ x: 5, boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)' }}
+                whileHover={{ y: -2 }}
               >
                 <div className="flex items-center justify-between mb-2">
                   <p className="font-semibold">Portfolio Site</p>
-                  <span className="px-3 py-1 bg-slate-300 rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-slate-400/20 text-slate-600 rounded-full text-xs font-medium border border-slate-300">
                     Good
                   </span>
                 </div>
@@ -249,7 +249,7 @@ export default function Searchability() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ y: -2, boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)' }}
+              whileHover={{ y: -2 }}
             >
               <h4 className="text-lg font-bold text-slate-900 mb-5">
                 Your searchability checklist
@@ -313,7 +313,7 @@ export default function Searchability() {
         </div>
 
         <motion.p
-          className="text-center text-lg text-slate-500 mt-16 max-w-xl mx-auto"
+          className="text-center text-lg text-slate-600 mt-16 max-w-xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
