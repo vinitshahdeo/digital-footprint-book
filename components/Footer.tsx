@@ -186,7 +186,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#purchase"
+                  href="https://www.amazon.in/Digital-Footprint-Engineers-Vinit-Shahdeo-ebook/dp/B0GRNBLWQK/"
                   className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
                 >
                   <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>

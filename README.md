@@ -21,7 +21,7 @@ Built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**, this site is
 
 - [Buy on Amazon](https://amzn.in/d/cSNyCNl)
 - [Buy on Flipkart (Coming soon!)](#)
-- [Get ebook on Kindle](#)
+- [Get ebook on Kindle](https://www.amazon.in/Digital-Footprint-Engineers-Vinit-Shahdeo-ebook/dp/B0GRNBLWQK/)
 - [View landing page](https://digitalfootprintbook.com)
 - [Author's Note](https://vinitshahdeo.substack.com/p/digital-footprint-for-software-engineers)
 
