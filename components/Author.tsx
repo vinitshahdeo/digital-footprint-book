@@ -1,6 +1,6 @@
 'use client'
 
-import { ExternalLink, User } from 'lucide-react'
+import { ExternalLink, Terminal } from 'lucide-react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -58,9 +58,9 @@ export default function Author() {
 
           {/* Clean Author Bio */}
           <div className="order-1 md:order-2">
-            <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
-              <User className="w-3.5 h-3.5" />
-              About the Author
+            <p className="text-[11px] font-semibold text-slate-600 mb-4 inline-flex items-center gap-2 pl-1 pr-3.5 py-1 bg-white/90 rounded-full border border-blue-100 shadow-sm backdrop-blur-sm">
+              <span className="px-2 py-0.5 bg-slate-900 text-white text-[10px] font-mono font-bold rounded-full inline-flex items-center gap-1"><Terminal className="w-2.5 h-2.5" />git blame</span>
+              @vinitshahdeo
             </p>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6">

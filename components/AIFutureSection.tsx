@@ -17,9 +17,9 @@ export default function AIFutureSection() {
           className="text-center"
         >
           {/* Badge - consistent with Purchase section */}
-          <p className="text-sm font-medium text-blue-400 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
-            <Bot className="w-4 h-4" />
-            The Future of Hiring
+          <p className="text-[11px] font-semibold text-slate-300 mb-4 inline-flex items-center gap-2 pl-1 pr-3.5 py-1 bg-white/[0.07] rounded-full border border-white/[0.12] backdrop-blur-sm">
+            <span className="px-2 py-0.5 bg-blue-500 text-white text-[10px] font-mono font-bold rounded-full inline-flex items-center gap-1"><Bot className="w-2.5 h-2.5" />agent</span>
+            AI is indexing you
           </p>
 
           {/* Headline */}

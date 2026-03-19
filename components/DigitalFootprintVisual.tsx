@@ -10,8 +10,8 @@ import {
   MessageCircle,
   Globe,
   Code,
+  Search,
   Users,
-  Network,
   Star,
   TrendingUp,
   Heart,
@@ -201,9 +201,9 @@ export default function DigitalFootprintVisual() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
-            <Network className="w-4 h-4" />
-            Your Ecosystem
+          <p className="text-[11px] font-semibold text-slate-600 mb-4 inline-flex items-center gap-2 pl-1 pr-3.5 py-1 bg-white/90 rounded-full border border-blue-100 shadow-sm backdrop-blur-sm">
+            <span className="px-2 py-0.5 bg-slate-900 text-white text-[10px] font-mono font-bold rounded-full inline-flex items-center gap-1"><Search className="w-2.5 h-2.5" />dig</span>
+            your digital nodes
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-slate-900 mb-6">
             Your Digital{' '}
