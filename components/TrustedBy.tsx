@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Users } from 'lucide-react'
+import { Activity } from 'lucide-react'
 import Image from 'next/image'
 
 const companies = [
@@ -48,10 +48,10 @@ export default function TrustedBy() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <div className="flex items-center justify-center gap-2 mb-8">
-            <Users className="w-5 h-5 text-slate-400" />
-            <p className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
-              Trusted by engineers at
+          <div className="flex items-center justify-center mb-8">
+            <p className="text-[11px] font-semibold text-slate-600 inline-flex items-center gap-2 pl-1 pr-3.5 py-1 bg-white/90 rounded-full border border-blue-100 shadow-sm backdrop-blur-sm">
+              <span className="px-2 py-0.5 bg-slate-900 text-white text-[10px] font-mono font-bold rounded-full inline-flex items-center gap-1"><Activity className="w-2.5 h-2.5" />uptime</span>
+              99.9% in production
             </p>
           </div>
 

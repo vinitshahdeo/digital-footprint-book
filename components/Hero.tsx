@@ -14,7 +14,6 @@ import {
   Quote,
   Rocket,
   Rss,
-  Sparkles,
   Twitch,
   Twitter,
   Youtube,
@@ -164,9 +163,9 @@ export default function HeroV1() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-full inline-flex items-center gap-2">
-              <Sparkles className="w-4 h-4" />
-              Now Available – Get Your Copy!
+            <span className="pl-1 pr-3.5 py-1 bg-white/90 text-slate-600 text-[11px] font-semibold rounded-full inline-flex items-center gap-2 border border-blue-100 backdrop-blur-sm shadow-sm">
+              <span className="px-2 py-0.5 bg-slate-900 text-white text-[10px] font-mono font-bold rounded-full inline-flex items-center gap-1"><Rocket className="w-2.5 h-2.5" />v1.0</span>
+              out now on Amazon
             </span>
           </motion.div>
 
@@ -280,8 +279,8 @@ export default function HeroV1() {
                   <Image
                     src="/images/vinit-shahdeo.jpg"
                     alt="Vinit Shahdeo"
-                    width={40}
-                    height={40}
+                    width={120}
+                    height={120}
                     className="w-full h-full object-cover scale-[1.35]"
                   />
                 </div>
