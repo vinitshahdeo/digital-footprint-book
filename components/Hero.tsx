@@ -12,6 +12,7 @@ import {
   Mail,
   Play,
   Quote,
+  Ribbon,
   Rocket,
   Rss,
   Twitch,
@@ -307,7 +308,14 @@ export default function HeroV1() {
                   />
                 </motion.div>
               </div>
+
             </div>
+
+            {/* Donation note */}
+            <p className="mt-3 px-3 py-1.5 text-[11px] text-slate-400 tracking-wide text-center leading-relaxed">
+              <Ribbon className="inline-block w-3 h-3 text-pink-400/80 align-[-1.5px] mr-1" aria-hidden="true" />
+              Every copy supports cancer care — <span className="font-medium text-slate-500">100% royalties</span> donated to <a href="https://tmc.gov.in/" target="_blank" rel="noopener noreferrer" className="font-medium text-slate-500 underline decoration-slate-300 underline-offset-2 hover:text-slate-700 transition-colors">TMH</a>.
+            </p>
           </motion.div>
         </div>
 
