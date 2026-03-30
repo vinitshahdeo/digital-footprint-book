@@ -118,7 +118,7 @@ const jsonLd = {
             '@type': 'Organization',
             name: 'Flipkart',
           },
-          url: 'https://www.flipkart.com',
+          url: 'https://dl.flipkart.com/s/6HfSBRNNNN',
         },
       ],
     },

@@ -329,21 +329,19 @@ export default function BookIntro() {
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </motion.a>
 
-              <div className="relative group/tooltip w-full sm:w-auto">
-                <motion.button
-                  disabled
-                  aria-label="Buy on Flipkart — Coming soon"
-                  className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-slate-300 text-slate-400 rounded-lg font-medium cursor-not-allowed opacity-60 w-full sm:w-auto"
-                  whileTap={{ scale: 0.99 }}
-                >
-                  <ShoppingCart className="w-4 h-4" />
-                  <span className="text-sm">Buy on Flipkart</span>
-                </motion.button>
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
-                  Coming soon on Flipkart! Meanwhile, purchase on Amazon.
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
-                </div>
-              </div>
+              <motion.a
+                href="https://dl.flipkart.com/s/6HfSBRNNNN"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Buy on Flipkart"
+                className="group flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-slate-300 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-all duration-200 w-full sm:w-auto"
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+              >
+                <ShoppingCart className="w-4 h-4" />
+                <span className="text-sm">Buy on Flipkart</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </motion.a>
             </div>
 
             {/* Trusted By */}
