@@ -215,6 +215,17 @@ export default function Footer() {
                   Invite Vinit to Speak
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://digitalfootprintworkshop.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-600 hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 rounded-full bg-slate-400 group-hover:bg-blue-600 transition-colors"></span>
+                  Hands-on Workshop
+                </a>
+              </li>
             </ul>
           </nav>
 
